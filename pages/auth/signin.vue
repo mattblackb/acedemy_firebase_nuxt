@@ -1,71 +1,88 @@
 <template>
-  <v-row align="center" justify="center">
-    <v-col cols="12" sm="8" md="4" align="center">
-      <v-card width="500" class="elevation-4 text-left" shaped color="yellow">
-        <v-card-title>Login</v-card-title>
-        <v-card-subtitle>Login to your dashboard</v-card-subtitle>
-        <v-card-text>
-          <v-form>
-            <v-text-field
-              label="Login"
-              name="login"
-              prepend-icon="mdi-account"
-              type="text"
-              v-model="auth.email"
-            ></v-text-field>
-
-            <v-text-field
-              label="Password"
-              name="password"
-              prepend-icon="mdi-lock"
-              type="password"
-              v-model="auth.password"
-            ></v-text-field>
-          </v-form>
-        </v-card-text>
-        <v-card-actions class="text-center">
-          <v-btn
+  <v-container>
+     <v-row>
+      <v-col cols="10" lg="5">
+       <v-card flat outlined>
+        <v-tabs v-model="tab" active-class="white" height="40" background-color="grey lighten-2" fixed-tabs hide-slider>
+         <v-tab>Returning user?</v-tab>
+         <v-tab>New user?</v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="tab">
+         <v-tab-item :value="0">
+          <v-card-text>
+           <v-form v-model="valid" ref="form" lazy-validation>
+             {{auth.email}}
+            <v-text-field prepend-icon="mdi-email" validate-on-blur clearable dense outlined v-model="auth.email" :rules="[rules.emailRequired, rules.email]" label="Please enter your Email" type="email" required/>
+            <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[rules.passwordRequired, rules.min]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="auth.password" label="Please enter your password"
+             required />
+             {{auth.password}}
+            <v-row align="center">
+             <v-btn
             class="login-button"
             @click="login"
             depressed
             large
-            >Login</v-btn
-          >
-          <v-btn class="reset-button" @click="createUser" depressed large
-            >Forgot Password</v-btn
-          >
-        </v-card-actions>
-      </v-card>
-       <v-btn
-            class="login-button"
-            @click="populateData"
-            depressed
-            large
-            >Register</v-btn
-          >
-      <v-snackbar
-        :timeout="4000"
-        v-model="snackbar"
-        absolute
-        bottom
-        center
-      >
-        {{ snackbarText }}
-      </v-snackbar>
-    </v-col>
-  </v-row>
+            >Login</v-btn>
+             <a href="/" class="subtitle-2">Forgot your password?</a>
+            </v-row>
+           </v-form>
+          </v-card-text>
+         </v-tab-item>
+         <v-tab-item :value="1">
+          <v-card-text>
+           <v-text-field dense outlined label="Parent/Guardian First Name" v-model="firstName" type="text" />
+           <v-text-field dense outlined label="Parent/Guardian Last Name" v-model="lastName" type="text" />
+           <v-text-field dense outlined label="Email" type="email" v-model="email" />
+           <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[rules.passwordRequired, rules.min]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="password" label="Please enter your password"
+            required />
+           <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[rules.passwordMatch]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="newPassword" label="Please enter your password"
+            required />
+           <v-row align="center" justify="space-around">
+            <v-btn dark depressed @click="snackbar = true">Create Account</v-btn>
+           </v-row>
+          </v-card-text>
+         </v-tab-item>
+        </v-tabs-items>
+       </v-card>
+      </v-col>
+   
+     </v-row>
+    </v-container>
+
 </template>
 
 <script>
 export default {
   data() {
+
+    
     return {
       snackbar: false,
       snackbarText: 'No error message',
       auth: {
         email: '',
         password: ''
-      }
+      },
+      tab: 0,
+  email: null,
+  firstName: null,
+  lastName: null,
+  password: null,
+  snackbar: false,
+  newPassword: null,
+  show1: false,
+  valid: false,
+  rules: {
+   email: value => {
+    const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern.test(value) || "Your Email should look like user@email.com";
+   },
+   emailRequired: value => !!value || "You must enter your Email",
+   passwordRequired: value => !!value || "Your password is required",
+   passwordMatch: value => value === this.password || "Your passwords don't match",
+  //  min: v => v.length >= 14 ||  "Your password must be at least 14 characters",
+   emailMatch: () => "The email and password you entered don't match"
+    }
     }
   },
   methods: {
@@ -96,13 +113,13 @@ export default {
      let that = this
      this.$fire.auth.createUserWithEmailAndPassword(
           that.auth.email,
-          this.auth.password
+          that.auth.password
         )
       .then(() => {
         
-        this.snackbarText = 'User created' + that.auth.email
-        this.snackbar = true
-        this.populateData(that.auth.email)
+        that.snackbarText = 'User created' + that.auth.email
+        that.snackbar = true
+        that.populateData(that.auth.email)
       })
       .catch(function (error) {
         that.snackbarText = error.message
