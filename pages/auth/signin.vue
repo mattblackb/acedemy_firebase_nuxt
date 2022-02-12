@@ -31,11 +31,18 @@
             large
             >Login</v-btn
           >
-          <v-btn class="reset-button" @click="forgotPassword" depressed large
+          <v-btn class="reset-button" @click="createUser" depressed large
             >Forgot Password</v-btn
           >
         </v-card-actions>
       </v-card>
+       <v-btn
+            class="login-button"
+            @click="populateData"
+            depressed
+            large
+            >Register</v-btn
+          >
       <v-snackbar
         :timeout="4000"
         v-model="snackbar"
@@ -84,9 +91,50 @@ export default {
         that.snackbarText = error.message
         that.snackbar = true
       })
+    },
+   createUser() {
+     let that = this
+     this.$fire.auth.createUserWithEmailAndPassword(
+          that.auth.email,
+          this.auth.password
+        )
+      .then(() => {
+        
+        this.snackbarText = 'User created' + that.auth.email
+        this.snackbar = true
+        this.populateData(that.auth.email)
+      })
+      .catch(function (error) {
+        that.snackbarText = error.message
+        that.snackbar = true
+      })
+    },
+    async populateData() {
+
+
+    const placeRef = this.$fire.firestore.collection('People')
+      .where("email", "==", this.auth.email)
+      .get()
+      .then((querySnapshot) => {
+        if(querySnapshot.docs.length > 0) {
+        querySnapshot.forEach((doc) => {
+          console.log('placeRef',querySnapshot)
+        })
+        } else {
+          //create a blank document for profile
+          var docData= 	{ name: "Matt B", email: this.auth.email, credits: 0, available_modules: [], saved_games: [] }
+	        this.$fire.firestore.collection('People').doc().set(docData);
+        }
+      })
+  
+
     }
   }
-}
+
+
+
+  }
+
 </script>
 
 <style>

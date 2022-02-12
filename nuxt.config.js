@@ -46,32 +46,40 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    
-      [
-        '@nuxtjs/firebase',
-        {
-          config: {
-              apiKey: "AIzaSyBIpGTddqJVdxjvvS7BrURpcGDpP3zypJE",
-              authDomain: "fir-nuxt-auth-12f4a.firebaseapp.com",
-              projectId: "fir-nuxt-auth-12f4a",
-              storageBucket: "fir-nuxt-auth-12f4a.appspot.com",
-              messagingSenderId: "7425042073",
-              appId: "1:7425042073:web:94dc7a2bf077ff8e9c3a08"
-          },
-          services: {
-            auth: {
-              persistence: 'local', // default
-              initialize: {
-                onAuthStateChangedAction: 'onAuthStateChangedAction',
-                subscribeManually: false
-              },
-              ssr: false,
-            }
-          }
-        }
-      ]
-  ],
+    '@nuxtjs/firebase',
 
+  ],
+  firebase: {
+    lazy: false,
+    config: {
+      apiKey: process.env.APIKEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      projectId: process.env.PROJECT_ID,
+      storageBucket: process.env.STORAGE_BUCKET,
+      messagingSenderId: process.env.MESSAGE_SENDER_ID,
+      appId: process.env.APP_ID,
+      measurementId: process.env.MEASUREMENT_ID
+    },
+    onFirebaseHosting: false,
+    terminateDatabasesAfterGenerate: true,
+    services: {
+      auth: {
+        initialize: {
+          onAuthStateChangedAction: 'onAuthStateChangedAction',
+          subscribeManually: false
+        },
+        ssr: true,
+        // emulatorPort: isDev && useEmulators ? 9099 : undefined,
+        disableEmulatorWarnings: false,
+      },
+      firestore: {
+        memoryOnly: false,
+        enablePersistence: true,
+        // emulatorPort: isDev && useEmulators ? 8080 : undefined,
+      },
+    }
+  },
+ 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
