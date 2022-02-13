@@ -1,7 +1,10 @@
 <template>
+<main>
+     <NavBar />
   <v-container>
      <v-row>
       <v-col cols="10" lg="5">
+        
        <v-card flat outlined>
         <v-tabs v-model="tab" active-class="white" height="40" background-color="grey lighten-2" fixed-tabs hide-slider>
          <v-tab>Returning user?</v-tab>
@@ -55,7 +58,7 @@
         {{ snackbarText }}
       </v-snackbar>
     </v-container>
-
+</main>
 </template>
 
 <script>

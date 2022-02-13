@@ -3,7 +3,7 @@ const actions = {
     if (!authUser) {
       // remove state
       state.commit('CLEAR_USER', null)
-
+      state.commit('CLEAR_PERSON', null)
       //redirect from here
       this.$router.push({
         path: '/auth/signin',
@@ -14,26 +14,26 @@ const actions = {
         uid,
         email,
       })
+      var returnedDocs = [];
+    
+      await this.$fire.firestore.collection('People').where("email", "==", email).get()
+      .then(querySnapshot => {
+        querySnapshot.docs.forEach(doc => {
+          returnedDocs.push(doc.data());
+      });
+    });
+      
+     console.log('Return:', returnedDocs[0])
+     state.commit("SET_PEOPLE", returnedDocs[0]);  
     }
   },
-  async fetchPeople(state,uid) {
-    console.log(uid);
-    var returnedDocs = [];
-    
-    await this.$fire.firestore.collection('People').where("email", "==", uid).get()
-    .then(querySnapshot => {
-      querySnapshot.docs.forEach(doc => {
-        returnedDocs.push(doc.data());
-    });
-  });
-    
-   console.log('Return:', returnedDocs[0])
-   state.commit("SET_PEOPLE", returnedDocs[0]);  
+  // async fetchPeople(state,uid) {
+   
 
   
 
  
-   }
+  //  }
 }
 
 const mutations = {
@@ -45,6 +45,9 @@ const mutations = {
   },
   CLEAR_USER(state, user) {
     state.user = user
+  },
+  CLEAR_PERSON(state, person) {
+    state.person = person
   },
 }
 

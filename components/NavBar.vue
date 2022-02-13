@@ -1,22 +1,68 @@
 <template>
-    <div>
-        <h1>Navbar</h1>
-        <v-btn v-if="this.$fire.auth.currentUser" to="/auth/signout">
+   
+
+    <v-app-bar
+      color="accent-4"
+      dark
+    >
+      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
+       <v-btn icon to="/">
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+    <template >
+      <v-toolbar-title v-if="userDetails">Welcome: {{userDetails}}</v-toolbar-title>
+       <v-toolbar-title v-else>Welcome to the Acedamy</v-toolbar-title>
+    </template>
+  
+      <v-spacer></v-spacer>
+   
+     <!-- <template v-if="getUser().email">
+           <v-btn   to="/auth/signout">
             Logout
         </v-btn>
-    </div>
+     </template>
+       <template v-else>
+        <v-btn  >
+                    Login
+        </v-btn>
+       </template> -->
+      
+      
+      
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+  
+      <v-btn icon to="/profile" v-if="userDetails">
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
+
+         <v-btn icon to="/auth/signin" v-else class="mr-3">
+        Login
+      </v-btn>
+  
+     
+       
+    </v-app-bar>
 </template>
 <script>
-import { mapActions } from "vuex";
+import {  mapGetters } from "vuex";
 export default {
   name: "NavBar",
-  methods: {  ...mapActions(["fetchPeople"])},
+ data: () => ({
+     currentUser: null
+ }),
+  methods: {   ...mapGetters(["getUser"])},
     mounted() {
-	//this.$auth.persistState();
-    if(this.$fire.auth.currentUser) {
-    this.fetchPeople(this.$fire.auth.currentUser.email);
-        alert('People!')
-    }
+    
     },
+    computed:{
+      userDetails (){
+          if(this.$store.state.person) {
+              return this.$store.state.person.name
+          }
+      }
+    }
+     
 }
 </script>
