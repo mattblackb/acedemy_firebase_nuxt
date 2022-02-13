@@ -1,6 +1,5 @@
 const actions = {
   async onAuthStateChangedAction(state, { authUser, claims }) {
-    console.log('State Changed', authUser)
     if (!authUser) {
       // remove state
       state.commit('CLEAR_USER', null)
@@ -17,11 +16,32 @@ const actions = {
       })
     }
   },
+  async fetchPeople(state,uid) {
+    console.log(uid);
+    var returnedDocs = [];
+    
+    await this.$fire.firestore.collection('People').where("email", "==", uid).get()
+    .then(querySnapshot => {
+      querySnapshot.docs.forEach(doc => {
+        returnedDocs.push(doc.data());
+    });
+  });
+    
+   console.log('Return:', returnedDocs[0])
+   state.commit("SET_PEOPLE", returnedDocs[0]);  
+
+  
+
+ 
+   }
 }
 
 const mutations = {
   SET_USER(state, user) {
     state.user = user
+  },
+  SET_PEOPLE: (state, person) => {
+    state.person = person;
   },
   CLEAR_USER(state, user) {
     state.user = user
@@ -30,11 +50,15 @@ const mutations = {
 
 const state = () => ({
   user: null,
+  person: null
 })
 
 const getters = {
   getUser(state) {
     return state.user
+  },
+  getPeople(state) {
+    return state.person
   },
 }
 

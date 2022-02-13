@@ -1,6 +1,6 @@
 <template>
   <v-app light>
-   
+ <NavBar />
     <v-main>
       <v-container>
         <nuxt />

@@ -11,34 +11,32 @@
          <v-tab-item :value="0">
           <v-card-text>
            <v-form v-model="valid" ref="form" lazy-validation>
-             {{auth.email}}
-            <v-text-field prepend-icon="mdi-email" validate-on-blur clearable dense outlined v-model="auth.email" :rules="[rules.emailRequired, rules.email]" label="Please enter your Email" type="email" required/>
-            <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[rules.passwordRequired, rules.min]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="auth.password" label="Please enter your password"
+            <v-text-field prepend-icon="mdi-email" validate-on-blur clearable dense outlined v-model="auth.email" :rules="[rules.emailRequired, ...rules.email]" label="Please enter your Email" type="email" required/>
+            <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[rules.passwordRequired]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="auth.password" label="Please enter your password"
              required />
-             {{auth.password}}
             <v-row align="center">
              <v-btn
-            class="login-button"
+            class="login-button ma-3"
             @click="login"
             depressed
             large
             >Login</v-btn>
-             <a href="/" class="subtitle-2">Forgot your password?</a>
+             <a @click="forgotPassword" class="subtitle-2">Forgot your password?</a>
             </v-row>
            </v-form>
           </v-card-text>
          </v-tab-item>
          <v-tab-item :value="1">
           <v-card-text>
-           <v-text-field dense outlined label="Parent/Guardian First Name" v-model="firstName" type="text" />
-           <v-text-field dense outlined label="Parent/Guardian Last Name" v-model="lastName" type="text" />
+           <v-text-field dense outlined label="Your Name" v-model="firstName" :rules="[rules.nameRequired]" type="text" />
+      
            <v-text-field dense outlined label="Email" type="email" v-model="email" />
-           <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[rules.passwordRequired, rules.min]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="password" label="Please enter your password"
+           <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[...rules.passwordRequired]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="password" label="Please enter your password"
             required />
-           <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[rules.passwordMatch]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="newPassword" label="Please enter your password"
+           <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :rules="[...rules.passwordMatch]" :type="show1 ? 'text' : 'password'" counter @click:append="show1 = !show1" prepend-icon="mdi-lock" dense outlined v-model="newPassword" label="Please enter your password"
             required />
            <v-row align="center" justify="space-around">
-            <v-btn dark depressed @click="snackbar = true">Create Account</v-btn>
+            <v-btn dark depressed @click="createUser">Create Account</v-btn>
            </v-row>
           </v-card-text>
          </v-tab-item>
@@ -47,6 +45,15 @@
       </v-col>
    
      </v-row>
+     <v-snackbar
+        :timeout="4000"
+        v-model="snackbar"
+        absolute
+        top
+        center
+      >
+        {{ snackbarText }}
+      </v-snackbar>
     </v-container>
 
 </template>
@@ -78,6 +85,7 @@ export default {
     return pattern.test(value) || "Your Email should look like user@email.com";
    },
    emailRequired: value => !!value || "You must enter your Email",
+  nameRequired: value => !!value || "You must enter your Name",
    passwordRequired: value => !!value || "Your password is required",
    passwordMatch: value => value === this.password || "Your passwords don't match",
   //  min: v => v.length >= 14 ||  "Your password must be at least 14 characters",
@@ -88,7 +96,7 @@ export default {
   methods: {
     login() {
       let that = this
-      this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password)
+      this.$fire.auth.signInWithEmailAndPassword(that.auth.email, that.auth.password)
       .catch(function (error){
         that.snackbarText = error.message
         that.snackbar = true
@@ -105,15 +113,19 @@ export default {
         that.snackbar = true
       })
       .catch(function (error) {
-        that.snackbarText = error.message
+        if(!that.auth.email){
+            that.snackbarText = "Please enter your email address in the form above"
+        } else {
+            that.snackbarText = error.message
+        }
         that.snackbar = true
       })
     },
    createUser() {
      let that = this
      this.$fire.auth.createUserWithEmailAndPassword(
-          that.auth.email,
-          that.auth.password
+          that.email,
+          that.password
         )
       .then(() => {
         
@@ -130,18 +142,16 @@ export default {
 
 
     const placeRef = this.$fire.firestore.collection('People')
-      .where("email", "==", this.auth.email)
+      .where("email", "==", this.email)
       .get()
       .then((querySnapshot) => {
-        if(querySnapshot.docs.length > 0) {
-        querySnapshot.forEach((doc) => {
-          console.log('placeRef',querySnapshot)
-        })
-        } else {
+        console.log('query',querySnapshot)
+      
           //create a blank document for profile
-          var docData= 	{ name: "Matt B", email: this.auth.email, credits: 0, available_modules: [], saved_games: [] }
+          var docData= 	{ name: this.firstName, email: this.email, credits: 0, available_modules: [], saved_games: [] }
 	        this.$fire.firestore.collection('People').doc().set(docData);
-        }
+           $nuxt.$router.push('/')
+        
       })
   
 
