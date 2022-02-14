@@ -22,18 +22,14 @@ const actions = {
           returnedDocs.push(doc.data());
       });
     });
-      
-     console.log('Return:', returnedDocs[0])
+
      state.commit("SET_PEOPLE", returnedDocs[0]);  
     }
   },
-  // async fetchPeople(state,uid) {
-   
 
-  
-
- 
-  //  }
+  // setPeople(person) {
+  //   state.commit("SET_PEOPLE", person);  
+  // }
 }
 
 const mutations = {

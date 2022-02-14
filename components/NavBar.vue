@@ -23,14 +23,14 @@
      </template>
        <template v-else>
         <v-btn  >
-                    Login
+                    Loginå
         </v-btn>
        </template> -->
       
       
       
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+      <v-btn  to="/introduction">
+       Introduction
       </v-btn>
   
       <v-btn icon to="/profile" v-if="userDetails">
@@ -39,29 +39,33 @@
 
          <v-btn icon to="/auth/signin" v-else class="mr-3">
         Login
-      </v-btn>
+      </v-btn> 
   
      
        
     </v-app-bar>
 </template>
 <script>
-import {  mapGetters } from "vuex";
+import {  mapActions } from "vuex";
 export default {
   name: "NavBar",
  data: () => ({
      currentUser: null
  }),
-  methods: {   ...mapGetters(["getUser"])},
+  methods: {   ...mapActions(["stories/setStories"])},
     mounted() {
-    
+      //  if(!this.$store.state.stories) {
+       this.$store.dispatch('stories/setStories')
+      //  }
     },
     computed:{
+    
       userDetails (){
           if(this.$store.state.person) {
               return this.$store.state.person.name
           }
       }
+      
     }
      
 }
