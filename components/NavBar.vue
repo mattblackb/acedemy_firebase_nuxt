@@ -16,16 +16,16 @@
   
       <v-spacer></v-spacer>
    
-     <!-- <template v-if="getUser().email">
+     <template v-if="currentUser">
            <v-btn   to="/auth/signout">
             Logout
         </v-btn>
      </template>
-       <template v-else>
+      <template v-else>
         <v-btn  >
-                    Loginå
+               Login
         </v-btn>
-       </template> -->
+       </template>
       
       
       
@@ -37,7 +37,7 @@
         <v-icon>mdi-account</v-icon>
       </v-btn>
 
-         <v-btn icon to="/auth/signin" v-else class="mr-3">
+      <v-btn icon to="/auth/signin" v-else class="mr-3">
         Login
       </v-btn> 
   
@@ -46,22 +46,21 @@
     </v-app-bar>
 </template>
 <script>
-import {  mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "NavBar",
  data: () => ({
-     currentUser: null
+     currentUser: false
  }),
   methods: {   ...mapActions(["stories/setStories"])},
     mounted() {
-      //  if(!this.$store.state.stories) {
        this.$store.dispatch('stories/setStories')
-      //  }
     },
     computed:{
     
       userDetails (){
           if(this.$store.state.person) {
+              this.currentUser = true
               return this.$store.state.person.name
           }
       }

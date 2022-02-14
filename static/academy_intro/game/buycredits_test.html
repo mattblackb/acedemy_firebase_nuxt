@@ -16,7 +16,7 @@
 <body onLoad="disallowNav()">
 
 
-    <button onclick="emitCheck('checkCredits|10')" id="buybutton">Test</button>   
+    <button onclick="emitCheck('jVPB0ws7x2EDgI8Aq75K|10')" id="buybutton">Test</button>   
 <button href="/natalia1`.html" id="availableButton" style="display:none;">Testing</button>   
         <area shape="rect" coords="300,555,690,635"  title="Use 10 Credits" onclick="emitCheck('checkCredits|10')"/>
 		<area shape="rect" coords="380,650,620,720" href="natalia36.html" title="Go back" />
@@ -49,8 +49,16 @@
 
 <script>
 let showcontinue = checkAvailable('jVPB0ws7x2EDgI8Aq75K');
-if (!showcontinue) {
+if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
 }
+function moduleAvailable(state) 
+{ 
+  alert('State'+state)
+  if(state) {
+    document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+  }
+} 
 </script>

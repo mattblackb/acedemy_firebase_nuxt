@@ -9,7 +9,9 @@ export const state = () => ({
        await  this.$fire.firestore.collection('Stories').get()
         .then(querySnapshot => {
             querySnapshot.docs.forEach(doc => {
-                returnedDocs.push(doc.data());
+                var includeID = doc.data();
+                includeID.id = doc.id;
+                returnedDocs.push(includeID);
             });
         state.commit("SET_STORIES", returnedDocs);  
           });

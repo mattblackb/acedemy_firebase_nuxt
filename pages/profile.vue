@@ -20,7 +20,7 @@
 import { mapGetters } from "vuex";
 export default {  
   	
-       computed:{
+    computed:{
       userDetails (){
           if(this.$store.state.person) {
               return this.$store.state.person
