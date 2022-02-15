@@ -78,7 +78,6 @@ export default {
   firstName: null,
   lastName: null,
   password: null,
-  snackbar: false,
   newPassword: null,
   show1: false,
   valid: false,

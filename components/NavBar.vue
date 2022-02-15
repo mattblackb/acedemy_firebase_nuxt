@@ -17,6 +17,9 @@
       <v-spacer></v-spacer>
    
      <template v-if="currentUser">
+       <v-btn   to="/buy">
+            Buy Credits
+        </v-btn>
            <v-btn   to="/auth/signout">
             Logout
         </v-btn>
