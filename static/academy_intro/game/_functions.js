@@ -1,19 +1,7 @@
 
-//MB Added post message
-
-
-
-function emitCheck(method) 
-{ 
-    parent.c_1.greet(method)
-} 
-function checkAvailable(method) 
-{ 
-   let returnedState = parent.c_1.checkAvailable(method)
-   return returnedState
-} 
 
 // Kills cookie
+
 function deleteVar(name) 
 
 {
