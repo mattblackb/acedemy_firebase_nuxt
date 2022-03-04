@@ -22,6 +22,22 @@ function deleteVar(name)
 
 } 
 
+function hideShowButton() {
+    let showcontinue = checkAvailable('jVPB0ws7x2EDgI8Aq75K');
+if (showcontinue) {
+   document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+}
+function moduleAvailable(state) 
+{ 
+  alert('State'+state)
+  if(state) {
+    document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+  }
+} 
+}
+
 
 
 // Creates cookie

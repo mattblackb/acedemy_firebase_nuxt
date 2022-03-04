@@ -24,11 +24,7 @@
             Logout
         </v-btn>
      </template>
-      <template v-else>
-        <v-btn  >
-               Login
-        </v-btn>
-       </template>
+   
       
       
       

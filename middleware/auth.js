@@ -1,5 +1,5 @@
 export default function ({app, route, redirect}){
-  if (route.path !== '/auth/signin' && route.path !== '/'  ) {
+  if (route.path !== '/auth/signin' && route.path !== '/' && route.path !== '/introduction' ) {
     //we are on a protected route
     if(!app.$fire.auth.currentUser) {
       //take them to sign in page
