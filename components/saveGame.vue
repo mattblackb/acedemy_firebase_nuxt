@@ -30,13 +30,10 @@ export default({
 	
 		saveEpisode() {
 			let personData = {...this.$store.state.person};
-			
 			 personData.saved_games.push(this.cookies);
-          
 			  this.$store.commit('setuser/updatePerson', personData)
                 this.$store.commit('SET_PEOPLE', personData)
 			this.currentMessage = 'This game has been saved you can see this game in your profile';
-		
 		},
     },
     mounted() {
