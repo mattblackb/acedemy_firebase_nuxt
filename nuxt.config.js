@@ -52,13 +52,13 @@ export default {
   firebase: {
     lazy: false,
     config: {
-      apiKey: "AIzaSyC8DKBjAGFWS1QzNEPSVAJTOmaE3fL82UY",
-      authDomain: "dating-f35b3.firebaseapp.com",
-      projectId: "dating-f35b3",
-      storageBucket: "dating-f35b3.appspot.com",
-      messagingSenderId: 234567875795,
-      appId: "1:234567875795:web:8dae13fc28e8157fafe826",
-      measurementId: "G-F9MCYJR6BG"
+      apiKey: process.env.APIKEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      projectId: process.env.PROJECT_ID,
+      storageBucket: process.env.STORAGE_BUCKET,
+      messagingSenderId: process.env.MESSAGE_SENDER_ID,
+      appId: process.env.APP_ID,
+      measurementId: process.env.MEASUREMENT_ID
     },
     onFirebaseHosting: false,
     terminateDatabasesAfterGenerate: true,

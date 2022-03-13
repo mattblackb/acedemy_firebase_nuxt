@@ -30,7 +30,6 @@ if (showcontinue) {
 }
 function moduleAvailable(state) 
 { 
-  alert('State'+state)
   if(state) {
     document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';

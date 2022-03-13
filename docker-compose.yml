@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    container_name: avademy-firebase-latest
+    
+    command: vue-cli-service serve
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      # - .:/app
+      - /dating-app
+      - /dating-app/node_modules/
+      
+      

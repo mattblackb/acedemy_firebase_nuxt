@@ -11,7 +11,7 @@
       </v-btn>
     <template >
       <v-toolbar-title v-if="userDetails">Welcome: {{userDetails}}</v-toolbar-title>
-       <v-toolbar-title v-else>Welcome to the Acedamy</v-toolbar-title>
+       <v-toolbar-title v-else>Welcome to the Academy</v-toolbar-title>
     </template>
   
       <v-spacer></v-spacer>
