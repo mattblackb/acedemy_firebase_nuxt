@@ -3,7 +3,7 @@ services:
   app:
     container_name: avademy-firebase-latest
     
-    command: vue-cli-service serve
+    command: npm run dev
     build:
       context: .
       dockerfile: Dockerfile

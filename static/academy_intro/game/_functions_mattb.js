@@ -1,8 +1,6 @@
 
 //MB Added post message
 
-
-
 function emitCheck(method) 
 { 
     parent.c_1.greet(method)
@@ -13,11 +11,30 @@ function checkAvailable(method)
    return returnedState
 } 
 
+var getCookies = function(){
+  var pairs = document.cookie.split(";");
+	  var cookies = {};
+	  for (var i=0; i<pairs.length; i++){
+		var pair = pairs[i].split("=");
+		if(pair[0] != " user"){
+		cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+		}
+	  }
+	  return cookies;
+	}
+	
+
+function saveProgress(){
+    var myCookies = getCookies(); //GET JSON ARRAY
+	myCookiesJSON = JSON.stringify(myCookies);
+    let returnedState = parent.c_1.saveProgress(myCookiesJSON)
+    return returnedState
+}
+
 // Kills cookie
 function deleteVar(name) 
 
 {
-
     document.cookie = name + "=; expires=Thu, 01-Jan-70 00:00:01 GMT" + "; path=/";
 
 } 

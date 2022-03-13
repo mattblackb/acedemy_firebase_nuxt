@@ -83,10 +83,8 @@ export default({
 			 if(this.$store.state.person) {
                  let personData = this.$store.state.person
 				let storiesData = this.$store.getters['stories/getStories']
-				console.log(storiesData,'Person Data');
 				//LOOP all stories - get applicable story
 				storiesData.map((story) => {
-					console.log('story', story)
 					if(story.id === this.currentmodule){
 						this.selectedStory = story;
 						console.log(this.selectedStory)

@@ -4,7 +4,10 @@ export const state = () => ({
   
   export const mutations = {
     async updatePerson(context, docData) {
+
         var userProfile = await  this.$fire.firestore.collection('People').where("email", "==", docData.email).get();
+        console.log('DocData',docData, userProfile.docs[0].id);
+        
         this.$fire.firestore.collection('People').doc(userProfile.docs[0].id).set(docData);
     
       },
