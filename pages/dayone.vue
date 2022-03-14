@@ -8,7 +8,7 @@
     <h1>Day One</h1>
         <div class="container">
             <iframe
-            src="academy_episode_1/begin.html"
+            src="../academy_episode_1/begin.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"

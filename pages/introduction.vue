@@ -8,7 +8,7 @@
     <h1>Introduction</h1>
         <div class="container">
             <iframe
-            src="academy_intro/game/checkpoint1.0.html"
+            src="../academy_intro/begin.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"

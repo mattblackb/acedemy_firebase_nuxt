@@ -1,6 +1,6 @@
 <template>
    
-
+  <main>
     <v-app-bar
       color="accent-4"
       dark
@@ -43,6 +43,27 @@
      
        
     </v-app-bar>
+
+    <v-container class="hidePrying">
+      <v-row>
+        <img src="imgs/header_main.png">
+      </v-row>
+      <v-row>
+         <v-btn
+      class="ma-2"
+      to="/"
+    >
+      Home
+    </v-btn>
+        <v-btn
+      class="ma-2"
+      to="/introduction"
+    >
+      Introduction
+    </v-btn>
+      </v-row>
+    </v-container>
+    </main>
 </template>
 <script>
 import { mapActions, mapGetters } from "vuex";
@@ -68,3 +89,14 @@ export default {
      
 }
 </script>
+
+<style>
+  .hidePrying {
+    display: block;
+  }
+  @media (min-width: 1264px) {
+.container {
+    max-width: 1400px!important;
+}
+  }
+</style>
