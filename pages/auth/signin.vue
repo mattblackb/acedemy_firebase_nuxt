@@ -104,7 +104,9 @@ export default {
         that.snackbar = true
       }).then((user) => {
         //we are signed in
+        if(user){
         $nuxt.$router.push('/')
+        }
       })
     },
     forgotPassword() {

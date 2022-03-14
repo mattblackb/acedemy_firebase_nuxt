@@ -29,6 +29,7 @@ export const state = () => ({
     getStories(state) {
       return state.stories
     }
+    
   }
 
   export default {
