@@ -92,7 +92,7 @@ export default {
 
 <style>
   .hidePrying {
-    display: block;
+    display: none;
   }
   @media (min-width: 1264px) {
 .container {

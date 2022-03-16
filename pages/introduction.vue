@@ -98,6 +98,7 @@ export default {
                 }
             },
               saveProgress(event) { //check that the user is logged in (likely)
+      
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
@@ -130,7 +131,7 @@ export default {
 .container {
     position: relative;
      width: 100%;
-     height: 0;
+     height: 125%;
      padding-bottom: 56.25%;
  }
  .video {
@@ -138,6 +139,6 @@ export default {
      top: 0;
      left: 0;
      width: 100%;
-     height: 105%;
+     height: 125%;
  }
 </style>

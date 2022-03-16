@@ -5,10 +5,10 @@
      <v-row>
       <v-col cols="10">
 
-    <h1>Day One</h1>
+    <h1>Introduction</h1>
         <div class="container">
             <iframe
-            src="../academy_episode_1/begin.html"
+               src="../academy_episode_1/game/checkpoint1.5.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
@@ -25,9 +25,18 @@
         v-model="dialog"
         width="500"
         >
-        <v-card>
-                <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
-        </v-card>
+            <v-card>
+                    <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
+            </v-card>
+        </v-dialog>
+         <v-dialog
+        v-model="dialogSave"
+        width="500"
+        >
+            <v-card>
+            <h1>Save Game</h1>
+            <SaveGame :cookieJson="cookieJson" />
+            </v-card>
         </v-dialog>
 
       </v-col>
@@ -42,6 +51,8 @@ export default {
     data () {
       return {
         dialog: false,
+        dialogSave: false,
+        cookieJson: '',
         currentCreditsneeded: [],
          currentmodule: ""
       }
@@ -57,10 +68,6 @@ export default {
     	methods: {
             AddCredits() {
                 this.dialog = true
-                // let personData = {...this.$store.state.person};
-                // personData.credits = personData.credits + 10;
-                // this.$store.commit('setuser/updatePerson', personData)
-                // this.$store.commit('SET_PEOPLE', personData)
             },
              greet(event) {
               
@@ -88,6 +95,29 @@ export default {
                     } else {
                         return false
                     }
+                }
+            },
+              saveProgress(event) { //check that the user is logged in (likely)
+      
+                if(!this.$store.state.user.uid) {
+                    return false
+                } else {
+                     if (event) {
+                         this.cookieJson = event;
+                        this.dialogSave = true
+                     }
+                    // //Logged in check for available
+                    // if(this.$store.state.person.available_modules.length > 0){
+                    //     if(this.$store.state.person.available_modules.includes(id)) {
+                    //         //user has already bought the module change the button on the iframe src
+                    //         return true
+                    //     } else {
+                    //         return false
+                    //     }
+                      
+                    // } else {
+                    //     return false
+                    // }
                 }
             }
         },
