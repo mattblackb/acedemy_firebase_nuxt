@@ -20,7 +20,7 @@
 
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-    <v-btn @click="AddCredits()">Add Credits</v-btn>
+
         <v-dialog
         v-model="dialog"
         width="500"
