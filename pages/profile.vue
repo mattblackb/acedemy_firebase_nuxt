@@ -12,6 +12,10 @@
    
     <h3>Introduction</h3>
     <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
+        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | Play Game 
+    </div>
+        <h3>Day One</h3>
+    <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
         <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | Play Game
     </div>
 
@@ -39,7 +43,6 @@ export default {
 	},
   methods: {
     setIntroduction(introductionObject) {
-      console.log(introductionObject);
         this.introchosen = introductionObject;
         this.showIntroduction = true;
     }
@@ -52,7 +55,12 @@ export default {
       },
       introductionGame (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode="introduction")
+              return this.$store.state.person.saved_games.filter(game => game.episode==="introduction")
+          }
+      },
+         dayonenGame (){
+          if(this.$store.state.person) {
+              return this.$store.state.person.saved_games.filter(game => game.episode==="dayone")
           }
       }
     }
