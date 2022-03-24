@@ -3,12 +3,12 @@
      <NavBar />
   <v-container>
      <v-row>
-      <v-col cols="10">
+      <v-col cols="12">
 
-    <h1>Introduction</h1>
+    <h1>Day One</h1>
         <div class="container">
             <iframe
-               src="../academy_episode_1/game/checkpoint1.5.html"
+               src="../academy_episode_1/begin.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"

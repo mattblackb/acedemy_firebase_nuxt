@@ -14,17 +14,25 @@
     <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
         <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | Play Game 
     </div>
-        <h3>Day One</h3>
+        <h3>Episode 1: Part One</h3>
     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
         <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | Play Game
     </div>
 
+       <h3>Episode 1: Part Two</h3>
+    <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
+        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | Play Game
+    </div>
+
+   
     <v-btn @click="$router.push('/auth/signout')">Logout</v-btn>
         
  
       </v-col>
        <v-col cols="8">
-          <DisplayAchievmentsintroduction v-if="showIntroduction" :introAchievments="introchosen" />
+          <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction'" :introAchievments="introchosen" />
+          <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone'" :introAchievments="introchosen" />
+           <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone2'" :introAchievments="introchosen" />
         </v-col>
      </v-row>
   </v-container>
@@ -61,6 +69,11 @@ export default {
          dayonenGame (){
           if(this.$store.state.person) {
               return this.$store.state.person.saved_games.filter(game => game.episode==="dayone")
+          }
+      },
+       dayonenGame2 (){
+          if(this.$store.state.person) {
+              return this.$store.state.person.saved_games.filter(game => game.episode==="dayone2")
           }
       }
     }
