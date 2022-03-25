@@ -5,10 +5,10 @@
      <v-row>
       <v-col cols="12">
 
-       <h1>Episode 1 - Part One</h1>
+    <h1>Episode 1 - Part Two</h1>
         <div class="container">
             <iframe
-               src="../academy_episode_1/begin.html"
+               src="../academy_episode_1/game/checkpoint1.5.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
