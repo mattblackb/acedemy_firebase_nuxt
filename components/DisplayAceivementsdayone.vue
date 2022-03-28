@@ -1,13 +1,9 @@
 <template>
-	<v-row class="pa-5">
-    Day one
-        <div v-for="(achievement, name) in introAchievments">
-        <div  v-if="achievement == 0 || achievement == 1">
-           <img  v-if=" achievement == 1" :src="'/academy_episode_1/game/buttonsetc/endcards/' + name + '.jpg'" v-bind:alt="pic" >
-           <img  v-else :src="'/academy_episode_1/game/buttonsetc/endcards/' + name + '_blank.jpg'" v-bind:alt="pic" >
-        </div>
-        </div>
-    </v-row>
+	
+
+      <AcheivementImage :introAchievments="sortArryObjects()" />
+
+ 
 </template>
 <script>
 
@@ -18,5 +14,30 @@ export default({
         required: true
         }
     },
+    data () {
+      return {
+        sortedAchievements: null
+      }
+    },
+    methods: {
+        sortArryObjects ( ) {
+                var temparray = new Array();
+                let that = this 
+                  Object.keys(that.introAchievments).map(function(keyName, index) {
+                          var substr = (keyName).substring(6);
+                          var newtemp = [];
+                        temparray.push({'keyname': keyName, 'value': that.introAchievments[keyName], 'sorted': parseInt(substr)})
+                    });
+                temparray.sort((a,b) => (a.sorted > b.sorted) ? 1 : ((b.sorted > a.sorted) ? -1 : 0))
+               return temparray
+            }      
+    },
+    computed: {
+        dortItem() {
+            console.log('dort')
+        }
+       
+    }
+  
 })
 </script>
