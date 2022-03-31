@@ -14,31 +14,7 @@
        <v-toolbar-title v-else>Welcome to the Academy</v-toolbar-title>
     </template>
   
-      <v-spacer></v-spacer>
-   
-     <template v-if="currentUser">
-       <v-btn   to="/buy">
-            Buy Credits
-        </v-btn>
-           <v-btn   to="/auth/signout">
-            Logout
-        </v-btn>
-     </template>
-   
-      
-      
-      
-      <v-btn  to="/introduction">
-       Introduction
-      </v-btn>
-  
-      <v-btn icon to="/profile" v-if="userDetails">
-        <v-icon>mdi-account</v-icon>
-      </v-btn>
-
-      <v-btn icon to="/auth/signin" v-else class="mr-3">
-        Login
-      </v-btn> 
+    
   
      
        
@@ -46,7 +22,7 @@
 
     <v-container class="hidePrying">
       <v-row>
-        <img src="imgs/header_main.png">
+        <img src="imgs/acedemy_placeholder.jpeg">
       </v-row>
       <v-row>
          <v-btn
@@ -54,13 +30,7 @@
       to="/"
     >
       Home
-    </v-btn>
-        <v-btn
-      class="ma-2"
-      to="/introduction"
-    >
-      Introduction
-    </v-btn>
+      </v-btn>
       </v-row>
     </v-container>
     </main>
