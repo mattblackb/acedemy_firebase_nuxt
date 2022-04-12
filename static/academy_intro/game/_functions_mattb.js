@@ -40,6 +40,7 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
+    alert('Called');
     let showcontinue = checkAvailable('jVPB0ws7x2EDgI8Aq75K');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';

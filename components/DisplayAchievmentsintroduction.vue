@@ -1,12 +1,9 @@
 <template>
-	<v-row class="pa-5">
-        <div v-for="(achievement, name) in introAchievments">
-        <div  v-if="achievement == 0 || achievement == 1">
-           <img  v-if=" achievement == 1" :src="'/academy_intro/game/buttonsetc/endcards/' + name + '.jpg'" v-bind:alt="pic" >
-           <img  v-else :src="'/academy_intro/game/buttonsetc/endcards/' + name + '_blank.jpg'" v-bind:alt="pic" >
-        </div>
-        </div>
-    </v-row>
+	
+
+      <AcheivementImageIntroduction :introAchievments="sortArryObjects('achievements')" :bonusAchievments="sortArryObjects('bonus')"/>
+
+ 
 </template>
 <script>
 
@@ -17,5 +14,45 @@ export default({
         required: true
         }
     },
+    data () {
+      return {
+        sortedAchievements: null
+      }
+    },
+    methods: {
+        sortArryObjects (type) {
+                var temparray = new Array();
+                var bonusArray = new Array();
+                let that = this 
+                  Object.keys(that.introAchievments).map(function(keyName, index) {
+                        
+                       
+                          if(keyName.includes('bonus')) {
+                              bonusArray.push({'keyname': keyName, 'value': that.introAchievments[keyName], 'sorted': parseInt(substr)})
+                          } else {
+                            var substr = (keyName).substring(8);
+
+                            if( parseInt(substr)) {
+                            temparray.push({'keyname': keyName, 'value': that.introAchievments[keyName], 'sorted': parseInt(substr)})
+                            }
+                          }
+                    });
+                temparray.sort((a,b) => (a.sorted > b.sorted) ? 1 : ((b.sorted > a.sorted) ? -1 : 0))
+                console.log(temparray, bonusArray);
+                if(type === "bonus"){
+                    return bonusArray
+                } else {
+                        return temparray    
+                }
+           
+            }      
+    },
+    computed: {
+        dortItem() {
+            console.log('dort')
+        }
+       
+    }
+  
 })
 </script>
