@@ -80,7 +80,7 @@ export default {
                 }
             },
             checkAvailable(id) { //check that the user is logged in (likely)
-                if(!this.$store.state.user.uid) {
+                if(!this.$store.state.user) {
                     return false
                 } else {
                     //Logged in check for available

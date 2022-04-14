@@ -5,9 +5,10 @@
 			{{currentMessage}}
             <p>Credits needed: {{currentCreditsneeded}}</p>
 			</div>
-			<p>Purchase credits?</p>
+			<!-- <p>Purchase credits?</p> -->
 			<!-- <button type="button" class="btn btn-primary">Buy Credits</button> -->
-			<div ref="paypal"></div>
+			<!-- <div ref="paypal"></div> -->
+			<h3>Currently we are unable to take payments</h3>
 		
     
 		</div>
@@ -100,11 +101,8 @@ export default({
 					this.currentMessage = 'You already have access to this module'+this.currentmodule
 					this.currentStatus = false;
 				}
-			})
-             } else {
-                 alert('Something has gone wrong please email stating #errocode 03334')
-             }
-			
+				})
+             	} 
 		},
 
 		buyModule() {

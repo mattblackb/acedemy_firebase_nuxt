@@ -4,7 +4,6 @@
 function emitCheck(method) 
 { 
     parent.c_1.greet(method)
-    hideShowButton();
 } 
 function checkAvailable(method) 
 { 
