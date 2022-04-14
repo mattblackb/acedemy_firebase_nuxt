@@ -4,12 +4,14 @@
 function emitCheck(method) 
 { 
     parent.c_1.greet(method)
+    hideShowButton();
 } 
 function checkAvailable(method) 
 { 
    let returnedState = parent.c_1.checkAvailable(method)
    return returnedState
 } 
+const myTimeout = setInterval(hideShowButton, 1000);
 
 var getCookies = function(){
   var pairs = document.cookie.split(";");
@@ -40,17 +42,25 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
-    alert('Called');
     let showcontinue = checkAvailable('jVPB0ws7x2EDgI8Aq75K');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonImage").style.display = 'block';
+} else {
+    document.getElementById('buybutton').style.display = 'block';
+    document.getElementById("availableButton").style.display = 'none';
+    document.getElementById('buybuttonImage').style.display = 'block';
+    document.getElementById("availableButtonImage").style.display = 'none';
 }
 function moduleAvailable(state) 
 { 
   if(state) {
     document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonimage").style.display = 'block';
   }
 } 
 }

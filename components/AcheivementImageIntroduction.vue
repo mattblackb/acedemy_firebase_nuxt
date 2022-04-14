@@ -7,7 +7,7 @@
    
     <v-col v-for="(achievement, name) in introAchievments"   cols="2" class="split5">
         <span v-if="achievement.value == 0 || achievement.value == 1" >
-              {{achievement}}
+  
            <img  v-if=" achievement.value == 1" :src="'/academy_intro/game/buttonsetc/endcards/' + achievement.keyname + '.jpg'"  >
            <img  v-else :src="'/academy_intro/game/buttonsetc/endcards/' + achievement.keyname + '_blank.jpg'"  >
         </span>
@@ -21,9 +21,9 @@
 
     <v-col v-for="(achievement, name) in bonusAchievments"   cols="2" class="split5">
         <span v-if="achievement.value == 0 || achievement.value == 1" >
-        {{achievement}}
+  
            <img  v-if=" achievement.value == 1" :src="'/academy_intro/game/buttonsetc/endcards/' + achievement.keyname + '.jpg'"  >
-           <img  v-else :src="'/academy_intro/game/buttonsetc/endcards/' + achievement.keyname + '_blank.jpg'"  >
+           <img  v-else :src="'/academy_intro/game/buttonsetc/endcards/introbonus_blank.jpg'"  >
         </span>
         </v-col >
    </v-row>
