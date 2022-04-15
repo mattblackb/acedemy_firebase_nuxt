@@ -1,14 +1,72 @@
 
+//MB Added post message
+if(parent.c_1){
+    alert('In App');
+} else {
+    window.location.href = "/";
+}
+function emitCheck(method) 
+{ 
+    parent.c_1.greet(method)
+} 
+function checkAvailable(method) 
+{ 
+   let returnedState = parent.c_1.checkAvailable(method)
+   return returnedState
+} 
+const myTimeout = setInterval(hideShowButton, 1000);
+
+var getCookies = function(){
+  var pairs = document.cookie.split(";");
+	  var cookies = {};
+	  for (var i=0; i<pairs.length; i++){
+		var pair = pairs[i].split("=");
+		if(pair[0] != " user"){
+		cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+		}
+	  }
+	  return cookies;
+	}
+	
+
+function saveProgress(){
+    var myCookies = getCookies(); //GET JSON ARRAY
+	myCookiesJSON = JSON.stringify(myCookies);
+    let returnedState = parent.c_1.saveProgress(myCookiesJSON)
+    return returnedState
+}
 
 // Kills cookie
-
 function deleteVar(name) 
 
 {
-
     document.cookie = name + "=; expires=Thu, 01-Jan-70 00:00:01 GMT" + "; path=/";
 
 } 
+
+function hideShowButton() {
+    let showcontinue = checkAvailable('jVPB0ws7x2EDgI8Aq75K');
+if (showcontinue) {
+   document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonImage").style.display = 'block';
+} else {
+    document.getElementById('buybutton').style.display = 'block';
+    document.getElementById("availableButton").style.display = 'none';
+    document.getElementById('buybuttonImage').style.display = 'block';
+    document.getElementById("availableButtonImage").style.display = 'none';
+}
+function moduleAvailable(state) 
+{ 
+  if(state) {
+    document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonimage").style.display = 'block';
+  }
+} 
+}
 
 
 

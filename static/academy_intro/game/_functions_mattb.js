@@ -1,6 +1,8 @@
 
 //MB Added post message
-
+if(parent.c_1){
+    alert('In App');
+}
 function emitCheck(method) 
 { 
     parent.c_1.greet(method)
