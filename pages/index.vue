@@ -13,7 +13,7 @@
         <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
-            <li>Day One - View the tutorial on how this site works <a href="/dayone"  >View episode</a></li>
+           <!-- <li>Day One - View the tutorial on how this site works <a href="/dayone"  >View episode</a></li> -->
             </template>
             <template v-else>
             <li>Day One - View the tutorial on how this site works <a href="/auth/signin"  >Login</a></li>

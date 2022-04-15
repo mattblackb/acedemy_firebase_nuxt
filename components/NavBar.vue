@@ -45,8 +45,8 @@
     </v-app-bar>
 
     <v-container class="hidePrying">
-      <v-row>
-        <img src="imgs/header_main.png">
+      <v-row class="pt-4 pb-4 ">
+        <img src="/imgs/header_new.png" class="textAlignCenter">
       </v-row>
       <v-row>
          <v-btn
@@ -91,6 +91,11 @@ export default {
 </script>
 
 <style>
+.textAlignCenter {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
   .hidePrying {
     display: block;
   }

@@ -13,7 +13,8 @@
 </head>
 	
 
-<body onLoad="disallowNav()">
+<!-- <body onLoad="disallowNav()"> -->
+<body>
 
 <div align="center">
 
@@ -74,8 +75,8 @@
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/unlock/locked_grey.jpg" alt="" usemap="#Map" id="buybuttonImage"/>
-
+    <td width="1000" class="relativePosition"><img src="images/unlock/locked_grey.jpg" alt="" usemap="#Map" id="buybuttonImage"/>
+   <img src="images/unlock/use_10.jpg" id="buybutton" onclick="emitCheck('jVPB0ws7x2EDgI8Aq75K|20')">
       <map name="Map" id="Map">
 
        
@@ -84,25 +85,20 @@
 	</map>
    
       </td>
-       <td width="1000"><img src="images/unlock/unlocked_natalia.jpg" alt="" usemap="#Map"  id="availableButtonImage"/>
+       <td width="1000" class="relativePosition">
+       <img src="images/unlock/unlocked_natalia.jpg" alt="" usemap="#Map"  id="availableButtonImage"/>
 
       <map name="Map" id="Map">
 
        
 		<area shape="rect" coords="380,650,620,720" href="natalia36.html" title="Go back" />
-		
+		 
 	</map>
-   
+
+    <a href="nataliabonus1.html" ><img src="images/unlock/unlocked_button.jpg" id="availableButton"> </a>
       </td>
     
-    </tr>
-      <tr width="1000">
-      <td>
-       <img src="images/unlock/use_10.jpg" id="buybutton" onclick="emitCheck('jVPB0ws7x2EDgI8Aq75K|20')">
-   <a href="nataliabonus1.html" ><img src="images/unlock/unlocked_button.jpg" id="availableButton"> </a>
-         
-    </td>
-    </tr>
+  
 </table>
 
 <table width="1200" border="0">
@@ -126,7 +122,11 @@
 </body>
 
 </html>
-
+<style>
+  #availableButton,#availableButtonImage {display: none}
+  .relativePosition {position: relative}
+  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
+</style>
 <script>
   hideShowButton();
 </script>
