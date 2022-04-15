@@ -1,7 +1,7 @@
 <template>
 	<v-row class="pa-5">
 		<h1>{{currentBuy}}</h1>
-        <pre>{{currentMessage}}</pre>
+        <p>{{currentMessage}}</p>
 
 
 	</v-row>
