@@ -83,6 +83,10 @@
            <v-btn   to="/auth/signout" v-if="currentUser">
             Logout
         </v-btn>
+          <v-btn icon to="/profile" v-if="currentUser">
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
+
          <v-btn  to="/auth/signin" v-if="!currentUser" class="ma-2">
         Login
       </v-btn> 
