@@ -9,6 +9,11 @@ if(parent.c_1){
     { 
         parent.c_1.greet(method)
     } 
+    function getName(method) 
+    { 
+        var person = parent.c_1.getname()
+        console.log('Person', person)
+    } 
     function checkAvailable(method) 
     { 
        let returnedState = parent.c_1.checkAvailable(method)

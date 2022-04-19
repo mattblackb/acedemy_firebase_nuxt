@@ -8,7 +8,7 @@
     <h1>Introduction</h1>
         <div class="container">
             <iframe
-            src="../academy_intro/begin.html"
+            src="../academy_intro/game/natalia1.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
@@ -68,6 +68,12 @@ export default {
     	methods: {
             AddCredits() {
                 this.dialog = true
+            },
+            Getname() {
+                if(this.$store.state.person) {
+              return this.$store.state.person
+                }
+            
             },
              greet(event) {
               
