@@ -13,9 +13,11 @@ if(parent.c_1){
     { 
         var person = parent.c_1.Getname()
         cookievalue= person.name + ";";
-
+        if(person){
         document.cookie="playername=" + cookievalue;
-
+        } else {
+            document.cookie="playername=Guest";
+        }
     } 
     function checkAvailable(method) 
     { 
