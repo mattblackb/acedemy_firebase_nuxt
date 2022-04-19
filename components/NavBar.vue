@@ -1,11 +1,11 @@
 <template>
    
   <main>
-    <v-app-bar
+  <!--  <v-app-bar
       color="accent-4"
       dark
     >
-      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
+   
        <v-btn icon to="/">
         <v-icon>mdi-home</v-icon>
       </v-btn>
@@ -36,19 +36,19 @@
         <v-icon>mdi-account</v-icon>
       </v-btn>
 
-      <v-btn icon to="/auth/signin" v-else class="mr-3">
-        Login
-      </v-btn> 
+     
   
      
        
-    </v-app-bar>
+    </v-app-bar> -->
 
     <v-container class="hidePrying">
+      <v-row><v-toolbar-title v-if="userDetails">Welcome: {{userDetails}}</v-toolbar-title></v-row>
       <v-row class="pt-4 pb-4 ">
         <img src="/imgs/header_new.png" class="textAlignCenter">
       </v-row>
       <v-row>
+      <v-col cols=9 >
          <v-btn
       class="ma-2"
       to="/"
@@ -57,10 +57,37 @@
     </v-btn>
         <v-btn
       class="ma-2"
-      to="/introduction"
+      to="/episodes"
     >
-      Introduction
+      Episodes
     </v-btn>
+
+       <v-btn
+      class="ma-2"
+      to="/characters"
+    >
+      Characters
+    </v-btn>
+          <v-btn
+      class="ma-2"
+      to="/about"
+    >
+      About
+    </v-btn>
+  </v-col>
+
+      <v-col cols=3>
+       <v-btn   to="/buy" v-if="currentUser">
+            Buy Credits
+        </v-btn>
+           <v-btn   to="/auth/signout" v-if="currentUser">
+            Logout
+        </v-btn>
+         <v-btn  to="/auth/signin" v-if="!currentUser" class="ma-2">
+        Login
+      </v-btn> 
+      </v-col>
+   
       </v-row>
     </v-container>
     </main>
