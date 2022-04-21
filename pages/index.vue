@@ -12,16 +12,18 @@
     <h1>Welcome {{userDetails.name}}</h1>
     <h2 v-if="userDetails" >Available Credits: {{userDetails.credits}}</h2>
     <h2>Current Available stories</h2>
-        <ul>
+     <a href="/introductionDetails"  ><img src="/imgs/index_intro1.png" /></a>
+        <a href="/episode1Details"  ><img src="/imgs/index_ep1pt1_locked.jpeg" /></a>
+        <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
-           <!-- <li>Day One - View the tutorial on how this site works <a href="/dayone"  >View episode</a></li> -->
+        
             </template>
             <template v-else>
             <li>Day One - View the tutorial on how this site works <a href="/auth/signin"  >Login</a></li>
             </template>
             
-        </ul>
+        </ul> -->
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
  
