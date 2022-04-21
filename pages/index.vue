@@ -5,7 +5,7 @@
      <v-row>
       <v-col cols="12" md="6">
             <h2 >About this site</h2><p><b>The Academy</b> is a multi episode series of interactive erotic games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one part into the next.</p>
-             <img src="imgs/bg1.png">
+             <img :src="selectedImage">
       </v-col>
       <v-col cols="12" md="6">
 
@@ -45,7 +45,11 @@ export default {
             stories: null,
             user: null,
             availablemodules: null,
-            currentUser: false
+            currentUser: false,
+            selectedImage: 'imgs/4.png',
+            images: [
+                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png'
+            ]
 		}
 	},
  
@@ -69,7 +73,10 @@ export default {
                  let storiesData = this.$store.state;
                  this.stories = storiesData.stories;
               
-            }
+            },
+            randomItem () {
+      return this.images[Math.floor(Math.random()*this.images.length)];
+    }
     },
     computed:{
     userDetails (){
@@ -82,7 +89,10 @@ export default {
    async mounted() {
        await this.setStories();
        console.log('Stories',this.stories);
-    }
+    },
+    created() {
+   this.selectedImage = this.randomItem(this.images)
+}
     
 }
 </script>
