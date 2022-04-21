@@ -20,9 +20,7 @@
         <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span>
     </div>
 
-   
-    <v-btn @click="$router.push('/auth/signout')">Logout</v-btn>
-        
+
  
       </v-col>
        <v-col cols="8">
