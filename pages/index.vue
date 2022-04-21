@@ -4,7 +4,9 @@
   <v-container v-if="userDetails">
      <v-row>
       <v-col cols="12" md="6">
-            <h2 >About this site</h2><p><b>The Academy</b> is a multi episode series of interactive erotic games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one part into the next.</p><strong>The Academy</strong> is a multi episode series of interactive erotic games created by dsp3000.<br> Each part is designed to be played one after the other with achievements carrying over from one part into the next.<br><br><strong>Episode One</strong> was released in April 2016 : <em>1230 pages</em><br><strong>Episode Two</strong> was released in July 2016 : <em>1851 pages</em><br><strong>Episode Three</strong> was released in December 2016 : <em>2264 pages</em><br><strong>Episode Four</strong> was released in May 2017 : <em>2226 pages</em><br><strong>Episode Five</strong> was released in December 2017 : <em>967 pages</em><br><strong>Episode Six</strong> was released in January 2018 : <em>1666 pages</em><br><strong>Episode Seven</strong> was released in March 2019 : <em>2667 pages</em><br><strong>Episode Eight</strong> was released in October 2019 : <em>1762 pages</em><br><strong>Episode Nine</strong> Completed mid 2020 - yet to be released : <em>3002 pages</em><br><strong>Episode Ten</strong> Almost completed mid 2021 - yet to be released : <em>2700 plus pages</em><br><strong>Episode Eleven</strong> In early stages of production.<br></v-col>
+            <h2 >About this site</h2><p><b>The Academy</b> is a multi episode series of interactive erotic games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one part into the next.</p>
+             <img src="imgs/bg1.png">
+      </v-col>
       <v-col cols="12" md="6">
 
     <h1>Welcome {{userDetails.name}}</h1>
@@ -23,21 +25,12 @@
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
  
-    <template v-if="userDetails">
-        <h2>Current Available bonuses</h2>
-        <div  v-for="eachModule in userDetails.available_modules"  :key="eachModule">
-        <ul v-html="checkforAvailableBonus(eachModule)"></ul>
-        </div>
-    </template>
 
-    <template v-if="userDetails">
-       <v-btn @click="$router.push('/auth/signout')">Logout</v-btn>
-    </template>
       </v-col>
      </v-row>
      <v-row>
          <v-col cols="12" class="hidePrying">
-                 <img src="imgs/bg1.png">
+                
          </v-col>
      </v-row>
   </v-container>
@@ -93,3 +86,6 @@ export default {
     
 }
 </script>
+<style scoped>
+img {max-width: 100%;}
+</style>

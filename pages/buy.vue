@@ -2,7 +2,7 @@
 <main>
     <NavBar />
     <v-container v-if="buyMaintenance">
-        <h1>Currently we are unable to process purchases</h1>
+        <h1>Credit payment facility currently disabled</h1>
     </v-container>
     <v-container v-else >
     <h1>Buy credits</h1>
