@@ -11,10 +11,18 @@
 
     <h1>The Academy - Episode One</h1>
 
-    <p>Descriptive text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis turpis at lorem vehicula, nec fermentum purus euismod. Sed venenatis diam quis ante sollicitudin ullamcorper. Quisque sed est in felis condimentum gravida. Suspendisse ante dui, fermentum nec commodo a, pulvinar sed ante. Quisque porttitor eu augue ac aliquam. Nunc at aliquet elit. 
-    
-    <br/><br/>Etiam vitae tortor purus. Donec ac lorem in ante volutpat commodo. Morbi egestas, justo in scelerisque congue, eros justo vulputate ipsum, a sollicitudin mi enim ut mi.</p>
-
+    <p>Start your new at The Goodhead Academy job on Monday morning where you are introduced to many of the characters you will spend your week with.
+There are also a few essential problems to solve and some tasks that need completing before you can succesfully move on to the afternoon.
+<br/><br/>
+More possibilities present themselves after your lunch break, where you are already proving popular amongst the students and the staff.
+Be careful though, Principal Valentine could fire you if she catches you crossing any lines!
+<br/><br/>
+This episode is split into two parts; one for the morning and one for the afternoon.
+<br/><br/>
+Good luck!
+<br/><br/>
+<b>Episode One - Part One</b> statistics : 510 pages : 485 images : 1 bonus scene<br/>
+<b>Episode One - Part Two</b> statistics : 1070 pages : 1185 images : 2 bonus scenes</p>
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/dayone">Play part one of this Episode</NuxtLink></h2>
            <h2 class="clickable" > <NuxtLink to="/dayoneep2">Play part two of this Episode</NuxtLink></h2>

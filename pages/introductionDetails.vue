@@ -10,10 +10,15 @@
 
     <h1>The Academy - Introduction</h1>
 
-    <p>Descriptive text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis turpis at lorem vehicula, nec fermentum purus euismod. Sed venenatis diam quis ante sollicitudin ullamcorper. Quisque sed est in felis condimentum gravida. Suspendisse ante dui, fermentum nec commodo a, pulvinar sed ante. Quisque porttitor eu augue ac aliquam. Nunc at aliquet elit. 
-    
-    <br/><br/>Etiam vitae tortor purus. Donec ac lorem in ante volutpat commodo. Morbi egestas, justo in scelerisque congue, eros justo vulputate ipsum, a sollicitudin mi enim ut mi.</p>
-
+   
+You start the story when you wake up in a hotel room with a former acquaintance.
+Natalia explains all about how the game works and offers an opportunity to test your skills and have some fun with her before you both have to leave for work.
+<br/><br/>
+You must play through this episode before you can move on to the next one.
+<br/><br/>
+<b>Introduction statistics</b> : 180 pages : 478 images : 1 bonus scene
+<br/><br/>
+</p>
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/introduction">Play this Episode</NuxtLink></h2>
     <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>

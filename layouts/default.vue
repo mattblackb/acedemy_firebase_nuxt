@@ -5,7 +5,7 @@
          
 
         <nuxt />
-     
+        <p class="pa-5">Become a supporter at : <a href="https://www.patreon.com/dsp3000" target="_blank">https://www.patreon.com/dsp3000</a></p>
     </v-main>
     
   </v-app>
