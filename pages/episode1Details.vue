@@ -4,7 +4,7 @@
   <v-container>
      <v-row>
      <v-col cols="12" md="6">
-       <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
+  
         <img src="/imgs/2.png">
      </v-col>
       <v-col cols="12" md="6">
@@ -21,12 +21,15 @@
     <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>
 
     <div v-if="showSaved">
-    <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
+    <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
         <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | <a href="/introduction">Replay Game</a> 
     </div>
     </div>
 
+   <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone' && showSaved" :introAchievments="introchosen" class="pt-5"/>
 
+
+ 
  
       </v-col>
       <!-- <v-col cols="8">
@@ -86,6 +89,7 @@ export default {
 <style scoped>
  .clickable {
    cursor: pointer;
+   color: white;
  }
- h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
+ h2, h2 a, a { color: white; text-decoration: none; text-transform: uppercase}
 </style>

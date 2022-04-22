@@ -4,7 +4,6 @@
   <v-container>
      <v-row>
      <v-col cols="12" md="6">
-       <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
         <img src="/imgs/5.png">
      </v-col>
       <v-col cols="12" md="6">
@@ -24,6 +23,7 @@
         <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | <a href="/introduction">Replay Game</a> 
     </div>
     </div>
+           <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" class="pt-5"/>
 
 
  
