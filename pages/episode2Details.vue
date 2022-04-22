@@ -5,18 +5,26 @@
      <v-row>
      <v-col cols="12" md="6">
        <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-         <img :src="selectedImage">
+        <img src="/imgs/1.png">
      </v-col>
       <v-col cols="12" md="6">
 
-    <h1>YOU CAN'T DO THAT YET</h1>
+    <h1>The Academy - Episode Two</h1>
 
-    <p>Before you play this episode you need to successfully complete the one before it</p>
+    <p>Descriptive text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis turpis at lorem vehicula, nec fermentum purus euismod. Sed venenatis diam quis ante sollicitudin ullamcorper. Quisque sed est in felis condimentum gravida. Suspendisse ante dui, fermentum nec commodo a, pulvinar sed ante. Quisque porttitor eu augue ac aliquam. Nunc at aliquet elit. 
+    
+    <br/><br/>Etiam vitae tortor purus. Donec ac lorem in ante volutpat commodo. Morbi egestas, justo in scelerisque congue, eros justo vulputate ipsum, a sollicitudin mi enim ut mi.</p>
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-         <h2 class="clickable" > <NuxtLink to="/episodes">View Episodes</NuxtLink></h2>
+         <h2 class="clickable" > <NuxtLink to="/dayoneep2">Play part one of this Episode</NuxtLink></h2>
+           <h2 class="clickable" > <NuxtLink to="/dayoneep2">Play part two of this Episode</NuxtLink></h2>
+    <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>
 
-
+    <div v-if="showSaved">
+    <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
+        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | <a href="/introduction">Replay Game</a> 
+    </div>
+    </div>
 
 
  
@@ -39,11 +47,7 @@ export default {
 			savedintroductions: [],
             introchosen: {},
             showIntroduction: false,
-            showSaved: false,
-              selectedImage: 'imgs/4.png',
-              images: [
-                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png'
-            ]
+            showSaved: false
 		}
 	},
   methods: {
@@ -51,7 +55,7 @@ export default {
         this.introchosen = introductionObject;
         this.showIntroduction = true;
     },
-     randomItem () {
+          randomItem () {
       return this.images[Math.floor(Math.random()*this.images.length)];
     }
   },
@@ -76,10 +80,7 @@ export default {
               return this.$store.state.person.saved_games.filter(game => game.episode==="dayone2")
           }
       }
-    } ,
-     created() {
-   this.selectedImage = this.randomItem(this.images)
-}
+    }
 }
 </script>
 <style scoped>

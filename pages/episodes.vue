@@ -9,15 +9,19 @@
         </v-row>
         <v-row>
             <v-col cols="12">
-            <a href="/introductionDetails"  ><img src="/imgs/index_intro1.png" /></a>
+            <a href="/introductionDetails"  ><img src="/imgs/episodes/banner_intro_unlocked.jpg" /></a>
             </v-col>
         </v-row>
         
-        <v-row>
-       
-        <v-col cols="12">
-         
-            <a href="/episode1Details"  ><img src="/imgs/index_ep1pt1_locked.jpeg" /></a>
+        <v-row> 
+            <v-col cols="12">
+                <a href="/episode1Details"  ><img src="/imgs/episodes/banner_ep1_locked.jpg" /></a>
+            </v-col>
+        </v-row>
+        
+        <v-row> 
+            <v-col cols="12">
+                <a href="/episode2Details"  ><img src="/imgs/episodes/banner_ep2_locked.jpg" /></a>
             </v-col>
         </v-row>
       </v-col>

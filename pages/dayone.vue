@@ -7,7 +7,7 @@
 
        <h1>Episode 1 - Part One</h1>
         <div class="container">
-            <iframe
+          <!--  <iframe
                src="../academy_episode_1/begin.html"
             width="100%"
             height= auto
@@ -15,7 +15,8 @@
             frameborder="0"
             scrolling="no"
             class="video"
-            ></iframe>
+            ></iframe> -->
+            <h2>Currently Unavailable</h2>
         </div>
 
 

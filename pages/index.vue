@@ -12,8 +12,9 @@
     <h1>Welcome {{userDetails.name}}</h1>
     <h2 v-if="userDetails" >Available Credits: {{userDetails.credits}}</h2>
     <h2>Current Available stories</h2>
-     <a href="/introductionDetails"  ><img src="/imgs/index_intro1.png" /></a>
-        <a href="/episode1Details"  ><img src="/imgs/index_ep1pt1_locked.jpeg" /></a>
+     <a href="/introductionDetails"  ><img src="/imgs/indeximgs/index_intro.jpg" /></a>
+        <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep1_locked.jpg" /></a>
+               <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep2_locked.jpg" /></a>
         <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
