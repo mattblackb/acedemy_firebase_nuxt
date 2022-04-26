@@ -3,7 +3,7 @@ services:
   app:
     container_name: avademy-firebase-latest
     
-    command: npm run dev
+    command: npm run start
     build:
       context: .
       dockerfile: Dockerfile
