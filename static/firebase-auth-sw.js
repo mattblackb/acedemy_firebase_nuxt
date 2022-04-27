@@ -1,10 +1,10 @@
 const ignorePaths = ["\u002F__webpack_hmr","\u002F_loading","\u002F_nuxt\u002F"]
 
 importScripts(
-  'https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js'
+  'https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js'
 )
 importScripts(
-  'https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js'
+  'https://www.gstatic.com/firebasejs/9.6.11/firebase-auth-compat.js'
 )
 firebase.initializeApp({"apiKey":"AIzaSyC8DKBjAGFWS1QzNEPSVAJTOmaE3fL82UY","authDomain":"dating-f35b3.firebaseapp.com","projectId":"dating-f35b3","storageBucket":"dating-f35b3.appspot.com","messagingSenderId":"234567875795","appId":"1:234567875795:web:8dae13fc28e8157fafe826","measurementId":"G-F9MCYJR6BG"})
 
