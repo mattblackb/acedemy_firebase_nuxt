@@ -31,11 +31,10 @@ export default({
                           
                              if(keyName.includes('_')) {
                                if(keyName == 'natalia_bonus'){
-                                 console.log('natalia_bonus!!x')
                                   bonusArray.push({'keyname': 'introbonus', 'value': that.introAchievments[keyName], 'sorted':0})
                                } else {
                                 const removed = keyName.replace('_','');
-                                  var substr = (removed).substring(12);
+                                  var substr = (keyName).substring(13);
                                   console.log(removed, substr)
                                     if( parseInt(substr)) {
                                  bonusArray.push({'keyname': removed, 'value': that.introAchievments[keyName], 'sorted': parseInt(substr)})
