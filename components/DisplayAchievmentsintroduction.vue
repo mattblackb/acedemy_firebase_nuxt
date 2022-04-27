@@ -28,14 +28,12 @@ export default({
                         
                        
                           if(keyName.includes('bonus')) {
-                          
                              if(keyName.includes('_')) {
                                if(keyName == 'natalia_bonus'){
                                   bonusArray.push({'keyname': 'introbonus', 'value': that.introAchievments[keyName], 'sorted':0})
                                } else {
-                                const removed = keyName.replace('_','');
+                                 const removed = keyName.replace('_','');
                                   var substr = (keyName).substring(13);
-                                  console.log(removed, substr)
                                     if( parseInt(substr)) {
                                  bonusArray.push({'keyname': removed, 'value': that.introAchievments[keyName], 'sorted': parseInt(substr)})
                                 }
@@ -54,6 +52,15 @@ export default({
                     });
                 temparray.sort((a,b) => (a.sorted > b.sorted) ? 1 : ((b.sorted > a.sorted) ? -1 : 0))
                 bonusArray.sort((a,b) => (a.sorted > b.sorted) ? 1 : ((b.sorted > a.sorted) ? -1 : 0))
+                bonusArray.map(function(keyName, index) {
+                  var keyname = bonusArray[index].keyname;
+                  console.log(keyname, that.introAchievments[keyname])
+                  if(that.introAchievments[keyname] == "1") {
+                    bonusArray[index].value = "1"
+                  } else {
+                     bonusArray[index].value = "0"
+                  }
+                })
                 console.log(temparray, bonusArray);
                 if(type === "bonus"){
                     return bonusArray
