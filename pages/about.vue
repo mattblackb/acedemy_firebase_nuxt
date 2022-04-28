@@ -19,36 +19,36 @@ During 2022 an ambitious schedule of release has been set.
 <b>A new Introductory Episode available April 2022</b> : 180 pages
 <br/><br/>
 <b>Episode One</b> was originally released in April 2016 : 1230 pages
-The remastered and expanded Episode One is due for release : 1680 pages
+<br/>The remastered and expanded Episode One is due for release : 1680 pages
 <br/><br/>
 <b>Episode Two</b> was released in July 2016 : 1851 pages
-The remastered and expanded Episode Two is due for release : 2585 pages
+<br/>The remastered and expanded Episode Two is due for release : 2585 pages
 <br/><br/>
 <b>Episode Three</b> was released in December 2016 :2264 pages
-The remastered and expanded Episode Three is in production : New release date TBC
+<br/>The remastered and expanded Episode Three is in production : <br/>New release date TBC
 <br/><br/>
 <b>Episode Four</b> was released in May 2017 : 2226 pages
-The remastered and expanded Episode Four is in production : New release date TBC
+<br/>The remastered and expanded Episode Four is in production :<br/> New release date TBC
 <br/><br/>
 <b>Episode Five</b> was released in December 2017 : 967 pages (Originally called 'A date with Bridgette : Part One')
-The remastered and expanded Episode Five is in production : New release date TBC
+<br/>The remastered and expanded Episode Five is in production : New release date TBC
 <br/><br/>
 <b>Episode Six</b> was released in January 2018 : 1666 pages (Originally called 'A date with Bridgette : Part Two')
-The remastered and expanded Episode Six is in production : New release date TBC
+<br/>The remastered and expanded Episode Six is in production : <br/>New release date TBC
 <br/><br/>
 <b>Episode Seven</b> was released in March 2019 : 2667 pages (Originally called 'A date with Bridgette : Part Three')
-The remastered and expanded Episode Seven is in production : New release date TBC
+<br/>The remastered and expanded Episode Seven is in production : New release date TBC
 <br/><br/>
 <b>Episode Eight</b> was released in October 2019 : 1762 pages (Originally called 'A date with Bridgette : Part Four')
-The remastered and expanded Episode Eight is in production : New release date TBC
+<br/>The remastered and expanded Episode Eight is in production :<br/> New release date TBC
 <br/><br/>
 <b>Episode Nine</b> Completed mid 2020 - yet to be released : 3002 pages
-The brand new Episode Nine is in production : Release date TBC
+<br/>The brand new Episode Nine is in production : <br/>Release date TBC
 <br/><br/>
 <b>Episode Ten</b> Almost completed mid 2021 - yet to be released : 2700 plus pages
-The brand new Episode Ten is in production : Release date TBC
+<br/>The brand new Episode Ten is in production : <br/>Release date TBC
 <br/><br/>
-<b>Episode Eleven</b> In early stages of production : Release date TBC
+<b>Episode Eleven</b> In early stages of production :<br/> Release date TBC
 </p>
       </v-col>
       </v-row>
