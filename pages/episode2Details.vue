@@ -11,9 +11,17 @@
 
     <h1>The Academy - Episode Two</h1>
 
-    <p>Descriptive text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis turpis at lorem vehicula, nec fermentum purus euismod. Sed venenatis diam quis ante sollicitudin ullamcorper. Quisque sed est in felis condimentum gravida. Suspendisse ante dui, fermentum nec commodo a, pulvinar sed ante. Quisque porttitor eu augue ac aliquam. Nunc at aliquet elit. 
-    
-    <br/><br/>Etiam vitae tortor purus. Donec ac lorem in ante volutpat commodo. Morbi egestas, justo in scelerisque congue, eros justo vulputate ipsum, a sollicitudin mi enim ut mi.</p>
+    <p>If you survived your first day at the Academy you can move on to a whole new day the next.<br/>
+    Meet some more of the characters, work on your report and solve a few more problems.<br/>
+    You also get a chance to really get to know more about the students by working with them in the photography studio. Who knows where that will lead…<br/><br/>
+    <br/><br/>You might get time for a workout with Amy, Laura and Lola in the gym during the afternoon of perhaps you'll choose to help Holly with a special project.<br/>
+    Principal Valentine also needs a progress update and a motivational chat.</br/></br/>
+    Day two can reveal many of the Academy's dirty little secrets if you know where to look.</br/></br/>
+    And Jodie is there for you too…</br/></br/>
+
+    <b>Episode Two - Part One</b> statistics : 866 pages : 786 images : 1 bonus scene
+<b>Episode Two - Part Two statistics</b> : 1990 pages : 3039 images : 3 bonus scenes
+    </p>
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/dayoneep2">Play part one of this Episode</NuxtLink></h2>

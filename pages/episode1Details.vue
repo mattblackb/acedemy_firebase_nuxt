@@ -11,11 +11,9 @@
 
     <h1>The Academy - Episode One</h1>
 
-    <p>Start your new at The Goodhead Academy job on Monday morning where you are introduced to many of the characters you will spend your week with.
-There are also a few essential problems to solve and some tasks that need completing before you can succesfully move on to the afternoon.
+    <p>Start your new job at <i>The Goodhead Academy</i> on Monday morning where you are introduced to many of the characters you will spend your week with. There are also a few essential problems to solve and some tasks that need completing before you can successfully move on to the afternoon.
 <br/><br/>
-More possibilities present themselves after your lunch break, where you are already proving popular amongst the students and the staff.
-Be careful though, Principal Valentine could fire you if she catches you crossing any lines!
+More possibilities present themselves after your lunch break, where you are already proving popular amongst the students and the staff. Be careful though, Principal Valentine could fire you if she catches you crossing any lines!
 <br/><br/>
 This episode is split into two parts; one for the morning and one for the afternoon.
 <br/><br/>

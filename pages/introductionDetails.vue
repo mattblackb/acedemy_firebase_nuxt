@@ -11,8 +11,7 @@
     <h1>The Academy - Introduction</h1>
 
    
-You start the story when you wake up in a hotel room with a former acquaintance.
-Natalia explains all about how the game works and offers an opportunity to test your skills and have some fun with her before you both have to leave for work.
+You start the story when you wake up in a hotel room with a former acquaintance. Natalia explains all about how the game works and offers an opportunity to test your skills and have some fun with her before you both have to leave for work.
 <br/><br/>
 You must play through this episode before you can move on to the next one.
 <br/><br/>
@@ -25,7 +24,7 @@ You must play through this episode before you can move on to the next one.
 
     <div v-if="showSaved">
     <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | <a href="/introduction">Replay Game</a> 
+                <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <a href="/introduction">Replay Game</a> 
     </div>
     </div>
            <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" class="pt-5"/>
