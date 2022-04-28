@@ -12,16 +12,17 @@
    
     <h3>Introduction</h3>
     <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | <a href="/introduction">Replay Game</a> 
+    
+        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <a href="/introduction">Replay Game</a> 
     </div>
         <h3>Episode 1: Part One</h3>
     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | <a href="/dayoneep2">Continue Game</a>
+        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <a href="/dayoneep2">Continue Game</a>
     </div>
 
        <h3>Episode 1: Part Two</h3>
     <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span>
+        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span>
     </div>
 
    
