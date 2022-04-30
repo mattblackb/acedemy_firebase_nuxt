@@ -20,7 +20,7 @@
     And Jodie is there for you too…</br/></br/>
 
     <b>Episode Two - Part One</b> statistics : 866 pages : 786 images : 1 bonus scene<br/>
-<b>Episode Two - Part Two</b>statistics : 1990 pages : 3039 images : 3 bonus scenes
+<b>Episode Two - Part Two</b> statistics : 1990 pages : 3039 images : 3 bonus scenes
     </p>
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->

@@ -48,7 +48,8 @@
         <img src="/imgs/header_new.png" class="textAlignCenter">
       </v-row>
       <v-row>
-      <v-col cols=9 >
+      <v-col cols="12"  sm="12"
+        md="9" >
          <v-btn
       class="ma-2"
       to="/"
@@ -76,7 +77,8 @@
     </v-btn>
   </v-col>
 
-      <v-col cols=3>
+      <v-col cols="12"  sm="12"
+        md="3">
        <v-btn   to="/buy" v-if="currentUser">
             Buy Credits
         </v-btn>
@@ -127,6 +129,7 @@ export default {
   display: block;
   margin: 0 auto;
 }
+img {max-width: 96%; padding: 2%;}
   .hidePrying {
     display: block;
   }

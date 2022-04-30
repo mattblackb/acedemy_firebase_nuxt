@@ -8,7 +8,7 @@
 			<!-- <p>Purchase credits?</p> -->
 			<!-- <button type="button" class="btn btn-primary">Buy Credits</button> -->
 			<!-- <div ref="paypal"></div> -->
-			<h3>Currently we are unable to take payments</h3>
+			<h3>Buy credit facility currently disabled</h3>
 		
     
 		</div>
@@ -29,7 +29,7 @@ export default({
 			currentBuy: this.$route.params.id,
 			selectedStory: {},
 			currentStatus: false,
-			currentMessage: 'Sadly you do not have enough credits.',
+			currentMessage: 'You do not have enough credits.',
 			storyId: ""
 		}
 	},
@@ -98,7 +98,7 @@ export default({
 			//Check that user hasn't already bought
 			personData.available_modules.map((module) => {
 				if(module === this.currentmodule){
-					this.currentMessage = 'You already have access to this module'+this.currentmodule
+					this.currentMessage = 'You already have access to this bonus scene ';
 					this.currentStatus = false;
 				}
 				})
@@ -112,7 +112,7 @@ export default({
 			personData.credits = personData.credits - this.selectedStory.cost;
 			  this.$store.commit('setuser/updatePerson', personData)
                 this.$store.commit('SET_PEOPLE', personData)
-			this.currentMessage = 'Thank you - you have now access to this module please visit the homepage';
+			this.currentMessage = 'Thank you - you have now unlocked this scene';
 			this.currentStatus = false;
 		},
     },

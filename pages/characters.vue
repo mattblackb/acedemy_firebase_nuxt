@@ -66,7 +66,7 @@
         <v-col cols="4">
            <img src="imgs/characters/character_profiles_sebastian.jpg">
       </v-col>
-    \
+    
       </v-row>
     </v-container>
 </main>

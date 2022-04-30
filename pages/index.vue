@@ -33,7 +33,7 @@ However you choose to play you can be sure to have fun along the way.
 
     <h1>Welcome {{userDetails.name}}</h1>
     <h2 v-if="userDetails" >Available Credits: {{userDetails.credits}}</h2>
-    <h2>Current Available stories</h2>
+    <h2>Current Available Episodes</h2>
      <a href="/introductionDetails"  ><img src="/imgs/indeximgs/index_intro.jpg" /></a>
         <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep1_locked.jpg" /></a>
                <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep2_locked.jpg" /></a>

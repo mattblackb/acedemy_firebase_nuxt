@@ -16,7 +16,7 @@ It also gave dsp3000 an opportunity to improve and expand upon elements of the s
 <br/><br/>
 During 2022 an ambitious schedule of release has been set.
 <br/><br/>
-<b>A new Introductory Episode available April 2022</b> : 180 pages
+A new <b>Introductory Episode</b> available April 2022 : 180 pages
 <br/><br/>
 <b>Episode One</b> was originally released in April 2016 : 1230 pages
 <br/>The remastered and expanded Episode One is due for release : 1680 pages
@@ -24,7 +24,7 @@ During 2022 an ambitious schedule of release has been set.
 <b>Episode Two</b> was released in July 2016 : 1851 pages
 <br/>The remastered and expanded Episode Two is due for release : 2585 pages
 <br/><br/>
-<b>Episode Three</b> was released in December 2016 :2264 pages
+<b>Episode Three</b> was released in December 2016 : 2264 pages
 <br/>The remastered and expanded Episode Three is in production : <br/>New release date TBC
 <br/><br/>
 <b>Episode Four</b> was released in May 2017 : 2226 pages
