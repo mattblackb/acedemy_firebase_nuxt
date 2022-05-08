@@ -1,43 +1,61 @@
 <template>
 <main>
      <NavBar />
+      <v-container v-if="!userDetails">
+        <img src="/imgs/main_page_image.png" style="width:100%">
+      </v-container>
   <v-container v-if="userDetails">
      <v-row>
       <v-col cols="12" md="6">
-            <h2 >About this site</h2><p><b>The Academy</b> is a multi episode series of interactive erotic games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one part into the next.</p><strong>The Academy</strong> is a multi episode series of interactive erotic games created by dsp3000.<br> Each part is designed to be played one after the other with achievements carrying over from one part into the next.<br><br><strong>Episode One</strong> was released in April 2016 : <em>1230 pages</em><br><strong>Episode Two</strong> was released in July 2016 : <em>1851 pages</em><br><strong>Episode Three</strong> was released in December 2016 : <em>2264 pages</em><br><strong>Episode Four</strong> was released in May 2017 : <em>2226 pages</em><br><strong>Episode Five</strong> was released in December 2017 : <em>967 pages</em><br><strong>Episode Six</strong> was released in January 2018 : <em>1666 pages</em><br><strong>Episode Seven</strong> was released in March 2019 : <em>2667 pages</em><br><strong>Episode Eight</strong> was released in October 2019 : <em>1762 pages</em><br><strong>Episode Nine</strong> Completed mid 2020 - yet to be released : <em>3002 pages</em><br><strong>Episode Ten</strong> Almost completed mid 2021 - yet to be released : <em>2700 plus pages</em><br><strong>Episode Eleven</strong> In early stages of production.<br></v-col>
+            <h2 >About The Academy</h2><p>
+ <br/><br/>
+
+            <b>The Academy</b> is a multi-episode series of adult interactive games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one part into the next.
+
+ <br/><br/>
+ The game is designed to have multiple story paths and multiple possibilities and achievements to discover. The more you play the more you can find.
+  <br/><br/>
+  The story is split up into episodes, with checkpoints along the way. By creating a free user account, you can save your progress at these checkpoints, play episodes again to see what else you can find, or continue to the next part. There are also many bonus scenes that can only be unlocked by spending credits.
+  <br/><br/>
+  <h2>The story</h2>
+You are a consultant hired for the week to assess what needs to happen in the Media Department to ensure a prosperous future at the Goodhead Academy. <br/><br/>
+Head of department Bridgette is there to help you out and at the end of the week you'll be expected to report your findings to Principal Valentine.<br/><br/>
+Along the way you get to meet the rest of the staff and student body. Everyone wants to get to know you while you are there, some of them will help you and some of them will be a welcome or perhaps unwelcome distraction.<br/><br/>
+It's easy to get tempted from the work you have to do and that can of course be lots of fun. All you must to do is avoid getting fired!
+
+
+ <br/><br/>
+However you choose to play you can be sure to have fun along the way.
+ </p>
+ <img :src="selectedImage">
+      </v-col>
       <v-col cols="12" md="6">
 
     <h1>Welcome {{userDetails.name}}</h1>
     <h2 v-if="userDetails" >Available Credits: {{userDetails.credits}}</h2>
-    <h2>Current Available stories</h2>
-        <ul>
+    <h2>Current Available Episodes</h2>
+     <a href="/introductionDetails"  ><img src="/imgs/indeximgs/index_intro.jpg" /></a>
+        <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep1_locked.jpg" /></a>
+               <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep2_locked.jpg" /></a>
+        <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
-            <li>Day One - View the tutorial on how this site works <a href="/dayone"  >View episode</a></li>
+        
             </template>
             <template v-else>
             <li>Day One - View the tutorial on how this site works <a href="/auth/signin"  >Login</a></li>
             </template>
             
-        </ul>
+        </ul> -->
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
  
-    <template v-if="userDetails">
-        <h2>Current Available bonuses</h2>
-        <div  v-for="eachModule in userDetails.available_modules"  :key="eachModule">
-        <ul v-html="checkforAvailableBonus(eachModule)"></ul>
-        </div>
-    </template>
 
-    <template v-if="userDetails">
-       <v-btn @click="$router.push('/auth/signout')">Logout</v-btn>
-    </template>
       </v-col>
      </v-row>
      <v-row>
          <v-col cols="12" class="hidePrying">
-                 <img src="imgs/bg1.png">
+                
          </v-col>
      </v-row>
   </v-container>
@@ -52,7 +70,11 @@ export default {
             stories: null,
             user: null,
             availablemodules: null,
-            currentUser: false
+            currentUser: false,
+            selectedImage: 'imgs/4.png',
+            images: [
+                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png'
+            ]
 		}
 	},
  
@@ -76,7 +98,10 @@ export default {
                  let storiesData = this.$store.state;
                  this.stories = storiesData.stories;
               
-            }
+            },
+            randomItem () {
+      return this.images[Math.floor(Math.random()*this.images.length)];
+    }
     },
     computed:{
     userDetails (){
@@ -89,10 +114,13 @@ export default {
    async mounted() {
        await this.setStories();
        console.log('Stories',this.stories);
-    }
+    },
+    created() {
+   this.selectedImage = this.randomItem(this.images)
+}
     
 }
 </script>
-<style>
-    img {width: 100%}
+<style scoped>
+img {max-width: 100%;}
 </style>

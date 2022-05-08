@@ -22,6 +22,6 @@ export default({
 </script>
 
 <style scoped>
-img {max-width: 100%}
+img {max-width: 100%; border: solid 1px black}
 .split5 {min-width: 20%}
 </style>

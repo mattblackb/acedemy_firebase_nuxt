@@ -8,7 +8,7 @@
     <h1>Introduction</h1>
         <div class="container">
             <iframe
-            src="../academy_intro/begin.html"
+            src="../academy_intro/game/natalia1.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
@@ -54,7 +54,8 @@ export default {
         dialogSave: false,
         cookieJson: '',
         currentCreditsneeded: [],
-         currentmodule: ""
+         currentmodule: "",
+            form_dirty: true
       }
     },
     computed:{
@@ -65,9 +66,15 @@ export default {
           }
       }
     },
-    	methods: {
+    methods: {
             AddCredits() {
                 this.dialog = true
+            },
+            Getname() {
+                if(this.$store.state.person) {
+              return this.$store.state.person
+                }
+            
             },
              greet(event) {
               
@@ -80,7 +87,7 @@ export default {
                 }
             },
             checkAvailable(id) { //check that the user is logged in (likely)
-                if(!this.$store.state.user.uid) {
+                if(!this.$store.state.user) {
                     return false
                 } else {
                     //Logged in check for available
@@ -97,8 +104,7 @@ export default {
                     }
                 }
             },
-              saveProgress(event) { //check that the user is logged in (likely)
-      
+            saveProgress(event) { //check that the user is logged in (likely)
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
@@ -106,24 +112,37 @@ export default {
                          this.cookieJson = event;
                         this.dialogSave = true
                      }
-                    // //Logged in check for available
-                    // if(this.$store.state.person.available_modules.length > 0){
-                    //     if(this.$store.state.person.available_modules.includes(id)) {
-                    //         //user has already bought the module change the button on the iframe src
-                    //         return true
-                    //     } else {
-                    //         return false
-                    //     }
-                      
-                    // } else {
-                    //     return false
-                    // }
                 }
+            },
+           beforeWindowUnload (e) {
+        
+                    if (this.form_dirty) {
+                        e.preventDefault()
+                        e.returnValue = ''
+                    }
             }
+            
+            
+            
         },
+        beforeRouteLeave (to, from, next) {
+            if (this.form_dirty) {
+                next(false)
+                window.location = to.path // this is the trick
+            } else {
+                next()
+            }
+            },
+
+            beforeDestroy () {
+                window.removeEventListener('beforeunload', this.beforeWindowUnload)
+            },
     mounted () {
        window.c_1 = this
-    }
+    },
+    created () {
+    window.addEventListener('beforeunload', this.beforeWindowUnload)
+  }
 }
 </script>
 

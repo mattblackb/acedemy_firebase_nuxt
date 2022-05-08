@@ -9,8 +9,10 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'dsp3000.games',
-    title: 'dsp3000.games',
+
+    titleTemplate: '%s',
+    title: 'dsp3000 games',
+
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

@@ -1,7 +1,10 @@
 <template>
 <main>
     <NavBar />
-    <v-container>
+    <v-container v-if="buyMaintenance">
+        <h1>Credit payment facility currently disabled</h1>
+    </v-container>
+    <v-container v-else >
     <h1>Buy credits</h1>
 
     <p>Buy 100 credits for $10 <v-btn @click="creditCost = 10">Choose $10</v-btn></p>
@@ -32,6 +35,7 @@ import { mapActions, mapGetters } from "vuex";
 export default ({
   name: "BuyCredits",
    data: () => ({
+     buyMaintenance: true,
      creditCost: 10,
          snackbar: false,
       snackbarText: 'No error message',
