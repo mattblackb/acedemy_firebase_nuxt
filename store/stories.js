@@ -13,6 +13,7 @@ export const state = () => ({
                 includeID.id = doc.id;
                 returnedDocs.push(includeID);
             });
+            console.log('returnedDocs',returnedDocs)
         state.commit("SET_STORIES", returnedDocs);  
           });
         //  
@@ -27,6 +28,7 @@ export const state = () => ({
 
   const getters = {
     getStories(state) {
+      console.log('state', state);
       return state.stories
     }
     

@@ -7,16 +7,16 @@
 
        <h1>Episode 1 - Part One</h1>
         <div class="container">
-          <!--  <iframe
-               src="../academy_episode_1/begin.html"
+           <iframe
+               src="../academy1_pt1/game/start1.0.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
             frameborder="0"
             scrolling="no"
             class="video"
-            ></iframe> -->
-            <h2>Currently Unavailable</h2>
+            ></iframe>
+            <!-- <h2>Currently Unavailable</h2> -->
         </div>
 
 
@@ -79,6 +79,12 @@ export default {
                             this.currentCreditsneeded = parseInt(myArray[1])
                             this.currentmodule = myArray[0]
                 }
+            },
+               Getname() {
+                if(this.$store.state.person) {
+              return this.$store.state.person
+                }
+            
             },
             checkAvailable(id) { //check that the user is logged in (likely)
                 if(!this.$store.state.user.uid) {

@@ -1,7 +1,6 @@
 
 //MB Added post message
 if(parent.c_1){
-    console.log("In App")
     } else {
         window.location.href = "/";
     }

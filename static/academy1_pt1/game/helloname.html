@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<title>The Academy: Episode One</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+
+
+<body onLoad="disallowNav()">
+
+<div align="center">
+
+<table width="1000" border="0">
+
+  <tr>
+
+    <td><p><strong>SELECT YOUR NAME</strong></p>
+	
+	<script type="text/javascript">
+
+<!--
+
+function WriteCookie()
+
+{
+
+   if( document.myform.customer.value == "" ){
+
+      alert("Enter some value!");
+
+      return;
+
+   }
+
+
+
+   cookievalue= escape(document.myform.customer.value) + ";";
+
+   document.cookie="playername=" + cookievalue;
+
+   alert("Setting Cookies : " + "playername=" + cookievalue );
+
+}
+
+//-->
+
+    </script>
+
+      </head>
+
+      <body>
+
+      <form name="myform" action="">
+        
+        <p>Enter the first name of your character, then select 'Use this name'. When you are finished, click continue:</p>
+  
+  <p> 
+    
+    <input type="text" name="customer"/>
+    
+    <input type="button" value="Use this name" onClick="WriteCookie();"/>
+    </p>
+  
+  <p>&nbsp;</p>
+  
+  <p><a href="start1.0.html"><img src="buttonsetc/continue.gif" width="850" height="100" border="0"></a></p>
+  
+  <p>&nbsp;</p>
+      </form></td>
+    </tr>
+</table>
+
+</div>
+
+</body>
+
+</html>
+
