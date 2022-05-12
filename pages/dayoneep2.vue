@@ -3,88 +3,149 @@
      <NavBar />
   <v-container>
      <v-row>
-     <v-col cols="12" md="6">
-       <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-         <img :src="selectedImage">
-     </v-col>
-      <v-col cols="12" md="6">
+      <v-col cols="12">
 
-    <h1>YOU CAN'T DO THAT YET</h1>
+       <h1>Episode 1 - Part Two</h1>
+        <div class="container">
+           <!-- <iframe
+               src="../academy1_pt2/game/exitannie23_locked.html"
+            width="100%"
+            height= auto
+            style="border: 1px solid #EEE; background: white"
+            frameborder="0"
+            scrolling="no"
+            class="video"
+            ></iframe> -->
+            <h2>Currently Unavailable</h2>
+        </div>
 
-    <p>Before you play this episode you need to successfully complete the one before it</p>
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-         <h2 class="clickable" > <NuxtLink to="/episodes">View Episodes</NuxtLink></h2>
 
+        <v-dialog
+        v-model="dialog"
+        width="500"
+        >
+            <v-card>
+                    <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
+            </v-card>
+        </v-dialog>
+         <v-dialog
+        v-model="dialogSave"
+        width="500"
+        >
+            <v-card>
+            <h1>Save Game</h1>
+            <SaveGame :cookieJson="cookieJson" />
+            </v-card>
+        </v-dialog>
 
-
-
- 
       </v-col>
-      <!-- <v-col cols="8">
-          <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction'" :introAchievments="introchosen" />
-          <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone'" :introAchievments="introchosen" />
-           <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone2'" :introAchievments="introchosen" />
-        </v-col> -->
      </v-row>
   </v-container>
 </main>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapMutations } from "vuex";
 export default {  
-  	data() {
-		return {
-			savedintroductions: [],
-            introchosen: {},
-            showIntroduction: false,
-            showSaved: false,
-              selectedImage: 'imgs/4.png',
-              images: [
-                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png'
-            ]
-		}
-	},
-  methods: {
-    setIntroduction(introductionObject) {
-        this.introchosen = introductionObject;
-        this.showIntroduction = true;
+    data () {
+      return {
+        dialog: false,
+        dialogSave: false,
+        cookieJson: '',
+        currentCreditsneeded: [],
+         currentmodule: ""
+      }
     },
-     randomItem () {
-      return this.images[Math.floor(Math.random()*this.images.length)];
-    }
-  },
     computed:{
+      ...mapActions(["updatePerson"]),
       userDetails (){
           if(this.$store.state.person) {
-              return this.$store.state.person;
-          }
-      },
-      introductionGame (){
-          if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="introduction")
-          }
-      },
-         dayonenGame (){
-          if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="dayone")
-          }
-      },
-       dayonenGame2 (){
-          if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="dayone2")
+              return this.$store.state.person
           }
       }
-    } ,
-     created() {
-   this.selectedImage = this.randomItem(this.images)
-}
+    },
+    	methods: {
+            AddCredits() {
+                this.dialog = true
+            },
+             greet(event) {
+              
+                // `event` is the native DOM event
+                    if (event) {
+                        this.dialog = true
+                            const myArray = event.split("|");
+                            this.currentCreditsneeded = parseInt(myArray[1])
+                            this.currentmodule = myArray[0]
+                }
+            },
+               Getname() {
+                if(this.$store.state.person) {
+              return this.$store.state.person
+                }
+            
+            },
+            checkAvailable(id) { //check that the user is logged in (likely)
+                if(!this.$store.state.user.uid) {
+                    return false
+                } else {
+                    //Logged in check for available
+                    if(this.$store.state.person.available_modules.length > 0){
+                        if(this.$store.state.person.available_modules.includes(id)) {
+                            //user has already bought the module change the button on the iframe src
+                            return true
+                        } else {
+                            return false
+                        }
+                      
+                    } else {
+                        return false
+                    }
+                }
+            },
+              saveProgress(event) { //check that the user is logged in (likely)
+      
+                if(!this.$store.state.user.uid) {
+                    return false
+                } else {
+                     if (event) {
+                         this.cookieJson = event;
+                        this.dialogSave = true
+                     }
+                    // //Logged in check for available
+                    // if(this.$store.state.person.available_modules.length > 0){
+                    //     if(this.$store.state.person.available_modules.includes(id)) {
+                    //         //user has already bought the module change the button on the iframe src
+                    //         return true
+                    //     } else {
+                    //         return false
+                    //     }
+                      
+                    // } else {
+                    //     return false
+                    // }
+                }
+            }
+        },
+    mounted () {
+       window.c_1 = this
+    }
 }
 </script>
+
 <style scoped>
- .clickable {
-   cursor: pointer;
+.container {
+    position: relative;
+     width: 100%;
+     height: 125%;
+     padding-bottom: 56.25%;
  }
- h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
+ .video {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 125%;
+ }
 </style>

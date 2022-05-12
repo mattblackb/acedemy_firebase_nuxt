@@ -15,7 +15,7 @@
         
         <v-row> 
             <v-col cols="12">
-                <a href="/episode1Details"  ><img src="/imgs/episodes/banner_ep1_locked.jpg" /></a>
+                <a href="/episode1Details"  ><img src="/imgs/episodes/banner_ep1_unlocked.jpg" /></a>
             </v-col>
         </v-row>
         
