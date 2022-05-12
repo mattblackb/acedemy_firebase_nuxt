@@ -24,8 +24,7 @@
                 <a href="/episode2Details"  ><img src="/imgs/episodes/banner_ep2_locked.jpg" /></a>
             </v-col>
         </v-row>
-      </v-col>
-      </v-row>
+   
     </v-container>
 </main>
 </template>
