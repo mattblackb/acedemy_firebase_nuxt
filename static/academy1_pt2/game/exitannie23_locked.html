@@ -75,16 +75,29 @@
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/exitannie23_locked.jpg" alt="" usemap="#Map" />
+    <td width="1000" class="relativePosition"><img src="images/unlock/annie_locked.png" alt="" usemap="#Map" id="buybuttonImage"/>
+   <img src="images/unlock/use_75.png" id="buybutton" onclick="emitCheck('5GvSh36NPJVmgz0LKXeX|75')">
+      <map name="Map" id="Map">
+
+       
+		<area shape="rect" coords="380,650,620,720" href="exitannie22.html" title="Go back" />
+		
+	</map>
+   
+      </td>
+       <td width="1000" class="relativePosition">
+       <img src="images/unlock/annie_unlocked.png" alt="" usemap="#Map"  id="availableButtonImage"/>
 
       <map name="Map" id="Map">
 
-        <area shape="rect" coords="300,555,690,635" href="exitannie23_unlocked.html" title="Use 50 Credits" />
+       
 		<area shape="rect" coords="380,650,620,720" href="exitannie22.html" title="Go back" />
-		
-		</map>
+		 
+	</map>
 
-</td>
+    <a href="anniebonus1.html" ><img src="images/unlock/unlocked_button.jpg" id="availableButton"> </a>
+      </td>
+    
     </tr>
 </table>
 
@@ -109,4 +122,12 @@
 </body>
 
 </html>
+<style>
+  #availableButton,#availableButtonImage {display: none}
+  .relativePosition {position: relative}
+  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
+</style>
+<script>
+  hideShowButton();
+</script>
 

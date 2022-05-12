@@ -10,10 +10,10 @@
            <iframe
                src="../academy1_pt1/game/start1.0.html"
             width="100%"
-            height= auto
+            height= "100px"
             style="border: 1px solid #EEE; background: white"
             frameborder="0"
-            scrolling="no"
+            scrolling="yes"
             class="video"
             ></iframe>
             <!-- <h2>Currently Unavailable</h2> -->
@@ -138,7 +138,8 @@ export default {
 .container {
     position: relative;
      width: 100%;
-     height: 125%;
+     height: 100px;
+     max-height: 1000px;
      padding-bottom: 56.25%;
  }
  .video {
@@ -146,6 +147,6 @@ export default {
      top: 0;
      left: 0;
      width: 100%;
-     height: 125%;
+     height: 1000px;
  }
 </style>

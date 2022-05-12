@@ -7,16 +7,16 @@
 
        <h1>Episode 1 - Part Two</h1>
         <div class="container">
-           <!-- <iframe
-               src="../academy1_pt2/game/exitannie23_locked.html"
+           <iframe
+               src="../academy1_pt2/game/start1.5.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
             frameborder="0"
-            scrolling="no"
+            scrolling="yes"
             class="video"
-            ></iframe> -->
-            <h2>Currently Unavailable</h2>
+            ></iframe>
+            <!-- <h2>Currently Unavailable</h2> -->
         </div>
 
 
@@ -138,14 +138,13 @@ export default {
 .container {
     position: relative;
      width: 100%;
-     height: 125%;
-     padding-bottom: 56.25%;
+     height: 1000px;     padding-bottom: 56.25%;
  }
  .video {
      position: absolute;
      top: 0;
      left: 0;
      width: 100%;
-     height: 125%;
+     height: 1000px;
  }
 </style>

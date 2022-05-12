@@ -17,7 +17,7 @@ You must play through this episode before you can move on to the next one.
 <br/><br/>
 <b>Introduction statistics</b> : 180 pages : 478 images : 1 bonus scene
 <br/><br/>
-</p>
+
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/introduction">Play this Episode</NuxtLink></h2>
     <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>

@@ -1,7 +1,7 @@
 <template>
 	
 
-      <AcheivementImage :introAchievments="sortArryObjects()" />
+      <AchievementImage11 :introAchievments="sortArryObjects()" />
 
  
 </template>
@@ -21,6 +21,7 @@ export default({
     },
     methods: {
         sortArryObjects ( ) {
+          console.log('that', this.introAchievments);
                 var temparray = new Array();
                 let that = this 
                   Object.keys(that.introAchievments).map(function(keyName, index) {
