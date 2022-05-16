@@ -3,6 +3,7 @@
 
       <AcheivementImageIntroduction :introAchievments="sortArryObjects('achievements')" :bonusAchievments="sortArryObjects('bonus')"/>
 
+
  
 </template>
 <script>

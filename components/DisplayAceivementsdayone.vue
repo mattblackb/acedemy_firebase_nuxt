@@ -30,9 +30,10 @@ export default({
                         
                        
                           if(keyName.includes('bonus')) {
-                             if(keyName.includes('_')) {
-                               if(keyName == 'natalia_bonus'){
-                                  bonusArray.push({'keyname': 'introbonus', 'value': that.introAchievments[keyName], 'sorted':0})
+                            console.log('keyname', keyName,  that.introAchievments[keyName]);
+                            //  if(keyName.includes('_')) {
+                               if(keyName == 'ep1hollybonus'){
+                                  bonusArray.push({'keyname': 'ep1hollybonus', 'value': that.introAchievments[keyName], 'sorted':0})
                                } else {
                                  const removed = keyName.replace('_','');
                                   var substr = (keyName).substring(13);
@@ -43,7 +44,7 @@ export default({
                                  
                              
                               // bonusArray.push({'keyname': keyName, 'value': that.introAchievments[keyName], 'sorted': parseInt(substr)})
-                             }
+                            //  }
                           } else {
                             var substr = (keyName).substring(6);
 
