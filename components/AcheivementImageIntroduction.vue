@@ -22,7 +22,7 @@
     <v-col v-for="(achievement, name) in bonusAchievments"   cols="2" class="split5">
         <span v-if="achievement.value == 0 || achievement.value == 1" >
            <img  v-if=" achievement.value == 1" :src="'/academy_intro/game/buttonsetc/endcards/' + achievement.keyname + '.jpg'"  >
-         <img  v-if=" achievement.value == 0 && achievement.keyname != 'introbonus'"" :src="'/academy_intro/game/buttonsetc/endcards/ach_blank.jpg'"  >
+         <img  v-if=" achievement.value == 0 && achievement.keyname != 'introbonus'" :src="'/academy_intro/game/buttonsetc/endcards/ach_blank.jpg'"  >
           <img  v-if=" achievement.value == 0 && achievement.keyname == 'introbonus'" :src="'/academy_intro/game/buttonsetc/endcards/introbonus_blank.jpg'"  >
 
         </span>
