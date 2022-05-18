@@ -70,6 +70,10 @@ export default {
             AddCredits() {
                 this.dialog = true
             },
+               returnAchievements() {
+                console.log(this.$store.state.setCurrentGame.chosenAcheivements);
+                return this.$store.state.setCurrentGame.chosenAcheivements
+            },
              greet(event) {
               
                 // `event` is the native DOM event

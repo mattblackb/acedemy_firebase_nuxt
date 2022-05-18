@@ -8,7 +8,7 @@
     <h1>Introduction</h1>
         <div class="container">
             <iframe
-            src="../ep1pt1/game/0_test_ep1pt1.html"
+            src="../ep1pt2/game/0_test_ep1pt2.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
