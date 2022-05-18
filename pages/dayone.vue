@@ -4,11 +4,11 @@
   <v-container>
      <v-row>
       <v-col cols="12">
-
+          
        <h1>Episode 1 - Part One</h1>
         <div class="container">
            <iframe
-               src="../academy1_pt1/game/start1.0.html"
+               src="../ep1pt1/game/checksave1.5.html"
             width="100%"
             height= "100px"
             style="border: 1px solid #EEE; background: white"
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { mapActions, mapMutations } from "vuex";
+import { mapActions, mapMutations, mapGetters } from "vuex";
 export default {  
     data () {
       return {
@@ -60,15 +60,24 @@ export default {
     },
     computed:{
       ...mapActions(["updatePerson"]),
+      ...mapGetters("setCurrentGame",["getAchievements"]),
       userDetails (){
           if(this.$store.state.person) {
               return this.$store.state.person
           }
+      },
+      Achievements() {
+          return this.$store.state.chosenAcheivements;
       }
+      
     },
     	methods: {
             AddCredits() {
                 this.dialog = true
+            },
+            returnAchievements() {
+                console.log(this.$store.state.setCurrentGame.chosenAcheivements);
+                return this.$store.state.setCurrentGame.chosenAcheivements
             },
              greet(event) {
               

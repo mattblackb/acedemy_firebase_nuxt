@@ -28,7 +28,6 @@ export const state = () => ({
 
   const getters = {
     getStories(state) {
-      console.log('state', state);
       return state.stories
     }
     

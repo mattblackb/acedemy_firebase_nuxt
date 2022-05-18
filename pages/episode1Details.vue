@@ -23,7 +23,7 @@ Good luck!
 <b>Episode One - Part Two</b> statistics : 1070 pages : 1185 images : 2 bonus scenes</p>
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/dayone">Play part one of this Episode</NuxtLink></h2>
-           <h2 class="clickable" > <NuxtLink to="/dayoneep2">Play part two of this Episode</NuxtLink></h2>
+           <!-- <h2 class="clickable" > <NuxtLink to="/dayoneep2">Play part two of this Episode</NuxtLink></h2> -->
     <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>
 
     <div v-if="showSaved">

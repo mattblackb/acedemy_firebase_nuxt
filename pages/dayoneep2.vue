@@ -8,7 +8,7 @@
        <h1>Episode 1 - Part Two</h1>
         <div class="container">
            <iframe
-               src="../academy1_pt2/game/start1.5.html"
+               src="../ep1pt2/game/checksave2.0.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"

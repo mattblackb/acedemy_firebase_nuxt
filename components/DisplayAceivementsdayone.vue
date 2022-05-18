@@ -25,15 +25,15 @@ export default({
                 var temparray = new Array();
                 var bonusArray = new Array();
                 let that = this 
-                          console.log('that day one', this.introAchievments);
+      
                   Object.keys(that.introAchievments).map(function(keyName, index) {
                         
                        
                           if(keyName.includes('bonus')) {
                             console.log('keyname', keyName,  that.introAchievments[keyName]);
                             //  if(keyName.includes('_')) {
-                               if(keyName == 'ep1hollybonus'){
-                                  bonusArray.push({'keyname': 'ep1hollybonus', 'value': that.introAchievments[keyName], 'sorted':0})
+                               if(keyName == 'ep1bonus1'){
+                                  bonusArray.push({'keyname': 'ep1bonus1', 'value': that.introAchievments[keyName], 'sorted':0})
                                } else {
                                  const removed = keyName.replace('_','');
                                   var substr = (keyName).substring(13);
@@ -57,7 +57,6 @@ export default({
                 bonusArray.sort((a,b) => (a.sorted > b.sorted) ? 1 : ((b.sorted > a.sorted) ? -1 : 0))
                 bonusArray.map(function(keyName, index) {
                   var keyname = bonusArray[index].keyname;
-                  console.log(keyname, that.introAchievments[keyname])
                   if(that.introAchievments[keyname] == "1") {
                     bonusArray[index].value = "1"
                   } else {

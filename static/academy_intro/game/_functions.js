@@ -42,6 +42,8 @@ if(parent.c_1){
         var myCookies = getCookies(); //GET JSON ARRAY
         myCookiesJSON = JSON.stringify(myCookies);
         let returnedState = parent.c_1.saveProgress(myCookiesJSON)
+
+        window.location.href ="checksave1.0.html";
         return returnedState
     }
     
