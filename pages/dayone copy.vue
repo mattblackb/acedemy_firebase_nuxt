@@ -4,13 +4,13 @@
   <v-container>
      <v-row>
       <v-col cols="12">
-
-       <h1>Episode 1 - Part Two</h1>
+          
+       <h1>Episode 1 - Part One</h1>
         <div class="container">
            <iframe
-               src="../ep1pt2/game/start1.5.html"
+               src="../ep1pt1/game/start1.0.html"
             width="100%"
-            height= auto
+            height= "100px"
             style="border: 1px solid #EEE; background: white"
             frameborder="0"
             scrolling="yes"
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { mapActions, mapMutations } from "vuex";
+import { mapActions, mapMutations, mapGetters } from "vuex";
 export default {  
     data () {
       return {
@@ -60,17 +60,22 @@ export default {
     },
     computed:{
       ...mapActions(["updatePerson"]),
+      ...mapGetters("setCurrentGame",["getAchievements"]),
       userDetails (){
           if(this.$store.state.person) {
               return this.$store.state.person
           }
+      },
+      Achievements() {
+          return this.$store.state.chosenAcheivements;
       }
+      
     },
     	methods: {
             AddCredits() {
                 this.dialog = true
             },
-               returnAchievements() {
+            returnAchievements() {
                 console.log(this.$store.state.setCurrentGame.chosenAcheivements);
                 return this.$store.state.setCurrentGame.chosenAcheivements
             },
@@ -142,7 +147,9 @@ export default {
 .container {
     position: relative;
      width: 100%;
-     height: 1000px;     padding-bottom: 56.25%;
+     height: 100px;
+     max-height: 1000px;
+     padding-bottom: 56.25%;
  }
  .video {
      position: absolute;

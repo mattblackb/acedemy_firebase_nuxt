@@ -17,7 +17,7 @@
     </div>
         <h3>Episode 1: Part One</h3>
     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/dayone')"> Play next Episode</span>
+        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/dayoneep2')"> Play next Episode</span>
     </div>
 
        <h3>Episode 1: Part Two</h3>

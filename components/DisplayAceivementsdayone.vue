@@ -47,10 +47,11 @@ export default({
                             //  }
                           } else {
                             var substr = (keyName).substring(6);
-
+ if(keyName.includes('ep1ach')) {
                             if( parseInt(substr)) {
                             temparray.push({'keyname': keyName, 'value': that.introAchievments[keyName], 'sorted': parseInt(substr)})
                             }
+                          }
                           }
                     });
                 temparray.sort((a,b) => (a.sorted > b.sorted) ? 1 : ((b.sorted > a.sorted) ? -1 : 0))
