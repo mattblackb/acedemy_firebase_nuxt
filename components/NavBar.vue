@@ -58,9 +58,9 @@
     </v-btn>
         <v-btn
       class="ma-2"
-      to="/episodes"
+      to="/chapters"
     >
-      Episodes
+      Chapters
     </v-btn>
 
        <v-btn

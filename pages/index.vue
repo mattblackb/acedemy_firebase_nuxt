@@ -35,8 +35,8 @@ However you choose to play you can be sure to have fun along the way.
     <h2 v-if="userDetails" >Available Credits: {{userDetails.credits}}</h2>
     <h2>Current Available Episodes</h2>
      <a href="/introductionDetails"  ><img src="/imgs/indeximgs/index_intro.jpg" /></a>
-        <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep1.jpg" /></a>
-               <a href="/episode2Details"  ><img src="/imgs/indeximgs/index_ep2_locked.jpg" /></a>
+        <a href="/chapter1Details"  ><img src="/imgs/indeximgs/index_ep1.jpg" /></a>
+               <a href="/chapter2Details"  ><img src="/imgs/indeximgs/index_ep2.jpg" /></a>
         <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">

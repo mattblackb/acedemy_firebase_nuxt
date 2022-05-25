@@ -17,12 +17,12 @@
     </div>
         <h3>Episode 1: Part One</h3>
     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/ep1pt1saved')"> Play next Episode</span>
+        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved')"> Play next Episode</span>
     </div>
 
        <h3>Episode 1: Part Two</h3>
     <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
-             <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/ep1pt2saved')"> Play next Episode</span>
+             <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved')"> Play next Episode</span>
   
     </div>
 
@@ -33,8 +33,8 @@
       </v-col>
        <v-col cols="8">
           <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction'" :introAchievments="introchosen" />
-          <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone'" :introAchievments="introchosen" />
-           <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone2'" :introAchievments="introchosen" />
+          <DisplayAceivementsdayone v-if="introchosen.episode == 'chapter1'" :introAchievments="introchosen" />
+           <DisplayAceivementsdayone v-if="introchosen.episode == 'chapter2'" :introAchievments="introchosen" />
         </v-col>
      </v-row>
   </v-container>
@@ -84,12 +84,12 @@ export default {
       },
          dayonenGame (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="dayone")
+              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter1")
           }
       },
        dayonenGame2 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="dayone2")
+              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter2")
           }
       }
     }
