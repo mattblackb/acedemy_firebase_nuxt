@@ -5,7 +5,7 @@
      <v-row>
      <v-col cols="12" md="6">
        <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-        <img src="/imgs/1.png">
+        <img src="/imgs/3.png">
      </v-col>
       <v-col cols="12" md="6">
 
@@ -21,9 +21,8 @@ Be careful though, Principal Valentine could fire you if she catches you crossin
 Stay lucky!
 <br/><br/>
 <b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus scenes : 50 Achievements
-
-NOTE: You must successfully complete<br />
-Chapter One before you can play Chapter Two!
+<br />
+<b>NOTE:</b> You must successfully complete Chapter One before you can play Chapter Two!
     </p>
 
     <h2 class="clickable" > <NuxtLink to="/profile">Continue the story from a saved game</NuxtLink></h2>
