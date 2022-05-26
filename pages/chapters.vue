@@ -4,7 +4,7 @@
   <v-container>
         <v-row>
             <v-col cols="12">
-                <h2>Current Available Chapters</h2>
+                <h1>Chapters</h1>
             </v-col>
         </v-row>
         <v-row>
