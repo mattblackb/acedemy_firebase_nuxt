@@ -10,12 +10,12 @@
             <h2 >About The Academy</h2><p>
  <br/><br/>
 
-            <b>The Academy</b> is a multi-episode series of adult interactive games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one part into the next.
+            <b>The Academy</b> is a multi-episode series of adult interactive games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one chapter into the next.
 
  <br/><br/>
  The game is designed to have multiple story paths and multiple possibilities and achievements to discover. The more you play the more you can find.
   <br/><br/>
-  The story is split up into episodes, with checkpoints along the way. By creating a free user account, you can save your progress at these checkpoints, play episodes again to see what else you can find, or continue to the next part. There are also many bonus scenes that can only be unlocked by spending credits.
+  The story is split up into chapters, with checkpoints along the way. By creating a free user account, you can save your progress at these checkpoints, play chapters again to see what else you can find, or continue to the next part. There are also many bonus scenes that can only be unlocked by spending credits.
   <br/><br/>
   <h2>The story</h2>
 You are a consultant hired for the week to assess what needs to happen in the Media Department to ensure a prosperous future at the Goodhead Academy. <br/><br/>
