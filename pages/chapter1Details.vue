@@ -9,22 +9,19 @@
      </v-col>
       <v-col cols="12" md="6">
 
-    <h1>The Academy - Chapter One</h1>
+    <h1>The Academy - Chapter 1</h1>
 
     <p>Start your new job at <i>The Goodhead Academy</i> on Monday morning where you are introduced to many of the characters you will spend your week with. There are also a few essential problems to solve and some tasks that need completing before you can successfully move on to the afternoon.
 <br/><br/>
-More possibilities present themselves after your lunch break, where you are already proving popular amongst the students and the staff. Be careful though, Principal Valentine could fire you if she catches you crossing any lines!
-<br/><br/>
-This episode is split into two parts; one for the morning and one for the afternoon.
+Get to know Bridgette, Didi, Jodie and Principal Valentine a little more and get yourself familiar with most of the students.
 <br/><br/>
 Good luck!
 <br/><br/>
-<b>Episode One - Part One</b> statistics : 510 pages : 485 images : 1 bonus scene<br/>
-<b>Episode One - Part Two</b> statistics : 1070 pages : 1185 images : 2 bonus scenes</p>
+<b>Chapter One</b> statistics : 530 pages : 525 images : 1 bonus scene</p>
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/chapter1">Play part one of this Episode</NuxtLink></h2>
            <!-- <h2 class="clickable" > <NuxtLink to="/dayoneep2">Play part two of this Episode</NuxtLink></h2> -->
-    <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>
+    <h2 class="clickable" > <NuxtLink to="/profile">View your Saved Games</NuxtLink></h2>
 
     <div v-if="showSaved">
     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">

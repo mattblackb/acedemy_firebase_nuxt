@@ -11,22 +11,24 @@
 
     <h1>The Academy - Chapter Two</h1>
 
-    <p>If you survived your first day at the Academy you can move on to a whole new day the next.<br/>
-    Meet some more of the characters, work on your report and solve a few more problems.<br/>
-    You also get a chance to really get to know more about the students by working with them in the photography studio. Who knows where that will lead…
-    <br/><br/>You might get time for a workout with Amy, Laura and Lola in the gym during the afternoon of perhaps you'll choose to help Holly with a special project.<br/>
-    Principal Valentine also needs a progress update and a motivational chat.<br/><br/>
-    Day two can reveal many of the Academy's dirty little secrets if you know where to look.<br/><br/>
-    And Jodie is there for you too…<br/><br/>
+    <p>More possibilities present themselves after your lunch break, where you are already proving popular amongst the students and the staff.<br/>
+There are a few puzzles to solve and tasks to perform.<br/><br/>
 
-    <b>Episode Two - Part One</b> statistics : 866 pages : 786 images : 1 bonus scene<br/>
-<b>Episode Two - Part Two</b> statistics : 1990 pages : 3039 images : 3 bonus scenes
+Jodie, Annie and Maria already want to push your buttons.
+<br/><br/>
+Be careful though, Principal Valentine could fire you if she catches you crossing any lines!
+<br/><br/>
+Stay lucky!
+<br/><br/>
+<b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus scenes
+
+NOTE: You must successfully complete Chapter One before you can play Chapter Two!
     </p>
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/chapter1">Play part one of this Episode</NuxtLink></h2>
-           <h2 class="clickable" > <NuxtLink to="/chapter2">Play part two of this Episode</NuxtLink></h2>
-    <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>
+           <h2 class="clickable" > <NuxtLink to="/profile">View your saved games</NuxtLink></h2>
+    
 
     <div v-if="showSaved">
     <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
