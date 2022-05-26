@@ -22,28 +22,16 @@ Stay lucky!
 <br/><br/>
 <b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus scenes
 
-NOTE: You must successfully complete Chapter One before you can play Chapter Two!
+NOTE: You must successfully complete<br />
+Chapter One before you can play Chapter Two!
     </p>
 
-    <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-         <h2 class="clickable" > <NuxtLink to="/chapter1">Play part one of this Episode</NuxtLink></h2>
-           <h2 class="clickable" > <NuxtLink to="/profile">View your saved games</NuxtLink></h2>
-    
-
-    <div v-if="showSaved">
-    <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">View game achievements</span> | <a href="/introduction">Replay Game</a> 
-    </div>
-    </div>
+    <h2 class="clickable" > <NuxtLink to="/profile">Continue the story</NuxtLink></h2>
 
 
  
       </v-col>
-      <!-- <v-col cols="8">
-          <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction'" :introAchievments="introchosen" />
-          <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone'" :introAchievments="introchosen" />
-           <DisplayAceivementsdayone v-if="introchosen.episode == 'dayone2'" :introAchievments="introchosen" />
-        </v-col> -->
+     
      </v-row>
   </v-container>
 </main>
