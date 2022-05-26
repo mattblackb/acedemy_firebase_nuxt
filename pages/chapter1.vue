@@ -8,7 +8,7 @@
        <h1>Chapter 1</h1>
         <div class="container">
            <iframe
-               src="../chapter1/game/checkpoint1.html"
+               src="../chapter1/game/start1.html"
             width="100%"
             height= "100px"
             style="border: 1px solid #EEE; background: white"
