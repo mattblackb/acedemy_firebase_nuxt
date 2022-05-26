@@ -13,16 +13,16 @@
     <h3>Introduction</h3>
     <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
     
-        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved')"> Play next Episode</span>
+        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved')"> Play next Chapter</span>
     </div>
-        <h3>Episode 1: Part One</h3>
+        <h3>Chapter 1</h3>
     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved')"> Play next Episode</span>
+        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved')"> Play next Chapter</span>
     </div>
 
-       <h3>Episode 1: Part Two</h3>
+       <h3>Chapter 2</h3>
     <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
-             <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved')"> Play next Episode</span>
+             <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved')"> Play next Chapter</span>
   
     </div>
 
