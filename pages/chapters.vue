@@ -9,7 +9,7 @@
         </v-row>
         <v-row>
             <v-col cols="12">
-            <a href="/introductionDetails"  ><img src="/imgs/episodes/banner_intro_unlocked.jpg" /></a>
+            <a href="/introductionDetails"  ><img src="/imgs/index_intro.jpg" /></a>
             </v-col>
         </v-row>
         
