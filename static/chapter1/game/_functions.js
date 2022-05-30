@@ -48,14 +48,14 @@ function setCookiesOnEntry() {
 	//set cookies to passed variables
 
 	Object.keys(allVars).map(cookie =>{
-        // console.log('cookie',cookie);
+        console.log('cookie',cookie);
 		setCookie(cookie,allVars[cookie],1)
 	})
 
 	}
 } 
 
-setCookiesOnEntry();
+// setCookiesOnEntry();
 
 
 
