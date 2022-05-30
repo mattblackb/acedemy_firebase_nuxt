@@ -1,6 +1,5 @@
 <template>
 	<v-row class="pa-5">
-		<img src="/imgs/modal_principal1.jpg">
 		<div v-if="!currentStatus"  >
 			<div class="alert alert-danger" role="alert">
             <p>Credits needed: {{currentCreditsneeded}}</p>

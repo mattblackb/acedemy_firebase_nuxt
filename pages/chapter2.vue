@@ -26,7 +26,14 @@
         v-model="dialog"
         width="500"
         >
-            <v-card>
+               <v-card class="pa5 modalbackground">
+                                        <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -34,7 +41,14 @@
         v-model="dialogSave"
         width="500"
         >
-            <v-card>
+                <v-card class="pa5 modalbackground">
+                                        <v-btn
+            color="primary"
+            text
+            @click="dialogSave = false"
+          >
+           X
+          </v-btn>
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" />
             </v-card>
@@ -151,4 +165,8 @@ export default {
      width: 100%;
      height: 1000px;
  }
+   .modalbackground{
+    background-image: url("/imgs/modal_bridgette1.jpg");
+
+   }
 </style>
