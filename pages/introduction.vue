@@ -5,7 +5,7 @@
      <v-row>
       <v-col cols="12">
 
-    <h1>Introduction</h1>
+    <h1></h1>
         <div class="container">
             <iframe
             src="../academy_intro/game/natalia1.html"
