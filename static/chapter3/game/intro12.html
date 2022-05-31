@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<title>The Academy: Chapter Three</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+	
+</head>
+
+
+<body onLoad="disallowNav()">
+
+<div align="center">
+
+  <p><span class="black">"text"</span><span class="hint">HINT: <a href="#">Enter the code you got at the end of 'The Academy : Chapter Two'</a></span></p>
+
+
+
+<table width="1220" border="0">
+
+  <tr>
+
+    <td width="105">
+<!--inventory start-->
+    
+<!--clock start-->
+      <table width="99" border="0" align="center">
+
+        <tr>
+
+          <td height="100">
+
+<script src="clockcheck.js">
+
+</script>
+
+</td>
+        </tr>
+      </table>
+<!--clock end-->
+
+<!--score start-->
+      <table width="100" border="0" align="center" cellpadding="3">
+
+      <tr>
+<td width="68" align="center" bgcolor="#999999"><img src="buttonsetc/noscore.jpg">
+
+
+          </td>
+
+      </tr>
+    </table>
+<!--score end-->
+    
+<!-- headshot start-->
+    <table width="200" border="0" align="center">
+
+          <tr>
+
+            <td height="250"></td>
+          </tr>
+    </table>
+    
+    <table width="200" border="0" align="center">
+      <tr> </tr>
+      
+    </table>
+    <!-- headshot end--></td>
+
+<!--inventory end-->
+
+    <td width="1000"><img id="CodeImage1" src="images/keypad_blank.jpg" alt="" usemap="#Map" />
+      
+      <map name="Map" id="Map">
+
+        <area shape="rect" coords="0,0,350,750" href="intro12check1.html" title="Look around" />
+        <area shape="rect" coords="448,220,542,315" onclick="keypad(event)" href="#" title="1" />
+        <area shape="rect" coords="550,220,644,315" onclick="keypad(event)" href="#" title="2" />
+        <area shape="rect" coords="653,220,748,315" onclick="keypad(event)" href="#" title="3" />
+        <area shape="rect" coords="755,220,848,315" onclick="keypad(event)" href="#" title="A" />
+        <area shape="rect" coords="448,318,542,408" onclick="keypad(event)" href="#" title="4" />
+        <area shape="rect" coords="550,317,644,407" onclick="keypad(event)" href="#" title="5" />
+        <area shape="rect" coords="653,316,748,406" onclick="keypad(event)" href="#" title="6" />
+        <area shape="rect" coords="755,315,848,405" onclick="keypad(event)" href="#" title="B" />
+        <area shape="rect" coords="450,418,544,508" onclick="keypad(event)" href="#" title="7" />
+        <area shape="rect" coords="552,417,646,507" onclick="keypad(event)" href="#" title="8" />
+        <area shape="rect" coords="655,416,750,506" onclick="keypad(event)" href="#" title="9" />
+        <area shape="rect" coords="757,415,850,505" onclick="keypad(event)" href="#" title="C" />
+        <area shape="rect" coords="450,517,544,607" onclick="keypad(event)" href="#" title="*" />
+        <area shape="rect" coords="553,516,647,606" onclick="keypad(event)" href="#" title="0" />
+        <area shape="rect" coords="655,515,752,605" onclick="keypad(event)" href="#" title="#" />
+        <area shape="rect" coords="760,514,853,604" onclick="keypad(event)" href="#" title="D" />
+        </map>
+
+      </td>
+    </tr>
+</table>
+
+<table width="1200" border="0">
+
+<tr>
+
+        <td width="200"></td>
+        
+        <td width="333"><a href="#"></a></td>
+
+        <td width="333"><a href="#"></a></td>
+
+      <td width="333"><a href="#"></a></td>
+
+    </tr>
+
+</table>
+
+</div>
+
+<script>
+/* code by kexter */
+(function (window) {
+  "use strict";
+  var keycode = "",
+    keypadImage = document.getElementById("CodeImage1"),
+    imageList = [
+		"images/keypad_blank.jpg","images/keypad_1.jpg","images/keypad_2.jpg","images/keypad_3.jpg","images/keypad_4.jpg","images/keypad_5.jpg"
+	],
+    validCodes = [
+	  ["A314#", "entrance1.html"],
+	  ["D314#", "entrance1.html"]
+	];
+  function keypad(e) {
+    var i,
+      valid = -1,
+      char = e.currentTarget.title;
+    e.preventDefault();
+    keycode += char;
+    console.log(keycode);
+    if (keycode.length < 5) {
+      // Change the image.
+      keypadImage.src = imageList[keycode.length] || "images/keypad_blank.jpg";"images/keypad_1.jpg";"images/keypad_2.jpg";"images/keypad_3.jpg";"images/keypad_4.jpg";"images/keypad_5.jpg"
+    } else {
+      // Check if the code is valid.
+      for (i = 0; i < validCodes.length; i += 1) {
+        if (keycode === validCodes[i][0]) {
+          valid = i;
+          break;
+        }
+      }
+      if (valid > -1) {
+        // Access granted.
+        window.location = validCodes[valid][1];
+      } else {
+        // Access denied.
+        window.location = "intro13.html";
+      }
+    }
+  }
+  // Export functions.
+  window.keypad = keypad;
+}(window));
+</script>
+
+</body>
+
+</html>
+
