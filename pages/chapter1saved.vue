@@ -16,11 +16,11 @@
             scrolling="yes"
             class="video"
             ></iframe>
-            <!-- <h2>Currently Unavailable</h2> -->
+            
         </div>
 
 
-    <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
+    
 
         <v-dialog
         v-model="dialog"

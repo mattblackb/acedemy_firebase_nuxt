@@ -5,7 +5,7 @@
      <v-row>
       <v-col cols="12">
 
-       <h1>Chapter 2</h1>
+       <h1>Chapter 3</h1>
         <div class="container">
            <iframe
                src="../chapter2/game/checksave2.html"
