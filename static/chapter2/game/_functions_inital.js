@@ -1,7 +1,6 @@
 
 //MB Added post message
 
-
 //MB added
 var getCookies = function(url){
 	// let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -42,22 +41,21 @@ function setCookie(name,value,days) {
 	}
 
 function setCookiesOnEntry() {
-
 	var allVars = getUrlVars();
+    // console.log('allVars',allVars);
 	if(allVars){
-	console.log('allVars',allVars);
+
 	//set cookies to passed variables
 
 	Object.keys(allVars).map(cookie =>{
-        console.log('cookie',cookie);
+        console.log('cookie',cookie, allVars[cookie]);
 		setCookie(cookie,allVars[cookie],1)
 	})
 
 	}
 } 
 
-// setCookiesOnEntry();
-
+setCookiesOnEntry();
 
 
 if(parent.c_1){
@@ -114,8 +112,30 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
-    let showcontinue = checkAvailable('aMQRxfwfzkM735Sj3QVQ');
-
+    let showcontinue = checkAvailable('VVJ5mVW6zM0f3fygZzHB');
+if (showcontinue) {
+   document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonImage").style.display = 'block';
+} else {
+    document.getElementById('buybutton').style.display = 'block';
+    document.getElementById("availableButton").style.display = 'none';
+    document.getElementById('buybuttonImage').style.display = 'block';
+    document.getElementById("availableButtonImage").style.display = 'none';
+}
+function moduleAvailable(state) 
+{ 
+  if(state) {
+    document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonimage").style.display = 'block';
+  }
+} 
+}
+function hideShowButton2() {
+    let showcontinue = checkAvailable('5GvSh36NPJVmgz0LKXeX');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
