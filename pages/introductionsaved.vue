@@ -8,7 +8,7 @@
     <h1>Chapter 1</h1>
         <div class="container">
             <iframe
-            src="../academy_intro/game/checksave1.0.html"
+            src="../academy_intro/game/checksave_intro.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
