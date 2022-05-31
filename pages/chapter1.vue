@@ -149,8 +149,32 @@ export default {
                     //     return false
                     // }
                 }
+            },
+           beforeWindowUnload (e) {
+        
+                    if (this.form_dirty) {
+                        e.preventDefault()
+                        e.returnValue = ''
+                    }
             }
+            
+            
+            
         },
+        beforeRouteLeave (to, from, next) {
+            if (this.form_dirty) {
+                next(false)
+                window.location = to.path // this is the trick
+            } else {
+                next()
+            }
+            },
+
+            beforeDestroy () {
+                window.removeEventListener('beforeunload', this.beforeWindowUnload)
+            },
+            
+    
     mounted () {
        window.c_1 = this
     }
