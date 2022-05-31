@@ -1,20 +1,42 @@
 <template>
 <main>
      <NavBar />
+      <v-container v-if="!userDetails">
+        <img src="/imgs/main_page_image.png" style="width:100%">
+      </v-container>
   <v-container v-if="userDetails">
      <v-row>
       <v-col cols="12" md="6">
-            <h2 >About this site</h2><p><b>The Academy</b> is a multi episode series of interactive erotic games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one part into the next.</p>
-             <img :src="selectedImage">
+            <h2 >About The Academy</h2><p>
+ <br/><br/>
+
+            <b>The Academy</b> is a multi-episode series of adult interactive games created by dsp3000. Each part is designed to be played one after the other with achievements carrying over from one chapter into the next.
+
+ <br/><br/>
+ The game is designed to have multiple story paths and multiple possibilities and achievements to discover. The more you play the more you can find.
+  <br/><br/>
+  The story is split up into chapters, with checkpoints along the way. By creating a free user account, you can save your progress at these checkpoints, play chapters again to see what else you can find, or continue to the next part. There are also many bonus scenes that can only be unlocked by spending credits.
+  <br/><br/>
+  <h2>The story</h2>
+You are a consultant hired for the week to assess what needs to happen in the Media Department to ensure a prosperous future at the Goodhead Academy. <br/><br/>
+Head of department Bridgette is there to help you out and at the end of the week you'll be expected to report your findings to Principal Valentine.<br/><br/>
+Along the way you get to meet the rest of the staff and student body. Everyone wants to get to know you while you are there, some of them will help you and some of them will be a welcome or perhaps unwelcome distraction.<br/><br/>
+It's easy to get tempted from the work you have to do and that can of course be lots of fun. All you must to do is avoid getting fired!
+
+
+ <br/><br/>
+However you choose to play you can be sure to have fun along the way.
+ </p>
+ <img :src="selectedImage">
       </v-col>
       <v-col cols="12" md="6">
 
     <h1>Welcome {{userDetails.name}}</h1>
     <h2 v-if="userDetails" >Available Credits: {{userDetails.credits}}</h2>
-    <h2>Current Available stories</h2>
-     <a href="/introductionDetails"  ><img src="/imgs/indeximgs/index_intro.jpg" /></a>
-        <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep1_locked.jpg" /></a>
-               <a href="/episode1Details"  ><img src="/imgs/indeximgs/index_ep2_locked.jpg" /></a>
+    <h2>Current Available Episodes</h2>
+     <a href="/introductionDetails"  ><img src="/imgs/index_intro.jpg" /></a>
+        <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
+               <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
         <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">

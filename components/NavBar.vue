@@ -1,46 +1,23 @@
 <template>
    
   <main>
-  <!--  <v-app-bar
-      color="accent-4"
-      dark
-    >
-   
-       <v-btn icon to="/">
-        <v-icon>mdi-home</v-icon>
-      </v-btn>
-    <template >
-      <v-toolbar-title v-if="userDetails">Welcome: {{userDetails}}</v-toolbar-title>
-       <v-toolbar-title v-else>Welcome to the Academy</v-toolbar-title>
-    </template>
-  
-      <v-spacer></v-spacer>
-   
-     <template v-if="currentUser">
-       <v-btn   to="/buy">
-            Buy Credits
-        </v-btn>
-           <v-btn   to="/auth/signout">
-            Logout
-        </v-btn>
-     </template>
-   
-      
-      
-      
-      <v-btn  to="/introduction">
-       Introduction
-      </v-btn>
-  
-      <v-btn icon to="/profile" v-if="userDetails">
-        <v-icon>mdi-account</v-icon>
-      </v-btn>
-
+       <v-dialog
+        v-model="dialog"
+        width="500"
+        >
+            <v-card class="pa5 modalbackground">
+                               <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
+                    <h2>Credit payment facility currently disabled</h2>
      
-  
-     
-       
-    </v-app-bar> -->
+            </v-card>
+        </v-dialog>
+ 
 
     <v-container class="hidePrying">
       <v-row><v-toolbar-title v-if="userDetails">Welcome: {{userDetails}}</v-toolbar-title></v-row>
@@ -48,7 +25,8 @@
         <img src="/imgs/header_new.png" class="textAlignCenter">
       </v-row>
       <v-row>
-      <v-col cols=9 >
+      <v-col cols="12"  sm="12"
+        md="9" >
          <v-btn
       class="ma-2"
       to="/"
@@ -57,9 +35,9 @@
     </v-btn>
         <v-btn
       class="ma-2"
-      to="/episodes"
+      to="/chapters"
     >
-      Episodes
+      Chapters
     </v-btn>
 
        <v-btn
@@ -76,8 +54,9 @@
     </v-btn>
   </v-col>
 
-      <v-col cols=3>
-       <v-btn   to="/buy" v-if="currentUser">
+      <v-col cols="12"  sm="12"
+        md="3">
+       <v-btn    v-if="currentUser"  @click="dialog = true">
             Buy Credits
         </v-btn>
            <v-btn   to="/auth/signout" v-if="currentUser">
@@ -101,7 +80,8 @@ import { mapActions, mapGetters } from "vuex";
 export default {
   name: "NavBar",
  data: () => ({
-     currentUser: false
+     currentUser: false,
+     dialog: false
  }),
   methods: {   ...mapActions(["stories/setStories"])},
     mounted() {
@@ -127,6 +107,7 @@ export default {
   display: block;
   margin: 0 auto;
 }
+img {max-width: 96%; padding: 2%;}
   .hidePrying {
     display: block;
   }
@@ -135,4 +116,21 @@ export default {
     max-width: 1500px!important;
 }
   }
+  .modalbackground{
+    background-image: url("/imgs/modal_principal1.jpg");
+ background-color: #cccccc;
+ min-height: 250px;
+
+  }
+    .modalbackground h2,   .modalbackground p,  .modalbackground h1{
+      max-width: 60%;
+      padding: 5%;
+      min-width: 60%;
+
+    }
+     .modalbackground h1 {
+       text-transform: capitalize;
+       line-height: 0px;
+     }
+     
 </style>

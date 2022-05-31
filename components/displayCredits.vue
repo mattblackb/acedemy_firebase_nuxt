@@ -2,13 +2,12 @@
 	<v-row class="pa-5">
 		<div v-if="!currentStatus"  >
 			<div class="alert alert-danger" role="alert">
-			{{currentMessage}}
             <p>Credits needed: {{currentCreditsneeded}}</p>
 			</div>
 			<!-- <p>Purchase credits?</p> -->
 			<!-- <button type="button" class="btn btn-primary">Buy Credits</button> -->
 			<!-- <div ref="paypal"></div> -->
-			<h3>Currently we are unable to take payments</h3>
+			<h3>Buy credit facility currently disabled</h3>
 		
     
 		</div>
@@ -29,7 +28,7 @@ export default({
 			currentBuy: this.$route.params.id,
 			selectedStory: {},
 			currentStatus: false,
-			currentMessage: 'Sadly you do not have enough credits.',
+			currentMessage: 'You do not have enough credits.',
 			storyId: ""
 		}
 	},
@@ -63,7 +62,6 @@ export default({
 			onApprove: async (data, actions) => {
 				const order = await actions.order.capture();
 				if(order.status) {
-					console.log(order.purchase_units[0].amount);
 					if(order.purchase_units[0].amount.value === '10.00'){
 						let personData = {...this.$store.state.person};
 						personData.credits = personData.credits + 100;
@@ -86,9 +84,10 @@ export default({
 				let storiesData = this.$store.getters['stories/getStories']
 				//LOOP all stories - get applicable story
 				storiesData.map((story) => {
-					if(story.id === this.currentmodule){
+					
+					if(story.id == this.currentmodule){
+							// console.log('Story', story.id, this.currentmodule);
 						this.selectedStory = story;
-						console.log(this.selectedStory)
 					}
 				})
 			if(personData.credits >= this.currentCreditsneeded){
@@ -98,7 +97,7 @@ export default({
 			//Check that user hasn't already bought
 			personData.available_modules.map((module) => {
 				if(module === this.currentmodule){
-					this.currentMessage = 'You already have access to this module'+this.currentmodule
+					this.currentMessage = 'You already have access to this bonus scene';
 					this.currentStatus = false;
 				}
 				})
@@ -112,7 +111,7 @@ export default({
 			personData.credits = personData.credits - this.selectedStory.cost;
 			  this.$store.commit('setuser/updatePerson', personData)
                 this.$store.commit('SET_PEOPLE', personData)
-			this.currentMessage = 'Thank you - you have now access to this module please visit the homepage';
+			this.currentMessage = 'Thank you - you have now unlocked this scene';
 			this.currentStatus = false;
 		},
     },

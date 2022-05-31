@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - nuxt-firebase-auth',
+    titleTemplate: '%s',
     title: 'dsp3000 games',
     meta: [
       { charset: 'utf-8' },

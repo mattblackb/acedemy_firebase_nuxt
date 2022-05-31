@@ -24,7 +24,7 @@
            <img src="imgs/characters/character_profiles_didi.jpg">
       </v-col>
          <v-col cols="4">
-           <img src="imgs/characters/character_profiles_pricipal.jpg">
+           <img src="imgs/characters/character_profiles_principal.jpg">
       </v-col>
       </v-row>
           <v-row class="pt-5">
@@ -66,7 +66,7 @@
         <v-col cols="4">
            <img src="imgs/characters/character_profiles_sebastian.jpg">
       </v-col>
-    \
+    
       </v-row>
     </v-container>
 </main>

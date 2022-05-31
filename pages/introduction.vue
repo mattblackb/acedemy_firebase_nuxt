@@ -13,7 +13,7 @@
             height= auto
             style="border: 1px solid #EEE; background: white"
             frameborder="0"
-            scrolling="no"
+            scrolling="yes"
             class="video"
             ></iframe>
         </div>
@@ -25,7 +25,14 @@
         v-model="dialog"
         width="500"
         >
-            <v-card>
+                  <v-card class="pa5 modalbackground">
+                                        <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -33,7 +40,14 @@
         v-model="dialogSave"
         width="500"
         >
-            <v-card>
+                  <v-card class="pa5 modalbackground">
+                                        <v-btn
+            color="primary"
+            text
+            @click="dialogSave = false"
+          >
+           X
+          </v-btn>
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" />
             </v-card>
@@ -54,7 +68,8 @@ export default {
         dialogSave: false,
         cookieJson: '',
         currentCreditsneeded: [],
-         currentmodule: ""
+         currentmodule: "",
+            form_dirty: true
       }
     },
     computed:{
@@ -65,7 +80,7 @@ export default {
           }
       }
     },
-    	methods: {
+    methods: {
             AddCredits() {
                 this.dialog = true
             },
@@ -103,8 +118,7 @@ export default {
                     }
                 }
             },
-              saveProgress(event) { //check that the user is logged in (likely)
-      
+            saveProgress(event) { //check that the user is logged in (likely)
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
@@ -112,24 +126,37 @@ export default {
                          this.cookieJson = event;
                         this.dialogSave = true
                      }
-                    // //Logged in check for available
-                    // if(this.$store.state.person.available_modules.length > 0){
-                    //     if(this.$store.state.person.available_modules.includes(id)) {
-                    //         //user has already bought the module change the button on the iframe src
-                    //         return true
-                    //     } else {
-                    //         return false
-                    //     }
-                      
-                    // } else {
-                    //     return false
-                    // }
                 }
+            },
+           beforeWindowUnload (e) {
+        
+                    if (this.form_dirty) {
+                        e.preventDefault()
+                        e.returnValue = ''
+                    }
             }
+            
+            
+            
         },
+        beforeRouteLeave (to, from, next) {
+            if (this.form_dirty) {
+                next(false)
+                window.location = to.path // this is the trick
+            } else {
+                next()
+            }
+            },
+
+            beforeDestroy () {
+                window.removeEventListener('beforeunload', this.beforeWindowUnload)
+            },
     mounted () {
        window.c_1 = this
-    }
+    },
+    created () {
+    window.addEventListener('beforeunload', this.beforeWindowUnload)
+  }
 }
 </script>
 
@@ -137,7 +164,7 @@ export default {
 .container {
     position: relative;
      width: 100%;
-     height: 125%;
+     height: 1000px;
      padding-bottom: 56.25%;
  }
  .video {
@@ -145,6 +172,10 @@ export default {
      top: 0;
      left: 0;
      width: 100%;
-     height: 125%;
+     height: 1000px;
  }
+   .modalbackground{
+    background-image: url("/imgs/modal_amy1.jpg");
+
+   }
 </style>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+<title>The Academy: Chapter Two</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+
+<script language="javascript">
+
+
+
+function check()
+
+{
+
+    var val = readVar("report");
+	
+	if ((val > 0)&&(val < 11))
+
+        window.location = "report3_10.html";
+		
+	else
+		
+	var val = readVar("report");
+	
+	if ((val > 10)&&(val < 16))
+
+        window.location = "report3_15.html";
+	
+	else
+		
+	var val = readVar("report");
+	
+	if ((val > 15)&&(val < 21))
+
+        window.location = "report3_20.html";
+		
+	else
+
+        window.location = "report3_15.html";  
+
+}
+
+
+
+check();
+
+
+
+</script>
+
+</body>
+
+</html>
+

@@ -29,11 +29,24 @@ export default({
 		...mapGetters("stories",["getStories"]),
 	
 		saveEpisode() {
-			let personData = {...this.$store.state.person};
+		
+			let personData = JSON.parse(JSON.stringify(this.$store.state.person))
+			console.log(personData)
+			const today = new Date();
+			const yyyy = today.getFullYear();
+			let mm = today.getMonth() + 1; // Months start at 0!
+			let dd = today.getDate();
+
+			if (dd < 10) dd = '0' + dd;
+			if (mm < 10) mm = '0' + mm;
+
+			const formattedDate = dd + '/' + mm + '/' + yyyy;
+			this.cookies['date'] = formattedDate;
 			 personData.saved_games.push(this.cookies);
+
 			  this.$store.commit('setuser/updatePerson', personData)
-                this.$store.commit('SET_PEOPLE', personData)
-			this.currentMessage = 'This game has been saved you can see this game in your profile';
+                // this.$store.commit('SET_PEOPLE', personData)
+			this.currentMessage = 'This game has been saved. You can see this game in your profile';
 		},
     },
     mounted() {

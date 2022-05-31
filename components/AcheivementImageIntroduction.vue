@@ -20,10 +20,9 @@
    <v-row class="pa-5">
 
     <v-col v-for="(achievement, name) in bonusAchievments"   cols="2" class="split5">
-    {{achievement.keyname}}
         <span v-if="achievement.value == 0 || achievement.value == 1" >
            <img  v-if=" achievement.value == 1" :src="'/academy_intro/game/buttonsetc/endcards/' + achievement.keyname + '.jpg'"  >
-         <img  v-if=" achievement.value == 0 && achievement.keyname != 'introbonus'"" :src="'/academy_intro/game/buttonsetc/endcards/ach_blank.jpg'"  >
+         <img  v-if=" achievement.value == 0 && achievement.keyname != 'introbonus'" :src="'/academy_intro/game/buttonsetc/endcards/ach_blank.jpg'"  >
           <img  v-if=" achievement.value == 0 && achievement.keyname == 'introbonus'" :src="'/academy_intro/game/buttonsetc/endcards/introbonus_blank.jpg'"  >
 
         </span>
@@ -47,6 +46,6 @@ export default({
 </script>
 
 <style scoped>
-img {max-width: 100%}
+img {max-width: 100%; border: solid 1px black}
 .split5 {min-width: 20%}
 </style>
