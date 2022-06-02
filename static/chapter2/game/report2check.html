@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+<title>The Academy: Episode Three</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+
+<script language="javascript">
+
+
+
+function check()
+
+{
+
+    var val = readVar("report");
+	
+	if ((val > 0)&&(val < 11))
+
+        window.location = "report2_10.html";
+		
+	else
+		
+	var val = readVar("report");
+	
+	if ((val > 10)&&(val < 16))
+
+        window.location = "report2_15.html";
+		
+	else
+
+        window.location = "report2_10.html";  
+
+}
+
+
+
+check();
+
+
+
+</script>
+
+</body>
+
+</html>
+

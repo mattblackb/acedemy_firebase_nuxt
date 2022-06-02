@@ -5,7 +5,7 @@
      <v-row>
       <v-col cols="12">
 
-    <h1>Introduction</h1>
+    <h1></h1>
         <div class="container">
             <iframe
             src="../academy_intro/game/natalia1.html"
@@ -13,7 +13,7 @@
             height= auto
             style="border: 1px solid #EEE; background: white"
             frameborder="0"
-            scrolling="no"
+            scrolling="yes"
             class="video"
             ></iframe>
         </div>
@@ -25,7 +25,14 @@
         v-model="dialog"
         width="500"
         >
-            <v-card>
+                  <v-card class="pa5 modalbackground">
+                                        <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -33,7 +40,14 @@
         v-model="dialogSave"
         width="500"
         >
-            <v-card>
+                  <v-card class="pa5 modalbackground">
+                                        <v-btn
+            color="primary"
+            text
+            @click="dialogSave = false"
+          >
+           X
+          </v-btn>
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" />
             </v-card>
@@ -150,7 +164,7 @@ export default {
 .container {
     position: relative;
      width: 100%;
-     height: 125%;
+     height: 1000px;
      padding-bottom: 56.25%;
  }
  .video {
@@ -158,6 +172,10 @@ export default {
      top: 0;
      left: 0;
      width: 100%;
-     height: 125%;
+     height: 1000px;
  }
+   .modalbackground{
+    background-image: url("/imgs/modal_amy1.jpg");
+
+   }
 </style>

@@ -29,7 +29,9 @@ export default({
 		...mapGetters("stories",["getStories"]),
 	
 		saveEpisode() {
-			let personData = {...this.$store.state.person};
+		
+			let personData = JSON.parse(JSON.stringify(this.$store.state.person))
+			console.log(personData)
 			const today = new Date();
 			const yyyy = today.getFullYear();
 			let mm = today.getMonth() + 1; // Months start at 0!
@@ -44,7 +46,7 @@ export default({
 
 			  this.$store.commit('setuser/updatePerson', personData)
                 // this.$store.commit('SET_PEOPLE', personData)
-			this.currentMessage = 'This game has been saved you can see this game in your profile';
+			this.currentMessage = 'This game has been saved. You can see this game in your profile';
 		},
     },
     mounted() {

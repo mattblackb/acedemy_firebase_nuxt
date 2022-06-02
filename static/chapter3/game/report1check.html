@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+<title>The Academy: Chapter Three</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+
+<script language="javascript">
+
+
+
+function check()
+
+{
+
+    var val = readVar("report");
+	
+	if ((val > 0)&&(val < 16))
+
+        window.location = "report1_15.html";
+		
+	else
+		
+	var val = readVar("report");
+	
+	if ((val > 15)&&(val < 21))
+
+        window.location = "report1_20.html";
+	
+	else
+		
+	var val = readVar("report");
+	
+	if ((val > 20)&&(val < 26))
+
+        window.location = "report1_25.html";
+	
+	else
+		
+	var val = readVar("report");
+	
+	if ((val > 25)&&(val < 31))
+
+        window.location = "report1_30.html";
+		
+	else
+
+        window.location = "report1_20.html";  
+
+}
+
+
+
+check();
+
+
+
+</script>
+
+</body>
+
+</html>
+
