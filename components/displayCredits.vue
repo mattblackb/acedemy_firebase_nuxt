@@ -80,6 +80,7 @@ export default({
 		},
         checkAvailable() {
 			 if(this.$store.state.person) {
+		
                  let personData = this.$store.state.person
 				let storiesData = this.$store.getters['stories/getStories']
 				//LOOP all stories - get applicable story
@@ -90,6 +91,7 @@ export default({
 						this.selectedStory = story;
 					}
 				})
+						 console.log(this.currentCreditsneeded, personData.credits);
 			if(personData.credits >= this.currentCreditsneeded){
 				this.currentStatus = true;
 			
@@ -98,7 +100,7 @@ export default({
 			personData.available_modules.map((module) => {
 				if(module === this.currentmodule){
 					this.currentMessage = 'You already have access to this bonus scene';
-					this.currentStatus = false;
+					// this.currentStatus = false;
 				}
 				})
              	} 
