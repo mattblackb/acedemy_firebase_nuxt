@@ -117,7 +117,7 @@ img {max-width: 96%; padding: 2%;}
 }
   }
   .modalbackground{
-    background-image: url("/imgs/modal/modal_principal1.jpg");
+    background-image: url("/imgs/modals/modal_principal1.jpg");
  background-color: #cccccc;
  min-height: 250px;
 
