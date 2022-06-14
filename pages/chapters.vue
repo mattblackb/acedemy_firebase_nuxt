@@ -21,7 +21,7 @@
                 <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
             </v-col>
                   <v-col cols="6">
-                <a href="/"  ><img src="/imgs/index_ch3_locked.jpg" /></a>
+                <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
             </v-col>
                   <v-col cols="6">
                 <a href="/"  ><img src="/imgs/index_ch4_locked.jpg" /></a>
