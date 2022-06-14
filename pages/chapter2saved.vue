@@ -26,7 +26,7 @@
         v-model="dialog"
         width="500"
         >
-            <v-card>
+               <v-card class="pa5 modalbackground">
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -34,7 +34,7 @@
         v-model="dialogSave"
         width="500"
         >
-            <v-card>
+           <v-card class="pa5 modalbackground">
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" />
             </v-card>
@@ -151,4 +151,38 @@ export default {
      width: 100%;
      height: 1000px;
  }
+</style>
+
+<style>
+.textAlignCenter {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+img {max-width: 96%; padding: 2%;}
+  .hidePrying {
+    display: block;
+  }
+  @media (min-width: 1264px) {
+.container {
+    max-width: 1500px!important;
+}
+  }
+  .modalbackground{
+    background-image: url("/imgs/modal_principal1.jpg");
+ background-color: #cccccc;
+ min-height: 250px;
+
+  }
+    .modalbackground h2,   .modalbackground p,  .modalbackground h1{
+      max-width: 60%;
+      padding: 5%;
+      min-width: 60%;
+
+    }
+     .modalbackground h1 {
+       text-transform: capitalize;
+       line-height: 0px;
+     }
+     
 </style>

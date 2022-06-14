@@ -1,3 +1,4 @@
+
 //MB Added post message
 
 //MB added
@@ -53,17 +54,110 @@ function setCookiesOnEntry() {
 
 	}
 } 
-setCookiesOnEntry();
+
+//setCookiesOnEntry();
+
+
+if(parent.c_1){
+} else {
+    window.location.href = "/";
+}
+function emitCheck(method) 
+{ 
+    parent.c_1.greet(method)
+} 
+function getName(method) 
+{ 
+    var person = parent.c_1.Getname()
+    cookievalue= person.name + ";";
+    if(person){
+    document.cookie="playername=" + cookievalue;
+    } else {
+        document.cookie="playername=Guest";
+    }
+} 
+function checkAvailable(method) 
+{ 
+   let returnedState = parent.c_1.checkAvailable(method)
+   return returnedState
+} 
+const myTimeout = setInterval(hideShowButton2, 1000);
+
+var getCookies = function(){
+  var pairs = document.cookie.split(";");
+      var cookies = {};
+      for (var i=0; i<pairs.length; i++){
+        var pair = pairs[i].split("=");
+        if(pair[0] != " user"){
+        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+        }
+      }
+      return cookies;
+    }
+    
+
+function saveProgress(){
+    var myCookies = getCookies(); //GET JSON ARRAY
+    myCookiesJSON = JSON.stringify(myCookies);
+    let returnedState = parent.c_1.saveProgress(myCookiesJSON)
+    return returnedState
+}
 
 // Kills cookie
-
 function deleteVar(name) 
 
 {
-
     document.cookie = name + "=; expires=Thu, 01-Jan-70 00:00:01 GMT" + "; path=/";
 
 } 
+
+function hideShowButton() {
+    let showcontinue = checkAvailable('VVJ5mVW6zM0f3fygZzHB');
+if (showcontinue) {
+   document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonImage").style.display = 'block';
+} else {
+    document.getElementById('buybutton').style.display = 'block';
+    document.getElementById("availableButton").style.display = 'none';
+    document.getElementById('buybuttonImage').style.display = 'block';
+    document.getElementById("availableButtonImage").style.display = 'none';
+}
+function moduleAvailable(state) 
+{ 
+  if(state) {
+    document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonimage").style.display = 'block';
+  }
+} 
+}
+function hideShowButton2() {
+    let showcontinue = checkAvailable('5GvSh36NPJVmgz0LKXeX');
+if (showcontinue) {
+   document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonImage").style.display = 'block';
+} else {
+
+    document.getElementById('buybutton').style.display = 'block';
+    document.getElementById("availableButton").style.display = 'none';
+    document.getElementById('buybuttonImage').style.display = 'block';
+    document.getElementById("availableButtonImage").style.display = 'none';
+}
+function moduleAvailable(state) 
+{ 
+  if(state) {
+    document.getElementById('buybutton').style.display = 'none';
+   document.getElementById("availableButton").style.display = 'block';
+   document.getElementById('buybuttonImage').style.display = 'none';
+   document.getElementById("availableButtonimage").style.display = 'block';
+  }
+} 
+}
 
 
 
@@ -95,23 +189,23 @@ function readVar(name)
 
     {
 
-	    var str = strings[i];
+        var str = strings[i];
 
-	    while (str.charAt(0)==' ')
+        while (str.charAt(0)==' ')
 
-	        str = str.substring(1, str.length);
+            str = str.substring(1, str.length);
 
-	    if (str.indexOf(fullName) == 0) 
+        if (str.indexOf(fullName) == 0) 
 
-	        val = parseInt(str.substring(fullName.length, str.length));
+            val = parseInt(str.substring(fullName.length, str.length));
 
-	    if (isNaN(val))
+        if (isNaN(val))
 
-	        val = 0;    
+            val = 0;    
 
     }
 
-	return val;
+    return val;
 
 }
 
@@ -205,11 +299,11 @@ function blockContextMenu()
 
 {
 
-	event.cancelBubble = true
+    event.cancelBubble = true
 
-   	event.returnValue = false;
+       event.returnValue = false;
 
-  	return false;
+      return false;
 
 }
 
@@ -227,15 +321,15 @@ function blockKeyPresses()
 
     
 
-	if ((event.keyCode == keyBackspace) || (event.keyCode == keyF5)) 
+    if ((event.keyCode == keyBackspace) || (event.keyCode == keyF5)) 
 
-   	{
+       {
 
-   	    event.keyCode = 0;
+           event.keyCode = 0;
 
-   	    event.returnValue = false;
+           event.returnValue = false;
 
-   	}
+       }
 
 }
 
