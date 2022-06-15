@@ -5,24 +5,23 @@
      <v-row>
      <v-col cols="12" md="6">
        <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-        <img src="/imgs/3.png">
+        <img src="/imgs/4.png">
      </v-col>
       <v-col cols="12" md="6">
 
     <h1>The Academy - Chapter Three</h1>
 
-    <p>More possibilities present themselves after your lunch break, where you are already proving popular amongst the students and the staff.<br/>
-There are a few puzzles to solve and tasks to perform.<br/><br/>
+    <p>Time to return for your second day of work at the Goodhead Academy... That's if you didn't get fired already!<br/><br/>
 
-Jodie, Annie and Maria already want to push your buttons.
+Fulfil Bridgette's request to help her out in the photography studio and get to know all the girls a little better.
 <br/><br/>
-Be careful though, Principal Valentine could fire you if she catches you crossing any lines!
+It's entirely up to you who you choose to assist more closely. The girls all love a bit of extra attention.
 <br/><br/>
-Stay lucky!
+Have a good time!
 <br/><br/>
-<b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus scenes : 50 Achievements
+<b>Chapter Three</b> statistics : 830 pages : 770 images : 1 bonus scene : 25 Achievements
 <br />
-<b>NOTE:</b> You must successfully complete Chapter One before you can play Chapter Two!
+<b>NOTE:</b> You must successfully complete Chapter Two before you can play Chapter Three!
     </p>
 
     <h2 class="clickable" > <NuxtLink to="/profile">Continue the story from a saved game</NuxtLink></h2>
