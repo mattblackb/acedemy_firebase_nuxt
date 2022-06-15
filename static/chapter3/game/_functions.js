@@ -53,7 +53,6 @@ function setCookiesOnEntry() {
 
 	}
 } 
-setCookiesOnEntry();
 
 // Kills cookie
 
