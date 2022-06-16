@@ -20,7 +20,8 @@ You must play through this episode before you can move on to the next one.
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/introduction">Play the Introduction</NuxtLink></h2>
-    <h2 class="clickable" v-on:click="showSaved = !showSaved">View your Saved Games </h2>
+    
+	<h2 class="clickable" > <NuxtLink to="/profile">View your Saved Games</NuxtLink></h2>
 
     <div v-if="showSaved">
     <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
