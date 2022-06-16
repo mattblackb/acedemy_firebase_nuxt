@@ -26,7 +26,7 @@
         v-model="dialog"
         width="500"
         >
-            <v-card>
+         <v-card class="pa5 modalbackground">
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -34,7 +34,7 @@
         v-model="dialogSave"
         width="500"
         >
-            <v-card>
+            <v-card class="pa5 modalbackground">
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" />
             </v-card>
