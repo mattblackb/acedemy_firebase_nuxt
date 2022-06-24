@@ -142,7 +142,7 @@ if (showcontinue) {
    document.getElementById('buybuttonImage').style.display = 'none';
    document.getElementById("availableButtonImage").style.display = 'block';
 } else {
-    alert(['test']);
+
     document.getElementById('buybutton').style.display = 'block';
     document.getElementById("availableButton").style.display = 'none';
     document.getElementById('buybuttonImage').style.display = 'block';

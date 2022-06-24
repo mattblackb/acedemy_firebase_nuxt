@@ -33,7 +33,10 @@
     </div>
             </v-col>
                   <v-col cols="6">
-                <a href="/"  ><img src="/imgs/index_ch3_locked.jpg" /></a>
+                <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
+                      <div v-for="savedintroduction in dayonenGame3" :key="savedintroduction.name">
+             <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved')"> Play next Chapter</span>
+            </div>
             </v-col>
                   <v-col cols="6">
                 <a href="/"  ><img src="/imgs/index_ch4_locked.jpg" /></a>
@@ -140,6 +143,11 @@ export default {
        dayonenGame2 (){
           if(this.$store.state.person) {
               return this.$store.state.person.saved_games.filter(game => game.episode==="chapter1saved")
+          }
+      },
+       dayonenGame3 (){
+          if(this.$store.state.person) {
+              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter2saved")
           }
       }
     }
