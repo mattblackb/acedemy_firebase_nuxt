@@ -8,7 +8,7 @@
        <h1></h1>
         <div class="container">
            <iframe
-               src="../chapter3/game/checksave3.html"
+                src="../chapter3/game/checksave3.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
@@ -26,7 +26,7 @@
         v-model="dialog"
         width="500"
         >
-            <v-card>
+              <v-card class="pa5 modalbackground">
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -34,7 +34,7 @@
         v-model="dialogSave"
         width="500"
         >
-            <v-card>
+              <v-card class="pa5 modalbackground">
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" />
             </v-card>

@@ -1,6 +1,5 @@
 
 //MB Added post message
-
 //MB added
 var getCookies = function(url){
 	// let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -55,7 +54,6 @@ function setCookiesOnEntry() {
 	}
 } 
 
-//setCookiesOnEntry();
 
 
 if(parent.c_1){
@@ -99,7 +97,6 @@ var getCookies = function(){
 function saveProgress(){
     var myCookies = getCookies(); //GET JSON ARRAY
     myCookiesJSON = JSON.stringify(myCookies);
-    console.log('myCookiesJSON',myCookiesJSON);
     let returnedState = parent.c_1.saveProgress(myCookiesJSON)
     return returnedState
 }
@@ -113,7 +110,7 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
-    let showcontinue = checkAvailable('VVJ5mVW6zM0f3fygZzHB');
+    let showcontinue = checkAvailable('pe8NCWmyCppVkE2Qe5JL');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
@@ -136,7 +133,7 @@ function moduleAvailable(state)
 } 
 }
 function hideShowButton2() {
-    let showcontinue = checkAvailable('5GvSh36NPJVmgz0LKXeX');
+    let showcontinue = checkAvailable('sSX6WUJBy1ICXlhXgSTA');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
@@ -158,16 +155,6 @@ function moduleAvailable(state)
   }
 } 
 }
-
-
-
-function deleteVar(name) 
-
-{
-
-    document.cookie = name + "=; expires=Thu, 01-Jan-70 00:00:01 GMT" + "; path=/";
-
-} 
 
 
 
@@ -199,23 +186,23 @@ function readVar(name)
 
     {
 
-	    var str = strings[i];
+        var str = strings[i];
 
-	    while (str.charAt(0)==' ')
+        while (str.charAt(0)==' ')
 
-	        str = str.substring(1, str.length);
+            str = str.substring(1, str.length);
 
-	    if (str.indexOf(fullName) == 0) 
+        if (str.indexOf(fullName) == 0) 
 
-	        val = parseInt(str.substring(fullName.length, str.length));
+            val = parseInt(str.substring(fullName.length, str.length));
 
-	    if (isNaN(val))
+        if (isNaN(val))
 
-	        val = 0;    
+            val = 0;    
 
     }
 
-	return val;
+    return val;
 
 }
 
@@ -309,11 +296,11 @@ function blockContextMenu()
 
 {
 
-	event.cancelBubble = true
+    event.cancelBubble = true
 
-   	event.returnValue = false;
+       event.returnValue = false;
 
-  	return false;
+      return false;
 
 }
 
@@ -331,15 +318,15 @@ function blockKeyPresses()
 
     
 
-	if ((event.keyCode == keyBackspace) || (event.keyCode == keyF5)) 
+    if ((event.keyCode == keyBackspace) || (event.keyCode == keyF5)) 
 
-   	{
+       {
 
-   	    event.keyCode = 0;
+           event.keyCode = 0;
 
-   	    event.returnValue = false;
+           event.returnValue = false;
 
-   	}
+       }
 
 }
 
