@@ -6,7 +6,6 @@ function outcome()
 
   var val = readVar("ch3day2_entry");
 
-	alert(val)
 
     if (val > 0)
 
