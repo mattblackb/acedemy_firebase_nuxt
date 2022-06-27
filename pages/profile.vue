@@ -112,6 +112,7 @@ export default {
          this.$store.commit('setCurrentGame/addAchievements', this.introchosen);
     },
       setIntroductionRedirect(introductionObject, page) {
+        console.log('Introchosen', this.introchosen);
         this.introchosen = introductionObject;
         this.showIntroduction = true;
          this.$store.commit('setCurrentGame/addAchievements', this.introchosen);
