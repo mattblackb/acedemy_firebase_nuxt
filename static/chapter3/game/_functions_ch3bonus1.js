@@ -54,7 +54,7 @@ function setCookiesOnEntry() {
 	}
 } 
 
-setCookiesOnEntry();
+// setCookiesOnEntry();
 
 
 if(parent.c_1){
