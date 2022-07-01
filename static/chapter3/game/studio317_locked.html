@@ -6,12 +6,17 @@
 
 <title>The Academy: Chapter Three</title>
 
-<script language="javascript" src="_functions.js"></script>
+<script language="javascript" src="_functions_ch3bonus1.js"></script>
 
 <link href="_style.css" rel="stylesheet" type="text/css" />
 	
 </head>
 
+<style>
+  #availableButton,#availableButtonImage {display: none}
+  .relativePosition {position: relative}
+  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
+</style>
 
 
 <body onLoad="disallowNav()">
@@ -75,14 +80,21 @@
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/studio317_locked.jpg" alt="" usemap="#Map" />
-
-      <map name="Map" id="Map">
-
-        <area shape="rect" coords="300,555,690,635" href="studio317_unlocked.html" title="Use 20 Credits" />
+    <td width="1000" class="relativePosition">
+		<img src="images/studio317_locked.jpg" alt="" usemap="#Map1" id="buybuttonImage"/>
+   <a href="#" title="Use 75 credits"><img src="buttonsetc/75credits.jpg" id="buybutton" onclick="emitCheck('sSX6WUJBy1ICXlhXgSTA|75')"></a>
+      <map name="Map1" id="Map1">
 		<area shape="rect" coords="380,650,620,720" href="studio318.html" title="Go back" /></map>
 
       </td>
+	  <td width="1000" class="relativePosition">
+       <img src="images/studio317_unlocked.jpg" alt="" usemap="#Map2"  id="availableButtonImage"/>
+
+      <map name="Map2" id="Map2">
+       <area shape="rect" coords="380,650,620,720" href="studio318.html" title="Go back" /></map>
+       
+	 <a href="bridgettebonus1.html"><img src="buttonsetc/play_scene.jpg" id="availableButton"></a>
+	  </td>
     </tr>
 </table>
 
@@ -103,8 +115,9 @@
 </table>
 
 </div>
-
+<script>
+  hideShowButton();
+</script>
 </body>
 
 </html>
-

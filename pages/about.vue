@@ -34,22 +34,22 @@ This part of the story takes place during Thursday morning and afternoon.<br/>
 The remastered and expanded versions are in early remake/production stages :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Nine</b> was originally released in December 2017 as 'A date with Bridgette : Part One' : 967 pages<br/>
+<b>Chapter Nine</b> was originally released in December 2017 as 'A Date with Bridgette : Part One' : 967 pages<br/>
 This part of the story takes place during early evening on Thursday.<br/>
 The remastered and expanded version is in early remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Ten</b> was originally released in January 2018 as 'A date with Bridgette : Part Two' : 1666 pages<br/>
+<b>Chapter Ten</b> was originally released in January 2018 as 'A Date with Bridgette : Part Two' : 1666 pages<br/>
 This part of the story takes place later on during Thursday evening.<br/>
 The remastered and expanded version is in early remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Eleven</b> was originally released in March 2019 as 'A date with Bridgette : Part Three' : 2667 pages<br/>
+<b>Chapter Eleven</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages<br/>
 This part of the story takes place during Thursday late evening.<br/>
 The remastered and expanded version is in early remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Twelve</b> was originally released in October 2019 as 'A date with Bridgette : Part Four' : 1762 pages<br/>
+<b>Chapter Twelve</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages<br/>
 This part of the story takes place late on Thursday night/Friday morning.<br/>
 The remastered and expanded version is in early remake/production stage :<br/>
 New release date TBC<br/>
