@@ -13,6 +13,7 @@ var getCookies = function(url){
 		}
 	  }
 	  // window.top.location.href ="/save/"+url+"/"+cookies; 
+      console.log(cookies);
 	  return cookies;
 	}
 	
@@ -54,7 +55,7 @@ function setCookiesOnEntry() {
 
 	}
 } 
-
+getCookies();
 //setCookiesOnEntry();
 
 
