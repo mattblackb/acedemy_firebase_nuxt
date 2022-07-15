@@ -77,8 +77,13 @@ export default {
             
             },
               returnAchievements() {
+             
                 console.log(this.$store.state.setCurrentGame.chosenAcheivements);
-                return this.$store.state.setCurrentGame.chosenAcheivements
+                if(this.$route.query.saved){
+                       return this.$store.state.setCurrentGame.chosenAcheivements
+                }
+                return null
+                
             },
              greet(event) {
               
