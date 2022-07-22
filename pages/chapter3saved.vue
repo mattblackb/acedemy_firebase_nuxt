@@ -36,7 +36,7 @@
         >
               <v-card class="pa5 modalbackground">
             <h1>Save Game</h1>
-            <SaveGame :cookieJson="cookieJson" />
+            <SaveGame :cookieJson="cookieJson" :route = "route" />
             </v-card>
         </v-dialog>
 
@@ -55,7 +55,8 @@ export default {
         dialogSave: false,
         cookieJson: '',
         currentCreditsneeded: [],
-         currentmodule: ""
+         currentmodule: "",
+         route: ""
       }
     },
     computed:{
@@ -70,14 +71,9 @@ export default {
             AddCredits() {
                 this.dialog = true
             },
-             returnAchievements() {
-             
+               returnAchievements() {
                 console.log(this.$store.state.setCurrentGame.chosenAcheivements);
-                if(this.$route.query.saved){
-                       return this.$store.state.setCurrentGame.chosenAcheivements
-                }
-                return null
-                
+                return this.$store.state.setCurrentGame.chosenAcheivements
             },
              greet(event) {
               
@@ -113,14 +109,15 @@ export default {
                     }
                 }
             },
-              saveProgress(event) { //check that the user is logged in (likely)
+              saveProgress(event, route) { //check that the user is logged in (likely)
       
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
                      if (event) {
                          this.cookieJson = event;
-                        this.dialogSave = true
+                        this.dialogSave = true;
+                        this.route = route;
                      }
                     // //Logged in check for available
                     // if(this.$store.state.person.available_modules.length > 0){

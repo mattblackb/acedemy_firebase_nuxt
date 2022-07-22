@@ -8,7 +8,7 @@
       <h1></h1>
         <div class="container">
             <iframe
-            src="../academy_intro/game/checksave_intro.html"
+                   src="../academy_intro/game/checksave_intro.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
@@ -35,7 +35,7 @@
         >
             <v-card>
             <h1>Save Game</h1>
-            <SaveGame :cookieJson="cookieJson" />
+            <SaveGame :cookieJson="cookieJson" :route=  "route" />
             </v-card>
         </v-dialog>
 
@@ -55,7 +55,8 @@ export default {
         cookieJson: '',
         currentCreditsneeded: [],
          currentmodule: "",
-            form_dirty: true
+            form_dirty: true,
+            route: ""
       }
     },
     computed:{
@@ -77,13 +78,15 @@ export default {
             
             },
               returnAchievements() {
-             
+            
                 console.log(this.$store.state.setCurrentGame.chosenAcheivements);
-                if(this.$route.query.saved){
-                       return this.$store.state.setCurrentGame.chosenAcheivements
+                if(this.$store.state.setCurrentGame.chosenAcheivements) {
+                    return this.$store.state.setCurrentGame.chosenAcheivements
                 }
-                return null
-                
+                else {
+                    console.log(null);
+                    return null
+                }
             },
              greet(event) {
               
@@ -114,13 +117,14 @@ export default {
                     }
                 }
             },
-            saveProgress(event) { //check that the user is logged in (likely)
+            saveProgress(event, route) { //check that the user is logged in (likely)
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
                      if (event) {
                          this.cookieJson = event;
-                        this.dialogSave = true
+                        this.dialogSave = true;
+                        this.route = route;
                      }
                 }
             },

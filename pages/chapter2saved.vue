@@ -70,14 +70,9 @@ export default {
             AddCredits() {
                 this.dialog = true
             },
-              returnAchievements() {
-             
+               returnAchievements() {
                 console.log(this.$store.state.setCurrentGame.chosenAcheivements);
-                if(this.$route.query.saved){
-                       return this.$store.state.setCurrentGame.chosenAcheivements
-                }
-                return null
-                
+                return this.$store.state.setCurrentGame.chosenAcheivements
             },
              greet(event) {
               

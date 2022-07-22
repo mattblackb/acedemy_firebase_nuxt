@@ -55,8 +55,7 @@ export default {
         dialogSave: false,
         cookieJson: '',
         currentCreditsneeded: [],
-         currentmodule: "", 
-         route: "",
+         currentmodule: "", route: "",
       }
     },
     computed:{

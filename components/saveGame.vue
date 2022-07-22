@@ -23,7 +23,11 @@ export default({
         cookieJson: {
         type: String,
         required: true
-        }
+        },
+		route: {
+			type: String,
+			required: false
+		}
     },
     methods: {
 		...mapGetters("stories",["getStories"]),
@@ -52,7 +56,13 @@ export default({
         var decodedData = decodeURIComponent(this.cookieJson);
 		// decodedData= atob(decodedData);
 		var jsonObject = JSON.parse(decodedData);
-        jsonObject['episode'] = this.currentBuy;
+		if(this.route != "") {
+			jsonObject['episode'] = this.route;
+			console.log(jsonObject['episode'] )
+		} else {
+			jsonObject['episode'] = this.currentBuy;
+		}
+        
 		this.cookies= jsonObject;
         this.saveEpisode();
     }
