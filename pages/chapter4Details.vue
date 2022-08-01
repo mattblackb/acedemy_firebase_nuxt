@@ -5,7 +5,7 @@
      <v-row>
      <v-col cols="12" md="6">
        <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-        <img src="/imgs/4.png">
+        <img src="/imgs/6.png">
      </v-col>
       <v-col cols="12" md="6">
 
