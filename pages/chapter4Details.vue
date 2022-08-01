@@ -13,13 +13,13 @@
 
     <p>Come back for a full schedule of activities on Tuesday Afternoon...<br/><br/>
 
-Perhaps Amy, Laura and Lola will invite you to join them for their afternoon workout in the gym. Maybe Holly will want to hook up later too.
+Perhaps Amy, Laura and Lola will invite you to join them for their afternoon workout in the gym and maybe Holly will want to hook up later too.
 <br/><br/>
-If you showed Annie the attention she craves then should might just return the favour in the photography studio.
+If you showed Annie the attention she craves then she might just return the favour in the photography studio.
 <br/><br/>
 Of course Principal Valentine needs to be kept abreast of your progress. She has some rather interesting techniques to keep you motivated.
 <br/><br/>
-And at the end of the day Jodie might want to pick up where you left off.
+And at the end of the day Jodie might want to pick up where you left off as well.
 <br/><br/>
 There is plenty to juggle with whichever pathway you choose in this chapter.
 <br/><br/>
