@@ -39,7 +39,10 @@
             </div>
             </v-col>
                   <v-col cols="6">
-                <a href="/"  ><img src="/imgs/index_ch4_locked.jpg" /></a>
+                <a href="/chapter4Details"  ><img src="/imgs/index_ch4.jpg" /></a>
+                      <div v-for="savedintroduction in dayonenGame4" :key="savedintroduction.name">
+             <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter4saved')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter4saved')"> Play next Chapter</span>
+            </div>
             </v-col>
                   <v-col cols="6">
                 <a href="/"  ><img src="/imgs/index_ch5_locked.jpg" /></a>

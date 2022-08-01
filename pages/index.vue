@@ -33,11 +33,12 @@ However you choose to play you can be sure to have fun along the way.
 
     <h1>Welcome {{userDetails.name}}</h1>
     <h2 v-if="userDetails" >Available Credits: {{userDetails.credits}}</h2>
-    <h2>Current Available Episodes</h2>
-     <a href="/introductionDetails"  ><img src="/imgs/index_intro.jpg" /></a>
+    <h2>Currently Available Episodes</h2>
+     	<a href="/introductionDetails"  ><img src="/imgs/index_intro.jpg" /></a>
         <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
-               <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
-               <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
+        <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
+        <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
+		<a href="/chapter4Details"  ><img src="/imgs/index_ch4.jpg" /></a>
         <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
@@ -74,7 +75,7 @@ export default {
             currentUser: false,
             selectedImage: 'imgs/4.png',
             images: [
-                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png'
+                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png', 'imgs/7.png', 'imgs/8.png', 'imgs/9.png', 'imgs/10.png', 'imgs/11.png', 'imgs/12.png'
             ]
 		}
 	},

@@ -22,11 +22,11 @@ The remastered and expanded versions available May 2022: 1600 pages<br/>
 <br/>
 <b>Chapters Three and Four</b> were originally released in July 2016 as 'Academy: Part Two' : 1851 pages<br/>
 This part of the story takes place during Tuesday morning, afternoon and early evening.<br/>
-The remastered and expanded versions are due for release May/June 2022 : 2765 pages<br/>
+The remastered and expanded versions released June/August 2022 : 2610 pages<br/>
 <br/>
 <b>Chapters Five and Six</b> were originally released in December 2016 as 'Academy: Part Three' : 2264 pages<br/>
 This part of the story takes place during Wednesday morning, afternoon and early evening.<br/>
-The remastered and expanded versions are in advanced remake/production stages :<br/>
+The remastered and expanded versions are due for release August/September 2022 :<br/>
 New release date TBC<br/>
 <br/>
 <b>Chapters Seven and Eight</b> were originally released in May 2017 as 'Academy: Part Four' : 2226 pages<br/>
