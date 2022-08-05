@@ -27,6 +27,13 @@
         width="500"
         >
               <v-card class="pa5 modalbackground">
+                 <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -35,6 +42,13 @@
         width="500"
         >
               <v-card class="pa5 modalbackground">
+                 <v-btn
+            color="primary"
+            text
+            @click="dialogSave = false"
+          >
+           X
+          </v-btn>
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" :route = "route" />
             </v-card>
