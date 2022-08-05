@@ -17,7 +17,8 @@ Get to know Bridgette, Didi, Jodie and Principal Valentine a little more and get
 <br/><br/>
 Good luck!
 <br/><br/>
-<b>Chapter One</b> statistics : 530 pages : 525 images : 1 bonus scene : 25 achievements</p>
+<b>Chapter One</b> statistics : 530 pages : 525 images : 1 bonus scene : 25 achievements : 5 bonus achievements
+</p>
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
          <h2 class="clickable" > <NuxtLink to="/chapter1">Start playing the game</NuxtLink></h2>
            

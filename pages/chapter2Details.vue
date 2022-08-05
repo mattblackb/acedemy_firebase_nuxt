@@ -20,7 +20,7 @@ Be careful though, Principal Valentine could fire you if she catches you crossin
 <br/><br/>
 Stay lucky!
 <br/><br/>
-<b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus scenes : 50 Achievements
+<b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus scenes : 50 achievements : 10 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter One before you can play Chapter Two!
     </p>
