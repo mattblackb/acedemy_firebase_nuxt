@@ -12,9 +12,6 @@
     </v-row>
             <v-row>
         <v-col cols="4">
-           <img src="imgs/characters/character_profiles_natalia.jpg">
-      </v-col>
-         <v-col cols="4">
            <img src="imgs/characters/character_profiles_bridgette.jpg">
       </v-col>
        <v-col cols="4">
@@ -43,6 +40,9 @@
          <v-col cols="4">
            <img src="imgs/characters/character_profiles_laura.jpg">
       </v-col>
+	  	 <v-col cols="4">
+           <img src="imgs/characters/character_profiles_alicia.jpg">
+      </v-col>
          <v-col cols="4">
            <img src="imgs/characters/character_profiles_genevieve.jpg">
       </v-col>
@@ -59,6 +59,14 @@
            <img src="imgs/characters/character_profiles_maria.jpg">
       </v-col>
       </v-row>
+	  <v-row  class="pt-5">
+            <h2> OTHER CHARACTERS </h2>
+    </v-row>
+            <v-row>
+        <v-col cols="4">
+           <img src="imgs/characters/character_profiles_natalia.jpg">
+      </v-col>
+      </v-row>
             <v-row  class="pt-5">
             <h2> MALE MEMBERS </h2>
                 </v-row>
@@ -66,7 +74,6 @@
         <v-col cols="4">
            <img src="imgs/characters/character_profiles_sebastian.jpg">
       </v-col>
-    
       </v-row>
     </v-container>
 </main>
