@@ -6,7 +6,11 @@ export const state = () => ({
     addAchievements(state, text ) {
       console.log('Text', text);
       state.chosenAcheivements = text
+    },
+    resetAchievements(state) {
+      state.chosenAcheivements = {}
     }
+
   }
 
   export const getters = {

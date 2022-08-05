@@ -55,7 +55,7 @@ function setCookiesOnEntry() {
 
 	}
 } 
-getCookies();
+// getCookies();
 //setCookiesOnEntry();
 
 

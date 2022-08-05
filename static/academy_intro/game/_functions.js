@@ -42,18 +42,21 @@ function setCookie(name,value,days) {
 function setCookiesOnEntry() {
 	var allVars = getUrlVars();
 	if(allVars){
-	// console.log('allVars',allVars);
+	console.log('allVars',allVars);
 	//set cookies to passed variables
 
 	Object.keys(allVars).map(cookie =>{
-        // console.log('cookie',cookie);
+        console.log('cookie',cookie);
 		setCookie(cookie,allVars[cookie],1)
 	})
 
 	}
 } 
 
-setCookiesOnEntry();
+if(readVar('intro_complete') === 0) {
+    setCookiesOnEntry();
+}
+
 if(parent.c_1){
     } else {
         window.location.href = "/";
@@ -92,10 +95,11 @@ if(parent.c_1){
         }
         
     
-    function saveProgress(){
+    function saveProgress(route){
+        
         var myCookies = getCookies(); //GET JSON ARRAY
         myCookiesJSON = JSON.stringify(myCookies);
-        let returnedState = parent.c_1.saveProgress(myCookiesJSON)
+        let returnedState = parent.c_1.saveProgress(myCookiesJSON, route)
 
         window.location.href ="checksave1.0.html";
         return returnedState

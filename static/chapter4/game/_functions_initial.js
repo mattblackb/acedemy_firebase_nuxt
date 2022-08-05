@@ -54,7 +54,9 @@ function setCookiesOnEntry() {
 	}
 } 
 
-setCookiesOnEntry();
+if(readVar('ch4_complete') === 0) {
+    setCookiesOnEntry();
+}
 
 
 if(parent.c_1){
