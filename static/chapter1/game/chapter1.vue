@@ -4,54 +4,41 @@
   <v-container>
      <v-row>
       <v-col cols="12">
-
-    <h1></h1>
+          
+       <h1>Chapter 1</h1>
         <div class="container">
-            <iframe
-            src="../academy_intro/game/natalia1.html"
+           <iframe
+               src="../chapter1/game/checkpoint1.html"
             width="100%"
-            height= auto
+            height= "100px"
             style="border: 1px solid #EEE; background: white"
             frameborder="0"
             scrolling="yes"
             class="video"
             ></iframe>
+            <!-- <h2>Currently Unavailable</h2> -->
         </div>
 
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
 
-        <v-dialog
+        <chapter2
         v-model="dialog"
         width="500"
         >
-                  <v-card class="pa5 modalbackground">
-                                        <v-btn
-            color="primary"
-            text
-            @click="dialog = false"
-          >
-           X
-          </v-btn>
+            <v-card class="pa5 modalbackground">
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
-        </v-dialog>
-         <v-dialog
+        </chapter2>
+         <chapter2
         v-model="dialogSave"
         width="500"
         >
-                  <v-card class="pa5 modalbackground">
-                                        <v-btn
-            color="primary"
-            text
-            @click="dialogSave = false"
-          >
-           X
-          </v-btn>
+            <v-card>
             <h1>Save Game</h1>
-            <SaveGame :cookieJson="cookieJson" :route="route" />
+            <SaveGame :cookieJson="cookieJson" :route="route"/>
             </v-card>
-        </v-dialog>
+        </chapter2>
 
       </v-col>
      </v-row>
@@ -60,7 +47,7 @@
 </template>
 
 <script>
-import { mapActions, mapMutations } from "vuex";
+import { mapActions, mapMutations, mapGetters } from "vuex";
 export default {  
     data () {
       return {
@@ -68,28 +55,29 @@ export default {
         dialogSave: false,
         cookieJson: '',
         currentCreditsneeded: [],
-         currentmodule: "",
-         route: "",
-            form_dirty: true
+         currentmodule: "", route: "",
       }
     },
     computed:{
       ...mapActions(["updatePerson"]),
+      ...mapGetters("setCurrentGame",["getAchievements"]),
       userDetails (){
           if(this.$store.state.person) {
               return this.$store.state.person
           }
+      },
+      Achievements() {
+          return this.$store.state.chosenAcheivements;
       }
+      
     },
-    methods: {
+    	methods: {
             AddCredits() {
                 this.dialog = true
             },
-            Getname() {
-                if(this.$store.state.person) {
-              return this.$store.state.person
-                }
-            
+            returnAchievements() {
+                console.log(this.$store.state.setCurrentGame.chosenAcheivements);
+                return this.$store.state.setCurrentGame.chosenAcheivements
             },
              greet(event) {
               
@@ -101,8 +89,14 @@ export default {
                             this.currentmodule = myArray[0]
                 }
             },
+               Getname() {
+                if(this.$store.state.person) {
+              return this.$store.state.person
+                }
+            
+            },
             checkAvailable(id) { //check that the user is logged in (likely)
-                if(!this.$store.state.user) {
+                if(!this.$store.state.user.uid) {
                     return false
                 } else {
                     //Logged in check for available
@@ -119,7 +113,8 @@ export default {
                     }
                 }
             },
-            saveProgress(event, route) { //check that the user is logged in (likely)
+              saveProgress(event, route) { //check that the user is logged in (likely)
+      
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
@@ -128,37 +123,24 @@ export default {
                         this.dialogSave = true;
                         this.route = route;
                      }
+                    // //Logged in check for available
+                    // if(this.$store.state.person.available_modules.length > 0){
+                    //     if(this.$store.state.person.available_modules.includes(id)) {
+                    //         //user has already bought the module change the button on the iframe src
+                    //         return true
+                    //     } else {
+                    //         return false
+                    //     }
+                      
+                    // } else {
+                    //     return false
+                    // }
                 }
-            },
-           beforeWindowUnload (e) {
-        
-                    if (this.form_dirty) {
-                        e.preventDefault()
-                        e.returnValue = ''
-                    }
             }
-            
-            
-            
         },
-        beforeRouteLeave (to, from, next) {
-            if (this.form_dirty) {
-                next(false)
-                window.location = to.path // this is the trick
-            } else {
-                next()
-            }
-            },
-
-            beforeDestroy () {
-                window.removeEventListener('beforeunload', this.beforeWindowUnload)
-            },
     mounted () {
        window.c_1 = this
-    },
-    created () {
-    window.addEventListener('beforeunload', this.beforeWindowUnload)
-  }
+    }
 }
 </script>
 
@@ -166,7 +148,8 @@ export default {
 .container {
     position: relative;
      width: 100%;
-     height: 1000px;
+     height: 100px;
+     max-height: 1000px;
      padding-bottom: 56.25%;
  }
  .video {
@@ -176,8 +159,4 @@ export default {
      width: 100%;
      height: 1000px;
  }
-   .modalbackground{
-    background-image: url("/imgs/modal_amy1.jpg");
-
-   }
 </style>

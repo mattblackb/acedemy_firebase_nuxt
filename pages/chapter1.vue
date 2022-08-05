@@ -5,7 +5,7 @@
      <v-row>
       <v-col cols="12">
           
-       <h1></h1>
+       <h1>Chapter 1</h1>
         <div class="container">
            <iframe
                src="../chapter1/game/start1.html"
@@ -27,7 +27,7 @@
         width="500"
         >
             <v-card class="pa5 modalbackground">
-                                        <v-btn
+                       <v-btn
             color="primary"
             text
             @click="dialog = false"
@@ -41,16 +41,16 @@
         v-model="dialogSave"
         width="500"
         >
-            <v-card class="pa5 modalbackground">
-                                        <v-btn
+            <v-card>
+                       <v-btn
             color="primary"
             text
-            @click="dialogSave = false"
+            @click="dialog = false"
           >
            X
           </v-btn>
             <h1>Save Game</h1>
-            <SaveGame :cookieJson="cookieJson" />
+            <SaveGame :cookieJson="cookieJson" :route="route"/>
             </v-card>
         </v-dialog>
 
@@ -69,7 +69,8 @@ export default {
         dialogSave: false,
         cookieJson: '',
         currentCreditsneeded: [],
-         currentmodule: ""
+         currentmodule: "", 
+         route: "",
       }
     },
     computed:{
@@ -127,14 +128,15 @@ export default {
                     }
                 }
             },
-              saveProgress(event) { //check that the user is logged in (likely)
+              saveProgress(event, route) { //check that the user is logged in (likely)
       
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
                      if (event) {
                          this.cookieJson = event;
-                        this.dialogSave = true
+                        this.dialogSave = true;
+                        this.route = route;
                      }
                     // //Logged in check for available
                     // if(this.$store.state.person.available_modules.length > 0){
@@ -149,32 +151,8 @@ export default {
                     //     return false
                     // }
                 }
-            },
-           beforeWindowUnload (e) {
-        
-                    if (this.form_dirty) {
-                        e.preventDefault()
-                        e.returnValue = ''
-                    }
             }
-            
-            
-            
         },
-        beforeRouteLeave (to, from, next) {
-            if (this.form_dirty) {
-                next(false)
-                window.location = to.path // this is the trick
-            } else {
-                next()
-            }
-            },
-
-            beforeDestroy () {
-                window.removeEventListener('beforeunload', this.beforeWindowUnload)
-            },
-            
-    
     mounted () {
        window.c_1 = this
     }

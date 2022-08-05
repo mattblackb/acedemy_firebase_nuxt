@@ -14,7 +14,7 @@
             <v-col cols="12">
             <a href="/introductionDetails"  ><img src="/imgs/index_intro.jpg" /></a>
                 <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
-                  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved')">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved')"> Play next Chapter</span>
+                  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')"> Play next Chapter</span>
               </div>
             </v-col>
         </v-row>
@@ -22,24 +22,29 @@
             <v-col cols="6">
                 <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
                     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
-                      <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved')"> {{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved')"> Play next Chapter</span>
+                      <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> {{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> Play next Chapter</span>
                   </div>
             </v-col>
              <v-col cols="6">
                 <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
                     <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
-             <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved')"> Play next Chapter</span>
+             <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')"> Play next Chapter</span>
   
     </div>
             </v-col>
                   <v-col cols="6">
                 <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
                       <div v-for="savedintroduction in dayonenGame3" :key="savedintroduction.name">
-             <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved')"> Play next Chapter</span>
+             <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved?saved=true')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved?saved=true')"> Play next Chapter</span>
             </div>
             </v-col>
                   <v-col cols="6">
-                <a href="/"  ><img src="/imgs/index_ch4_locked.jpg" /></a>
+                <a href="/chapter4Details"  ><img src="/imgs/index_ch4.jpg" /></a>
+
+                        <div v-for="chapter4saced in chapter4" :key="chapter4saced.name">
+             <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')">{{chapter4saced.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')"> Play next Chapter</span>
+
+            </div>
             </v-col>
                   <v-col cols="6">
                 <a href="/"  ><img src="/imgs/index_ch5_locked.jpg" /></a>
@@ -138,7 +143,7 @@ export default {
       },
          dayonenGame (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter1")
+              return this.$store.state.person.saved_games.filter(game => game.episode==="introductionsaved")
           }
       },
        dayonenGame2 (){
@@ -149,6 +154,11 @@ export default {
        dayonenGame3 (){
           if(this.$store.state.person) {
               return this.$store.state.person.saved_games.filter(game => game.episode==="chapter2saved")
+          }
+      },
+        chapter4 (){
+          if(this.$store.state.person) {
+              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter3saved")
           }
       }
     }

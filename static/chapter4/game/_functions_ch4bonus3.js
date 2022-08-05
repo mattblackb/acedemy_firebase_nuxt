@@ -110,7 +110,7 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
-    let showcontinue = checkAvailable('v3mbekNFP7i8U9hDQKUt');
+    let showcontinue = checkAvailable('tVCuczvBvCfsrBUQ1tPG');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
@@ -133,7 +133,7 @@ function moduleAvailable(state)
 } 
 }
 function hideShowButton2() {
-    let showcontinue = checkAvailable('sSX6WUJBy1ICXlhXgSTA');
+    let showcontinue = checkAvailable('tVCuczvBvCfsrBUQ1tPG');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';

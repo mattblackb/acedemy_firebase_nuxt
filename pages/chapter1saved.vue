@@ -27,6 +27,14 @@
         width="500"
         >
               <v-card class="pa5 modalbackground">
+          
+                       <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
         </v-dialog>
@@ -35,8 +43,16 @@
         width="500"
         >
             <v-card>
+               
+                       <v-btn
+            color="primary"
+            text
+            @click="dialogSave = false"
+          >
+           X
+          </v-btn>
             <h1>Save Game</h1>
-            <SaveGame :cookieJson="cookieJson" />
+            <SaveGame :cookieJson="cookieJson" :route= "route" />
             </v-card>
         </v-dialog>
 
@@ -55,7 +71,8 @@ export default {
         dialogSave: false,
         cookieJson: '',
         currentCreditsneeded: [],
-         currentmodule: ""
+         currentmodule: "",
+         route: ""
       }
     },
     computed:{
@@ -113,14 +130,15 @@ export default {
                     }
                 }
             },
-              saveProgress(event) { //check that the user is logged in (likely)
+              saveProgress(event, route) { //check that the user is logged in (likely)
       
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
                      if (event) {
                          this.cookieJson = event;
-                        this.dialogSave = true
+                        this.dialogSave = true;
+                        route = route;
                      }
                     // //Logged in check for available
                     // if(this.$store.state.person.available_modules.length > 0){

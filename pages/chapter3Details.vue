@@ -19,7 +19,7 @@ It's entirely up to you who you choose to assist more closely. The girls all lov
 <br/><br/>
 Have a good time!
 <br/><br/>
-<b>Chapter Three</b> statistics : 830 pages : 770 images : 1 bonus scene : 25 Achievements
+<b>Chapter Three</b> statistics : 830 pages : 770 images : 1 bonus scene : 25 achievements : 5 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Two before you can play Chapter Three!
     </p>
