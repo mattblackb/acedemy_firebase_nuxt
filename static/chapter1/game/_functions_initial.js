@@ -57,10 +57,10 @@ function setCookiesOnEntry() {
 } 
 
 
-if(readVar('ch1_complete') === 0) {
-    console.log('set Cookies')
+// if(readVar('ch1_complete') === 0) {
+//     console.log('set Cookies')
     setCookiesOnEntry();
-}
+// }
 
 
 

@@ -117,10 +117,10 @@ export default {
          this.$store.commit('setCurrentGame/addAchievements', this.introchosen);
     },
       setIntroductionRedirect(introductionObject, page) {
-        console.log('Introchosen', this.introchosen);
+        console.log('Introchosen', page);
         this.introchosen = introductionObject;
         this.showIntroduction = true;
-         this.$store.commit('setCurrentGame/addAchievements', this.introchosen);
+         this.$store.commit('setCurrentGame/addAchievements', introductionObject);
          this.$router.push({
             path: page
         })
