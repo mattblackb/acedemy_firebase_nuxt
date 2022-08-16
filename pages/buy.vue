@@ -43,69 +43,69 @@ export default ({
 
     methods: {
 		...mapGetters("stories",["getStories"]),
-  setLoaded: function() {
-			window.paypal
-			.Buttons({
-			createOrder: (data, actions) => {
-				return actions.order.create({
-				purchase_units: [
-				{
-					amount: {
-					value: this.creditCost,
-					},
-				},
-				],
-				});
-			},
-			onApprove: async (data, actions) => {
-				const order = await actions.order.capture();
-				if(order.status) {
-					console.log(order.purchase_units[0].amount);
-					if(order.purchase_units[0].amount.value === '10.00'){
-						let personData = {...this.$store.state.person};
-						personData.credits = personData.credits + 100;
-						this.$store.commit('setuser/updatePerson', personData)
-						this.$store.commit('SET_PEOPLE', personData)
-						this.currentStatus = true;
-                         this.snackbarText="You have succesfully purchased 100 credits!"
-                        this.snackbar = true
-					}
-                    if(order.purchase_units[0].amount.value === '20.00'){
-						let personData = {...this.$store.state.person};
-						personData.credits = personData.credits + 250;
-						this.$store.commit('setuser/updatePerson', personData)
-						this.$store.commit('SET_PEOPLE', personData)
-						this.currentStatus = true;
-                           this.snackbarText="You have succesfully purchased 250 credits!"
-                        this.snackbar = true
-					}
-                         if(order.purchase_units[0].amount.value === '30.00'){
-						let personData = {...this.$store.state.person};
-						personData.credits = personData.credits + 400;
-						this.$store.commit('setuser/updatePerson', personData)
-						this.$store.commit('SET_PEOPLE', personData)
-						this.currentStatus = true;
-                        this.snackbarText="You have succesfully purchased 400 credits!"
-                        this.snackbar = true
-					}
+//   setLoaded: function() {
+// 			window.paypal
+// 			.Buttons({
+// 			createOrder: (data, actions) => {
+// 				return actions.order.create({
+// 				purchase_units: [
+// 				{
+// 					amount: {
+// 					value: this.creditCost,
+// 					},
+// 				},
+// 				],
+// 				});
+// 			},
+// 			onApprove: async (data, actions) => {
+// 				const order = await actions.order.capture();
+// 				if(order.status) {
+// 					console.log(order.purchase_units[0].amount);
+// 					if(order.purchase_units[0].amount.value === '10.00'){
+// 						let personData = {...this.$store.state.person};
+// 						personData.credits = personData.credits + 100;
+// 						this.$store.commit('setuser/updatePerson', personData)
+// 						this.$store.commit('SET_PEOPLE', personData)
+// 						this.currentStatus = true;
+//                          this.snackbarText="You have succesfully purchased 100 credits!"
+//                         this.snackbar = true
+// 					}
+//                     if(order.purchase_units[0].amount.value === '20.00'){
+// 						let personData = {...this.$store.state.person};
+// 						personData.credits = personData.credits + 250;
+// 						this.$store.commit('setuser/updatePerson', personData)
+// 						this.$store.commit('SET_PEOPLE', personData)
+// 						this.currentStatus = true;
+//                            this.snackbarText="You have succesfully purchased 250 credits!"
+//                         this.snackbar = true
+// 					}
+//                          if(order.purchase_units[0].amount.value === '30.00'){
+// 						let personData = {...this.$store.state.person};
+// 						personData.credits = personData.credits + 400;
+// 						this.$store.commit('setuser/updatePerson', personData)
+// 						this.$store.commit('SET_PEOPLE', personData)
+// 						this.currentStatus = true;
+//                         this.snackbarText="You have succesfully purchased 400 credits!"
+//                         this.snackbar = true
+// 					}
                     
 
-				}
-				// ajax request
-			},
-			onError: err => {
-				console.log(err);
-			}
-			})
-			.render(this.$refs.paypal);
-		}
+// 				}
+// 				// ajax request
+// 			},
+// 			onError: err => {
+// 				console.log(err);
+// 			}
+// 			})
+// 			.render(this.$refs.paypal);
+// 		}
     },
  mounted: function() {
-    const script = document.createElement("script");
-    const ClientID = "sb&enable-funding=venmo";
-    script.src = `https://www.paypal.com/sdk/js?client-id=${ClientID}`;
-    script.addEventListener("load", this.setLoaded);
-    document.body.appendChild(script);
+    // const script = document.createElement("script");
+    // const ClientID = "sb&enable-funding=venmo";
+    // script.src = `https://www.paypal.com/sdk/js?client-id=${ClientID}`;
+    // script.addEventListener("load", this.setLoaded);
+    // document.body.appendChild(script);
   },
   computed:{
       userDetails (){
