@@ -7,7 +7,8 @@
 			<!-- <p>Purchase credits?</p> -->
 			<!-- <button type="button" class="btn btn-primary">Buy Credits</button> -->
 			<!-- <div ref="chapter2"></div> -->
-			<h3>Buy credit facility currently disabled</h3>
+			<h3>Scene unlocked
+            </h3>
 		
     
 		</div>
