@@ -8,7 +8,7 @@
        <h1>Chapter 1</h1>
         <div class="container">
            <iframe
-               src="../chapter1/game/checkpoint1.html"
+               src="../chapter1/game/start1.html"
             width="100%"
             height= "100px"
             style="border: 1px solid #EEE; background: white"
@@ -22,23 +22,37 @@
 
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
 
-        <chapter2
+        <v-dialog
         v-model="dialog"
         width="500"
         >
             <v-card class="pa5 modalbackground">
+                       <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
                     <DisplayCredits :currentCreditsneeded="currentCreditsneeded" :currentmodule="currentmodule"/>
             </v-card>
-        </chapter2>
-         <chapter2
+        </v-dialog>
+         <v-dialog
         v-model="dialogSave"
         width="500"
         >
             <v-card>
+                       <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
             <h1>Save Game</h1>
             <SaveGame :cookieJson="cookieJson" :route="route"/>
             </v-card>
-        </chapter2>
+        </v-dialog>
 
       </v-col>
      </v-row>
