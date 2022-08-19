@@ -160,23 +160,24 @@ export default {
           }
       },
          dayonenGame (){
+          console.log(this.$store.state.person.saved_games);
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="introductionsaved")
+              return this.$store.state.person.saved_games.filter(game => game.ch1_complete==="1")
           }
       },
        dayonenGame2 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter1saved")
+              return this.$store.state.person.saved_games.filter(game => game.ch2_complete==="1")
           }
       },
        dayonenGame3 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter2saved")
+              return this.$store.state.person.saved_games.filter(game => game.ch3_complete==="1")
           }
       },
         chapter4 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter3saved")
+              return this.$store.state.person.saved_games.filter(game => game.ch4_complete==="1")
           }
       }
     }
