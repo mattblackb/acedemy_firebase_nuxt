@@ -96,6 +96,9 @@
         </v-col>
      </v-row> -->
   </v-container>
+  <div v-if="showloading" class="loading">
+      <p>Loading...</p>
+  </div>
 </main>
 </template>
 
@@ -106,29 +109,44 @@ export default {
 		return {
 			savedintroductions: [],
       introchosen: {},
-      showIntroduction: false
+      showIntroduction: false,
+      showloading: false
 		}
 	},
   methods: {
       ...mapGetters("setCurrentGame",["addAchievements"]),
+      asyncsetState(introductionObject) {
+        this.showloading = true;
+            return new Promise((resolve) => {
+             this.$store.commit('setCurrentGame/addAchievements', introductionObject);
+            })
+   
+      },
     setIntroduction(introductionObject) {
         this.introchosen = introductionObject;
         this.showIntroduction = true;
          this.$store.commit('setCurrentGame/addAchievements', this.introchosen);
     },
-      setIntroductionRedirect(introductionObject, page) {
-        console.log('Introchosen', page);
+     async setIntroductionRedirect(introductionObject, page) {
+         this.showloading = true;
         this.introchosen = introductionObject;
         this.showIntroduction = true;
-         this.$store.commit('setCurrentGame/addAchievements', introductionObject);
-         this.$router.push({
-            path: page
-        })
+      
+           await this.$store.commit('setCurrentGame/addAchievements', introductionObject)
+            this.showloading = false;
+            this.$router.push(page);
+           
+          //  this.showloading = false;
+        //       this.$router.push({
+        //     path: page
+        // })
+          
+
+       
     }
   },
     computed:{
          chosenAchievments () {
-             console.log('Achievements', this.store)
       return this.$store.state.chosenAcheivements
     },
       userDetails (){
@@ -167,5 +185,14 @@ export default {
 <style scoped>
  .clickable {
    cursor: pointer;
+ }
+ .loading {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-color: rgba(255,255,255,0.5);
+  top: 0px;
+  left: 0px;
  }
 </style>
