@@ -97,7 +97,7 @@
      </v-row> -->
   </v-container>
   <div v-if="showloading" class="loading">
-      <p>Loading...</p>
+      <img src="/VAyR.gif" />
   </div>
 </main>
 </template>
@@ -132,9 +132,10 @@ export default {
         this.introchosen = introductionObject;
         this.showIntroduction = true;
       
-           await this.$store.commit('setCurrentGame/addAchievements', introductionObject)
-            this.showloading = false;
-            this.$router.push(page);
+           await this.$store.commit('setCurrentGame/addAchievements', introductionObject);
+           setTimeout(() => {  this.showloading = false;
+            this.$router.push(page); }, 3000);
+            
            
           //  this.showloading = false;
         //       this.$router.push({
@@ -195,5 +196,8 @@ export default {
   background-color: rgba(255,255,255,0.5);
   top: 0px;
   left: 0px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
  }
 </style>

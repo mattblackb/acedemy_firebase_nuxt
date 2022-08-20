@@ -117,7 +117,7 @@ export default {
                     return false
                 } else {
                     //Logged in check for available
-                    if(this.$store.state.person.available_modules.length > 0){
+                    if(this.$store.state.person.available_modules.length > 0){ 
                         if(this.$store.state.person.available_modules.includes(id)) {
                             //user has already bought the module change the button on the iframe src
                             return true
@@ -130,13 +130,14 @@ export default {
                     }
                 }
             },
-              saveProgress(event, route) { //check that the user is logged in (likely)
+             async saveProgress(event, route) { //check that the user is logged in (likely)
       
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
                      if (event) {
                          this.cookieJson = event;
+                         await this.$store.commit('setCurrentGame/addAchievements', event);
                         this.dialogSave = true;
                         route = route;
                      }
