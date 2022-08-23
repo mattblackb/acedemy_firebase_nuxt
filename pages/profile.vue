@@ -96,6 +96,9 @@
         </v-col>
      </v-row> -->
   </v-container>
+  <div v-if="showloading" class="loading">
+      <img src="/VAyR.gif" />
+  </div>
 </main>
 </template>
 
@@ -106,29 +109,45 @@ export default {
 		return {
 			savedintroductions: [],
       introchosen: {},
-      showIntroduction: false
+      showIntroduction: false,
+      showloading: false
 		}
 	},
   methods: {
       ...mapGetters("setCurrentGame",["addAchievements"]),
+      asyncsetState(introductionObject) {
+        this.showloading = true;
+            return new Promise((resolve) => {
+             this.$store.commit('setCurrentGame/addAchievements', introductionObject);
+            })
+   
+      },
     setIntroduction(introductionObject) {
         this.introchosen = introductionObject;
         this.showIntroduction = true;
          this.$store.commit('setCurrentGame/addAchievements', this.introchosen);
     },
-      setIntroductionRedirect(introductionObject, page) {
-        console.log('Introchosen', page);
+     async setIntroductionRedirect(introductionObject, page) {
+         this.showloading = true;
         this.introchosen = introductionObject;
         this.showIntroduction = true;
-         this.$store.commit('setCurrentGame/addAchievements', introductionObject);
-         this.$router.push({
-            path: page
-        })
+      
+           await this.$store.commit('setCurrentGame/addAchievements', introductionObject);
+           setTimeout(() => {  this.showloading = false;
+            this.$router.push(page); }, 3000);
+            
+           
+          //  this.showloading = false;
+        //       this.$router.push({
+        //     path: page
+        // })
+          
+
+       
     }
   },
     computed:{
          chosenAchievments () {
-             console.log('Achievements', this.store)
       return this.$store.state.chosenAcheivements
     },
       userDetails (){
@@ -142,23 +161,24 @@ export default {
           }
       },
          dayonenGame (){
+          console.log(this.$store.state.person.saved_games);
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="introductionsaved")
+              return this.$store.state.person.saved_games.filter(game => game.ch1_complete==="1")
           }
       },
        dayonenGame2 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter1saved")
+              return this.$store.state.person.saved_games.filter(game => game.ch2_complete==="1")
           }
       },
        dayonenGame3 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter2saved")
+              return this.$store.state.person.saved_games.filter(game => game.ch3_complete==="1")
           }
       },
         chapter4 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter3saved")
+              return this.$store.state.person.saved_games.filter(game => game.ch4_complete==="1")
           }
       }
     }
@@ -167,5 +187,17 @@ export default {
 <style scoped>
  .clickable {
    cursor: pointer;
+ }
+ .loading {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-color: rgba(255,255,255,0.5);
+  top: 0px;
+  left: 0px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
  }
 </style>
