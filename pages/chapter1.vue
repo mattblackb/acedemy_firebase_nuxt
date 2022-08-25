@@ -26,7 +26,7 @@
         v-model="dialog"
         width="500"
         >
-            <v-card class="pa5 modalbackground">
+            <v-card class="pa5 chapter2background">
                        <v-btn
             color="primary"
             text

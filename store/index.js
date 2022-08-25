@@ -15,12 +15,15 @@ const actions = {
         email,
       })
       var returnedDocs = [];
+      console.log('email',email);
       await this.$fire.firestore.collection('People').where("email", "==", email).get()
       .then(querySnapshot => {
+        console.log('email',email, querySnapshot.docs[0].data());
         querySnapshot.docs.forEach(doc => {
           returnedDocs.push(doc.data());
       });
     });
+    console.log(returnedDocs[0]);
      state.commit("SET_PEOPLE", returnedDocs[0]);  
     }
   },
