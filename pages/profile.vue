@@ -23,7 +23,7 @@
                 <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
                     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
                       <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> {{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> Play next Chapter | </span> 
-                      <span class="clickable" @click="deleteSave(savedintroduction)">| Delete </span>
+                      <span class="clickable" @click="deleteSave(savedintroduction)"> Delete </span>
                   </div>
             </v-col>
              <v-col cols="6">
@@ -46,7 +46,7 @@
 
                         <div v-for="chapter4saced in chapter4" :key="chapter4saced.name">
              <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')">{{chapter4saced.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')"> Play next Chapter</span>
-              <span class="clickable" @click="deleteSave(chapter4saced)">| Delete {</span>
+              <span class="clickable" @click="deleteSave(chapter4saced)">| Delete </span>
 
             </div>
             </v-col>
@@ -77,7 +77,8 @@
             <v-card class="pa5 modalbackground">
                        <v-btn
             color="primary"
-            text
+               text
+
             @click="dialog = false"
           >
            X
@@ -85,14 +86,14 @@
                    <h3>Delete this save?</h3>
                                 <v-btn
             color="primary"
-            text
+                depressed
             @click="dialog = false"
           >
            No
           </v-btn>
                     <v-btn
             color="warning"
-            text
+            depressed
             @click="commitDelete()"
           >
            Yes
