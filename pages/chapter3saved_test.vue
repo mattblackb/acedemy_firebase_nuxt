@@ -8,7 +8,7 @@
        <h1></h1>
         <div class="container">
            <iframe
-                src="../chapter4/game/holly106_locked.html"
+                src="../chapter2/game/checkpoint2.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
@@ -123,12 +123,13 @@ export default {
                     }
                 }
             },
-              saveProgress(event, route) { //check that the user is logged in (likely)
+             async saveProgress(event, route) { //check that the user is logged in (likely)
       
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
                      if (event) {
+                         await this.$store.commit('setCurrentGame/addAchievements', event)
                          this.cookieJson = event;
                         this.dialogSave = true;
                         this.route = route;

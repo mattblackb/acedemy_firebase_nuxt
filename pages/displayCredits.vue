@@ -110,7 +110,6 @@ export default({
 		buyModule() {
 			let personData = {...this.$store.state.person};
 			personData.available_modules.push(this.selectedStory.id);
-			console.log(personData);
 			personData.credits = personData.credits - this.selectedStory.cost;
 			  this.$store.commit('setuser/updatePerson', personData)
                 this.$store.commit('SET_PEOPLE', personData)

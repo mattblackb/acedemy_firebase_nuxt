@@ -14,7 +14,7 @@
             <v-col cols="12">
             <a href="/introductionDetails"  ><img src="/imgs/index_intro.jpg" /></a>
                 <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
-                  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')"> Play next Chapter</span>
+                  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')"> Play next Chapter </span>
               </div>
             </v-col>
         </v-row>
@@ -22,13 +22,15 @@
             <v-col cols="6">
                 <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
                     <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
-                      <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> {{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> Play next Chapter</span>
+                      <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> {{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> Play next Chapter | </span> 
+                      <span class="clickable" @click="deleteSave(savedintroduction)"> Delete </span>
                   </div>
             </v-col>
              <v-col cols="6">
                 <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
                     <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
              <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')"> Play next Chapter</span>
+              <span class="clickable" @click="deleteSave(savedintroduction)">| Delete </span>
   
     </div>
             </v-col>
@@ -36,6 +38,7 @@
                 <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
                       <div v-for="savedintroduction in dayonenGame3" :key="savedintroduction.name">
              <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved?saved=true')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved?saved=true')"> Play next Chapter</span>
+              <span class="clickable" @click="deleteSave(savedintroduction)">| Delete </span>
             </div>
             </v-col>
                   <v-col cols="6">
@@ -43,6 +46,7 @@
 
                         <div v-for="chapter4saced in chapter4" :key="chapter4saced.name">
              <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')">{{chapter4saced.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')"> Play next Chapter</span>
+              <span class="clickable" @click="deleteSave(chapter4saced)">| Delete </span>
 
             </div>
             </v-col>
@@ -66,23 +70,38 @@
             </v-col>
         </v-row>
 
-<!-- 
-    <h3>Introduction</h3>
-    <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
-    
-        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved')"> Play next Chapter</span>
-    </div>
-        <h3>Chapter 1</h3>
-    <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
-        <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved')"> Play next Chapter</span>
-    </div>
+ <v-dialog
+        v-model="dialog"
+        width="500"
+        >
+            <v-card class="pa5 modalbackground">
+                       <v-btn
+            color="primary"
+               text
 
-       <h3>Chapter 2</h3>
-       {{dayonenGame2}}
-    <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
-             <span class="clickable" @click="setIntroduction(savedintroduction)">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved')"> Play next Chapter</span>
-  
-    </div> -->
+            @click="dialog = false"
+          >
+           X
+          </v-btn>
+                   <h3>Delete this save?</h3>
+                                <v-btn
+            color="primary"
+                depressed
+            @click="dialog = false"
+          >
+           No
+          </v-btn>
+                    <v-btn
+            color="warning"
+            depressed
+            @click="commitDelete()"
+          >
+           Yes
+          </v-btn>
+
+            </v-card>
+        </v-dialog>
+       
 
    
     <v-btn @click="$router.push('/auth/signout')">Logout</v-btn>
@@ -96,39 +115,77 @@
         </v-col>
      </v-row> -->
   </v-container>
+  <div v-if="showloading" class="loading">
+      <img src="/VAyR.gif" />
+  </div>
 </main>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
+import _ from "lodash";
 export default {  
   	data() {
 		return {
+      dialog: false,
 			savedintroductions: [],
       introchosen: {},
-      showIntroduction: false
+      showIntroduction: false,
+      showloading: false,
+      deleteObject: {},
 		}
 	},
   methods: {
+     ...mapActions(["updatePerson"]),
       ...mapGetters("setCurrentGame",["addAchievements"]),
+      asyncsetState(introductionObject) {
+        this.showloading = true;
+            return new Promise((resolve) => {
+             this.$store.commit('setCurrentGame/addAchievements', introductionObject);
+            })
+   
+      },
+      commitDelete() {
+        this.$store.commit('setuser/updatePerson', this.deleteObject);
+        this.$store.commit('SET_PEOPLE',  this.deleteObject);
+        this.dialog = false;
+      },
+      deleteSave(introductionObject) {
+         var orderAllData = _.cloneDeep(this.$store.state.person);
+        this.dialog = true;
+         //remove from aray at index 
+         
+         orderAllData.saved_games.splice(parseInt(introductionObject.index),1);
+          this.deleteObject = orderAllData;
+          console.log('DeleteObject',this.deleteObject);
+
+      },
     setIntroduction(introductionObject) {
         this.introchosen = introductionObject;
         this.showIntroduction = true;
          this.$store.commit('setCurrentGame/addAchievements', this.introchosen);
     },
-      setIntroductionRedirect(introductionObject, page) {
-        console.log('Introchosen', page);
+     async setIntroductionRedirect(introductionObject, page) {
+         this.showloading = true;
         this.introchosen = introductionObject;
         this.showIntroduction = true;
-         this.$store.commit('setCurrentGame/addAchievements', introductionObject);
-         this.$router.push({
-            path: page
-        })
+      
+           await this.$store.commit('setCurrentGame/addAchievements', introductionObject);
+           setTimeout(() => {  this.showloading = false;
+            this.$router.push(page); }, 3000);
+            
+           
+          //  this.showloading = false;
+        //       this.$router.push({
+        //     path: page
+        // })
+          
+
+       
     }
   },
     computed:{
          chosenAchievments () {
-             console.log('Achievements', this.store)
       return this.$store.state.chosenAcheivements
     },
       userDetails (){
@@ -137,28 +194,71 @@ export default {
           }
       },
       introductionGame (){
+ 
           if(this.$store.state.person) {
               return this.$store.state.person.saved_games.filter(game => game.episode==="introduction")
           }
       },
-         dayonenGame (){
+       dayonenGame (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="introductionsaved")
+            var savedGame = []; var x=0;
+             this.$store.state.person.saved_games.map(function(game, index) {
+    
+                 if(game.ch1_complete==="1"  && !game.ch2_complete) {
+                     savedGame.push(_.cloneDeep(game));
+                      savedGame[x].index = index;
+                     x++;
+                 }
+              });
+              return savedGame;
+
           }
       },
        dayonenGame2 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter1saved")
+            var savedGame = []; var x=0;
+             this.$store.state.person.saved_games.map(function(game, index) {
+              
+                 if(game.ch2_complete==="1" && !game.ch3_complete) {
+                  console.log('game2',game.ch3_complete, index);
+                     savedGame.push(_.cloneDeep(game));
+                      savedGame[x].index = index;
+                     x++;
+                 }
+              });
+              return savedGame;
+
           }
       },
        dayonenGame3 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter2saved")
+            var savedGame = []; var x=0;
+             this.$store.state.person.saved_games.map(function(game, index) {
+       
+                 if(game.ch3_complete==="1"  && !game.ch4_complete) {
+                   console.log('game3',game.ch3_complete, index);
+                     savedGame.push(_.cloneDeep(game));
+                      savedGame[x].index = index;
+                     x++;
+                 }
+              });
+              return savedGame;
+
           }
       },
         chapter4 (){
           if(this.$store.state.person) {
-              return this.$store.state.person.saved_games.filter(game => game.episode==="chapter3saved")
+            var savedGame = []; var x=0;
+             this.$store.state.person.saved_games.map(function(game, index) {
+    
+                 if(game.ch4_complete==="1") {
+                        savedGame.push(_.cloneDeep(game));
+                      savedGame[x].index = index;
+                     x++;
+                 }
+              });
+              return savedGame;
+
           }
       }
     }
@@ -167,5 +267,17 @@ export default {
 <style scoped>
  .clickable {
    cursor: pointer;
+ }
+ .loading {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-color: rgba(255,255,255,0.5);
+  top: 0px;
+  left: 0px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
  }
 </style>

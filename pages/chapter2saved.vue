@@ -125,12 +125,13 @@ export default {
                     }
                 }
             },
-                saveProgress(event, route) { //check that the user is logged in (likely)
+             async   saveProgress(event, route) { //check that the user is logged in (likely)
       
                 if(!this.$store.state.user.uid) {
                     return false
                 } else {
                      if (event) {
+                         await this.$store.commit('setCurrentGame/addAchievements', event)
                          this.cookieJson = event;
                         this.dialogSave = true;
                         route = route;
