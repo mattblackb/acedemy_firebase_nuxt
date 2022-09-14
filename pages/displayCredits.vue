@@ -6,8 +6,9 @@
 			</div>
 			<!-- <p>Purchase credits?</p> -->
 			<!-- <button type="button" class="btn btn-primary">Buy Credits</button> -->
-			<!-- <div ref="paypal"></div> -->
-			<h3>Scene unlocked</h3>
+			<!-- <div ref="chapter2"></div> -->
+			<h3>Scene unlocked
+            </h3>
 		
     
 		</div>
@@ -44,40 +45,40 @@ export default({
     },
     methods: {
 		...mapGetters("stories",["getStories"]),
-		setLoaded: function() {
-			window.paypal
-			.Buttons({
-			createOrder: (data, actions) => {
-				console.log('Creating order..', this.order)
-				return actions.order.create({
-				purchase_units: [
-				{
-					amount: {
-					value: "10",
-					},
-				},
-				],
-				});
-			},
-			onApprove: async (data, actions) => {
-				const order = await actions.order.capture();
-				if(order.status) {
-					if(order.purchase_units[0].amount.value === '10.00'){
-						let personData = {...this.$store.state.person};
-						personData.credits = personData.credits + 100;
-						this.$store.commit('setuser/updatePerson', personData)
-						this.$store.commit('SET_PEOPLE', personData)
-						this.currentStatus = true;
-					}
-				}
-				// ajax request
-			},
-			onError: err => {
-				console.log(err);
-			}
-			})
-			.render(this.$refs.paypal);
-		},
+		// setLoaded: function() {
+		// 	window.chapter2
+		// 	.Buttons({
+		// 	createOrder: (data, actions) => {
+		// 		console.log('Creating order..', this.order)
+		// 		return actions.order.create({
+		// 		purchase_units: [
+		// 		{
+		// 			amount: {
+		// 			value: "10",
+		// 			},
+		// 		},
+		// 		],
+		// 		});
+		// 	},
+		// 	onApprove: async (data, actions) => {
+		// 		const order = await actions.order.capture();
+		// 		if(order.status) {
+		// 			if(order.purchase_units[0].amount.value === '10.00'){
+		// 				let personData = {...this.$store.state.person};
+		// 				personData.credits = personData.credits + 100;
+		// 				this.$store.commit('setuser/updatePerson', personData)
+		// 				this.$store.commit('SET_PEOPLE', personData)
+		// 				this.currentStatus = true;
+		// 			}
+		// 		}
+		// 		// ajax request
+		// 	},
+		// 	onError: err => {
+		// 		console.log(err);
+		// 	}
+		// 	})
+		// 	.render(this.$refs.chapter2);
+		// },
         checkAvailable() {
 			 if(this.$store.state.person) {
 		
@@ -109,7 +110,6 @@ export default({
 		buyModule() {
 			let personData = {...this.$store.state.person};
 			personData.available_modules.push(this.selectedStory.id);
-			console.log(personData);
 			personData.credits = personData.credits - this.selectedStory.cost;
 			  this.$store.commit('setuser/updatePerson', personData)
                 this.$store.commit('SET_PEOPLE', personData)
@@ -118,11 +118,11 @@ export default({
 		},
     },
     mounted: function() {
-    const script = document.createElement("script");
-    const ClientID = "sb&enable-funding=venmo";
-    script.src = `https://www.paypal.com/sdk/js?client-id=${ClientID}`;
-    script.addEventListener("load", this.setLoaded);
-    document.body.appendChild(script);
+    // const script = document.createElement("script");
+    // // const ClientID = "sb&enable-funding=venmo";
+    // // script.src = `https://www.chapter2.com/sdk/js?client-id=${ClientID}`;
+    // script.addEventListener("load", this.setLoaded);
+    // document.body.appendChild(script);
 	this.checkAvailable();
   },
 })
