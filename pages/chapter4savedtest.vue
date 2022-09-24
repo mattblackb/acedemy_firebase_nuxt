@@ -129,10 +129,12 @@ export default {
                     return false
                 } else {
                      if (event) {
+                        console.log(event);
                         await this.$store.commit('setCurrentGame/addAchievements', event)
                         this.cookieJson = event;
                         this.dialogSave = true;
                         this.route = route;
+                        //update user state with data
                      }
                     // //Logged in check for available
                     // if(this.$store.state.person.available_modules.length > 0){
