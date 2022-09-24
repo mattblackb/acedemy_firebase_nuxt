@@ -98,6 +98,7 @@ var getCookies = function(){
 
     function saveProgress(route){
         var myCookies = getCookies(); //GET JSON ARRAY
+        console.log('myCookies',myCookies);
         myCookiesJSON = JSON.stringify(myCookies);
         let returnedState = parent.c_1.saveProgress(myCookiesJSON, route)
         return returnedState
