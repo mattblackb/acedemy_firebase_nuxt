@@ -49,7 +49,7 @@ export default({
 			
 			 personData.saved_games.push(this.cookies);
 			  this.$store.commit('setuser/updatePerson', personData)
-                // this.$store.commit('SET_PEOPLE', personData)
+            this.$store.commit('SET_PEOPLE', personData)
 			this.currentMessage = 'This game has been saved. You can see this game in your profile';
 		},
     },
