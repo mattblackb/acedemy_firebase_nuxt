@@ -12,7 +12,8 @@ export const state = () => ({
         })
         //set person data state
 
-        // state.commit("SET_USER", userProfile);
+        //state.commit("SET_USER", userProfile);
+
        
         // if(userProfile.docs[0].id){
         //   console.log('ID', docs[0].id);
