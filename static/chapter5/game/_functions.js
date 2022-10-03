@@ -81,7 +81,7 @@ function checkAvailable(method)
    let returnedState = parent.c_1.checkAvailable(method)
    return returnedState
 } 
-const myTimeout = setInterval(hideShowButton, 1000);
+// const myTimeout = setInterval(hideShowButton, 1000);
 
 var getCookies = function(){
   var pairs = document.cookie.split(";");
