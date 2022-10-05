@@ -6,15 +6,22 @@
 
 <title>The Academy: Chapter One</title>
 
-<script language="javascript" src="_functions.js"></script>
+<script language="javascript" src="_functions_ch1bonus1.js"></script>
 
 <link href="_style.css" rel="stylesheet" type="text/css" />
 	
 </head>
-	
 
-<!-- <body onLoad="disallowNav()"> -->
-<body>
+<style>
+  #availableButton,#availableButtonImage {display: none}
+  .relativePosition {position: relative}
+  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
+</style>
+<script>
+  hideShowButton2();
+</script>
+
+<body onLoad="disallowNav()">
 
 <div align="center">
 
@@ -75,28 +82,15 @@
 <!--inventory end-->
 
     <td width="1000" class="relativePosition"><img src="images/media84_locked.jpg" alt="" usemap="#Map" id="buybuttonImage"/>
-   <img src="buttonsetc/10credits.jpg" id="buybutton" onclick="emitCheck('aMQRxfwfzkM735Sj3QVQ|10')">
-      <map name="Map" id="Map">
-
-       
-		<area shape="rect" coords="380,650,620,720" href="media77.html" title="Go back" />
-		
-	</map>
-   
+   <a href="#" title="Use 10 credits"><img src="buttonsetc/10credits.jpg" id="buybutton" onclick="emitCheck('aMQRxfwfzkM735Sj3QVQ|10')"></a>
       </td>
        <td width="1000" class="relativePosition">
        <img src="images/media84_unlocked.jpg" alt="" usemap="#Map"  id="availableButtonImage"/>
 
-      <map name="Map_play" id="Map_play">
-
-       
-		<area shape="rect" coords="380,650,620,720" href="media77.html" title="Go back" />
-		 
-	</map>
-
-    <a href="mediabonus1.html" ><img src="buttonsetc/play_scene.jpg" id="availableButton"> </a>
+      <a href="mediabonus1.html" ><img src="buttonsetc/play_scene.jpg" id="availableButton"> </a>
       </td>
     
+	</tr>
   
 </table>
 
