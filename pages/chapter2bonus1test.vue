@@ -8,7 +8,7 @@
        <h1></h1>
         <div class="container">
            <iframe
-                src="../chapter1/game/mediajodie60_locked.html"
+                src="../chapter2/game/mediajodie60_locked.html"
             width="100%"
             height= auto
             style="border: 1px solid #EEE; background: white"
