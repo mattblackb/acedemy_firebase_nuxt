@@ -176,31 +176,13 @@ function readVar(name)
 
 {
 
-    var fullName = name + "=";
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
 
-    var val = 0;
-
-    var strings = document.cookie.split(';');
-
-    for(var i=0; i < strings.length; i++) 
-
-    {
-
-        var str = strings[i];
-
-        while (str.charAt(0)==' ')
-
-            str = str.substring(1, str.length);
-
-        if (str.indexOf(fullName) == 0) 
-
-            val = parseInt(str.substring(fullName.length, str.length));
-
-        if (isNaN(val))
-
-            val = 0;    
-
-    }
+        if (match) {
+            return val;
+        } else {
+            return null;
+        }
 
     return val;
 
