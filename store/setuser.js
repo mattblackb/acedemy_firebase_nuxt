@@ -3,7 +3,7 @@ export const state = () => ({
   })
   
   export const mutations = {
-    async updatePerson(context, docData) {
+    async updatePerson(state, docData) {
         console.log('UpdatePerson', docData);
         var userProfile = await  this.$fire.firestore.collection('People').where("email", "==", docData.email).get().then(querySnapshot => {
           // console.log('userProfile', querySnapshot.docs[0]);
@@ -11,7 +11,9 @@ export const state = () => ({
           this.$fire.firestore.collection('People').doc(querySnapshot.docs[0].id).set(docData);
         })
         //set person data state
+
         //state.commit("SET_USER", userProfile);
+
        
         // if(userProfile.docs[0].id){
         //   console.log('ID', docs[0].id);

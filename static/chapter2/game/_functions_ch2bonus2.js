@@ -112,7 +112,7 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
-    let showcontinue = checkAvailable('VVJ5mVW6zM0f3fygZzHB');
+    let showcontinue = checkAvailable('5GvSh36NPJVmgz0LKXeX');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';

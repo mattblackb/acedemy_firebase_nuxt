@@ -1,5 +1,6 @@
 
 //MB Added post message
+
 //MB added
 var getCookies = function(url){
 	// let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -54,6 +55,7 @@ function setCookiesOnEntry() {
 	}
 } 
 
+//setCookiesOnEntry();
 
 
 if(parent.c_1){
@@ -79,7 +81,7 @@ function checkAvailable(method)
    let returnedState = parent.c_1.checkAvailable(method)
    return returnedState
 } 
-const myTimeout = setInterval(hideShowButton, 1000);
+const myTimeout = setInterval(hideShowButton2, 1000);
 
 var getCookies = function(){
   var pairs = document.cookie.split(";");
@@ -110,7 +112,7 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
-    let showcontinue = checkAvailable('v3mbekNFP7i8U9hDQKUt');
+    let showcontinue = checkAvailable('VVJ5mVW6zM0f3fygZzHB');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
@@ -133,13 +135,14 @@ function moduleAvailable(state)
 } 
 }
 function hideShowButton2() {
-    let showcontinue = checkAvailable('v3mbekNFP7i8U9hDQKUt');
+    let showcontinue = checkAvailable('VVJ5mVW6zM0f3fygZzHB');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
    document.getElementById('buybuttonImage').style.display = 'none';
    document.getElementById("availableButtonImage").style.display = 'block';
 } else {
+
     document.getElementById('buybutton').style.display = 'block';
     document.getElementById("availableButton").style.display = 'none';
     document.getElementById('buybuttonImage').style.display = 'block';
