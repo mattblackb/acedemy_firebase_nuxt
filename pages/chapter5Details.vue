@@ -23,7 +23,7 @@ Will you take the opportunity to hang out with Annie, or will you help Holly and
 <br/><br/>
 Once again, there are several pathways for you choose in this chapter.
 <br/><br/>
-<b>Chapter Five</b> statistics : 1500 pages : 1700 images : 2 bonus scene : 25 achievements : 30 bonus achievements
+<b>Chapter Five</b> statistics : 1500 pages : 1700 images : 2 bonus scenes : 25 achievements : 30 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Four before you can play Chapter Five!
     </p>
