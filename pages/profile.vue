@@ -256,7 +256,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
       
-                   if(game.ch4_complete==="1" && !game.ch5_complete) {
+                   if(game.ch4_complete==="1" && !game.ch5_complete  && game.ch5_complete != 0) {
                           savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
