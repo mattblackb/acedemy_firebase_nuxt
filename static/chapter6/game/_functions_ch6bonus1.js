@@ -110,7 +110,7 @@ function deleteVar(name)
 } 
 
 function hideShowButton() {
-    let showcontinue = checkAvailable('---AMEND---');
+    let showcontinue = checkAvailable('jReWFozzmh0DoFRK9zqx');
 if (showcontinue) {
    document.getElementById('buybutton').style.display = 'none';
    document.getElementById("availableButton").style.display = 'block';
