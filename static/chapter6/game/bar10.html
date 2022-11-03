@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<title>The Academy: Chapter Six</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+<script language="javascript">
+	
+setVar("ch6bar_drinks", 1);
+	
+setVar("ch6drink_wine", 0);
+	
+setVar("ch6drink_whiskey", 0);
+	
+setVar("ch6drink_beer", 0);
+	
+setVar("alexia_score", 2);
+	
+</script>
+	
+
+<body onLoad="disallowNav()">
+
+<div align="center">
+
+  <p><span class="black">"text_________________________________text"</span> <span class="alexia">"Yes Sir what can I get you?"</span></p>
+
+
+
+<table width="1220" border="0">
+
+  <tr>
+
+    <td width="105">
+<!--inventory start-->
+    
+<!--clock start-->
+      <table width="99" border="0" align="center">
+
+        <tr>
+
+          <td height="100">
+
+<script src="clockcheck.js">
+
+</script>
+
+</td>
+        </tr>
+      </table>
+<!--clock end-->
+
+<!--score start-->
+      <table width="100" border="0" align="center" cellpadding="3">
+
+      <tr>
+<td width="68" align="center" bgcolor="#CCCCCC"><script src="alexiascorecheck.js">
+
+</script>
+
+
+          </td>
+
+      </tr>
+    </table>
+<!--score end-->
+    
+<!-- headshot start-->
+    <table width="200" border="0" align="center">
+
+          <tr>
+
+            <td height="250"><img src="buttonsetc/inv_alexia.jpg" width="125" height="200" alt=""/></td>
+
+          </tr>
+
+      </table>
+<!-- headshot end--></td>
+
+<!--inventory end-->
+
+    <td width="1000"><img src="images/bar10.jpg" alt="" />
+    
+    </td>
+    </tr>
+</table>
+
+<table width="1200" border="0">
+
+<tr>
+
+        <td width="200"></td>
+        
+        <td width="333"><a href="bar11.html" onClick="varPlus1('ch6drink_wine')">"Two red wines and a mineral water please."</a></td>
+
+        <td width="333"><a href="bar11.html" onClick="varPlus1('ch6drink_whiskey')">"A red wine, a whiskey and a water please."</a></td>
+
+      <td width="333"><a href="bar11.html" onClick="varPlus1('ch6drink_beer')">"A red wine, a beer and a water please."</a></td>
+
+    </tr>
+
+</table>
+
+</div>
+
+</body>
+
+</html>
+
