@@ -1,3 +1,4 @@
+
 // displays player's name
 
 
@@ -63,5 +64,3 @@ document.write(' '+username);
 
 
 }
-
-myname2();
