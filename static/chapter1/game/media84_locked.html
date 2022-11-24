@@ -6,26 +6,18 @@
 
 <title>The Academy: Chapter One</title>
 
-<script language="javascript" src="_functions_ch1bonus1.js"></script>
+<script language="javascript" src="_functions.js"></script>
 
 <link href="_style.css" rel="stylesheet" type="text/css" />
-	
 </head>
 
-<style>
-  #availableButton,#availableButtonImage {display: none}
-  .relativePosition {position: relative}
-  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
-</style>
-<script>
-  hideShowButton2();
-</script>
+
 
 <body onLoad="disallowNav()">
 
 <div align="center">
 
-	<p><span class="black">"text"</span></p>
+  <p><span class="black">"text"</span></p>
 
 
 
@@ -70,31 +62,29 @@
           <tr>
 
             <td height="250"></td>
+
           </tr>
-    </table>
-    
-    <table width="200" border="0" align="center">
-      <tr> </tr>
-      
-    </table>
-    <!-- headshot end--></td>
+
+      </table>
+<!-- headshot end--></td>
 
 <!--inventory end-->
 
-    <td width="1000" class="relativePosition"><img src="images/media84_locked.jpg" alt="" usemap="#Map" id="buybuttonImage"/>
-   <a href="#" title="Use 10 credits"><img src="buttonsetc/10credits.jpg" id="buybutton" onclick="emitCheck('aMQRxfwfzkM735Sj3QVQ|10')"></a>
-      </td>
-       <td width="1000" class="relativePosition">
-       <img src="images/media84_unlocked.jpg" alt="" usemap="#Map"  id="availableButtonImage"/>
+    <td width="1000"><img src="images/media84_locked.jpg" alt="" usemap="#Map" />
 
-      <a href="mediabonus1.html" ><img src="buttonsetc/play_scene.jpg" id="availableButton"> </a>
+      <map name="Map" id="Map">
+
+        <area shape="rect" coords="300,555,690,635" href="media84_unlocked.html" title="Use 10 Credits" />
+		<area shape="rect" coords="380,650,620,720" href="media77.html" title="Go back" />
+		
+        
+      </map>
+
       </td>
-    
-	</tr>
-  
+    </tr>
 </table>
 
-<table width="1200" border="0">
+<table width="1200" height="50" border="0">
 
 <tr>
 
@@ -102,7 +92,7 @@
         
         <td width="333"><a href="#"></a></td>
 
-        <td width="333"><a href="media77.html">SKIP SCENE</a></td>
+        <td width="333"><a href="media77.html">GO BACK</a></td>
 
       <td width="333"><a href="#"></a></td>
 
@@ -110,16 +100,44 @@
 
 </table>
 
+<table width="1200" height="50" border="0">
+
+<tr>
+
+        <td width="200"></td>
+        
+        <td width="333"><a href="#"></a></td>
+
+        <td width="333"><a href="#"></a></td>
+
+        <td width="333"><a href="#"></a></td>
+
+    </tr>
+
+</table>
+
+<!-- NEW FUNCTIONS BAR START --> 
+<table width="1200" height="50" border="0">
+
+<tr>
+
+    <td width="50"></td>
+	
+	<td width="50"><a href="#" onClick="location.reload()"><img src="buttonsetc/refresh.jpg" width="50" height="50" alt="Refresh this page" title="Refresh this page"/></a></td>
+	
+	<td width="50"></td>
+	
+	<td width="1050"></td>
+
+    </tr>
+
+</table>
+	
+<!-- NEW FUNCTIONS BAR END -->
+
 </div>
 
 </body>
 
 </html>
-<style>
-  #availableButton,#availableButtonImage {display: none}
-  .relativePosition {position: relative}
-  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
-</style>
-<script>
-  hideShowButton();
-</script>
+
