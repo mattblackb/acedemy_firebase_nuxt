@@ -6,19 +6,19 @@
 
 <title>The Academy: Chapter Two</title>
 
-<script language="javascript" src="_functions.js"></script>
+<script language="javascript" src="_functions_ch2bonus1.js"></script>
 
 <link href="_style.css" rel="stylesheet" type="text/css" />
 	
 </head>
+	
 
-
-
-<body onLoad="disallowNav()">
+<!-- <body onLoad="disallowNav()"> -->
+<body>
 
 <div align="center">
 
-  <p><span class="black">"text"</span></p>
+	<p><span class="black">"text"</span></p>
 
 
 
@@ -64,28 +64,32 @@
           <tr>
 
             <td height="250"><img src="buttonsetc/inv_jodie1.jpg" width="125" height="200" alt=""/></td>
-
           </tr>
-
-      </table>
-<!-- headshot end--></td>
+    </table>
+    
+    <table width="200" border="0" align="center">
+      <tr> </tr>
+      
+    </table>
+    <!-- headshot end--></td>
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/mediajodie60_locked.jpg" usemap="#Map" />
-
-      <map name="Map" id="Map">
-
-        <area shape="rect" coords="300,555,690,635" href="mediajodie60_unlocked.html" title="Use 50 Credits" />
-		<area shape="rect" coords="380,650,620,720" href="mediajodie59.html" title="Go back" />
-		  
-      </map>
-
+    <td width="1000" class="relativePosition">
+<img src="images/mediajodie60_locked.jpg" alt="" usemap="#Map" id="buybuttonImage"/>
+<a href="#" title="Use 50 credits"><img src="buttonsetc/50credits.jpg" id="buybutton" onclick="emitCheck('VVJ5mVW6zM0f3fygZzHB|50')"></a>
+</td>
+       
+	<td width="1000" class="relativePosition">
+       <img src="images/mediajodie60_unlocked.jpg" alt="" usemap="#Map"  id="availableButtonImage"/>
+		   
+<a href="jodiebonus1.html" ><img src="buttonsetc/play_scene.jpg" id="availableButton"> </a>
       </td>
-    </tr>
+	</tr>
+  
 </table>
 
-<table width="1200" height="50" border="0">
+<table width="1200" border="0">
 
 <tr>
 
@@ -93,14 +97,14 @@
         
         <td width="333"><a href="#"></a></td>
 
-        <td width="333"><a href="mediajodie59.html">GO BACK</a></td>
+        <td width="333"><a href="mediajodie59.html">SKIP SCENE</a></td>
 
       <td width="333"><a href="#"></a></td>
 
     </tr>
 
 </table>
-
+	
 <!-- NEW FUNCTIONS BAR START --> 
 <table width="1200" height="50" border="0">
 
@@ -125,4 +129,11 @@
 </body>
 
 </html>
-
+<style>
+  #availableButton,#availableButtonImage {display: none}
+  .relativePosition {position: relative}
+  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
+</style>
+<script>
+  hideShowButton();
+</script>
