@@ -1,6 +1,8 @@
 
 //MB Added post message
 
+//Functions for Chapter Three
+
 //MB added
 var getCookies = function(url){
 	// let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -41,21 +43,37 @@ function setCookie(name,value,days) {
 	document.cookie = name+"="+value+expires+"; path=/";
 	}
 
-function setCookiesOnEntry() {
-	var allVars = getUrlVars();
-    // console.log('allVars',allVars);
-	if(allVars){
+function clearUnwantedCookies() {
+  cookiesToKeep = [
+    'ch1bonus1',
+	'ch2_success',
+    'ch2bonus1',
+    'ch2bonus2',
+	'ch2_maria_sex',
+    'ch2_jodie_positive',
+	'ch2_jodie_cum',
+    'ch2_annie_positive',
+	'ch2_annie_cum',
+    'ch2annie_ride',
+	'report',
+  ]
+  var allVars = getUrlVars()
+  if (allVars) {
+    //set cookies to passed variables
 
-	//set cookies to passed variables
+    Object.keys(allVars).map((cookie) => {
+      //if cookie name is not in cookiesToKeep array, delete it
+      if (!cookiesToKeep.includes(cookie)) {
+        document.cookie =
+          cookie + '=; expires=Thu, 01-Jan-70 00:00:01 GMT' + '; path=/'
+        // console.log('cookissse', cookie)
+      } else {
+        console.log('cookissse saved', cookie)
+      }
+    })
+  }
+}
 
-	Object.keys(allVars).map(cookie =>{
-        console.log('cookie',cookie, allVars[cookie]);
-		setCookie(cookie,allVars[cookie],1)
-	})
-
-	}
-} 
-// getCookies();
 //setCookiesOnEntry();
 
 

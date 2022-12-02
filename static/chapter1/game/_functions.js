@@ -1,6 +1,7 @@
 
 //MB Added post message
 
+//Functions for Chapter One
 
 //MB added
 var getCookies = function(url){
@@ -41,24 +42,28 @@ function setCookie(name,value,days) {
 	document.cookie = name+"="+value+expires+"; path=/";
 	}
 
-function setCookiesOnEntry() {
+function clearUnwantedCookies() {
+  cookiesToKeep = [
+    'intro_success',
+  ]
+  var allVars = getUrlVars()
+  if (allVars) {
+    //set cookies to passed variables
 
-	var allVars = getUrlVars();
-	if(allVars){
-	console.log('allVars',allVars);
-	//set cookies to passed variables
+    Object.keys(allVars).map((cookie) => {
+      //if cookie name is not in cookiesToKeep array, delete it
+      if (!cookiesToKeep.includes(cookie)) {
+        document.cookie =
+          cookie + '=; expires=Thu, 01-Jan-70 00:00:01 GMT' + '; path=/'
+        // console.log('cookissse', cookie)
+      } else {
+        console.log('cookissse saved', cookie)
+      }
+    })
+  }
+}
 
-	Object.keys(allVars).map(cookie =>{
-        console.log('cookie',cookie);
-		setCookie(cookie,allVars[cookie],1)
-	})
-
-	}
-} 
-
-// setCookiesOnEntry();
-
-
+//setCookiesOnEntry();
 
 if(parent.c_1){
 } else {
