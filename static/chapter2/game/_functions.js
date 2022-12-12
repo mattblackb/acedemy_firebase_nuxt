@@ -48,6 +48,7 @@ function clearUnwantedCookies() {
     'ch1bonus1',
     'ch1manners',
 	'ch1talk_megan',
+	'ch1_jodie_positive',
 	'report',
 	'ch2maria_canteen',
 	'ch2megan_canteen',

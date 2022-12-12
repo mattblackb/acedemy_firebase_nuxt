@@ -106,6 +106,9 @@ function clearUnwantedCookies() {
 	'ch3principal_studio',
 	'ch3_maria_sex',
 	'ch3_bridgette_positive',
+	'ch3_annie_positive',
+	'ch3_holly_positive',
+	'ch3_lola_positive',
   ]
   var allVars = getUrlVars()
   if (allVars) {
