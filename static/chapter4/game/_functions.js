@@ -42,6 +42,23 @@ function setCookie(name, value, days) {
 
 function clearUnwantedCookies() {
   cookiesToKeep = [
+	'alicia_score',
+	'amy_score',
+	'annie_score',
+	'bridgette_score',
+	'didi_score',
+	'genevieve_score',
+	'holly_score',
+	'isabella_score',
+	'jodie_score',
+	'laura_score',
+	'lola_score',
+	'maria_score',
+	'megan_score',
+	'olivia_score',
+	'principal_score',
+	'progress',
+	'report',
     'ch1bonus1',
 	'ch2bonus1',
     'ch2bonus2',
