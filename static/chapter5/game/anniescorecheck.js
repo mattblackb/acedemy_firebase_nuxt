@@ -4,7 +4,7 @@ function infcheck()
 
 {
 
-  var val = readVar("amy_score");
+  var val = readVar("annie_score");
 
 	if ((val > -200)&&(val < -4))
 
