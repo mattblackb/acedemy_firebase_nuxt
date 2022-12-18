@@ -75,7 +75,7 @@ export default {
       form_dirty: true,
       dialogInteraction: false,
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_amy1.jpg',
+      backgroundImage: '/imgs/modals/modal_principal1.jpg',
       bonusRedirectUrl: '',
     }
   },

@@ -14,11 +14,29 @@
               frameborder="0"
               scrolling="yes"
               class="video"
+              id="iframeContent"
             ></iframe>
             <!-- <h2>Currently Unavailable</h2> -->
           </div>
 
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
+
+          <!-- Modal for All other actions-->
+          <v-dialog v-model="dialogInteraction" width="500">
+            <v-card
+              class="pa-5 genericModal"
+              :style="{ backgroundImage: `url(${backgroundImage})` }"
+            >
+              <v-btn color="primary" text @click="dialogInteraction = false">
+                X
+              </v-btn>
+              <h1 :v-show="genericModalAction == ''">Play this bonus again</h1>
+              <v-btn color="primary" text @click="triggerBonusReplay()">
+                Replay Bonus
+              </v-btn>
+            </v-card>
+          </v-dialog>
+          <!-- End of generic modal -->
 
           <v-dialog v-model="dialog" width="500">
             <v-card class="pa5 modalbackground">
@@ -55,6 +73,9 @@ export default {
       currentCreditsneeded: [],
       currentmodule: '',
       route: '',
+      genericModalAction: '',
+      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      bonusRedirectUrl: '',
     }
   },
   computed: {

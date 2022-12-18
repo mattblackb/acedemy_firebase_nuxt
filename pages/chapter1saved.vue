@@ -14,6 +14,7 @@
               frameborder="0"
               scrolling="yes"
               class="video"
+              id="iframeContent"
             ></iframe>
           </div>
 
@@ -69,6 +70,9 @@ export default {
       currentCreditsneeded: [],
       currentmodule: '',
       route: '',
+      genericModalAction: '',
+      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      bonusRedirectUrl: '',
     }
   },
   computed: {

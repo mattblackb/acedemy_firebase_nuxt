@@ -14,6 +14,7 @@
               frameborder="0"
               scrolling="yes"
               class="video"
+              id="iframeContent"
             ></iframe>
             <!-- <h2>Currently Unavailable</h2> -->
           </div>
@@ -35,7 +36,7 @@
               </v-btn>
             </v-card>
           </v-dialog>
-          <!-- End of generci modal -->
+          <!-- End of generic modal -->
 
           <v-dialog v-model="dialog" width="500">
             <v-card class="pa5 modalbackground">
@@ -72,6 +73,9 @@ export default {
       currentCreditsneeded: [],
       currentmodule: '',
       route: '',
+      genericModalAction: '',
+      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      bonusRedirectUrl: '',
     }
   },
   computed: {
