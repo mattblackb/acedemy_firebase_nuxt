@@ -59,6 +59,12 @@ if (parent.c_1) {
 function emitCheck(method) {
   parent.c_1.greet(method)
 }
+//Added for bonus replay - displays modal to replay bonus
+function replayBonus(bonus) {
+  console.log('Replay bonus', bonus)
+  parent.c_1.replayBonus(bonus)
+}
+//End Added for bonus replay - displays modal to replay bonus
 function getName(method) {
   var person = parent.c_1.Getname()
   cookievalue = person.name + ';'

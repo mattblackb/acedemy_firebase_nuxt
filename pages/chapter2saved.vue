@@ -70,6 +70,9 @@ export default {
       currentCreditsneeded: [],
       currentmodule: '',
       route: '',
+      genericModalAction: '',
+      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      bonusRedirectUrl: '',
     }
   },
   computed: {
