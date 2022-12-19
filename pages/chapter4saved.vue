@@ -191,3 +191,8 @@ export default {
   height: 1000px;
 }
 </style>
+<style>
+.genericModal {
+  height: 250px;
+}
+</style>
