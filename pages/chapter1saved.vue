@@ -66,6 +66,7 @@ export default {
     return {
       dialog: false,
       dialogSave: false,
+      dialogInteraction: false,
       cookieJson: '',
       currentCreditsneeded: [],
       currentmodule: '',
@@ -103,6 +104,7 @@ export default {
     },
     triggerBonusReplay() {
       document.getElementById('iframeContent').src = this.bonusRedirectUrl
+      this.dialogInteraction = false
     },
     AddCredits() {
       this.dialog = true
@@ -209,5 +211,8 @@ export default {
   left: 0;
   width: 100%;
   height: 1000px;
+}
+.genericModal {
+  height: 250px;
 }
 </style>
