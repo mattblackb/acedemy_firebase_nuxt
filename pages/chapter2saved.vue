@@ -74,6 +74,7 @@ export default {
       genericModalAction: '',
       backgroundImage: '/imgs/modals/modal_principal1.jpg',
       bonusRedirectUrl: '',
+      dialogInteraction: false,
     }
   },
   computed: {
@@ -100,6 +101,7 @@ export default {
     },
     triggerBonusReplay() {
       document.getElementById('iframeContent').src = this.bonusRedirectUrl
+      this.dialogInteraction = false
     },
     AddCredits() {
       this.dialog = true

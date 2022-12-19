@@ -76,6 +76,7 @@ export default {
       genericModalAction: '',
       backgroundImage: '/imgs/modals/modal_principal1.jpg',
       bonusRedirectUrl: '',
+      dialogInteraction: false,
     }
   },
   computed: {
@@ -87,6 +88,23 @@ export default {
     },
   },
   methods: {
+    replayBonus(bonusString) {
+      //split bonusString by | and return
+      var bonusSplit = bonusString.split('|')
+      if (bonusSplit.length > 1) {
+        this.backgroundImage = bonusSplit[0] //First part of string should be the img as '/imgs/modals/modal_amy1.jpg', Ignoring the static string
+        this.bonusRedirectUrl = bonusSplit[1] //Second part of string should be the url to replace the iframe with
+      }
+      if (bonusSplit.length > 2) {
+        //Future use
+        this.genericModalAction = bonusSplit[2] //Changes the behaviour of the modal...
+      }
+      this.dialogInteraction = true
+    },
+    triggerBonusReplay() {
+      document.getElementById('iframeContent').src = this.bonusRedirectUrl
+      this.dialogInteraction = false
+    },
     AddCredits() {
       this.dialog = true
     },
