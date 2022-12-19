@@ -33,7 +33,7 @@
                 <a href="/chapter6Details"  ><img src="/imgs/index_ch6.jpg" /></a>
             </v-col>
                   <v-col cols="6">
-                <a href="/"  ><img src="/imgs/index_ch7_locked.jpg" /></a>
+                <a href="/chapter7Details"  ><img src="/imgs/index_ch7.jpg" /></a>
             </v-col>
                   <v-col cols="6">
                 <a href="/"  ><img src="/imgs/index_ch8_locked.jpg" /></a>
