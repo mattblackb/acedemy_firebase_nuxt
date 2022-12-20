@@ -12,25 +12,25 @@ After a period of some uncertainty as to the whereabouts of the games' creator, 
 While completing on a further two episodes, a decision had also been taken to update the older episodes and bring them up to a consistent quality. At the same time, it was decided to release the new and remastered episodes on a custom-built platform.<br/><br/>
 It also gave dsp3000 an opportunity to improve and expand upon elements of the story.
 <br/><br/>
-During 2022 an ambitious schedule of release has been set.
+During 2022/2023 an ambitious schedule of release has been set.
 <br/><br/>
-A new <b>Introductory Episode</b> available April 2022 : 180 pages<br/>
+A new <b>Introductory Episode</b> available April 2022 : 180 pages : 478 images<br/>
 <br/>
 <b>Chapters One and Two </b> were originally released in April 2016 as 'Academy: Part One' : 1230 pages<br/>
 This part of the story takes place during Monday morning and afternoon.<br/>
-The remastered and expanded versions available May 2022: 1600 pages<br/>
+The remastered and expanded versions available May 2022: 1600 pages : 1732 images<br/>
 <br/>
 <b>Chapters Three and Four</b> were originally released in July 2016 as 'Academy: Part Two' : 1851 pages<br/>
 This part of the story takes place during Tuesday morning, afternoon and early evening.<br/>
-The remastered and expanded versions released June/August 2022 : 2610 pages<br/>
+The remastered and expanded versions released June/August 2022 : 2610 pages : 3831 images<br/>
 <br/>
 <b>Chapters Five and Six</b> were originally released in December 2016 as 'Academy: Part Three' : 2264 pages<br/>
 This part of the story takes place during Wednesday morning, afternoon and evening.<br/>
-The remastered and expanded versions are due for release August/September 2022 : 3250 pages<br/>
+The remastered and expanded versions released September/November 2022 : 3250 pages : 4314 images<br/>
 <br/>
 <b>Chapters Seven and Eight</b> were originally released in May 2017 as 'Academy: Part Four' : 2226 pages<br/>
 This part of the story takes place during Thursday morning and afternoon.<br/>
-The remastered and expanded versions are in remake/production stages :<br/>
+The remastered and expanded versions are in late remake/production stages :<br/>
 New release date TBC<br/>
 <br/>
 <b>Chapter Nine</b> was originally released in December 2017 as 'A Date with Bridgette : Part One' : 967 pages<br/>

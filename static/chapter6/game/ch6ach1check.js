@@ -1,10 +1,10 @@
-// displays annie message outcome
+// displays amy message outcome
 
 function outcome()
 
 {
 
-  var val = readVar("ch6annie_message");
+  var val = readVar("ch6amy_message");
 
 	
 
