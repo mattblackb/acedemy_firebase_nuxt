@@ -20,7 +20,7 @@ Good luck!
 <b>Chapter One</b> statistics : 530 pages : 525 images : 1 bonus scene : 25 achievements : 5 bonus achievements
 </p>
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-         <h2 class="clickable" > <NuxtLink to="/chapter1">Start playing the game</NuxtLink></h2>
+         <h2 class="clickable" > <NuxtLink to="/introductionsaved">Start playing the game</NuxtLink></h2>
            
     <h2 class="clickable" > <NuxtLink to="/profile">View your Saved Games</NuxtLink></h2>
 
