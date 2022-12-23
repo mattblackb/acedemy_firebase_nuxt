@@ -67,7 +67,7 @@
               </v-col>
                     <v-col cols="6">
                   <a href="/chapter7Details"  ><img src="/imgs/index_ch7.jpg" /></a>
-                  <div v-for="chapter7saved in chapter6" :key="chapter7saved.name">
+                  <div v-for="chapter7saved in chapter7" :key="chapter7saved.name">
                <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')">{{chapter7saved.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')"> Play next Chapter</span>
                 <span class="clickable" @click="deleteSave(chapter7saved)">| Delete </span>
                 </div>
