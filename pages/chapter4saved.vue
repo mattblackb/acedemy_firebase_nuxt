@@ -120,6 +120,11 @@ export default {
         this.currentmodule = myArray[0]
       }
     },
+    getPlayerName() {
+      if (this.$store.state.person) {
+        return this.$store.state.person.name
+      }
+    },
     Getname() {
       if (this.$store.state.person) {
         return this.$store.state.person

@@ -122,6 +122,11 @@ export default {
         this.currentmodule = myArray[0]
       }
     },
+    getPlayerName() {
+      if (this.$store.state.person) {
+        return this.$store.state.person.name
+      }
+    },
     checkAvailable(id) {
       //check that the user is logged in (likely)
       if (!this.$store.state.user) {
