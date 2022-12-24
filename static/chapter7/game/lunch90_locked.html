@@ -1,134 +1,148 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTDXHTML1.0Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html>
 
-<head>
+	<head>
 
-<title>The Academy: Chapter Seven</title>
+		<title>The Academy: Chapter Seven</title>
 
-<script language="javascript" src="_functions_ch7bonus1.js"></script>
+		<script language="javascript" src="_functions_ch7bonus1.js"></script>
 
-<link href="_style.css" rel="stylesheet" type="text/css" />
-    
-</head>
+		<link href="_style.css" rel="stylesheet" type="text/css"/>
 
-<style>
-  #availableButton,#availableButtonImage {display: none}
-  .relativePosition {position: relative}
-  #buybutton, #availableButton { position: absolute; bottom: 100px; left: 290px}
-</style>
-<script>
-  hideShowButton2();
-</script>
-<body onLoad="disallowNav()">
+	</head>
 
-<div align="center">
+	<style>
+		#availableButton,
+		#availableButtonImage {
+			display: none
+		}
+		.relativePosition {
+			position: relative
+		}
+		#buybutton,
+		#availableButton {
+			position: absolute;
+			bottom: 100px;
+			left: 290px
+		}
+	</style>
+	<script>
+		hideShowButton2();
+	</script>
+	<body onload="disallowNav()">
 
-  <p><span class="black">"text"</span></p>
+		<div align="center">
+
+			<p>
+				<span class="black">"text"</span>
+			</p>
 
 
+			<table width="1220" border="0">
 
-<table width="1220" border="0">
+				<tr>
 
-  <tr>
+					<td width="105">
+						<!--inventory start-->
 
-    <td width="105">
-<!--inventory start-->
-    
-<!--clock start-->
-      <table width="99" border="0" align="center">
+						<!--clock start-->
+							<table width="99" border="0" align="center"> <tr>
 
-        <tr>
+								<td height="100">
 
-          <td height="100">
+									<script src="clockcheck.js"></script>
 
-<script src="clockcheck.js">
+								</td>
+							</tr>
+						</table>
+						<!--clock end-->
 
-</script>
+						<!--score start-->
+						<table width="100" border="0" align="center" cellpadding="3">
 
-</td>
-        </tr>
-      </table>
-<!--clock end-->
+							<tr>
+								<td width="68" align="center" bgcolor="#CCCCCC">
+									<script src="bridgettescorecheck.js"></script>
+								</td>
 
-<!--score start-->
-      <table width="100" border="0" align="center" cellpadding="3">
+							</tr>
+						</table>
+						<!--score end-->
 
-      <tr>
-<td width="68" align="center" bgcolor="#CCCCCC"><script src="bridgettescorecheck.js">
+						<!-- headshot start-->
+						<table width="200" border="0" align="center">
 
-</script>
-          </td>
+							<tr>
 
-      </tr>
-    </table>
-<!--score end-->
-    
-<!-- headshot start-->
-    <table width="200" border="0" align="center">
+								<td height="250"><img src="buttonsetc/inv_bridgette4.jpg" width="125" height="200" alt=""/></td>
 
-          <tr>
+							</tr>
 
-            <td height="250"><img src="buttonsetc/inv_bridgette4.jpg" width="125" height="200" alt=""/></td>
+						</table>
+						<!-- headshot end-->
+					</td>
 
-          </tr>
+					<!--inventory end-->
 
-      </table>
-<!-- headshot end--></td>
+					<td width="1000" class="relativePosition">
+						<img src="images/lunch90_locked.jpg" alt="" usemap="#Map" id="buybuttonImage"/>
+						<a href="#" title="Use 100 credits"><img src="buttonsetc/100credits.jpg" id="buybutton" onclick="emitCheck('CUNlldEogSuLRXxIye1a|100')"></a>
+					</td>
 
-<!--inventory end-->
+					<td width="1000" class="relativePosition">
+						<img src="images/lunch90_unlocked.jpg" alt="" usemap="#Map" id="availableButtonImage"/>
 
-    <td width="1000" class="relativePosition">
-		<img src="images/lunch90_locked.jpg" alt="" usemap="#Map" id="buybuttonImage"/>
-<a href="#" title="Use 100 credits"><img src="buttonsetc/100credits.jpg" id="buybutton" onclick="emitCheck('---AMEND---|100')"></a>
-</td>
-	  
-	<td width="1000" class="relativePosition">
-       <img src="images/lunch90_unlocked.jpg" alt="" usemap="#Map"  id="availableButtonImage"/>
-       
-<a href="bridgettebonus1.html"><img src="buttonsetc/play_scene.jpg" id="availableButton"></a>
-</td>
-    </tr>
-</table>
+						<a href="bridgettebonus1.html"><img src="buttonsetc/play_scene.jpg" id="availableButton"></a>
+					</td>
+				</tr>
+			</table>
 
-<table width="1200" height="50" border="0">
+			<table width="1200" height="50" border="0">
 
-<tr>
+				<tr>
 
-        <td width="200"></td>
-        
-        <td width="333"><a href="#"></a></td>
+					<td width="200"></td>
 
-        <td width="333"><a href="lunch91.html">SKIP SCENE</a></td>
+					<td width="333">
+						<a href="#"></a>
+					</td>
 
-      <td width="333"><a href="#"></a></td>
+					<td width="333">
+						<a href="lunch91.html">SKIP SCENE</a>
+					</td>
 
-    </tr>
+					<td width="333">
+						<a href="#"></a>
+					</td>
 
-</table>
+				</tr>
 
-<!-- NEW FUNCTIONS BAR START --> 
-<table width="1200" height="50" border="0">
+			</table>
 
-<tr>
+			<!-- NEW FUNCTIONS BAR START -->
+			<table width="1200" height="50" border="0">
 
-    <td width="50"></td>
-	
-	<td width="50"><a href="#" onClick="location.reload()"><img src="buttonsetc/refresh.jpg" width="50" height="50" alt="Refresh this page" title="Refresh this page"/></a></td>
-	
-	<td width="50"></td>
-	
-	<td width="1050"></td>
+				<tr>
 
-    </tr>
+					<td width="50"></td>
 
-</table>
-	
-<!-- NEW FUNCTIONS BAR END -->
+					<td width="50">
+						<a href="#" onclick="location.reload()"><img src="buttonsetc/refresh.jpg" width="50" height="50" alt="Refresh this page" title="Refresh this page"/></a>
+					</td>
 
-</div>
+					<td width="50"></td>
 
-</body>
+					<td width="1050"></td>
+
+				</tr>
+
+			</table>
+
+			<!-- NEW FUNCTIONS BAR END -->
+
+		</div>
+
+	</body>
 
 </html>
-

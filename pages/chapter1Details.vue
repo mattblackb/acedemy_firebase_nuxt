@@ -9,7 +9,7 @@
      </v-col>
       <v-col cols="12" md="6">
 
-    <h1>The Academy - Chapter 1</h1>
+    <h1>The Academy - Chapter One</h1>
 
     <p>Start your new job at <i>The Goodhead Academy</i> on Monday morning where you are introduced to many of the characters you will spend your week with. There are also a few essential problems to solve and some tasks that need completing before you can successfully move on to the afternoon.
 <br/><br/>
@@ -20,7 +20,7 @@ Good luck!
 <b>Chapter One</b> statistics : 530 pages : 525 images : 1 bonus scene : 25 achievements : 5 bonus achievements
 </p>
     <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-         <h2 class="clickable" > <NuxtLink to="/chapter1">Start playing the game</NuxtLink></h2>
+         <h2 class="clickable" > <NuxtLink to="/introductionsaved">Skip intro and start playing the game</NuxtLink></h2>
            
     <h2 class="clickable" > <NuxtLink to="/profile">View your Saved Games</NuxtLink></h2>
 

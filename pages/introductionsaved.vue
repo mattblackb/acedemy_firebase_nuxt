@@ -103,6 +103,11 @@ export default {
     AddCredits() {
       this.dialog = true
     },
+     getPlayerName() {
+      if (this.$store.state.person) {
+        return this.$store.state.person.name
+      }
+    },
     Getname() {
       if (this.$store.state.person) {
         return this.$store.state.person
