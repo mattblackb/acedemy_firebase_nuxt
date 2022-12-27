@@ -14,45 +14,46 @@
               <v-col cols="12">
               <a href="/introductionDetails"  ><img src="/imgs/index_intro.jpg" /></a>
                   <div v-for="savedintroduction in introductionGame" :key="savedintroduction.name">
-                    <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')">{{savedintroduction.date}} | View Introduction achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')"> Play Chapter One</span>
+                    <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')">{{savedintroduction.date}} | View game achievements</span> |  <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/introductionsaved?saved=true')"> Play next Chapter </span>
                 </div>
               </v-col>
           </v-row>
     <v-row> 
               <v-col cols="6">
                   <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
-                      <div v-for="chapter1saved in chapter1" :key="savedintroduction.name">
-                <span class="clickable" @click="setIntroductionRedirect(chapter1saved, '/chapter1saved?saved=true')"> {{chapter1saved.date}} | View Chapter One achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> Play Chapter Two | </span> 
+                      <div v-for="savedintroduction in dayonenGame" :key="savedintroduction.name">
+                        <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> {{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> Play next Chapter | </span> 
                         <span class="clickable" @click="deleteSave(savedintroduction)"> Delete </span>
                     </div>
               </v-col>
                <v-col cols="6">
                   <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
-                      <div v-for="chapter2saved in chapter2" :key="chapter2saved.name">
-               <span class="clickable" @click="setIntroductionRedirect(chapter2saved, '/chapter2saved?saved=true')">{{chapter2saved.date}} | View Chapter Two achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')"> Play Chapter Three</span>
-                <span class="clickable" @click="deleteSave(chapter2saved)">| Delete </span>
+                      <div v-for="savedintroduction in dayonenGame2" :key="savedintroduction.name">
+               <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')"> Play next Chapter</span>
+                <span class="clickable" @click="deleteSave(savedintroduction)">| Delete </span>
     
       </div>
               </v-col>
                     <v-col cols="6">
                   <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
-                        <div v-for="chapter3saved in chapter3" :key="chapter3saved.name">
-               <span class="clickable" @click="setIntroductionRedirect(chapter3saved, '/chapter3saved?saved=true')">{{chapter3saved.date}} | View Chapter Three achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter3saved, '/chapter3saved?saved=true')"> Play Chapter Four</span>
-                <span class="clickable" @click="deleteSave(chapter3saved)">| Delete </span>
+                        <div v-for="savedintroduction in dayonenGame3" :key="savedintroduction.name">
+               <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved?saved=true')">{{savedintroduction.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter3saved?saved=true')"> Play next Chapter</span>
+                <span class="clickable" @click="deleteSave(savedintroduction)">| Delete </span>
               </div>
               </v-col>
                     <v-col cols="6">
                   <a href="/chapter4Details"  ><img src="/imgs/index_ch4.jpg" /></a>
-  				<div v-for="chapter4saved in chapter4" :key="chapter4saved.name">
-               <span class="clickable" @click="setIntroductionRedirect(chapter4saved, '/chapter4saved?saved=true')">{{chapter4saved.date}} | View Chapter Four achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter4saved, '/chapter4saved?saved=true')"> Play Chapter Five</span>
-                <span class="clickable" @click="deleteSave(chapter4saved)">| Delete </span>
+  
+                          <div v-for="chapter4saced in chapter4" :key="chapter4saced.name">
+               <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')">{{chapter4saced.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter4saced, '/chapter4saved?saved=true')"> Play next Chapter</span>
+                <span class="clickable" @click="deleteSave(chapter4saced)">| Delete </span>
   
               </div>
               </v-col>
                     <v-col cols="6">
                   <a href="/chapter5Details"  ><img src="/imgs/index_ch5.jpg" /></a>
                   <div v-for="chapter5saved in chapter5" :key="chapter5saved.name">
-               <span class="clickable" @click="setIntroductionRedirect(chapter5saved, '/chapter5saved?saved=true')">{{chapter5saved.date}} | View Chapter Five achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter5saved, '/chapter5saved?saved=true')"> Play Chapter Six</span>
+               <span class="clickable" @click="setIntroductionRedirect(chapter5saved, '/chapter5saved?saved=true')">{{chapter5saved.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter5saved, '/chapter5saved?saved=true')"> Play next Chapter</span>
                 <span class="clickable" @click="deleteSave(chapter5saved)">| Delete </span>
   
               </div>
@@ -60,14 +61,14 @@
                     <v-col cols="6">
                   <a href="/chapter6Details"  ><img src="/imgs/index_ch6.jpg" /></a>
                   <div v-for="chapter6saved in chapter6" :key="chapter6saved.name">
-               <span class="clickable" @click="setIntroductionRedirect(chapter6saved, '/chapter6saved?saved=true')">{{chapter6saved.date}} | View Chapter Six achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter6saved, '/chapter6saved?saved=true')"> Play Chapter Seven</span>
+               <span class="clickable" @click="setIntroductionRedirect(chapter6saved, '/chapter6saved?saved=true')">{{chapter6saved.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter6saved, '/chapter6saved?saved=true')"> Play next Chapter</span>
                 <span class="clickable" @click="deleteSave(chapter6saved)">| Delete </span>
                 </div>
               </v-col>
                     <v-col cols="6">
                   <a href="/chapter7Details"  ><img src="/imgs/index_ch7.jpg" /></a>
                   <div v-for="chapter7saved in chapter7" :key="chapter7saved.name">
-               <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')">{{chapter7saved.date}} | View Chapter Seven achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')"> Play Chapter Eight</span>
+               <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')">{{chapter7saved.date}} | View game achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')"> Play next Chapter</span>
                 <span class="clickable" @click="deleteSave(chapter7saved)">| Delete </span>
                 </div>
               </v-col>
