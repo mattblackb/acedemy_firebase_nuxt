@@ -21,7 +21,7 @@
     <v-row> 
               <v-col cols="6">
                   <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
-                      <div v-for="chapter1saved in chapter1" :key="savedintroduction.name">
+                      <div v-for="chapter1saved in chapter1" :key="chapter1saved.name">
                 <span class="clickable" @click="setIntroductionRedirect(chapter1saved, '/chapter1saved?saved=true')"> {{chapter1saved.date}} | View Chapter One achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter1saved, '/chapter1saved?saved=true')"> Play Chapter Two | </span> 
                         <span class="clickable" @click="deleteSave(chapter1saved)">| Delete </span>
                     </div>
@@ -197,7 +197,7 @@
       }
     },
       computed:{
-           chosenAcheivments () {
+           chosenAchievements () {
         return this.$store.state.chosenAchievements
       },
         userDetails (){
