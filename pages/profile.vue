@@ -32,7 +32,7 @@
                <span class="clickable" @click="setIntroductionRedirect(chapter2saved, '/chapter2saved?saved=true')">{{chapter2saved.date}} | View Chapter Two achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter2saved, '/chapter2saved?saved=true')"> Play Chapter Three</span>
                 <span class="clickable" @click="deleteSave(chapter2saved)">| Delete </span>
     
-      </div>
+      		  </div>
               </v-col>
                     <v-col cols="6">
                   <a href="/chapter3Details"  ><img src="/imgs/index_ch3.jpg" /></a>
