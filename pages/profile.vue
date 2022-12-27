@@ -22,14 +22,14 @@
               <v-col cols="6">
                   <a href="/chapter1Details"  ><img src="/imgs/index_ch1.jpg" /></a>
                       <div v-for="chapter1saved in chapter1" :key="savedintroduction.name">
-                <span class="clickable" @click="setIntroductionRedirect(chapter1saved, '/chapter1saved?saved=true')"> {{chapter1saved.date}} | View Chapter One achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter1saved?saved=true')"> Play Chapter Two | </span> 
-                        <span class="clickable" @click="deleteSave(savedintroduction)"> Delete </span>
+                <span class="clickable" @click="setIntroductionRedirect(chapter1saved, '/chapter1saved?saved=true')"> {{chapter1saved.date}} | View Chapter One achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter1saved, '/chapter1saved?saved=true')"> Play Chapter Two | </span> 
+                        <span class="clickable" @click="deleteSave(chapter1saved)">| Delete </span>
                     </div>
               </v-col>
                <v-col cols="6">
                   <a href="/chapter2Details"  ><img src="/imgs/index_ch2.jpg" /></a>
                       <div v-for="chapter2saved in chapter2" :key="chapter2saved.name">
-               <span class="clickable" @click="setIntroductionRedirect(chapter2saved, '/chapter2saved?saved=true')">{{chapter2saved.date}} | View Chapter Two achievements</span> | <span class="clickable" @click="setIntroductionRedirect(savedintroduction, '/chapter2saved?saved=true')"> Play Chapter Three</span>
+               <span class="clickable" @click="setIntroductionRedirect(chapter2saved, '/chapter2saved?saved=true')">{{chapter2saved.date}} | View Chapter Two achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter2saved, '/chapter2saved?saved=true')"> Play Chapter Three</span>
                 <span class="clickable" @click="deleteSave(chapter2saved)">| Delete </span>
     
       </div>
@@ -122,8 +122,8 @@
       <!-- <v-row>
          <v-col cols="8">
             <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction'" :introAchievments="introchosen" />
-            <DisplayAceivementsdayone v-if="introchosen.episode == 'chapter1'" :introAchievments="introchosen" />
-            <DisplayAceivementsdayone v-if="introchosen.episode == 'chapter2'" :introAchievments="introchosen" />
+            <DisplayAchievementschapter1 v-if="introchosen.episode == 'chapter1'" :introAchievments="introchosen" />
+            <DisplayAchievementschapter2 v-if="introchosen.episode == 'chapter2'" :introAchievments="introchosen" />
           </v-col>
        </v-row> -->
     </v-container>
@@ -197,8 +197,8 @@
       }
     },
       computed:{
-           chosenAchievments () {
-        return this.$store.state.chosenAcheivements
+           chosenAcheivments () {
+        return this.$store.state.chosenAchievements
       },
         userDetails (){
             if(this.$store.state.person) {
@@ -211,13 +211,13 @@
                 return this.$store.state.person.saved_games.filter(game => game.episode==="introduction")
             }
         },
-         dayonenGame (){
+         chapter1 (){
             if(this.$store.state.person) {
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
       
-                   if(game.ch1_complete==="1"  && !game.ch2_complete) {
-                       savedGame.push(_.cloneDeep(game));
+                   if(game.ch1_complete==="1"  && !game.ch2_complete != 0) {
+                        savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
                    }
@@ -226,14 +226,13 @@
   
             }
         },
-         dayonenGame2 (){
+         chapter2 (){
             if(this.$store.state.person) {
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
                 
-                   if(game.ch2_complete==="1" && !game.ch3_complete) {
-                    console.log('game2',game.ch3_complete, index);
-                       savedGame.push(_.cloneDeep(game));
+                   if(game.ch2_complete==="1" && !game.ch3_complete  && game.ch3_complete != 0) {
+                    	savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
                    }
@@ -242,14 +241,13 @@
   
             }
         },
-         dayonenGame3 (){
+         chapter3 (){
             if(this.$store.state.person) {
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
          
-                   if(game.ch3_complete==="1"  && !game.ch4_complete) {
-                     console.log('game3',game.ch3_complete, index);
-                       savedGame.push(_.cloneDeep(game));
+                   if(game.ch3_complete==="1" && !game.ch4_complete  && game.ch4_complete != 0) {
+                     	savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
                    }
@@ -264,7 +262,7 @@
                this.$store.state.person.saved_games.map(function(game, index) {
       
                    if(game.ch4_complete==="1" && !game.ch5_complete  && game.ch5_complete != 0) {
-                          savedGame.push(_.cloneDeep(game));
+                        savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
                    }
@@ -279,7 +277,7 @@
                this.$store.state.person.saved_games.map(function(game, index) {
               
                    if(game.ch5_complete==="1" && !game.ch6_complete  && game.ch6_complete != 0) {
-                          savedGame.push(_.cloneDeep(game));
+                        savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
                    }
@@ -293,8 +291,8 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
               
-                   if(game.ch6_complete==="1" ) {
-                          savedGame.push(_.cloneDeep(game));
+                   if(game.ch6_complete==="1" && !game.ch7_complete  && game.ch7_complete != 0)) {
+                        savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
                    }
