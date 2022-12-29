@@ -1,10 +1,10 @@
-// displays jodie topless outcome
+// displays bridgette_convo outcome
 
 function outcome()
 
 {
 
-  var val = readVar("ch6jodie_topless");
+  var val = readVar("ch6bridgette_convo");
 
 	
 

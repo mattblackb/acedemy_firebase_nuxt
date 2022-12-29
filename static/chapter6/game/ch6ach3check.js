@@ -1,10 +1,10 @@
-// displays bridgette workout outcome
+// displays annie documents outcome
 
 function outcome()
 
 {
 
-  var val = readVar("ch6bridgette_workout");
+  var val = readVar("ch6annie_documents");
 
 	
 
