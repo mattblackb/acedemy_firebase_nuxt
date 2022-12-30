@@ -31,7 +31,7 @@
               >Continue the story from a saved game</NuxtLink
             >
           </h2>
-          <div
+          <!-- <div
             v-for="savedintroduction in dayonenGame3"
             :key="savedintroduction.name"
           >
@@ -57,10 +57,10 @@
             >
               Play chapter Four</span
             >
-            <!-- <span class="clickable" @click="deleteSave(savedintroduction)"
+          <span class="clickable" @click="deleteSave(savedintroduction)"
               >| Delete
-            </span> -->
-          </div>
+            </span> 
+          </div> -->
      
         </v-col>
       </v-row>
