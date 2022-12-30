@@ -3,7 +3,7 @@
     <NavBar />
     <v-container>
       <v-row>
-        <v-col cols="12" md="6"> </v-col>
+        <v-col cols="12" md="6">      <img src="/imgs/4.png" /></v-col>
         <v-col cols="12" md="6">
           <h1>The Academy - Chapter Three</h1>
 
@@ -43,9 +43,9 @@
                   '/chapter3saved?saved=true'
                 )
               "
-              >{{ savedintroduction.date }} | View game achievements</span
+              >{{ savedintroduction.date }} | View Chapter Three achievements |</span
             >
-            |
+  
             <span
               class="clickable"
               @click="
@@ -55,13 +55,13 @@
                 )
               "
             >
-              Play chapter 4</span
+              Play chapter Four</span
             >
             <!-- <span class="clickable" @click="deleteSave(savedintroduction)"
               >| Delete
             </span> -->
           </div>
-          <img src="/imgs/4.png" />
+     
         </v-col>
       </v-row>
     </v-container>
