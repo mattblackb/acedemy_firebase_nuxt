@@ -39,7 +39,9 @@ function setCookie(name, value, days) {
 
 function setCookiesOnEntry() {
   var allVars = getUrlVars()
-  // console.log('allVars',allVars);
+  console.log('allVars',allVars);
+  //parse srtring allVars to Json
+  allVars = JSON.parse(allVars);
   if (allVars) {
     //set cookies to passed variables
 
