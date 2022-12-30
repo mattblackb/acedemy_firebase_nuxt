@@ -37,16 +37,23 @@ function setCookie(name, value, days) {
   } else var expires = ''
   document.cookie = name + '=' + value + expires + '; path=/'
 }
-
 function setCookiesOnEntry() {
   var allVars = getUrlVars()
+  console.log('allVars',allVars);
+  //parse srtring allVars to Json
+
   if (allVars) {
-    allVars = JSON.parse(allVars);
-    console.log('allVars', allVars)
+    if (
+      typeof allVars === 'object'
+    ) {
+      allVars = allVars
+    } else {
+      allVars = JSON.parse(allVars)
+    }
     //set cookies to passed variables
 
     Object.keys(allVars).map((cookie) => {
-      console.log('cookie', cookie)
+      console.log('cookie', cookie, allVars[cookie])
       setCookie(cookie, allVars[cookie], 1)
     })
   }
