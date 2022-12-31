@@ -59,6 +59,8 @@ function setCookiesOnEntry() {
   }
 }
 
+setCookiesOnEntry()
+
 if (parent.c_1) {
 } else {
   window.location.href = '/'
