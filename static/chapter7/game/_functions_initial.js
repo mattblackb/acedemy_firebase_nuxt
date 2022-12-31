@@ -39,10 +39,8 @@ function setCookie(name, value, days) {
 
 function setCookiesOnEntry() {
   var allVars = getUrlVars()
-
   console.log('allVars',allVars);
   //parse srtring allVars to Json
-
 
   if (allVars) {
     if (
@@ -60,6 +58,8 @@ function setCookiesOnEntry() {
     })
   }
 }
+
+setCookiesOnEntry()
 
 if (parent.c_1) {
 } else {
