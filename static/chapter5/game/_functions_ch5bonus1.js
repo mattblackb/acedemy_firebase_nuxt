@@ -125,7 +125,7 @@ function hideShowButton() {
   }
 }
 function hideShowButton2() {
-  let showcontinue = checkAvailable('---AMEND---')
+  let showcontinue = checkAvailable('C0fWB53yfmMaPj46uXRY')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
@@ -161,12 +161,21 @@ function setVar(name, value, expires) {
 // Checks cookie
 
 function readVar(name) {
-  var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
+  var fullName = name + '='
 
-  if (match) {
-    return val
-  } else {
-    return null
+  var val = 0
+
+  var strings = document.cookie.split(';')
+
+  for (var i = 0; i < strings.length; i++) {
+    var str = strings[i]
+
+    while (str.charAt(0) == ' ') str = str.substring(1, str.length)
+
+    if (str.indexOf(fullName) == 0)
+      val = parseInt(str.substring(fullName.length, str.length))
+
+    if (isNaN(val)) val = 0
   }
 
   return val
