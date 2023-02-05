@@ -1,10 +1,10 @@
-// displays ch8alicia_happy outcome
+// displays ch8alicia_return outcome
 
 function outcome()
 
 {
 
-  var val = readVar("ch8alicia_happy");
+  var val = readVar("ch8alicia_return");
 
 	
 
