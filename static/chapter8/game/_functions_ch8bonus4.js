@@ -131,30 +131,6 @@ function moduleAvailable(state)
    document.getElementById("availableButtonimage").style.display = 'block';
   }
 } 
-}
-function hideShowButton2() {
-    let showcontinue = checkAvailable('---AMEND---');
-if (showcontinue) {
-   document.getElementById('buybutton').style.display = 'none';
-   document.getElementById("availableButton").style.display = 'block';
-   document.getElementById('buybuttonImage').style.display = 'none';
-   document.getElementById("availableButtonImage").style.display = 'block';
-} else {
-    document.getElementById('buybutton').style.display = 'block';
-    document.getElementById("availableButton").style.display = 'none';
-    document.getElementById('buybuttonImage').style.display = 'block';
-    document.getElementById("availableButtonImage").style.display = 'none';
-}
-function moduleAvailable(state) 
-{ 
-  if(state) {
-    document.getElementById('buybutton').style.display = 'none';
-   document.getElementById("availableButton").style.display = 'block';
-   document.getElementById('buybuttonImage').style.display = 'none';
-   document.getElementById("availableButtonimage").style.display = 'block';
-  }
-} 
-}
 
 
 
