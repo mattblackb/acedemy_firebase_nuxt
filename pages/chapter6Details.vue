@@ -10,6 +10,8 @@
       <v-col cols="12" md="6">
 
     <h1>The Academy - Chapter Six</h1>
+	
+	<h5 class="clickable" > <NuxtLink to="/chapter4Details">Previous Chapter</NuxtLink> : <NuxtLink to="/chapter7Details">Next Chapter</NuxtLink></h5>
 
     <p>Return to The Goodhead Academy on Wednesday afternoon<br/><br/>
 
