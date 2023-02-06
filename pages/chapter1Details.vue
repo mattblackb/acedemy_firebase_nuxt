@@ -96,10 +96,8 @@ export default {
 <style scoped>
  .clickable {
    cursor: pointer;
-   color: white;
  }
- h2, h2 a, a { color: white; text-decoration: none; text-transform: uppercase;}
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
  
- }
  h4, h4 a { color: white; text-decoration: none;}
 </style>

@@ -149,29 +149,10 @@ export default {
 }
 </script>
 <style scoped>
-.clickable {
-  cursor: pointer;
-}
-h2,
-h2 a { color: white; text-decoration: none; text-transform: uppercase;}
-
-}
+ .clickable {
+   cursor: pointer;
+ }
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
+ 
  h4, h4 a { color: white; text-decoration: none;}
-</style>
-<style scoped>
-.clickable {
-  cursor: pointer;
-}
-.loading {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.5);
-  top: 0px;
-  left: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 </style>
