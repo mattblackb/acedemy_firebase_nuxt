@@ -21,7 +21,7 @@ You have some time to fill before your important meeting later on in the afterno
 <br/><br/>
 While everybody is busy thrashing out the what happens next, you can focus on the here and now.
 <br/><br/>
-<b>Chapter Eight</b> statistics : 2090 pages : 3335 images : 4 bonus scenes : 35 achievements : 20 bonus achievements
+<b>Chapter Eight</b> statistics : 2090 pages : 3335 images : 4 bonus scenes : 35 achievements : 45 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Seven before you can play Chapter Eight!
     </p>

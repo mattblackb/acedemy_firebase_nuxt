@@ -59,11 +59,11 @@ function clearUnwantedCookies() {
     'principal_score',
     'progress',
     'report',
-    'ch1_success',
     'ch1bonus1',
     'ch1manners',
     'ch1talk_megan',
     'ch1_jodie_positive',
+	'ch1_success',
     'ch2maria_canteen',
     'ch2megan_canteen',
     'ch2annie_canteen',
@@ -122,7 +122,6 @@ function clearUnwantedCookies() {
     'ch2_maria_sex',
     'ch2_annie_positive',
     'ch2_annie_cum',
-    'ch2_success',
   ]
   var allVars = getUrlVars()
   if (allVars) {
