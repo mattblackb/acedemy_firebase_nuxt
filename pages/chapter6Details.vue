@@ -13,7 +13,7 @@
 	
 	<h4 class="clickable" > <NuxtLink to="/chapter5Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter7Details">Next Chapter ></NuxtLink></h4>
 <br/><br/>
-    <p>Return to The Goodhead Academy on Wednesday afternoon<br/><br/>
+    <p>Return to the Goodhead Academy on Wednesday afternoon<br/><br/>
 
 It's back to work after what could have been a very eventful morning.
 <br/><br/>
@@ -25,7 +25,7 @@ It's a busy afternoon but will you find time to help Alicia with her assignment 
 <br/><br/>
 At the end of the day Jodie needs a workout to wind down and Bridgette and Didi want to meet up with you for a drink after work too.
 <br/><br/>
-Will join Jodie in the gym or go and meet the girls? Maybe you can work out how to meet all their desires...
+Will you join Jodie in the gym or go and meet the girls? Maybe you can work out how to meet all their desires...
 <br/><br/>
 The story can take you in many directions based on the choices you make and the one's you have already made!
 <br/><br/>
