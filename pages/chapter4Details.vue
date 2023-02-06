@@ -10,6 +10,9 @@
       <v-col cols="12" md="6">
 
     <h1>The Academy - Chapter Four</h1>
+	
+	<h4 class="clickable" > <NuxtLink to="/chapter3Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter5Details">Next Chapter ></NuxtLink></h4>
+<br/><br/>
 
     <p>Come back for a full schedule of activities on Tuesday Afternoon...<br/><br/>
 
@@ -88,4 +91,6 @@ export default {
    cursor: pointer;
  }
  h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
+ }
+ h4, h4 a { color: white; text-decoration: none}
 </style>
