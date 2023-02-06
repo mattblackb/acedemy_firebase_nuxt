@@ -11,7 +11,7 @@
 
     <h1>The Academy - Chapter Six</h1>
 	
-	<h4 class="clickable" > <NuxtLink to="/chapter4Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter7Details">Next Chapter ></NuxtLink></h4>
+	<h4 class="clickable" > <NuxtLink to="/chapter5Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter7Details">Next Chapter ></NuxtLink></h4>
 <br/><br/>
     <p>Return to The Goodhead Academy on Wednesday afternoon<br/><br/>
 
@@ -93,7 +93,8 @@ export default {
  .clickable {
    cursor: pointer;
  }
- h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
+ 
  }
- h4, h4 a { color: white; text-decoration: none}
+ h4, h4 a { color: white; text-decoration: none;}
 </style>

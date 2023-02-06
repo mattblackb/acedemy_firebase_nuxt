@@ -89,7 +89,8 @@ export default {
  .clickable {
    cursor: pointer;
  }
- h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
+ 
  }
- h4, h4 a { color: white; text-decoration: none}
+ h4, h4 a { color: white; text-decoration: none;}
 </style>
