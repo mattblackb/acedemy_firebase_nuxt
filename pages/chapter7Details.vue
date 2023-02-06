@@ -13,7 +13,7 @@
 	
 	<h4 class="clickable" > <NuxtLink to="/chapter6Details"> < Previous Chapter</NuxtLink> : <NuxtLink to="/chapter8Details">Next Chapter ></NuxtLink></h4>
 <br/><br/>
-    <p>It's Thursday morning already and there are plans and schemes to figure out<br/><br/>
+    <p>It's Thursday morning already and there are plans and schemes to figure out.<br/><br/>
 
 Miss Goodhead and Governor Ramsey are here to inspect the facilities and pass judgement on everybody's performance.
 <br/><br/>
@@ -89,10 +89,14 @@ export default {
  .clickable {
    cursor: pointer;
  }
- h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
  
- }
- h4, h4 a { color: white; text-decoration: none;
+ </style>
  
+ <style scoped>
+ .clickable {
+   cursor: pointer;
  }
+ h4, h4 a { color: white; text-decoration: none;}
+ 
 </style>
