@@ -11,17 +11,17 @@
 
     <h1>The Academy - Chapter Eight</h1>
 	
-	<h4 class="clickable" > <NuxtLink to="/chapter7Details">Previous Chapter</NuxtLink> : <NuxtLink to="/chapter9Details">Next Chapter</NuxtLink></h4>
+	<h4 class="clickable" > <NuxtLink to="/chapter7Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter9Details">Next Chapter ></NuxtLink></h4>
 
-    <p>Thursday afternoon could be the last few hours you have at the Goodhead Academy<br/><br/>
+    <p>Thursday afternoon is perhaps the most important time at the Goodhead Academy<br/><br/>
 
 It all depends on how things go for Principal Valentine...
 <br/><br/>
-Will she come undone after everything you have found out about her and what's been happening?
+Olivia Goodhead is out to get her but will she come undone after everything you have found out about her and what's been happening?
 <br/><br/>
-You have some time to fill before your important meeting later on in the afternoon.
+You have some time to fill before you find out later on in the afternoon.
 <br/><br/>
-While everybody is busy thrashing out the what happens next, you can focus on the here and now.
+While everybody is busy thrashing out the what happens with Governor Ramsey, you can figure out who you want to help and how.
 <br/><br/>
 <b>Chapter Eight</b> statistics : 2090 pages : 3335 images : 4 bonus scenes : 35 achievements : 45 bonus achievements
 <br />
@@ -88,4 +88,7 @@ export default {
    cursor: pointer;
  }
  h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
+ 
+ }
+ h4, h4 a { color: white; text-decoration: none}
 </style>
