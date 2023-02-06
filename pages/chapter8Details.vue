@@ -11,7 +11,7 @@
 
     <h1>The Academy - Chapter Eight</h1>
 	
-	<h4 class="clickable" > <NuxtLink to="/chapter7Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter9Details">Next Chapter ></NuxtLink></h4>
+	<h4 class="clickable" > <NuxtLink to="/chapter7Details">< Previous Chapter</NuxtLink></h4>
 <br/><br/>
     <p>Thursday afternoon is a very critical time at the Goodhead Academy<br/><br/>
 
