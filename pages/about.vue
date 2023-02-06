@@ -32,7 +32,6 @@ The remastered and expanded versions released September/November 2022 : 3250 pag
 This part of the story takes place during Thursday morning and afternoon.<br/>
 The remastered and expanded versions released December 2022/February 2023 : 3540 pages : 5825 images<br/>
 <br/>
-<br/>
 <b>Chapter Nine</b> was originally released in December 2017 as 'A Date with Bridgette : Part One' : 967 pages<br/>
 This part of the story takes place during early evening on Thursday.<br/>
 The remastered and expanded version is in advanced remake/production stage :<br/>
