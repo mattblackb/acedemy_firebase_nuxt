@@ -11,8 +11,8 @@
 
     <h1>The Academy - Chapter Five</h1>
 	
-	<h6 class="clickable" > <NuxtLink to="/chapter4Details">Previous Chapter</NuxtLink> : <NuxtLink to="/chapter6Details">Next Chapter</NuxtLink></h6>
-
+	<h4 class="clickable" > <NuxtLink to="/chapter4Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter6Details">Next Chapter ></NuxtLink></h4>
+<br/><br/>
     <p>Another day of adventures at the Academy<br/><br/>
 
 It's all business first thing with another staff meeting where you find out more about the Principal's expectations.
@@ -91,3 +91,5 @@ export default {
  }
  h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
 </style>
+}
+ h4, h4 a { color: white; text-decoration: none}

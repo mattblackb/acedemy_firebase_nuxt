@@ -11,8 +11,8 @@
 
     <h1>The Academy - Chapter Seven</h1>
 	
-	<h3 class="clickable" > <NuxtLink to="/chapter6Details">Previous Chapter</NuxtLink> : <NuxtLink to="/chapter8Details">Next Chapter</NuxtLink></h3>
-
+	<h4 class="clickable" > <NuxtLink to="/chapter6Details"> < Previous Chapter</NuxtLink> : <NuxtLink to="/chapter8Details">Next Chapter ></NuxtLink></h4>
+<br/><br/>
     <p>It's Thursday morning already and there are plans and schemes to figure out<br/><br/>
 
 Miss Goodhead and Governor Ramsey are here to inspect the facilities and pass judgement on everybody's performance.
@@ -90,4 +90,6 @@ export default {
    cursor: pointer;
  }
  h2, h2 a { color: white; text-decoration: none; text-transform: uppercase}
+ }
+ h4, h4 a { color: white; text-decoration: none}
 </style>

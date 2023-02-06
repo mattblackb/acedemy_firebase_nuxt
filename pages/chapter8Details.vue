@@ -12,16 +12,17 @@
     <h1>The Academy - Chapter Eight</h1>
 	
 	<h4 class="clickable" > <NuxtLink to="/chapter7Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter9Details">Next Chapter ></NuxtLink></h4>
+<br/><br/>
+    <p>Thursday afternoon is a very critical time at the Goodhead Academy<br/><br/>
 
-    <p>Thursday afternoon is perhaps the most important time at the Goodhead Academy<br/><br/>
-
-It all depends on how things go for Principal Valentine...
+Everything rests on how things go for Principal Valentine...
 <br/><br/>
-Olivia Goodhead is out to get her but will she come undone after everything you have found out about her and what's been happening?
+Olivia Goodhead is out to get her, Bridgette and Didi also want her gone...<br />
+But will she come undone after everything you have found out about her and everything that's been happening?
 <br/><br/>
-You have some time to fill before you find out later on in the afternoon.
+You have some time to kill before you find out the result later on in the afternoon.
 <br/><br/>
-While everybody is busy thrashing out the what happens with Governor Ramsey, you can figure out who you want to help and how.
+While everybody is busy thrashing out the details with Governor Ramsey, you can figure out who else and how else you can help.
 <br/><br/>
 <b>Chapter Eight</b> statistics : 2090 pages : 3335 images : 4 bonus scenes : 35 achievements : 45 bonus achievements
 <br />
