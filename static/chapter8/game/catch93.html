@@ -4,6 +4,40 @@
 
 <head>
 
+<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
 <title>The Academy: Chapter Eight</title>
 
 <script language="javascript" src="_functions.js"></script>
@@ -11,7 +45,7 @@
 <link href="_style.css" rel="stylesheet" type="text/css" />
     
 </head>
-
+	
 <script language="javascript">
 	
 setVar("principal_score", -3);
@@ -77,14 +111,41 @@ setVar("principal_score", -3);
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/catch93.gif" alt="" usemap="#Map" />
 
-      <map name="Map" id="Map">
+	  <td width="1000">
+    <img src="images/catch93_00.jpg" name="slide" width="1000" height="750" border="0" usemap="#slideMap">
+    <map name="slideMap">
+    <area shape="rect" coords="0,0,1000,750" href="catch94.html" title="See what happens" />
+	
+    </map>
+    	
+		<script>
+<!--
 
-        <area shape="rect" coords="0,0,1000,750" href="catch94.html" title="Continue" />
-        
-      </map>
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/catch93_00.jpg","images/catch93_00.jpg","images/catch93_00.jpg","images/catch93_01.jpg","images/catch93_02.jpg","images/catch93_03.jpg","images/catch93_04.jpg","images/catch93_05.jpg","images/catch93_06.jpg","images/catch93_07.jpg","images/catch93_08.jpg","images/catch93_09.jpg","images/catch93_10.jpg","images/catch93_11.jpg","images/catch93_12.jpg")
 
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=120
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-0)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+          </script>
+      
       </td>
     </tr>
 </table>
