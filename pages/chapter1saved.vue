@@ -33,7 +33,7 @@
               </v-btn>
             </v-card>
           </v-dialog>
-          <!-- End of generci modal -->
+          <!-- End of generic modal -->
 
           <v-dialog v-model="dialog" width="500">
             <v-card class="pa5 modalbackground">
