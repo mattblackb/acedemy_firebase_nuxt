@@ -166,7 +166,7 @@ function clearUnwantedCookies() {
 	'ch7archive_invite',
 	'ch7bridgette_bonus',
 	'ch7bonus1',
-	'cch7bridgette_kiss1',
+	'ch7bridgette_kiss1',
 	'ch7bridgette_undress',
 	'ch7bridgette_stroke',
 	'ch7bridgette_fingers',
