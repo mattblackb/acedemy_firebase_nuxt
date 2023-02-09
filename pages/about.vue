@@ -16,38 +16,38 @@ During 2022/2023 an ambitious schedule of release has been set.
 <br/><br/>
 A new <b>Introductory Episode</b> available April 2022 : 180 pages : 478 images<br/>
 <br/>
-<b>Chapters One and Two </b> were originally released in April 2016 as 'Academy: Part One' : 1230 pages<br/>
+<b>Chapters One and Two </b> were originally released in April 2016 as 'Academy: Part One' : 1230 pages : 997 images<br/>
 This part of the story takes place during Monday morning and afternoon.<br/>
 The remastered and expanded versions released May 2022: 1600 pages : 1732 images<br/>
 <br/>
-<b>Chapters Three and Four</b> were originally released in July 2016 as 'Academy: Part Two' : 1851 pages<br/>
+<b>Chapters Three and Four</b> were originally released in July 2016 as 'Academy: Part Two' : 1851 pages : 1500 images<br/>
 This part of the story takes place during Tuesday morning, afternoon and early evening.<br/>
 The remastered and expanded versions released June/August 2022 : 2610 pages : 3831 images<br/>
 <br/>
-<b>Chapters Five and Six</b> were originally released in December 2016 as 'Academy: Part Three' : 2264 pages<br/>
+<b>Chapters Five and Six</b> were originally released in December 2016 as 'Academy: Part Three' : 2264 pages : 1797 images<br/>
 This part of the story takes place during Wednesday morning, afternoon and evening.<br/>
 The remastered and expanded versions released September/November 2022 : 3250 pages : 4314 images<br/>
 <br/>
-<b>Chapters Seven and Eight</b> were originally released in May 2017 as 'Academy: Part Four' : 2226 pages<br/>
+<b>Chapters Seven and Eight</b> were originally released in May 2017 as 'Academy: Part Four' : 2226 pages : 1824 images<br/>
 This part of the story takes place during Thursday morning and afternoon.<br/>
-The remastered and expanded versions released December 2022/February 2023 : 3540 pages : 5825 images<br/>
+The remastered and expanded versions released December 2022/February 2023 : 3540 pages : 5880 images<br/>
 <br/>
-<b>Chapter Nine</b> was originally released in December 2017 as 'A Date with Bridgette : Part One' : 967 pages<br/>
+<b>Chapter Nine</b> was originally released in December 2017 as 'A Date with Bridgette : Part One' : 967 pages : 848 images<br/>
 This part of the story takes place during early evening on Thursday.<br/>
 The remastered and expanded version is in advanced remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Ten</b> was originally released in January 2018 as 'A Date with Bridgette : Part Two' : 1666 pages<br/>
+<b>Chapter Ten</b> was originally released in January 2018 as 'A Date with Bridgette : Part Two' : 1666 pages : 2287 images<br/>
 This part of the story takes place later on during Thursday evening.<br/>
 The remastered and expanded version is in early remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Eleven</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages<br/>
+<b>Chapter Eleven</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages : 3542 images<br/>
 This part of the story takes place during Thursday late evening.<br/>
 The remastered and expanded version is in early remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Twelve</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages<br/>
+<b>Chapter Twelve</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages : 4531 images<br/>
 This part of the story takes place late on Thursday night/Friday morning.<br/>
 The remastered and expanded version is in early remake/production stage :<br/>
 New release date TBC<br/>

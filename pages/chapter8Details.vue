@@ -24,7 +24,7 @@ You have some time to kill before you find out the result later on in the aftern
 <br/><br/>
 While everybody is busy thrashing out the details with Governor Ramsey, you can figure out who else and how else you can help.
 <br/><br/>
-<b>Chapter Eight</b> statistics : 2090 pages : 3335 images : 4 bonus scenes : 35 achievements : 45 bonus achievements
+<b>Chapter Eight</b> statistics : 2090 pages : 3390 images : 4 bonus scenes : 35 achievements : 45 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Seven before you can play Chapter Eight!
     </p>
