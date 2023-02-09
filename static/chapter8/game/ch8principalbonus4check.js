@@ -1,10 +1,10 @@
-// displays ch8principal_ outcome
+// displays ch8principal_suck outcome
 
 function outcome()
 
 {
 
-  var val = readVar("ch8principal_");
+  var val = readVar("ch8principal_suck");
 
 	
 
