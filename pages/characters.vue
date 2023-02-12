@@ -70,7 +70,7 @@
            <img src="imgs/characters/character_profiles_natalia.jpg">
       </v-col>
 	    <v-col cols="4">
-           <img src="imgs/characters/character_profiles_natalia.jpg">
+           <img src="imgs/characters/character_profiles_alexia.jpg">
       </v-col>
       </v-row>
             <v-row  class="pt-5">
