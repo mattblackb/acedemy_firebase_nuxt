@@ -15,9 +15,10 @@
 <br/><br/>
     <p>Thursday afternoon is a very critical time at the Goodhead Academy<br/><br/>
 
-Everything rests on how things go for Principal Valentine...
-<br/><br/>
-Olivia Goodhead is out to get her, Bridgette and Didi also want her gone...<br />
+Everything rests on how things go for Principal Valentine.
+<br/>
+Olivia Goodhead is out to get her... Bridgette and Didi also want her gone...
+<br />
 But will she come undone after everything you have found out about her and everything that's been happening?
 <br/><br/>
 You have some time to kill before you find out the result later on in the afternoon.
