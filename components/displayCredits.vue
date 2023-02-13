@@ -7,7 +7,7 @@
 			<!-- <p>Purchase credits?</p> -->
 			<!-- <button type="button" class="btn btn-primary">Buy Credits</button> -->
 			<!-- <div ref="paypal"></div> -->
-			<h3>Scene unlocked</h3>
+			<h3>{{  currentMessage }}</h3>
 		
     
 		</div>
@@ -94,8 +94,8 @@ export default({
 						 console.log(this.currentCreditsneeded, personData.credits);
 			if(personData.credits >= this.currentCreditsneeded){
 				this.currentStatus = true;
-			
-			}
+				this.currentMessage = 'You have enough credits to unlock this scene';
+			}	
 			//Check that user hasn't already bought
 			personData.available_modules.map((module) => {
 				if(module === this.currentmodule){
