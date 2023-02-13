@@ -124,10 +124,15 @@ img {max-width: 96%; padding: 2%;}
  background-color: #cccccc;
  min-height: 250px;
  	}
-    .modalbackground h2,  .modalbackground h4,	.modalbackground p,  .modalbackground h1{
+    .modalbackground h2,   .modalbackground p,	.modalbackground h1{
       max-width: 60%;
       padding: 5%;
-      min-width: 60%; 
+      min-width: 60%;
+	}
+    .modalbackground h4{
+      max-width: 80%;
+      padding: 5%;
+      min-width: 80%;
     }
      .modalbackground h1 {
        text-transform: capitalize;
