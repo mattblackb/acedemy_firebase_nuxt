@@ -13,7 +13,8 @@
           >
            X
           </v-btn>
-                    <h2>Credit payment facility currently disabled, credits available <a href="https://www.patreon.com/dsp3000">https://www.patreon.com/dsp3000</a></h2>
+                    <h2>Credit payment facility currently disabled.</h2>
+					<h4>Credits available at <a href="https://www.patreon.com/dsp3000">https://www.patreon.com/dsp3000</a></h4>
      
             </v-card>
         </v-dialog>
