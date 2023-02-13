@@ -13,20 +13,20 @@
           >
            X
           </v-btn>
-                    <h2>Credit payment facility currently disabled</h2>
+                    <h2>Credit payment facility currently disabled, credits available <a href="https://www.patreon.com/dsp3000">https://www.patreon.com/dsp3000</a></h2>
      
             </v-card>
         </v-dialog>
  
 
     <v-container class="hidePrying">
-      <v-row><v-toolbar-title v-if="userDetails">Welcome: {{userDetails}}</v-toolbar-title></v-row>
+      <v-row><v-toolbar-title v-if="userDetails">Welcome: {{userDetails.name}}</v-toolbar-title></v-row>
       <v-row class="pt-4 pb-4 ">
         <img src="/imgs/header_new.png" class="textAlignCenter">
       </v-row>
       <v-row>
       <v-col cols="12"  sm="12"
-        md="9" >
+        md="7" >
          <v-btn
       class="ma-2"
       to="/"
@@ -55,7 +55,9 @@
   </v-col>
 
       <v-col cols="12"  sm="12"
-        md="3">
+        md="5">
+     
+        <p v-if="userDetails" class="floatL">You have <b> {{userDetails.credits}} </b> credits</p>
        <v-btn    v-if="currentUser"  @click="dialog = true">
             Buy Credits
         </v-btn>
@@ -92,7 +94,7 @@ export default {
       userDetails (){
           if(this.$store.state.person) {
               this.currentUser = true
-              return this.$store.state.person.name
+              return this.$store.state.person
           }
       }
       
@@ -131,6 +133,14 @@ img {max-width: 96%; padding: 2%;}
      .modalbackground h1 {
        text-transform: capitalize;
        line-height: 0px;
+     }
+     .floatL {
+      display: inline-block;
+      font-size: 22px;
+      margin-right: 5px;
+      margin-top: 0px;
+      margin-bottom: 0px!important;
+      vertical-align: middle;
      }
      
 </style>
