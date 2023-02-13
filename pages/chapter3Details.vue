@@ -6,6 +6,9 @@
         <v-col cols="12" md="6">      <img src="/imgs/4.png" /></v-col>
         <v-col cols="12" md="6">
           <h1>The Academy - Chapter Three</h1>
+		  
+		  <h4 class="clickable" > <NuxtLink to="/chapter2Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter4Details">Next Chapter ></NuxtLink></h4>
+<br/><br/>
 
           <p>
             Time to return for your second day of work at the Goodhead
@@ -146,30 +149,10 @@ export default {
 }
 </script>
 <style scoped>
-.clickable {
-  cursor: pointer;
-}
-h2,
-h2 a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-</style>
-<style scoped>
-.clickable {
-  cursor: pointer;
-}
-.loading {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.5);
-  top: 0px;
-  left: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+ .clickable {
+   cursor: pointer;
+ }
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
+ 
+ h4, h4 a { color: white; text-decoration: none;}
 </style>

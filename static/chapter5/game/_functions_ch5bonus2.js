@@ -125,7 +125,7 @@ function hideShowButton() {
   }
 }
 function hideShowButton2() {
-  let showcontinue = checkAvailable('---AMEND---')
+  let showcontinue = checkAvailable('TCc0GLlhmv3Lkw5C1atR')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'

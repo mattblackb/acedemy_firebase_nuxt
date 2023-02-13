@@ -10,7 +10,9 @@
 
     <h1>The Academy - Introduction</h1>
 
-   
+   <h4 class="clickable" > <NuxtLink to="/chapter1Details">Next Chapter ></NuxtLink></h4>
+<br/><br/>
+
 You start the story when you wake up in a hotel room with a former acquaintance. Natalia explains all about how the game works and offers an opportunity to test your skills and have some fun with her before you both have to leave for work.
 <br/><br/>
 You must play through this episode before you can move on to the next one.
@@ -87,7 +89,8 @@ export default {
 <style scoped>
  .clickable {
    cursor: pointer;
-   color: white;
  }
- h2, h2 a, a { color: white; text-decoration: none; text-transform: uppercase}
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
+ 
+ h4, h4 a { color: white; text-decoration: none;}
 </style>

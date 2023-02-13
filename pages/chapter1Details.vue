@@ -10,6 +10,9 @@
       <v-col cols="12" md="6">
 
     <h1>The Academy - Chapter One</h1>
+	
+	<h4 class="clickable" > <NuxtLink to="/introductionDetails">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter2Details">Next Chapter ></NuxtLink></h4>
+<br/><br/>
 
     <p>Start your new job at <i>The Goodhead Academy</i> on Monday morning where you are introduced to many of the characters you will spend your week with. There are also a few essential problems to solve and some tasks that need completing before you can successfully move on to the afternoon.
 <br/><br/>
@@ -93,7 +96,8 @@ export default {
 <style scoped>
  .clickable {
    cursor: pointer;
-   color: white;
  }
- h2, h2 a, a { color: white; text-decoration: none; text-transform: uppercase}
+ h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
+ 
+ h4, h4 a { color: white; text-decoration: none;}
 </style>

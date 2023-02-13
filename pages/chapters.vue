@@ -36,13 +36,31 @@
                 <a href="/chapter7Details"  ><img src="/imgs/index_ch7.jpg" /></a>
             </v-col>
                   <v-col cols="6">
-                <a href="/"  ><img src="/imgs/index_ch8_locked.jpg" /></a>
+                <a href="/chapter8Details"  ><img src="/imgs/index_ch8.jpg" /></a>
             </v-col>
                   <v-col cols="6">
                 <a href="/"  ><img src="/imgs/index_ch9_locked.jpg" /></a>
             </v-col>
                   <v-col cols="6">
                 <a href="/"  ><img src="/imgs/index_ch10_locked.jpg" /></a>
+            </v-col>
+				  <v-col cols="6">
+                <a href="/"  ><img src="/imgs/index_ch11_locked.jpg" /></a>
+            </v-col>
+				  <v-col cols="6">
+                <a href="/"  ><img src="/imgs/index_ch12_locked.jpg" /></a>
+            </v-col>
+				  <v-col cols="6">
+                <a href="/"  ><img src="/imgs/index_ch13_locked.jpg" /></a>
+            </v-col>
+				  <v-col cols="6">
+                <a href="/"  ><img src="/imgs/index_ch14_locked.jpg" /></a>
+            </v-col>
+				  <v-col cols="6">
+                <a href="/"  ><img src="/imgs/index_ch15_locked.jpg" /></a>
+            </v-col>
+				  <v-col cols="6">
+                <a href="/"  ><img src="/imgs/index_ch16_locked.jpg" /></a>
             </v-col>
         </v-row>
         

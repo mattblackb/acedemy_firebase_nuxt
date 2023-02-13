@@ -72,7 +72,11 @@
                 </div>
               </v-col>
                     <v-col cols="6">
-                  <a href="/"  ><img src="/imgs/index_ch8_locked.jpg" /></a>
+                  <a href="/chapter8Details"  ><img src="/imgs/index_ch8.jpg" /></a>
+                  <div v-for="chapter8saved in chapter8" :key="chapter8saved.name">
+               <span class="clickable" @click="setIntroductionRedirect(chapter8saved, '/chapter8saved?saved=true')">{{chapter8saved.date}} | View Chapter Eight achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter8saved, '/chapter8saved?saved=true')"> Play Chapter Nine</span>
+                <span class="clickable" @click="deleteSave(chapter8saved)">| Delete </span>
+                </div>
               </v-col>
                     <v-col cols="6">
                   <a href="/"  ><img src="/imgs/index_ch9_locked.jpg" /></a>
@@ -307,6 +311,21 @@
                this.$store.state.person.saved_games.map(function(game, index) {
               
                    if(game.ch7_complete==="1" && !game.ch8_complete  && game.ch8_complete != 0) {
+                        savedGame.push(_.cloneDeep(game));
+                        savedGame[x].index = index;
+                       x++;
+                   }
+                });
+                return savedGame;
+  
+            }
+		 },
+         chapter8 (){
+            if(this.$store.state.person) {
+              var savedGame = []; var x=0;
+               this.$store.state.person.saved_games.map(function(game, index) {
+              
+                   if(game.ch8_complete==="1" && !game.ch9_complete  && game.ch9_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
