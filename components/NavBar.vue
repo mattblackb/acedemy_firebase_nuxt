@@ -13,7 +13,8 @@
           >
            X
           </v-btn>
-                    <h2>Credit payment facility currently disabled, credits available <a href="https://www.patreon.com/dsp3000">https://www.patreon.com/dsp3000</a></h2>
+                    <h2>Credit payment facility currently disabled.</h2>
+					<h4>Credits available at <a href="https://www.patreon.com/dsp3000">https://www.patreon.com/dsp3000</a></h4>
      
             </v-card>
         </v-dialog>
@@ -122,13 +123,16 @@ img {max-width: 96%; padding: 2%;}
     background-image: url("/imgs/modals/modal_principal1.jpg");
  background-color: #cccccc;
  min-height: 250px;
-
-  }
-    .modalbackground h2,   .modalbackground p,  .modalbackground h1{
+ 	}
+    .modalbackground h2,   .modalbackground p,	.modalbackground h1 {
       max-width: 60%;
       padding: 5%;
       min-width: 60%;
-
+	}
+    .modalbackground h4 {
+      max-width: 90%;
+      padding: 5%;
+      min-width: 90%;
     }
      .modalbackground h1 {
        text-transform: capitalize;
