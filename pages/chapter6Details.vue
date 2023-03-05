@@ -36,6 +36,36 @@ The story can take you in many directions based on the choices you make and the 
 
     <h2 class="clickable" > <NuxtLink to="/profile">Continue the story from a saved game</NuxtLink></h2>
 
+    <div
+            v-for="savedintroduction in dayonenGame6"
+            :key="savedintroduction.name"
+          >
+            <span
+              class="clickable"
+              @click="
+                setIntroductionRedirect(
+                  savedintroduction,
+                  '/chapter5saved?saved=true'
+                )
+              "
+              >{{ savedintroduction.date }} | View Chapter Six achievements |</span
+            >
+  
+            <span
+              class="clickable"
+              @click="
+                setIntroductionRedirect(
+                  savedintroduction,
+                  '/chapter5saved?saved=true'
+                )
+              "
+            >
+              Play chapter Six</span
+            >
+            <!-- <span class="clickable" @click="deleteSave(savedintroduction)"
+              >| Delete
+            </span> -->
+          </div>
 
  
       </v-col>
@@ -47,6 +77,7 @@ The story can take you in many directions based on the choices you make and the 
 
 <script>
 import { mapGetters } from "vuex";
+import _ from 'lodash'
 export default {  
   	data() {
 		return {
@@ -57,6 +88,19 @@ export default {
 		}
 	},
   methods: {
+    async setIntroductionRedirect(introductionObject, page) {
+      this.showloading = true
+      this.introchosen = introductionObject
+      this.showIntroduction = true
+
+      await this.$store.commit(
+        'setCurrentGame/addAchievements',
+        introductionObject
+      )
+    
+        this.$router.push(page)
+   
+    },
     setIntroduction(introductionObject) {
         this.introchosen = introductionObject;
         this.showIntroduction = true;
@@ -66,6 +110,21 @@ export default {
     }
   },
     computed:{
+      dayonenGame6() { 
+        if (this.$store.state.person) {
+          var savedGame = []
+          var x = 0
+          this.$store.state.person.saved_games.map(function (game, index) {
+            if(game.ch6_complete==="1" && game.ch7_complete != 0) {
+        
+              savedGame.push(_.cloneDeep(game))
+              savedGame[x].index = index
+              x++
+            }
+          })
+          return savedGame
+        }
+      },
       userDetails (){
           if(this.$store.state.person) {
               return this.$store.state.person;
