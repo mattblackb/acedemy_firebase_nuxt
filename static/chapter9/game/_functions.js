@@ -565,7 +565,57 @@ function varMinus50(name) {
   setVar(name, val)
 }
 
-// minus 50 cookie value
+// minus 60 cookie value
+
+function varMinus60(name) {
+  var val = readVar(name)
+
+  val -= 60
+
+  setVar(name, val)
+}
+
+// minus 70 cookie value
+
+function varMinus70(name) {
+  var val = readVar(name)
+
+  val -= 70
+
+  setVar(name, val)
+}
+
+// minus 80 cookie value
+
+function varMinus80(name) {
+  var val = readVar(name)
+
+  val -= 80
+
+  setVar(name, val)
+}
+
+// minus 90 cookie value
+
+function varMinus90(name) {
+  var val = readVar(name)
+
+  val -= 90
+
+  setVar(name, val)
+}
+
+// minus 100 cookie value
+
+function varMinus100(name) {
+  var val = readVar(name)
+
+  val -= 100
+
+  setVar(name, val)
+}
+
+// zero cookie value
 
 function varZero(name) {
   var val = readVar(name)
