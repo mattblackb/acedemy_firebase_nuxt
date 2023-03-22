@@ -220,7 +220,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
               
-                   if(game.ch1_complete==="1"  && !game.ch2_complete != 0) {
+                if(game.ch1_complete==="1" && game.ch2_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
@@ -235,7 +235,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
                 
-                   if(game.ch2_complete==="1" && !game.ch3_complete  && game.ch3_complete != 0) {
+                if(game.ch2_complete==="1" && game.ch3_complete != 0) {
                     	savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
@@ -250,7 +250,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
          
-                   if(game.ch3_complete==="1" && !game.ch4_complete  && game.ch4_complete != 0) {
+                if(game.ch3_complete==="1" && game.ch4_complete != 0) {
                      	savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
@@ -265,7 +265,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
       
-                   if(game.ch4_complete==="1" && !game.ch5_complete  && game.ch5_complete != 0) {
+                if(game.ch4_complete==="1" && game.ch5_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
@@ -280,7 +280,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
               
-                   if(game.ch5_complete==="1" && !game.ch6_complete  && game.ch6_complete != 0) {
+                if(game.ch5_complete==="1" && game.ch6_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
@@ -295,7 +295,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
               
-                   if(game.ch6_complete==="1" && !game.ch7_complete  && game.ch7_complete != 0) {
+                if(game.ch6_complete==="1" && game.ch7_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
@@ -310,7 +310,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
               
-                   if(game.ch7_complete==="1" && !game.ch8_complete  && game.ch8_complete != 0) {
+                if(game.ch7_complete==="1" && game.ch8_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
@@ -325,7 +325,7 @@
               var savedGame = []; var x=0;
                this.$store.state.person.saved_games.map(function(game, index) {
               
-                   if(game.ch8_complete==="1" && !game.ch9_complete  && game.ch9_complete != 0) {
+                if(game.ch8_complete==="1" && game.ch9_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
