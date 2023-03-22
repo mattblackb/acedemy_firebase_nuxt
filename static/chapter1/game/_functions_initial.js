@@ -43,6 +43,7 @@ function setCookiesOnEntry() {
   //parse srtring allVars to Json
 
   if (allVars) {
+
     if (
       typeof allVars === 'object'
     ) {
@@ -50,6 +51,7 @@ function setCookiesOnEntry() {
     } else {
       allVars = JSON.parse(allVars)
     }
+
     //set cookies to passed variables
 
     Object.keys(allVars).map((cookie) => {

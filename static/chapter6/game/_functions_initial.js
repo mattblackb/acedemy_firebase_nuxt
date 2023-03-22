@@ -38,7 +38,8 @@ function setCookie(name, value, days) {
 }
 
 function setCookiesOnEntry() {
-  var allVars = getUrlVars()
+	var allVars = getUrlVars()
+
   console.log('allVars',allVars);
   //parse srtring allVars to Json
 
