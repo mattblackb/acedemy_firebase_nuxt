@@ -31,6 +31,13 @@
         Add Credits
       </v-btn>
     </div>
+
+    <div v-for="chapter7saved in chapter7" :key="chapter7saved.name">
+               <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')">{{chapter7saved.date}} | View Chapter Seven achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter7saved, '/chapter7saved?saved=true')"> Play Chapter Eight</span>
+                <span class="clickable" @click="deleteSave(chapter7saved)">| Delete </span>
+                </div>
+
+
     <div class="unWantedWarning" v-if="unwantedRubbish">
       <h1>Unwanted Rubbish</h1>
       <h3>
@@ -63,7 +70,8 @@ export default {
   },
   methods: {
     ...mapActions(['setuser/setPerson']),
-
+  
+         
     returnCurrent() {
       const that = this
       var returnedArray = []
@@ -111,8 +119,30 @@ export default {
   computed: {
     chosenUser() {
       console.log(this.$store.state.setuser.chosenPerson)
+      // this.chapter7(this.$store.state.setuser.chosenPerson);
       return this.$store.state.setuser.chosenPerson
     },
+    chapter7 (){
+       
+       console.log('chosen data',this.chosenUser);
+         if(this.chosenUser.data) {
+         
+           var savedGame = []; var x=0;
+           this.chosenUser.data.saved_games.map(function(game, index) {
+
+              console.log('game',game);
+                if(game.ch4_complete==="1" && game.ch5_complete != 0) {
+                 
+                     savedGame.push(_.cloneDeep(game));
+                     savedGame[x].index = index;
+                    x++;
+                    
+                }
+             });
+             return savedGame;
+
+         }
+       },
   },
 }
 </script>
