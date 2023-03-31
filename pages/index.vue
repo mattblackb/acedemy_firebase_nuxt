@@ -43,6 +43,7 @@ However you choose to play you can be sure to have fun along the way.
 		<a href="/chapter6Details"  ><img src="/imgs/index_ch6.jpg" /></a>
 		<a href="/chapter7Details"  ><img src="/imgs/index_ch7.jpg" /></a>
 		<a href="/chapter8Details"  ><img src="/imgs/index_ch8.jpg" /></a>
+		<a href="/chapter9Details"  ><img src="/imgs/index_ch9.jpg" /></a>
         <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">

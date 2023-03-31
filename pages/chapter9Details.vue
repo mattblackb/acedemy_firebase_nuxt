@@ -5,29 +5,29 @@
      <v-row>
      <v-col cols="12" md="6">
        <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-        <img src="/imgs/20.png">
+        <img src="/imgs/24.png">
      </v-col>
       <v-col cols="12" md="6">
 
-    <h1>The Academy - Chapter Eight</h1>
+    <h1>The Academy - Chapter Nine</h1>
 	
-	<h4 class="clickable" > <NuxtLink to="/chapter7Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter9Details">Next Chapter ></NuxtLink></h4>
+	<h4 class="clickable" > <NuxtLink to="/chapter8Details">< Previous Chapter</NuxtLink></h4>
 <br/><br/>
-    <p>Thursday afternoon is a very critical time at the Goodhead Academy<br/><br/>
+    <p>It's been a long week that's been full of challenges at the Goodhead Academy.<br/><br/>
 
-Everything rests on how things go for Principal Valentine.
+But Thursday evening is a chance to put your work aside, unwind and really have some fun.
 <br/>
-Olivia Goodhead is out to get her... Bridgette and Didi also want her gone...
+Maybe you can go out on a date with Bridgette, or perhaps you prefer to go out exploring on your own.
 <br />
-But will she come undone after everything you have found out about her and everything that's been happening?
+There are some new places to visit and many new people to meet.
 <br/><br/>
-You have some time to kill before you find out the result later on in the afternoon.
+Thursday evening is also an opportunity to see everything else that happens when you go looking.
 <br/><br/>
-While everybody is busy thrashing out the details with Governor Ramsey, you can figure out who else and how else you can help.
+And if your date with Bridgette doesn't work out then there are always other options to consider.
 <br/><br/>
-<b>Chapter Eight</b> statistics : 2090 pages : 3390 images : 4 bonus scenes : 35 achievements : 45 bonus achievements
+<b>Chapter Nine</b> statistics : 2370 pages : 3640 images : 1 bonus scene : 25 date achievements : 20 solo achievements : 5 bonus achievements : 60 additional achievements
 <br />
-<b>NOTE:</b> You must successfully complete Chapter Seven before you can play Chapter Eight!
+<b>NOTE:</b> You must successfully complete Chapter Nine before you can play Chapter Ten!
     </p>
 
     <h2 class="clickable" > <NuxtLink to="/profile">Continue the story from a saved game</NuxtLink></h2>
