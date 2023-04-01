@@ -27,7 +27,7 @@ And if your date with Bridgette doesn't work out then there are always other opt
 <br/><br/>
 <b>Chapter Nine</b> statistics : 2370 pages : 3640 images : 1 bonus scene : 25 date achievements : 20 solo achievements : 5 bonus achievements : 60 additional achievements
 <br />
-<b>NOTE:</b> You must successfully complete Chapter Nine before you can play Chapter Ten!
+<b>NOTE:</b> You must successfully complete Chapter Eight before you can play Chapter Nine!
     </p>
 
     <h2 class="clickable" > <NuxtLink to="/profile">Continue the story from a saved game</NuxtLink></h2>
