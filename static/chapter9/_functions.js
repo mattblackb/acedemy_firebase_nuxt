@@ -122,6 +122,7 @@ function clearUnwantedCookies() {
 	'ch8annie_bonus',
 	'ch8alicia_bonus',
 	'ch8principal_bonus',
+	'ch8bridgette_number',
 	'ch8_bridgette_positive',
 	'ch8_bridgette_negative',
 	'ch8_annie_sex"',
