@@ -82,7 +82,7 @@
                   <a href="/chapter9Details"  ><img src="/imgs/index_ch9.jpg" /></a>
                   <div v-for="chapter9saved in chapter9" :key="chapter9saved.name">
                <span class="clickable" @click="setIntroductionRedirect(chapter9saved, '/chapter9saved?saved=true')">{{chapter9saved.date}} | View Chapter Nine achievements</span> | <span class="clickable" @click="setIntroductionRedirect(chapter9saved, '/chapter9saved?saved=true')"> Play Chapter Ten</span>
-                <span class="clickable" @click="deleteSave(chapter8saved)">| Delete </span>
+                <span class="clickable" @click="deleteSave(chapter9saved)">| Delete </span>
                 </div>
               </v-col>
                     <v-col cols="6">
@@ -330,6 +330,21 @@
                this.$store.state.person.saved_games.map(function(game, index) {
               
                 if(game.ch8_complete==="1" && game.ch9_complete != 0) {
+                        savedGame.push(_.cloneDeep(game));
+                        savedGame[x].index = index;
+                       x++;
+                   }
+                });
+                return savedGame;
+				
+			}
+		 },
+         chapter9 (){
+            if(this.$store.state.person) {
+              var savedGame = []; var x=0;
+               this.$store.state.person.saved_games.map(function(game, index) {
+              
+                if(game.ch9_complete==="1" && game.ch10_complete != 0) {
                         savedGame.push(_.cloneDeep(game));
                         savedGame[x].index = index;
                        x++;
