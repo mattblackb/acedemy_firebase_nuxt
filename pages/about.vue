@@ -34,28 +34,29 @@ The remastered and expanded versions released December 2022/February 2023 : 3540
 <br/>
 <b>Chapter Nine</b> was originally released in December 2017 as 'A Date with Bridgette : Part One' : 967 pages : 848 images<br/>
 This part of the story takes place during early evening on Thursday.<br/>
-The remastered and expanded version is in advanced remake/production stage :<br/>
-New release date TBC<br/>
+The remastered and expanded version released April 2023 : 2370 pages : 3640 images<br/>
 <br/>
 <b>Chapter Ten</b> was originally released in January 2018 as 'A Date with Bridgette : Part Two' : 1666 pages : 2287 images<br/>
 This part of the story takes place later on during Thursday evening.<br/>
-The remastered and expanded version is in early remake/production stage :<br/>
+The remastered and expanded version is due for release :<br/>
 New release date TBC<br/>
 <br/>
 <b>Chapter Eleven</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages : 3542 images<br/>
-This part of the story takes place during Thursday late evening.<br/>
-The remastered and expanded version is in early remake/production stage :<br/>
+This part of the story takes place during Thursday evening.<br/>
+The remastered and expanded version splits the original episode and adds additional alternative scenes.<br />
+Chapter Eleven is in early remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Twelve</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages : 4531 images<br/>
-This part of the story takes place late on Thursday night/Friday morning.<br/>
-The remastered and expanded version is in early remake/production stage :<br/>
+<b>Chapter Twelve</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages : 3542 images<br/>
+This part of the story takes place late on Thursday evening.<br/>
+The remastered and expanded version splits the original episode and adds additional alternative scenes.<br />
+Chapter Twelve is in early remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
-<b>Chapter Thirteen</b> Completed mid 2020 - yet to be released : 3002 pages<br/>
-This part of the story will take place during Thursday evening.<br/>
-This brand new chapter is complete subject to testing:<br/>
-Release date TBC<br/>
+<b>Chapter Thirteen</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages : 4531 images<br/>
+This part of the story will take place during late on Thursday night/Friday morning.<br/>
+Chapter Thirteen will be released after some minor modifications :<br/>
+New release date TBC<br/>
 <br/>
 <b>Chapter Fourteen</b> Completed mid 2021 - yet to be released : 2900 pages<br/>
 This part of the story will take place during Friday morning.<br/>
