@@ -1,6 +1,6 @@
 //MB Added post message
 
-//Functions for Chapter Nine
+//Functions for Chapter Ten
 
 //MB added
 var getCookies = function (url) {
@@ -122,6 +122,7 @@ function clearUnwantedCookies() {
 	'ch8annie_bonus',
 	'ch8alicia_bonus',
 	'ch8principal_bonus',
+	'ch8principal_fired',
 	'ch8bridgette_number',
 	'ch8_bridgette_positive',
 	'ch8_bridgette_negative',
@@ -131,6 +132,18 @@ function clearUnwantedCookies() {
 	'ch8_alicia_positive',
 	'ch8_fired',
 	'ch8_success',
+	'ch9bonus1',
+	'ch9alexia_bonus',
+	'ch9rest_maria',
+	'ch9rest_ tip',
+	'ch9rest_man',
+	'ch9bar_girl',
+	'ch9bar_touch',
+	'ch9park_naked',
+	'ch9park_tits',
+	'ch9_success_bridgette',
+	'ch9_success_alexia',
+	'ch9_fail_alexia',
  ]
   var allVars = getUrlVars()
   if (allVars) {
@@ -238,25 +251,6 @@ function readVar(name) {
   return val
 }
 
-// Alters cookie value
-
-function varPlus1(name) {
-  var val = readVar(name)
-
-  val += 1
-
-  setVar(name, val)
-}
-
-// Alters cookie value lower
-
-function varMinus1(name) {
-  var val = readVar(name)
-
-  val -= 1
-
-  setVar(name, val)
-}
 
 // Other disable back
 
@@ -316,53 +310,14 @@ function blockKeyPresses() {
     event.returnValue = false
   }
 }
+// Increase cookie value
 
-///cookie value to max
+//adds 1 to cookie value
 
-function varPlus100(name) {
+function varPlus1(name) {
   var val = readVar(name)
 
-  val += 100
-
-  setVar(name, val)
-}
-
-//sets cookie value to beginning
-
-function varPlus30(name) {
-  var val = readVar(name)
-
-  val += 30
-
-  setVar(name, val)
-}
-
-//adds 5 to cookie value
-
-function varPlus5(name) {
-  var val = readVar(name)
-
-  val += 5
-
-  setVar(name, val)
-}
-
-//adds 6 to cookie value
-
-function varPlus6(name) {
-  var val = readVar(name)
-
-  val += 6
-
-  setVar(name, val)
-}
-
-//adds 7 to cookie value
-
-function varPlus7(name) {
-  var val = readVar(name)
-
-  val += 7
+  val += 1
 
   setVar(name, val)
 }
@@ -397,6 +352,36 @@ function varPlus4(name) {
   setVar(name, val)
 }
 
+//adds 5 to cookie value
+
+function varPlus5(name) {
+  var val = readVar(name)
+
+  val += 5
+
+  setVar(name, val)
+}
+
+//adds 6 to cookie value
+
+function varPlus6(name) {
+  var val = readVar(name)
+
+  val += 6
+
+  setVar(name, val)
+}
+
+//adds 7 to cookie value
+
+function varPlus7(name) {
+  var val = readVar(name)
+
+  val += 7
+
+  setVar(name, val)
+}
+
 //adds 8 to cookie value
 
 function varPlus8(name) {
@@ -427,36 +412,6 @@ function varPlus10(name) {
   setVar(name, val)
 }
 
-//adds 12 to cookie value
-
-function varPlus12(name) {
-  var val = readVar(name)
-
-  val += 12
-
-  setVar(name, val)
-}
-
-//adds 14 to cookie value
-
-function varPlus14(name) {
-  var val = readVar(name)
-
-  val += 14
-
-  setVar(name, val)
-}
-
-//adds 15 to cookie value
-
-function varPlus15(name) {
-  var val = readVar(name)
-
-  val += 15
-
-  setVar(name, val)
-}
-
 //adds 20 to cookie value
 
 function varPlus20(name) {
@@ -467,12 +422,134 @@ function varPlus20(name) {
   setVar(name, val)
 }
 
+//adds 30 to cookie value
+
+function varPlus30(name) {
+  var val = readVar(name)
+
+  val += 30
+
+  setVar(name, val)
+}
+
 //adds 40 to cookie value
 
 function varPlus40(name) {
   var val = readVar(name)
 
   val += 40
+
+  setVar(name, val)
+}
+
+//adds 50 to cookie value
+
+function varPlus50(name) {
+  var val = readVar(name)
+
+  val += 50
+
+  setVar(name, val)
+}
+
+//adds 60 to cookie value
+
+function varPlus60(name) {
+  var val = readVar(name)
+
+  val += 60
+
+  setVar(name, val)
+}
+
+//adds 70 to cookie value
+
+function varPlus70(name) {
+  var val = readVar(name)
+
+  val += 70
+
+  setVar(name, val)
+}
+
+//adds 80 to cookie value
+
+function varPlus80(name) {
+  var val = readVar(name)
+
+  val += 80
+
+  setVar(name, val)
+}
+
+//adds 90 to cookie value
+
+function varPlus90(name) {
+  var val = readVar(name)
+
+  val += 90
+
+  setVar(name, val)
+}
+
+//adds 100 to cookie value
+
+function varPlus100(name) {
+  var val = readVar(name)
+
+  val += 100
+
+  setVar(name, val)
+}
+
+//adds 200 to cookie value
+
+function varPlus200(name) {
+  var val = readVar(name)
+
+  val += 200
+
+  setVar(name, val)
+}
+
+//adds 300 to cookie value
+
+function varPlus300(name) {
+  var val = readVar(name)
+
+  val += 300
+
+  setVar(name, val)
+}
+
+//adds 400 to cookie value
+
+function varPlus400(name) {
+  var val = readVar(name)
+
+  val += 400
+
+  setVar(name, val)
+}
+
+//adds 500 to cookie value
+
+function varPlus500(name) {
+  var val = readVar(name)
+
+  val += 500
+
+  setVar(name, val)
+}
+
+// Decrease cookie value
+
+// minus 1 cookie value
+
+function varMinus1(name) {
+  var val = readVar(name)
+
+  val -= 1
 
   setVar(name, val)
 }
@@ -567,7 +644,97 @@ function varMinus50(name) {
   setVar(name, val)
 }
 
-// minus 50 cookie value
+// minus 60 cookie value
+
+function varMinus60(name) {
+  var val = readVar(name)
+
+  val -= 60
+
+  setVar(name, val)
+}
+
+// minus 70 cookie value
+
+function varMinus70(name) {
+  var val = readVar(name)
+
+  val -= 70
+
+  setVar(name, val)
+}
+
+// minus 80 cookie value
+
+function varMinus80(name) {
+  var val = readVar(name)
+
+  val -= 80
+
+  setVar(name, val)
+}
+
+// minus 90 cookie value
+
+function varMinus90(name) {
+  var val = readVar(name)
+
+  val -= 90
+
+  setVar(name, val)
+}
+
+// minus 100 cookie value
+
+function varMinus100(name) {
+  var val = readVar(name)
+
+  val -= 100
+
+  setVar(name, val)
+}
+
+// minus 200 cookie value
+
+function varMinus200(name) {
+  var val = readVar(name)
+
+  val -= 200
+
+  setVar(name, val)
+}
+
+// minus 300 cookie value
+
+function varMinus300(name) {
+  var val = readVar(name)
+
+  val -= 300
+
+  setVar(name, val)
+}
+
+// minus 400 cookie value
+
+function varMinus400(name) {
+  var val = readVar(name)
+
+  val -= 400
+
+  setVar(name, val)
+}
+
+// minus 500 cookie value
+
+function varMinus500(name) {
+  var val = readVar(name)
+
+  val -= 500
+
+  setVar(name, val)
+}
+
+// Zero cookie value
 
 function varZero(name) {
   var val = readVar(name)
