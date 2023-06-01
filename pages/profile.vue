@@ -363,6 +363,21 @@
                 return savedGame;
   
             }
+		 },
+         chapter10 (){
+            if(this.$store.state.person) {
+              var savedGame = []; var x=0;
+               this.$store.state.person.saved_games.map(function(game, index) {
+              
+                if(game.ch10_complete==="1" && game.ch11_complete != 0) {
+                        savedGame.push(_.cloneDeep(game));
+                        savedGame[x].index = index;
+                       x++;
+                   }
+                });
+                return savedGame;
+  
+            }
         }
       }
   }
