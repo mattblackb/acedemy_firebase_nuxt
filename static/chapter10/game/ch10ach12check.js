@@ -4,7 +4,7 @@ function outcome()
 
 {
 
-  var val = readVar("ch10vip_tickets");
+  var val = readVar("ch10vip_holly");
 
 	
 
