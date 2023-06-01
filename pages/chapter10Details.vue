@@ -13,7 +13,7 @@
 	
 	<h4 class="clickable" > <NuxtLink to="/chapter9Details">< Previous Chapter</NuxtLink></h4>
 <br/><br/>
-    <p>Now it's dark the fun stuff can really start to happen...<br/><br/>
+    <p>Now that it's dark, the fun stuff can really start to happen...<br/><br/>
 
 It could be an opportunity to continue getting to know Bridgette, if she is still with you.
 <br/>
