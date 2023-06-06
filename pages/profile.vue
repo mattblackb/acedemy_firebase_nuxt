@@ -463,7 +463,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch1_complete === '1' && game.ch2_complete != 0) {
+          if (
+            game.ch1_complete === '1' &&
+            game.ch2_complete != 0 &&
+            !game.ch2_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -477,7 +481,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch2_complete === '1' && game.ch3_complete != 0) {
+          if (
+            game.ch2_complete === '1' &&
+            game.ch3_complete != 0 &&
+            !game.ch3_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -491,7 +499,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch3_complete === '1' && game.ch4_complete != 0) {
+          if (
+            game.ch3_complete === '1' &&
+            game.ch4_complete != 0 &&
+            !game.ch4_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -505,7 +517,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch4_complete === '1' && game.ch5_complete != 0) {
+          if (
+            game.ch4_complete === '1' &&
+            game.ch5_complete != 0 &&
+            !game.ch5_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -519,7 +535,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch5_complete === '1' && game.ch6_complete != 0) {
+          if (
+            game.ch5_complete === '1' &&
+            game.ch6_complete != 0 &&
+            !game.ch6_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -533,7 +553,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch6_complete === '1' && game.ch7_complete != 0) {
+          if (
+            game.ch6_complete === '1' &&
+            game.ch7_complete != 0 &&
+            !game.ch7_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -547,7 +571,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch7_complete === '1' && game.ch8_complete != 0) {
+          if (
+            game.ch7_complete === '1' &&
+            game.ch8_complete != 0 &&
+            !game.ch8_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -561,7 +589,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch8_complete === '1' && game.ch9_complete != 0) {
+          if (
+            game.ch8_complete === '1' &&
+            game.ch9_complete != 0 &&
+            !game.ch9_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
@@ -593,7 +625,11 @@ export default {
         var savedGame = []
         var x = 0
         this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch10_complete === '1' && game.ch11_complete != 0) {
+          if (
+            game.ch10_complete === '1' &&
+            game.ch11_complete != 0 &&
+            !game.ch11_complete
+          ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index
             x++
