@@ -30,7 +30,7 @@ function infcheck()
 
     else 
 
-    if ((val > 3)&&(val < 5))
+    if ((val > 3)&&(val < 10))
 
         document.write("<img src='buttonsetc/sober4.jpg'>");    
 
