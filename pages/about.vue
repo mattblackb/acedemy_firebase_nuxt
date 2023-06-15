@@ -39,7 +39,6 @@ The remastered and expanded version released April 2023 : 2370 pages : 3640 imag
 <b>Chapter Ten</b> was originally released in January 2018 as 'A Date with Bridgette : Part Two' : 1666 pages : 2287 images<br/>
 This part of the story takes place later on during Thursday evening.<br/>
 The remastered and expanded version released June 2023 : 2610 pages : 3340 images<br/>
-New release date TBC<br/>
 <br/>
 <b>Chapter Eleven</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages : 3542 images<br/>
 This part of the story takes place during Thursday evening.<br/>
