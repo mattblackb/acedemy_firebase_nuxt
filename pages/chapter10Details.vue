@@ -25,7 +25,7 @@ The choice is yours...
 <br/><br/>
 All you really need to do is stay out of trouble.
 <br/><br/>
-<b>Chapter Ten</b> statistics : TBC pages : TBC images : 2 bonus scenes : 25 date achievements : 20 solo achievements : TBC bonus achievements
+<b>Chapter Ten</b> statistics : 2610 pages : 3340 images : 2 bonus scenes : 25 date achievements : 20 solo achievements : 45 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Nine before you can play Chapter Ten!
     </p>
