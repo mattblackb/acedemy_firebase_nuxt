@@ -45,6 +45,7 @@ However you choose to play you can be sure to have fun along the way.
 		<a href="/chapter8Details"  ><img src="/imgs/index_ch8.jpg" /></a>
 		<a href="/chapter9Details"  ><img src="/imgs/index_ch9.jpg" /></a>
 		<a href="/chapter10Details"  ><img src="/imgs/index_ch10.jpg" /></a>
+		<a href="/chapter11Details"  ><img src="/imgs/index_ch11.jpg" /></a>
         <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
@@ -81,7 +82,7 @@ export default {
             currentUser: false,
             selectedImage: 'imgs/4.png',
             images: [
-                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png', 'imgs/7.png', 'imgs/8.png', 'imgs/9.png', 'imgs/10.png', 'imgs/11.png', 'imgs/12.png', 'imgs/13.png', 'imgs/14.png', 'imgs/15.png', 'imgs/16.png', 'imgs/17.png', 'imgs/18.png', 'imgs/19.png', 'imgs/20.png', 'imgs/21.png', 'imgs/22.png', 'imgs/23.png', 'imgs/24.png', 'imgs/25.png'
+                'imgs/4.png', 'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/5.png', 'imgs/6.png', 'imgs/7.png', 'imgs/8.png', 'imgs/9.png', 'imgs/10.png', 'imgs/11.png', 'imgs/12.png', 'imgs/13.png', 'imgs/14.png', 'imgs/15.png', 'imgs/16.png', 'imgs/17.png', 'imgs/18.png', 'imgs/19.png', 'imgs/20.png', 'imgs/21.png', 'imgs/22.png', 'imgs/23.png', 'imgs/24.png', 'imgs/25.png', 'imgs/26.png'
             ]
 		}
 	},

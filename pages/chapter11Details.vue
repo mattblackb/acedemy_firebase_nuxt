@@ -5,29 +5,27 @@
      <v-row>
      <v-col cols="12" md="6">
        <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-        <img src="/imgs/25.png">
+        <img src="/imgs/26.png">
      </v-col>
       <v-col cols="12" md="6">
 
-    <h1>The Academy - Chapter Ten</h1>
+    <h1>The Academy - Chapter Eleven</h1>
 	
-	<h4 class="clickable" > <NuxtLink to="/chapter9Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter11Details">Next Chapter ></NuxtLink></h4>
+	<h4 class="clickable" > <NuxtLink to="/chapter10Details">< Previous Chapter</NuxtLink></h4>
 <br/><br/>
-    <p>Now that it's dark, the fun stuff can really start to happen...<br/><br/>
+    <p>You've made it to the Brass Pole nightclub!<br/><br/>
 
-It could be an opportunity to continue getting to know Bridgette, if she is still with you.
+If you are still on your date with Bridgette then this could be just the test that your relationship needs.
 <br/>
-But even without her, there are also a few other possibilities to entertain you. Maybe she would only cramp your style.
+In a nightclub full of other temptations it might just be too much to resist.
 <br /><br/>
-Take a trip to see a movie, or perhaps enjoy the clear moonlit scenery up at the secluded viewpoint.
+Amy, Alicia, Laura and Lola and a whole host of other girls are all there to dance with you.
 <br/>
-The choice is yours...
+But will you just be dancing...
 <br/><br/>
-All you really need to do is stay out of trouble.
-<br/><br/>
-<b>Chapter Ten</b> statistics : 2610 pages : 3340 images : 2 bonus scenes : 25 date achievements : 20 solo achievements : 45 bonus achievements
+<b>Chapter Eleven</b> statistics : TBC pages : TBC images : 2 bonus scenes : 15 date achievements : 35 nightclub achievements : 20 other achievements : 35 bonus achievements
 <br />
-<b>NOTE:</b> You must successfully complete Chapter Nine before you can play Chapter Ten!
+<b>NOTE:</b> You must successfully complete Chapter Ten before you can play Chapter Eleven!
     </p>
 
     <h2 class="clickable" > <NuxtLink to="/profile">Continue the story from a saved game</NuxtLink></h2>
