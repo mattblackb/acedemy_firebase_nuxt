@@ -348,7 +348,34 @@
           </div>
         </v-col>
         <v-col cols="6">
-          <a href="/"><img src="/imgs/index_ch11_locked.jpg" /></a>
+          <a href="/chapter11Details"><img src="/imgs/index_ch11.jpg" /></a>
+          <div v-for="chapter11saved in chapter11" :key="chapter11saved.name">
+            <span
+              class="clickable"
+              @click="
+                setIntroductionRedirect(
+                  chapter11saved,
+                  '/chapter11saved?saved=true'
+                )
+              "
+              >{{ chapter11saved.date }} | View Chapter Eleven achievements</span
+            >
+            |
+            <span
+              class="clickable"
+              @click="
+                setIntroductionRedirect(
+                  chapter11saved,
+                  '/chapter11saved?saved=true'
+                )
+              "
+            >
+              Play Chapter Twelve</span
+            >
+            <span class="clickable" @click="deleteSave(chapter11saved)"
+              >| Delete
+            </span>
+          </div>
         </v-col>
         <v-col cols="6">
           <a href="/"><img src="/imgs/index_ch12_locked.jpg" /></a>
