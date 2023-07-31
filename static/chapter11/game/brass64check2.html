@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<title>The Academy: Chapter Eleven</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+
+<body>
+
+<script language="javascript">
+
+
+
+function check()
+
+{
+
+var val = readVar("cash");
+
+	//less than 20
+
+    if ((val > -1)&&(val < 20))
+
+        window.location = "brass65a.html"; 
+
+    else 
+
+	//more than 19 : less than 80
+
+    if ((val > 19)&&(val < 80))
+
+        window.location = "brass65b.html"; 
+
+    else 
+
+	//more than 79
+
+    if ((val > 79)&&(val < 201))
+
+        window.location = "brass65c.html"; 
+
+    else 
+ 
+
+        window.location = "brass65a.html";
+		 
+
+}
+
+
+check();
+
+
+
+</script>
+
+</body>
+
+</html>
+
