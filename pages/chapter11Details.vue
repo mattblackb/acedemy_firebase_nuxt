@@ -23,7 +23,7 @@ Amy, Alicia, Laura and Lola and a whole host of other girls are all there to dan
 <br/>
 But will you just be dancing...
 <br/><br/>
-<b>Chapter Eleven</b> statistics : TBC pages : TBC images : 2 bonus scenes : 15 date achievements : 35 nightclub achievements : 20 other achievements : 35 bonus achievements
+<b>Chapter Eleven</b> statistics : 2340 pages : 3645 images : 2 bonus scenes : 15 date achievements : 35 nightclub achievements : 20 other achievements : 30 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Ten before you can play Chapter Eleven!
     </p>

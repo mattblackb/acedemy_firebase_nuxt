@@ -43,13 +43,12 @@ The remastered and expanded version released June 2023 : 2610 pages : 3340 image
 <b>Chapter Eleven</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages : 3542 images<br/>
 This part of the story takes place during Thursday evening.<br/>
 The remastered and expanded version splits the original episode and adds additional alternative scenes.<br />
-Chapter Eleven is in remake/production stage :<br/>
-New release date TBC<br/>
+Released July 2023 : 2340 pages : 3645 images<br/>
 <br/>
 <b>Chapter Twelve</b> was originally released in March 2019 as 'A Date with Bridgette : Part Three' : 2667 pages : 3542 images<br/>
 This part of the story takes place late on Thursday evening.<br/>
 The remastered and expanded version splits the original episode and adds additional alternative scenes.<br />
-Chapter Twelve is in early remake/production stage :<br/>
+Chapter Twelve is in advanced remake/production stage :<br/>
 New release date TBC<br/>
 <br/>
 <b>Chapter Thirteen</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages : 4531 images<br/>
