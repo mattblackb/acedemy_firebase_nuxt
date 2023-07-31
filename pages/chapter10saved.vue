@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter10/game/checksave10.html"
+              :src="curIframeSrc"
               width="100%"
               height="auto"
               style="border: 1px solid #eee; background: white"
@@ -47,6 +47,24 @@
               />
             </v-card>
           </v-dialog>
+
+          <v-dialog v-model="dialogCash" width="500">
+            <v-card class="pa5 modalbackground">
+              <v-btn
+                color="primary"
+                text
+                @click="changeURL('../chapter11/game/cashmachine9.html')"
+              >
+                X
+              </v-btn>
+
+              <BuyCash
+                :currentCreditsneeded="cashAmount"
+                :currentmodule="currentmodule"
+                :changeURL="changeURL"
+              />
+            </v-card>
+          </v-dialog>
           <v-dialog v-model="dialogSave" width="500">
             <v-card class="pa5 modalbackground">
               <v-btn color="primary" text @click="dialogSave = false">
@@ -69,14 +87,17 @@ export default {
     return {
       dialog: false,
       dialogSave: false,
+      dialogCash: false,
       cookieJson: '',
       currentCreditsneeded: [],
-      currentmodule: '',
+      currentmodule: 'chapter11',
       route: '',
       genericModalAction: '',
       backgroundImage: '/imgs/modals/modal_principal1.jpg',
       bonusRedirectUrl: '',
       dialogInteraction: false,
+      cashAmount: 0,
+      curIframeSrc: '../chapter10/game/checksave10.html',
     }
   },
   computed: {
@@ -88,6 +109,12 @@ export default {
     },
   },
   methods: {
+    changeURL(url) {
+      var rand = Math.floor(Math.random() * 1000000 + 1)
+      this.curIframeSrc = url + '?uid=' + +rand
+      iframeContent.contentWindow.location.reload(true)
+      this.dialogCash = false
+    },
     replayBonus(bonusString) {
       //split bonusString by | and return
       var bonusSplit = bonusString.split('|')
@@ -150,6 +177,10 @@ export default {
           return false
         }
       }
+    },
+    async buyCash(cashAmount) {
+      this.cashAmount = cashAmount
+      this.dialogCash = true
     },
     async saveProgress(event, route) {
       //check that the user is logged in (likely)
