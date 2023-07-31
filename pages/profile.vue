@@ -664,6 +664,24 @@ export default {
         })
         return savedGame
       }
+	},
+    chapter11() {
+      if (this.$store.state.person) {
+        var savedGame = []
+        var x = 0
+        this.$store.state.person.saved_games.map(function (game, index) {
+          if (
+            game.ch11_complete === '1' &&
+            game.ch12_complete != 0 &&
+            !game.ch12_complete
+          ) {
+            savedGame.push(_.cloneDeep(game))
+            savedGame[x].index = index
+            x++
+          }
+        })
+        return savedGame
+      }
     },
   },
 }
