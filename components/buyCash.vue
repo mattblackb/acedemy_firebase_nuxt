@@ -108,9 +108,12 @@ export default {
           }
         })
         console.log(this.currentCreditsneeded, personData.credits)
+
         if (personData.credits >= this.currentCreditsneeded) {
           this.currentStatus = true
           this.currentMessage = 'You have enough credits to buy cash'
+        } else {
+          this.thisBuy = false
         }
         //Check that user hasn't already bought
         personData.available_modules.map((module) => {
@@ -150,16 +153,22 @@ export default {
       let personData = { ...this.$store.state.person }
 
       personData.credits = personData.credits - credits
-      console.log(personData.credits, personData.credits - credits, credits)
-      this.$store.commit('setuser/updatePerson', personData)
-      this.$store.commit('SET_PEOPLE', personData)
-      this.currentMessage = 'Thank you for your purchase'
-      this.currentStatus = false
-      this.thisBuy = false
-      if (this.currentmodule === 'chapter11') {
-        this.changeURL('../chapter11/game/cashmachine10.html')
+      //check this isn't a negative number
+      if (personData.credits < 0) {
+        this.changeURL('../chapter11/game/cashmachine9.html')
+        this.currentMessage = 'You do not have enough credits.'
       } else {
-        this.changeURL('none')
+        console.log(personData.credits, personData.credits - credits, credits)
+        this.$store.commit('setuser/updatePerson', personData)
+        this.$store.commit('SET_PEOPLE', personData)
+        this.currentMessage = 'Thank you for your purchase'
+        this.currentStatus = false
+        this.thisBuy = false
+        if (this.currentmodule === 'chapter11') {
+          this.changeURL('../chapter11/game/cashmachine10.html')
+        } else {
+          this.changeURL('none')
+        }
       }
     },
   },
