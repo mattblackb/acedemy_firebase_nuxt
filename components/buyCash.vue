@@ -46,6 +46,12 @@ export default {
       thisBuy: true,
     }
   },
+  //watch currentCreditsneeded
+  watch: {
+    currentCreditsneeded: function () {
+      this.checkAvailable()
+    },
+  },
   props: {
     currentCreditsneeded: {
       type: String,
@@ -107,12 +113,14 @@ export default {
             this.selectedStory = story
           }
         })
-        console.log(this.currentCreditsneeded, personData.credits)
+        console.log(personData.credits, this.currentCreditsneeded)
 
         if (personData.credits >= this.currentCreditsneeded) {
           this.currentStatus = true
           this.currentMessage = 'You have enough credits to buy cash'
+          this.thisBuy = true
         } else {
+          this.currentMessage = 'You do not have enough credits.'
           this.thisBuy = false
         }
         //Check that user hasn't already bought
