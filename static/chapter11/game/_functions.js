@@ -40,7 +40,7 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-function getCash(cashVal, location) {
+function getCash(cashVal) {
   let returnedState = parent.c_1.buyCash(cashVal)
 
   const name = 'cash='
