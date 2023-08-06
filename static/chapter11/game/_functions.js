@@ -41,6 +41,7 @@ function setCookie(name, value, days) {
 }
 
 function getCash(cashVal, location) {
+  console.log('cashVal', cashVal, 'location', location)
   let returnedState = parent.c_1.buyCash(cashVal)
 
   const name = 'cash='
@@ -190,18 +191,18 @@ function clearUnwantedCookies() {
     'ch9_success_bridgette',
     'ch9_success_alexia',
     'ch9_fail_alexia',
-	'ch10bonus1',
-	'ch10bonus2',
+    'ch10bonus1',
+    'ch10bonus2',
     'ch10lolamoviebonus',
-	'ch10lolaviewbonus',
-	'ch10vip_tickets',
-	'ch10didi_invite',
-	'ch10bridgette_continue',
-	'ch10_bridgette_positive',
-	'ch10_bridgette_negative',
-	'ch10_lola_positive',
-	'ch10_didi_positive',
-]
+    'ch10lolaviewbonus',
+    'ch10vip_tickets',
+    'ch10didi_invite',
+    'ch10bridgette_continue',
+    'ch10_bridgette_positive',
+    'ch10_bridgette_negative',
+    'ch10_lola_positive',
+    'ch10_didi_positive',
+  ]
   var allVars = getUrlVars()
   if (allVars) {
     //set cookies to passed variables
@@ -465,7 +466,7 @@ function varPlus10(name) {
 
   val += 10
 
-  setVar(name, val)	
+  setVar(name, val)
 }
 
 //adds 15 to cookie value
