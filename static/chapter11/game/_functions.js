@@ -40,8 +40,7 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-function getCash(cashVal, location) {
-  console.log('cashVal', cashVal, 'location', location)
+function getCash(cashVal) {
   let returnedState = parent.c_1.buyCash(cashVal)
 
   const name = 'cash='
@@ -202,6 +201,7 @@ function clearUnwantedCookies() {
     'ch10_bridgette_negative',
     'ch10_lola_positive',
     'ch10_didi_positive',
+    'cash',
   ]
   var allVars = getUrlVars()
   if (allVars) {
