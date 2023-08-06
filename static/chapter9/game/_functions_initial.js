@@ -39,13 +39,11 @@ function setCookie(name, value, days) {
 
 function setCookiesOnEntry() {
   var allVars = getUrlVars()
-  console.log('allVars',allVars);
+  console.log('allVarss', allVars)
   //parse srtring allVars to Json
 
   if (allVars) {
-    if (
-      typeof allVars === 'object'
-    ) {
+    if (typeof allVars === 'object') {
       allVars = allVars
     } else {
       allVars = JSON.parse(allVars)
@@ -53,7 +51,9 @@ function setCookiesOnEntry() {
     //set cookies to passed variables
 
     Object.keys(allVars).map((cookie) => {
-      console.log('cookie', cookie, allVars[cookie])
+      if (cookie === 'ch9solobar_necklace') {
+        console.log('cookie', cookie, allVars[cookie])
+      }
       setCookie(cookie, allVars[cookie], 1)
     })
   }

@@ -156,7 +156,7 @@ export default {
 
       //set cash cookie to cash
       document.cookie =
-        'cash=' + cash + '; expires=Thu, 18 Dec 2024 12:00:00 UTC; path=/'
+        'cash=' + cash + '; expires=Thu, 18 Dec 2029 12:00:00 UTC; path=/'
 
       let personData = { ...this.$store.state.person }
 

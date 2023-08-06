@@ -277,13 +277,14 @@ function deleteVar(name) {
 
 // Creates cookie
 
-function setVar(name, value, expires) {
-  document.cookie =
-    name +
-    '=' +
-    escape(value) +
-    '; path=/' +
-    (expires == null ? '' : '; expires=' + expires.toGMTString())
+function setVar(cName, cValue, cExpires) {
+  console.log('setVar', cName, cValue, cExpires)
+  if (cName != 'ch11brass_sandf') {
+    let date = new Date()
+    date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
+    const expires = 'expires=' + date.toUTCString()
+    document.cookie = cName + '=' + cValue + '; ' + expires + '; path=/'
+  }
 }
 
 // Checks cookie
