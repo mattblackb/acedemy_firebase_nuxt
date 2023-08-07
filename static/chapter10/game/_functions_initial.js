@@ -142,6 +142,7 @@ const setCookiesOnEntry = async function () {
     'ch9_success_bridgette',
     'ch9_success_alexia',
     'ch9_fail_alexia',
+    'cash',
   ]
   //parse srtring allVars to Json
 
