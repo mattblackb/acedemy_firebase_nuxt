@@ -1,4 +1,5 @@
 //MB Added post message
+//Functions initial for Chapter Seven - passed into Chapter Eight
 //MB added
 var getCookies = function (url) {
   // let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -37,24 +38,50 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-function setCookiesOnEntry() {
+const setCookiesOnEntry = async function () {
   var allVars = getUrlVars()
-  console.log('allVars',allVars);
-  //parse srtring allVars to Json
+  cookiesToKeep = [
+	'ch2_jodie_cum',
+    'ch2_maria_sex',
+	'ch2_annie_cum',
+	'ch3_bridgette_positive',
+	'ch4_annie_cum',
+    'ch4_holly_sex',
+    'ch4_lola_sex',
+    'ch4_jodie_sex',
+    'ch5_amy_sex',
+    'ch5_annie_sex',
+    'ch6_jodie_sex',
+    'ch6_bridgette_sex',
+	'ch7_jodie_sex',
+    'ch7_lola_sex',
+    'ch7_bridgette_sex',
+	'ch7_bridgette_positive',
+	'ch7_bridgette_negative',
+	'ch7holly_key',
+	'ch7cctv_office',
+	'ch7have_key',
+	'ch7ramsey_porn',
+   ]
+  //parse string allVars to Json
 
   if (allVars) {
-    if (
-      typeof allVars === 'object'
-    ) {
+    if (typeof allVars === 'object') {
       allVars = allVars
     } else {
       allVars = JSON.parse(allVars)
     }
     //set cookies to passed variables
-
-    Object.keys(allVars).map((cookie) => {
-      console.log('cookie', cookie, allVars[cookie])
-      setCookie(cookie, allVars[cookie], 1)
+    let setC = true
+    Object.keys(allVars).map(async (cookie) => {
+      // console.log('cookie', cookie, allVars[cookie])
+      var date = new Date()
+      date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
+      var expires = '; expires=' + date.toGMTString()
+      //check that cookie contains ch7
+      if (cookie.includes('ch7') || cookiesToKeep.includes(cookie)) {
+        document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
+      }
     })
   }
 }

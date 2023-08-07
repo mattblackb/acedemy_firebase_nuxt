@@ -1,5 +1,5 @@
 //MB Added post message
-
+//Functions initial for Chapter Two - passed into Chapter Three
 //MB added
 var getCookies = function (url) {
   // let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -56,9 +56,11 @@ const setCookiesOnEntry = async function () {
     'megan_score',
     'olivia_score',
     'principal_score',
-    'ch1bonus1',
+	'ch2_success'
+	'report',
+	'progress',
   ]
-  //parse srtring allVars to Json
+  //parse string allVars to Json
 
   if (allVars) {
     if (typeof allVars === 'object') {
@@ -73,7 +75,7 @@ const setCookiesOnEntry = async function () {
       var date = new Date()
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch9
+      //check that cookie contains ch2
       if (cookie.includes('ch2') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }
