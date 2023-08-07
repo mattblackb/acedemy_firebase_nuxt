@@ -36,26 +36,52 @@ function setCookie(name, value, days) {
   } else var expires = ''
   document.cookie = name + '=' + value + expires + '; path=/'
 }
-
-function setCookiesOnEntry() {
+const setCookiesOnEntry = async function () {
   var allVars = getUrlVars()
-
-  console.log('allVars',allVars);
+  cookiesToKeep = [
+    'alicia_score',
+    'amy_score',
+    'annie_score',
+    'bridgette_score',
+    'didi_score',
+    'genevieve_score',
+    'holly_score',
+    'isabella_score',
+    'jodie_score',
+    'laura_score',
+    'lola_score',
+    'maria_score',
+    'megan_score',
+    'olivia_score',
+    'principal_score',
+    'ch1bonus1',
+    'ch2bonus1',
+    'ch2bonus2',
+    'ch2_maria_sex',
+    'ch2_jodie_positive',
+    'ch2_jodie_cum',
+    'ch2_annie_positive',
+    'ch2_annie_cum',
+  ]
   //parse srtring allVars to Json
 
   if (allVars) {
-    if (
-      typeof allVars === 'object'
-    ) {
+    if (typeof allVars === 'object') {
       allVars = allVars
     } else {
       allVars = JSON.parse(allVars)
     }
     //set cookies to passed variables
-
-    Object.keys(allVars).map((cookie) => {
-      console.log('cookie', cookie, allVars[cookie])
-      setCookie(cookie, allVars[cookie], 1)
+    let setC = true
+    Object.keys(allVars).map(async (cookie) => {
+      // console.log('cookie', cookie, allVars[cookie])
+      var date = new Date()
+      date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
+      var expires = '; expires=' + date.toGMTString()
+      //check that cookie contains ch9
+      if (cookie.includes('ch3') || cookiesToKeep.includes(cookie)) {
+        document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
+      }
     })
   }
 }
