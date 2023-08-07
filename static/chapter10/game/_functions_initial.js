@@ -37,131 +37,24 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-const setCookiesOnEntry = async function () {
+function setCookiesOnEntry() {
   var allVars = getUrlVars()
-  cookiesToKeep = [
-    'alicia_score',
-    'amy_score',
-    'annie_score',
-    'bridgette_score',
-    'didi_score',
-    'genevieve_score',
-    'holly_score',
-    'isabella_score',
-    'jodie_score',
-    'laura_score',
-    'lola_score',
-    'maria_score',
-    'megan_score',
-    'olivia_score',
-    'principal_score',
-    'ch1bonus1',
-    'ch2bonus1',
-    'ch2bonus2',
-    'ch2_maria_sex',
-    'ch2_jodie_positive',
-    'ch2_jodie_cum',
-    'ch2_annie_positive',
-    'ch2_annie_cum',
-    'ch3bonus1',
-    'ch3_bridgette_positive',
-    'ch3_annie_positive',
-    'ch3_holly_positive',
-    'ch3_lola_positive',
-    'ch4bonus1',
-    'ch4bonus2',
-    'ch4bonus3',
-    'ch4bonus4',
-    'ch4_annie_cum',
-    'ch4_annie_positive',
-    'ch4_holly_sex',
-    'ch4_holly_positive',
-    'ch4_lola_sex',
-    'ch4_lola_positive',
-    'ch4_jodie_positive',
-    'ch4_jodie_sex',
-    'ch4girls_shower',
-    'ch5bonus1',
-    'ch5bonus2',
-    'ch5_amy_sex',
-    'ch5amy_bonus',
-    'ch5_amy_positive',
-    'ch5annie_bonus',
-    'ch5_annie_sex',
-    'ch5_annie_positive',
-    'ch6bonus1',
-    'ch6bonus2',
-    'ch6jodie_bonus',
-    'ch6bridgette_bonus',
-    'ch6_jodie_positive',
-    'ch6_jodie_sex',
-    'ch6_bridgette_positive',
-    'ch6_bridgette_sex',
-    'ch6_alicia_positive',
-    'ch6_success',
-    'ch7bonus1',
-    'ch7bridgette_bonus',
-    'ch7_jodie_sex',
-    'ch7_jodie_positive',
-    'ch7_jodie_negative',
-    'ch7_lola_sex',
-    'ch7_lola_positive',
-    'ch7_principal_positive',
-    'ch7_principal_negative',
-    'ch7_bridgette_sex',
-    'ch7_bridgette_positive',
-    'ch7_bridgette_negative',
-    'ch7_success',
-    'ch8bonus1',
-    'ch8bonus2',
-    'ch8bonus3',
-    'ch8bonus4',
-    'ch8gym_bonus',
-    'ch8annie_bonus',
-    'ch8alicia_bonus',
-    'ch8principal_bonus',
-    'ch8principal_fired',
-    'ch8bridgette_number',
-    'ch8_bridgette_positive',
-    'ch8_bridgette_negative',
-    'ch8_annie_sex"',
-    'ch8_annie_positive',
-    'ch8_alicia_sex',
-    'ch8_alicia_positive',
-    'ch8_fired',
-    'ch8_success',
-    'ch9bonus1',
-    'ch9alexia_bonus',
-    'ch9rest_maria',
-    'ch9rest_ tip',
-    'ch9rest_man',
-    'ch9bar_girl',
-    'ch9bar_touch',
-    'ch9park_naked',
-    'ch9park_tits',
-    'ch9_success_bridgette',
-    'ch9_success_alexia',
-    'ch9_fail_alexia',
-  ]
+  console.log('allVars',allVars);
   //parse srtring allVars to Json
 
   if (allVars) {
-    if (typeof allVars === 'object') {
+    if (
+      typeof allVars === 'object'
+    ) {
       allVars = allVars
     } else {
       allVars = JSON.parse(allVars)
     }
     //set cookies to passed variables
-    let setC = true
-    Object.keys(allVars).map(async (cookie) => {
-      // console.log('cookie', cookie, allVars[cookie])
-      var date = new Date()
-      date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
-      var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch9
-      if (cookie.includes('ch10') || cookiesToKeep.includes(cookie)) {
-        document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
-      }
+
+    Object.keys(allVars).map((cookie) => {
+      console.log('cookie', cookie, allVars[cookie])
+      setCookie(cookie, allVars[cookie], 1)
     })
   }
 }

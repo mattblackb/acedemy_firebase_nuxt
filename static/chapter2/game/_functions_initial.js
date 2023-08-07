@@ -1,4 +1,5 @@
 //MB Added post message
+
 //MB added
 var getCookies = function (url) {
   // let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -38,7 +39,7 @@ function setCookie(name, value, days) {
 }
 
 function setCookiesOnEntry() {
-	var allVars = getUrlVars()
+  var allVars = getUrlVars()
 
   console.log('allVars',allVars);
   //parse srtring allVars to Json
@@ -59,8 +60,9 @@ function setCookiesOnEntry() {
     })
   }
 }
-
+// if(readVar('ch2_complete') === 0) {
 setCookiesOnEntry()
+// }
 
 if (parent.c_1) {
 } else {
@@ -115,7 +117,7 @@ function deleteVar(name) {
 }
 
 function hideShowButton() {
-  let showcontinue = checkAvailable('sSX6WUJBy1ICXlhXgSTA')
+  let showcontinue = checkAvailable('VVJ5mVW6zM0f3fygZzHB')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
@@ -137,7 +139,7 @@ function hideShowButton() {
   }
 }
 function hideShowButton2() {
-  let showcontinue = checkAvailable('sSX6WUJBy1ICXlhXgSTA')
+  let showcontinue = checkAvailable('5GvSh36NPJVmgz0LKXeX')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
