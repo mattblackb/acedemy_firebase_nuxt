@@ -109,10 +109,7 @@ export default {
       this.dialog = true
     },
     returnAchievements() {
-      var parsedobj = JSON.parse(
-        JSON.stringify(this.$store.state.setCurrentGame.chosenAcheivements)
-      )
-      return parsedobj
+      return this.$store.state.setCurrentGame.chosenAcheivements
     },
     greet(event) {
       // `event` is the native DOM event
