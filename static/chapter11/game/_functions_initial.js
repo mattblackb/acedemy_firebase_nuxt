@@ -39,13 +39,11 @@ function setCookie(name, value, days) {
 
 function setCookiesOnEntry() {
   var allVars = getUrlVars()
-  console.log('allVars',allVars);
+  console.log('allVars', allVars)
   //parse srtring allVars to Json
 
   if (allVars) {
-    if (
-      typeof allVars === 'object'
-    ) {
+    if (typeof allVars === 'object') {
       allVars = allVars
     } else {
       allVars = JSON.parse(allVars)
