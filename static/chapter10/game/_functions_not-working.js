@@ -1,6 +1,6 @@
 //MB Added post message
 
-//Functions
+//Functions for All Chapters
 
 //MB added
 var getCookies = function (url) {
@@ -40,8 +40,7 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-function getCash(cashVal, location) {
-  console.log('cashVal', cashVal, 'location', location)
+function getCash(cashVal) {
   let returnedState = parent.c_1.buyCash(cashVal)
 
   const name = 'cash='
@@ -87,6 +86,15 @@ function wait(initialValue, location) {
   }
 }
 
+//setCookiesOnEntry();
+
+if (parent.c_1) {
+} else {
+  window.location.href = '/'
+}
+function emitCheck(method) {
+  parent.c_1.greet(method)
+}
 //Added for bonus replay - displays modal to replay bonus
 function replayBonus(bonus) {
   console.log('Replay bonus', bonus)
@@ -135,13 +143,14 @@ function deleteVar(name) {
 
 // Creates cookie
 
-function setVar(name, value, expires) {
-  document.cookie =
-    name +
-    '=' +
-    escape(value) +
-    '; path=/' +
-    (expires == null ? '' : '; expires=' + expires.toGMTString())
+function setVar(cName, cValue, cExpires) {
+  console.log('setVar', cName, cValue, cExpires)
+  if (cName != 'ch11brass_sandf') {
+    let date = new Date()
+    date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
+    const expires = 'expires=' + date.toUTCString()
+    document.cookie = cName + '=' + cValue + '; ' + expires + '; path=/'
+  }
 }
 
 // Checks cookie
@@ -167,6 +176,64 @@ function readVar(name) {
   return val
 }
 
+// Other disable back
+
+function disallowNav() {
+  var disallowNav = 1
+
+  if (disallowNav) {
+    document.oncontextmenu = blockContextMenu
+
+    document.onkeydown = blockKeyPresses
+
+    // This part works for IE, but not Firefox
+
+    undoBack()
+
+    // This extra part is need for Firefox
+
+    window.onload = window.onload
+    undoBack()
+
+    window.onpageshow = function (evt) {
+      if (evt.persisted) undoBack()
+    }
+
+    window.onunload = function () {
+      void 0
+    }
+  }
+}
+
+// No back button
+
+function undoBack() {
+  window.history.forward()
+}
+
+// No menu
+
+function blockContextMenu() {
+  event.cancelBubble = true
+
+  event.returnValue = false
+
+  return false
+}
+
+// Backup no back
+
+function blockKeyPresses() {
+  var keyBackspace = 8
+
+  var keyF5 = 116
+
+  if (event.keyCode == keyBackspace || event.keyCode == keyF5) {
+    event.keyCode = 0
+
+    event.returnValue = false
+  }
+}
 // Increase cookie value
 
 //adds 1 to cookie value
@@ -609,63 +676,4 @@ function varZero(name) {
   val = 0
 
   setVar(name, val)
-}
-
-// Other disable back
-
-function disallowNav() {
-  var disallowNav = 1
-
-  if (disallowNav) {
-    document.oncontextmenu = blockContextMenu
-
-    document.onkeydown = blockKeyPresses
-
-    // This part works for IE, but not Firefox
-
-    undoBack()
-
-    // This extra part is need for Firefox
-
-    window.onload = window.onload
-    undoBack()
-
-    window.onpageshow = function (evt) {
-      if (evt.persisted) undoBack()
-    }
-
-    window.onunload = function () {
-      void 0
-    }
-  }
-}
-
-// No back button
-
-function undoBack() {
-  window.history.forward()
-}
-
-// No menu
-
-function blockContextMenu() {
-  event.cancelBubble = true
-
-  event.returnValue = false
-
-  return false
-}
-
-// Backup no back
-
-function blockKeyPresses() {
-  var keyBackspace = 8
-
-  var keyF5 = 116
-
-  if (event.keyCode == keyBackspace || event.keyCode == keyF5) {
-    event.keyCode = 0
-
-    event.returnValue = false
-  }
 }
