@@ -1,6 +1,6 @@
 //MB Added post message
 
-//Functions for Chapter Ten
+//Functions for All Chapters
 
 //MB added
 var getCookies = function (url) {
@@ -40,39 +40,49 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-function clearUnwantedCookies() {
-  cookiesToKeep = [
-    'ch2_maria_sex',
-    'ch4_holly_sex',
-    'ch4_lola_sex',
-    'ch4_jodie_sex',
-    'ch5_amy_sex',
-    'ch5_annie_sex',
-    'ch6_jodie_sex',
-    'ch6_bridgette_sex',
-    'ch7_jodie_sex',
-    'ch7_lola_sex',
-    'ch7_bridgette_sex',
-    'ch8_annie_sex"',
-    'ch8_alicia_sex',
-    'ch9_alexia_sex',
-    'ch10_lola_sex',
-    'ch8_fired',
-    'ch9rest_tip',
-    'ch9rest_man',
-    'ch10bridgette_continue',
-    'ch10vip_tickets',
-    'cash',
-  ]
+function getCash(cashVal) {
+  let returnedState = parent.c_1.buyCash(cashVal)
 
-  //get all cookies and delete the ones not in the array
-  const cookies = document.cookie.split(';')
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookiesToKeep[i].trim()
-    const cookieName = cookie.split('=')[0]
-    if (!cookieNames.includes(cookieName)) {
-      document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`
-    }
+  const name = 'cash='
+  const cDecoded = decodeURIComponent(document.cookie) //to be careful
+  const cArr = cDecoded.split('; ')
+  let res
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) res = val.substring(name.length)
+  })
+  //check that res has a value
+  if (!res) {
+    res = 0
+  }
+  //set a timeout to check wheter the cash has been updated
+  wait(res, location)
+
+  return returnedState
+}
+
+function wait(initialValue, location) {
+  const name = 'cash='
+  const cDecoded = decodeURIComponent(document.cookie) //to be careful
+  const cArr = cDecoded.split('; ')
+  let newValue
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) newValue = val.substring(name.length)
+  })
+  // console.log(
+  //   'initialValue',
+  //   initialValue,
+  //   'newValue',
+  //   newValue,
+  //   'location',
+  //   location
+  // )
+
+  if (initialValue === newValue) {
+    setTimeout(wait, 1000, initialValue, location)
+  } else {
+    // CODE to launch until condition is met
+    //redirect user to new page after cash has been updated
+    window.location.replace(location)
   }
 }
 
@@ -133,13 +143,14 @@ function deleteVar(name) {
 
 // Creates cookie
 
-function setVar(name, value, expires) {
-  document.cookie =
-    name +
-    '=' +
-    escape(value) +
-    '; path=/' +
-    (expires == null ? '' : '; expires=' + expires.toGMTString())
+function setVar(cName, cValue, cExpires) {
+  console.log('setVar', cName, cValue, cExpires)
+  if (cName != 'ch11brass_sandf') {
+    let date = new Date()
+    date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
+    const expires = 'expires=' + date.toUTCString()
+    document.cookie = cName + '=' + cValue + '; ' + expires + '; path=/'
+  }
 }
 
 // Checks cookie
@@ -321,6 +332,16 @@ function varPlus10(name) {
   var val = readVar(name)
 
   val += 10
+
+  setVar(name, val)
+}
+
+//adds 15 to cookie value
+
+function varPlus15(name) {
+  var val = readVar(name)
+
+  val += 15
 
   setVar(name, val)
 }

@@ -1,6 +1,6 @@
 //MB Added post message
 
-//Functions for Chapter Seven
+//Functions for All Chapters
 
 //MB added
 var getCookies = function (url) {
@@ -40,179 +40,49 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-function clearUnwantedCookies() {
-  cookiesToKeep = [
-    'alicia_score',
-    'amy_score',
-    'annie_score',
-    'bridgette_score',
-    'didi_score',
-    'genevieve_score',
-    'holly_score',
-    'isabella_score',
-    'jodie_score',
-    'laura_score',
-    'lola_score',
-    'maria_score',
-    'megan_score',
-    'olivia_score',
-    'principal_score',
-    'progress',
-    'report',
-    'ch1bonus1',
-    'ch2bonus1',
-    'ch2bonus2',
-    'ch2_maria_sex',
-    'ch2_jodie_positive',
-    'ch2_jodie_cum',
-    'ch2_annie_positive',
-    'ch2_annie_cum',
-    'ch3bonus1',
-    'ch3_bridgette_positive',
-    'ch3_annie_positive',
-    'ch3_holly_positive',
-    'ch3_lola_positive',
-    'ch4bonus1',
-    'ch4bonus2',
-    'ch4bonus3',
-    'ch4bonus4',
-    'ch4_annie_cum',
-    'ch4_annie_positive',
-    'ch4_holly_sex',
-    'ch4_holly_positive',
-    'ch4_lola_sex',
-    'ch4_lola_positive',
-    'ch4_jodie_positive',
-    'ch4_jodie_sex',
-    'ch4girls_shower',
-    'ch5bonus1',
-    'ch5bonus2',
-    'ch5_amy_sex',
-    'ch5amy_bonus',
-    'ch5_amy_positive',
-    'ch5annie_bonus',
-    'ch5_annie_sex',
-    'ch5_annie_positive',
-    'ch5documents',
-    'ch5annie_garden',
-    'ch5jodie_invite',
-    'ch5garden_suck',
-    'ch5spare_key',
-    'ch6bonus1',
-	'ch6bonus2',
-	'ch6jodie_bonus',
-    'ch6bridgette_bonus',
-    'ch6bridgette_upset',
-    'ch6bridgette_save',
-	'ch6alicia_help',
-    'ch6principal_reward',
-    'ch6principal_blackmail',
-    'ch6jodie_cum_face',
-    'ch6bridgette_car',
-    'ch6bridgette_kiss',
-    'ch6bridgette_invite',
-    'ch6_jodie_positive',
-    'ch6_jodie_sex',
-    'ch6_bridgette_positive',
-    'ch6_bridgette_sex',
-    'ch6_alicia_positive',
-	'ch6_success',
-	'ch7jodie_convo',
-	'ch7jodie_private',
-	'ch7jodie_stroke',
-	'ch7jodie_tits',
-	'ch7jodie_fingers',
-	'ch7jodie_pussy',
-	'ch7jodie_orgasm',
-	'ch7jodie_suck',
-	'ch7jodie_throat',
-	'ch7jodie_throatfuck',
-	'ch7jodie_pussy_cum',
-	'ch7jodie_mouth_cum',
-	'ch7jodie_positive',
-	'ch7lola_convo',
-	'ch7lola_suck',
-	'ch7lola_fuck',
-	'ch7lola_orgasm',
-	'ch7alicia_convo',
-	'ch7lola_cctv',
-	'ch7seb_convo',
-	'ch7lola_gym',
-	'ch7megan_convo',
-	'ch7principal_reward',
-	'ch7governors_meeting',
-	'ch7jodie_note',
-	'ch7bridgette_touch',
-	'ch7principal_offer',
-	'ch7bridgette_library',
-	'ch7library_kiss',
-	'ch7library_breasts',
-	'ch7library_nipples',
-	'ch7library_invite',
-	'ch7have_key',
-	'ch7meet_holly',
-	'ch7holly_key',
-	'ch7cctv_medical',
-	'ch7cctv_office',
-	'ch7ramsey_porn',
-	'ch7olivia_office',
-	'ch7lola_flirt',
-	'ch7amy_flirt',
-	'ch7olivia_consider',
-	'ch7ramsey_cctv',
-	'ch7holly_cctv',
-	'ch7olivia_intentions',
-	'ch7elevator_kiss',
-	'ch7archive_invite',
-	'ch7bridgette_bonus',
-	'ch7bonus1',
-	'ch7bridgette_kiss1',
-	'ch7bridgette_undress',
-	'ch7bridgette_stroke',
-	'ch7bridgette_fingers',
-	'ch7bridgette_orgasm_fingers',
-	'ch7bridgette_suck_fingers',
-	'ch7bridgette_suck_nipples',
-	'ch7bridgette_oral',
-	'ch7bridgette_orgasm_oral',
-	'ch7bridgette_blowjob',
-	'ch7bridgette_mouth_cum',
-	'ch7bridgette_fuck',
-	'ch7bridgette_orgasm_fuck',
-	'ch7bridgette_ass_cum',
-	'ch7bridgette_pussy_cum',
-	'ch7bridgette_more_sucking',
-	'ch7bridgette_face_cum',
-	'ch7bridgette_tits_cum',
-	'ch7bridgette_kiss2',
-	'lola_orgasm',
-	'ch7no_key',
-	'ch7bridgette_no_cum',
-	'ch7_jodie_sex',
-	'ch7_jodie_positive',
-	'ch7_jodie_negative',
-	'ch7_lola_sex',
-	'ch7_lola_positive',
-	'ch7_principal_positive',
-	'ch7_principal_negative',
-	'ch7_bridgette_sex',
-	'ch7_bridgette_positive',
-	'ch7_bridgette_negative',
- ]
-  var allVars = getUrlVars()
-  if (allVars) {
-    //set cookies to passed variables
+function getCash(cashVal) {
+  let returnedState = parent.c_1.buyCash(cashVal)
 
-    Object.keys(allVars).map((cookie) => {
-      //if cookie name is not in cookiesToKeep array, delete it
-      if (!cookiesToKeep.includes(cookie)) {
-        document.cookie =
-          cookie + '=; expires=Thu, 01-Jan-70 00:00:01 GMT' + '; path=/'
-        // console.log('cookissse', cookie)
-      } else {
-        console.log('cookissse saved', cookie)
-      }
-    })
+  const name = 'cash='
+  const cDecoded = decodeURIComponent(document.cookie) //to be careful
+  const cArr = cDecoded.split('; ')
+  let res
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) res = val.substring(name.length)
+  })
+  //check that res has a value
+  if (!res) {
+    res = 0
+  }
+  //set a timeout to check wheter the cash has been updated
+  wait(res, location)
+
+  return returnedState
+}
+
+function wait(initialValue, location) {
+  const name = 'cash='
+  const cDecoded = decodeURIComponent(document.cookie) //to be careful
+  const cArr = cDecoded.split('; ')
+  let newValue
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) newValue = val.substring(name.length)
+  })
+  // console.log(
+  //   'initialValue',
+  //   initialValue,
+  //   'newValue',
+  //   newValue,
+  //   'location',
+  //   location
+  // )
+
+  if (initialValue === newValue) {
+    setTimeout(wait, 1000, initialValue, location)
+  } else {
+    // CODE to launch until condition is met
+    //redirect user to new page after cash has been updated
+    window.location.replace(location)
   }
 }
 
@@ -273,13 +143,14 @@ function deleteVar(name) {
 
 // Creates cookie
 
-function setVar(name, value, expires) {
-  document.cookie =
-    name +
-    '=' +
-    escape(value) +
-    '; path=/' +
-    (expires == null ? '' : '; expires=' + expires.toGMTString())
+function setVar(cName, cValue, cExpires) {
+  console.log('setVar', cName, cValue, cExpires)
+  if (cName != 'ch11brass_sandf') {
+    let date = new Date()
+    date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
+    const expires = 'expires=' + date.toUTCString()
+    document.cookie = cName + '=' + cValue + '; ' + expires + '; path=/'
+  }
 }
 
 // Checks cookie
@@ -303,26 +174,6 @@ function readVar(name) {
   }
 
   return val
-}
-
-// Alters cookie value
-
-function varPlus1(name) {
-  var val = readVar(name)
-
-  val += 1
-
-  setVar(name, val)
-}
-
-// Alters cookie value lower
-
-function varMinus1(name) {
-  var val = readVar(name)
-
-  val -= 1
-
-  setVar(name, val)
 }
 
 // Other disable back
@@ -383,53 +234,14 @@ function blockKeyPresses() {
     event.returnValue = false
   }
 }
+// Increase cookie value
 
-///cookie value to max
+//adds 1 to cookie value
 
-function varPlus100(name) {
+function varPlus1(name) {
   var val = readVar(name)
 
-  val += 100
-
-  setVar(name, val)
-}
-
-//sets cookie value to beginning
-
-function varPlus30(name) {
-  var val = readVar(name)
-
-  val += 30
-
-  setVar(name, val)
-}
-
-//adds 5 to cookie value
-
-function varPlus5(name) {
-  var val = readVar(name)
-
-  val += 5
-
-  setVar(name, val)
-}
-
-//adds 6 to cookie value
-
-function varPlus6(name) {
-  var val = readVar(name)
-
-  val += 6
-
-  setVar(name, val)
-}
-
-//adds 7 to cookie value
-
-function varPlus7(name) {
-  var val = readVar(name)
-
-  val += 7
+  val += 1
 
   setVar(name, val)
 }
@@ -464,6 +276,36 @@ function varPlus4(name) {
   setVar(name, val)
 }
 
+//adds 5 to cookie value
+
+function varPlus5(name) {
+  var val = readVar(name)
+
+  val += 5
+
+  setVar(name, val)
+}
+
+//adds 6 to cookie value
+
+function varPlus6(name) {
+  var val = readVar(name)
+
+  val += 6
+
+  setVar(name, val)
+}
+
+//adds 7 to cookie value
+
+function varPlus7(name) {
+  var val = readVar(name)
+
+  val += 7
+
+  setVar(name, val)
+}
+
 //adds 8 to cookie value
 
 function varPlus8(name) {
@@ -494,26 +336,6 @@ function varPlus10(name) {
   setVar(name, val)
 }
 
-//adds 12 to cookie value
-
-function varPlus12(name) {
-  var val = readVar(name)
-
-  val += 12
-
-  setVar(name, val)
-}
-
-//adds 14 to cookie value
-
-function varPlus14(name) {
-  var val = readVar(name)
-
-  val += 14
-
-  setVar(name, val)
-}
-
 //adds 15 to cookie value
 
 function varPlus15(name) {
@@ -534,12 +356,134 @@ function varPlus20(name) {
   setVar(name, val)
 }
 
+//adds 30 to cookie value
+
+function varPlus30(name) {
+  var val = readVar(name)
+
+  val += 30
+
+  setVar(name, val)
+}
+
 //adds 40 to cookie value
 
 function varPlus40(name) {
   var val = readVar(name)
 
   val += 40
+
+  setVar(name, val)
+}
+
+//adds 50 to cookie value
+
+function varPlus50(name) {
+  var val = readVar(name)
+
+  val += 50
+
+  setVar(name, val)
+}
+
+//adds 60 to cookie value
+
+function varPlus60(name) {
+  var val = readVar(name)
+
+  val += 60
+
+  setVar(name, val)
+}
+
+//adds 70 to cookie value
+
+function varPlus70(name) {
+  var val = readVar(name)
+
+  val += 70
+
+  setVar(name, val)
+}
+
+//adds 80 to cookie value
+
+function varPlus80(name) {
+  var val = readVar(name)
+
+  val += 80
+
+  setVar(name, val)
+}
+
+//adds 90 to cookie value
+
+function varPlus90(name) {
+  var val = readVar(name)
+
+  val += 90
+
+  setVar(name, val)
+}
+
+//adds 100 to cookie value
+
+function varPlus100(name) {
+  var val = readVar(name)
+
+  val += 100
+
+  setVar(name, val)
+}
+
+//adds 200 to cookie value
+
+function varPlus200(name) {
+  var val = readVar(name)
+
+  val += 200
+
+  setVar(name, val)
+}
+
+//adds 300 to cookie value
+
+function varPlus300(name) {
+  var val = readVar(name)
+
+  val += 300
+
+  setVar(name, val)
+}
+
+//adds 400 to cookie value
+
+function varPlus400(name) {
+  var val = readVar(name)
+
+  val += 400
+
+  setVar(name, val)
+}
+
+//adds 500 to cookie value
+
+function varPlus500(name) {
+  var val = readVar(name)
+
+  val += 500
+
+  setVar(name, val)
+}
+
+// Decrease cookie value
+
+// minus 1 cookie value
+
+function varMinus1(name) {
+  var val = readVar(name)
+
+  val -= 1
 
   setVar(name, val)
 }
@@ -634,7 +578,97 @@ function varMinus50(name) {
   setVar(name, val)
 }
 
-// minus 50 cookie value
+// minus 60 cookie value
+
+function varMinus60(name) {
+  var val = readVar(name)
+
+  val -= 60
+
+  setVar(name, val)
+}
+
+// minus 70 cookie value
+
+function varMinus70(name) {
+  var val = readVar(name)
+
+  val -= 70
+
+  setVar(name, val)
+}
+
+// minus 80 cookie value
+
+function varMinus80(name) {
+  var val = readVar(name)
+
+  val -= 80
+
+  setVar(name, val)
+}
+
+// minus 90 cookie value
+
+function varMinus90(name) {
+  var val = readVar(name)
+
+  val -= 90
+
+  setVar(name, val)
+}
+
+// minus 100 cookie value
+
+function varMinus100(name) {
+  var val = readVar(name)
+
+  val -= 100
+
+  setVar(name, val)
+}
+
+// minus 200 cookie value
+
+function varMinus200(name) {
+  var val = readVar(name)
+
+  val -= 200
+
+  setVar(name, val)
+}
+
+// minus 300 cookie value
+
+function varMinus300(name) {
+  var val = readVar(name)
+
+  val -= 300
+
+  setVar(name, val)
+}
+
+// minus 400 cookie value
+
+function varMinus400(name) {
+  var val = readVar(name)
+
+  val -= 400
+
+  setVar(name, val)
+}
+
+// minus 500 cookie value
+
+function varMinus500(name) {
+  var val = readVar(name)
+
+  val -= 500
+
+  setVar(name, val)
+}
+
+// Zero cookie value
 
 function varZero(name) {
   var val = readVar(name)

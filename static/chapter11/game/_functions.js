@@ -1,6 +1,6 @@
 //MB Added post message
 
-//Functions for Chapter Eleven
+//Functions for All Chapters
 
 //MB added
 var getCookies = function (url) {
