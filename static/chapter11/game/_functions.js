@@ -87,6 +87,7 @@ function wait(initialValue, location) {
 }
 
 function clearUnwantedCookies() {
+  console.log('cookies to keep...')
   cookiesToKeep = [
     'alicia_score',
     'amy_score',
@@ -203,20 +204,16 @@ function clearUnwantedCookies() {
     'ch10_didi_positive',
     'cash',
   ]
-  var allVars = getUrlVars()
-  if (allVars) {
-    //set cookies to passed variables
+  //get all cookies and delete the ones not in the array
+  const cookies = document.cookie.split(';')
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim()
+    const cookieName = cookie.split('=')[0]
 
-    Object.keys(allVars).map((cookie) => {
-      //if cookie name is not in cookiesToKeep array, delete it
-      if (!cookiesToKeep.includes(cookie)) {
-        document.cookie =
-          cookie + '=; expires=Thu, 01-Jan-70 00:00:01 GMT' + '; path=/'
-        // console.log('cookissse', cookie)
-      } else {
-        console.log('cookissse saved', cookie)
-      }
-    })
+    if (!cookiesToKeep.includes(cookieName)) {
+      document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`
+      console.log('cookie', cookieName)
+    }
   }
 }
 
