@@ -54,6 +54,7 @@ cookiesToKeep = [
     'ch8_alicia_sex',
 	'ch9_alexia_sex',
     'ch8_fired',
+	'ch8bridgette_number',
 	'ch9_success_bridgette',
 	'ch9park_tits',
 	'ch9rest_tip',
