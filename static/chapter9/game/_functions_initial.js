@@ -38,9 +38,7 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-const setCookiesOnEntry = async function () {
-  var allVars = getUrlVars()
-  cookiesToKeep = [
+cookiesToKeep = [
     'ch2_maria_sex',
     'ch4_holly_sex',
     'ch4_lola_sex',
