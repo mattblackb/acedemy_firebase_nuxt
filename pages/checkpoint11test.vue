@@ -29,7 +29,7 @@
               </v-btn>
               <h1 :v-show="genericModalAction == ''">Play this bonus again</h1>
               <v-btn color="primary" text @click="triggerBonusReplay()">
-                Replay Bonus
+                Replay Bonus..
               </v-btn>
             </v-card>
           </v-dialog>
