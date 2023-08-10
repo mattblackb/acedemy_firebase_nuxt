@@ -59,6 +59,7 @@ cookiesToKeep = [
   'ch9rest_tip',
   'ch9rest_man',
   'ch10bridgette_continue',
+  'ch10didi_invite',
   'ch10vip_tickets',
   'cash',
 ]
