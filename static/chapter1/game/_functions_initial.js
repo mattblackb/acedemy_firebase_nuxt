@@ -39,20 +39,10 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
-    'alicia_score',
-    'amy_score',
     'annie_score',
     'bridgette_score',
-    'didi_score',
-    'genevieve_score',
-    'holly_score',
-    'isabella_score',
     'jodie_score',
-    'laura_score',
-    'lola_score',
     'maria_score',
-    'megan_score',
-    'olivia_score',
     'principal_score',
 	'ch1talk_megan',
 	'ch1manners',

@@ -42,13 +42,15 @@ cookiesToKeep = [
     'annie_score',
 	'bridgette_score',
     'jodie_score',
-    'ch2_maria_sex',
+	'ch2_maria_sex',
     'ch2_jodie_positive',
     'ch2_jodie_cum',
     'ch2_annie_positive',
     'ch2_annie_cum',
 	'ch2_success',
 	'ch3_bridgette_positive',
+	'report',
+	'progress',
   ]
 
 const setCookiesOnEntry = async function () {
