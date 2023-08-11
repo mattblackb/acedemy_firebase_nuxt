@@ -61,6 +61,7 @@ cookiesToKeep = [
 	'ch9rest_maria',
 	'ch9rest_tip',
 	'ch9rest_man',
+	'ch9bridgette_continue',
     'sober',
 	'alcohol',
 	'cash',
