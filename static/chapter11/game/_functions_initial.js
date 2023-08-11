@@ -63,6 +63,7 @@ cookiesToKeep = [
   'ch10bridgette_continue',
   'ch10didi_invite',
   'ch10vip_tickets',
+  'ch10run_away',
   'ch11bridgette_continue',
   'cash',
 ]
