@@ -59,7 +59,6 @@ cookiesToKeep = [
   'ch11_laura_sex',
   'ch10_didi_positive',
   'ch9rest_tip',
-  'ch9rest_man',
   'ch10bridgette_continue',
   'ch10didi_invite',
   'ch10vip_tickets',
