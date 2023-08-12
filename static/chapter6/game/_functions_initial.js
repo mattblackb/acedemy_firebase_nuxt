@@ -1,5 +1,5 @@
 //MB Added post message
-//Functions initial for Chapter Six - passed into Chapter Seven
+//Functions initial for Chapter Seven - passed into Chapter Eight
 //MB added
 var getCookies = function (url) {
   // let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -39,34 +39,34 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
-    'ch2_jodie_cum',
+	'ch2_jodie_cum',
     'ch2_maria_sex',
 	'ch2_annie_cum',
 	'ch3_bridgette_positive',
 	'ch4_annie_cum',
     'ch4_holly_sex',
     'ch4_lola_sex',
-	'ch4_jodie_positive',
     'ch4_jodie_sex',
-	'ch6_jodie_positive',
+	'ch5spare_key',
     'ch5_amy_sex',
     'ch5_annie_sex',
-	'ch5documents',
-	'ch5amy_bonus',
-    'ch5annie_bonus',
-	'ch5annie_garden',
-	'ch5garden_suck',
-	'ch5jodie_invite',
-	'ch5spare_key',
     'ch6_jodie_sex',
-	'ch6_jodie_positive',
     'ch6_bridgette_sex',
 	'ch6principal_blackmail', 
 	'ch6bridgette_upset',
 	'ch6bridgette_invite',  
 	'ch6bridgette_kiss',
-	'ch6bridgette_car',  
-  ]
+	'ch6bridgette_car',
+	'ch7_jodie_sex',
+    'ch7_lola_sex',
+    'ch7_bridgette_sex',
+	'ch7_bridgette_positive',
+	'ch7_bridgette_negative',
+	'ch7holly_key',
+	'ch7cctv_office',
+	'ch7have_key',
+	'ch7ramsey_porn',
+   ]
 
 const setCookiesOnEntry = async function () {
   console.log('setCookiesOnEntry', cookiesToKeep)
@@ -86,8 +86,8 @@ const setCookiesOnEntry = async function () {
       var date = new Date()
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch6
-      if (cookie.includes('ch6') || cookiesToKeep.includes(cookie)) {
+      //check that cookie contains ch7
+      if (cookie.includes('ch7') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }
     })
