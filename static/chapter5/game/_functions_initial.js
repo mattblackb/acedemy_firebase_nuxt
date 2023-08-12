@@ -60,6 +60,7 @@ cookiesToKeep = [
 	'ch5annie_garden',
 	'ch5garden_suck',
 	'ch5jodie_invite',
+	'ch5spare_key',
   ]
 
 const setCookiesOnEntry = async function () {

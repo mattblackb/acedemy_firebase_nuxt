@@ -45,6 +45,7 @@ cookiesToKeep = [
     'jodie_score',
     'maria_score',
     'principal_score',
+	'ch1_jodie_positive',
 	'ch1talk_megan',
 	'ch1manners',
 	'ch2_maria_sex',

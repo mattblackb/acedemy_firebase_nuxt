@@ -57,6 +57,7 @@ cookiesToKeep = [
 	'ch5annie_garden',
 	'ch5garden_suck',
 	'ch5jodie_invite',
+	'ch5spare_key',
     'ch6_jodie_sex',
 	'ch6_jodie_positive',
     'ch6_bridgette_sex',
