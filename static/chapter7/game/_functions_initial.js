@@ -47,6 +47,7 @@ cookiesToKeep = [
     'ch4_holly_sex',
     'ch4_lola_sex',
     'ch4_jodie_sex',
+	'ch5spare_key',
     'ch5_amy_sex',
     'ch5_annie_sex',
     'ch6_jodie_sex',
