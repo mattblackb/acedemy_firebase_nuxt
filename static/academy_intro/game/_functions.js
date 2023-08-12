@@ -1,5 +1,8 @@
 //MB Added post message
 
+//Functions
+
+//MB added
 var getCookies = function (url) {
   // let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
   var pairs = document.cookie.split(';')
@@ -13,6 +16,16 @@ var getCookies = function (url) {
   // window.top.location.href ="/save/"+url+"/"+cookies;
   return cookies
 }
+
+// start added by dsp3000
+if (parent.c_1) {
+} else {
+  window.location.href = '/'
+}
+function emitCheck(method) {
+  parent.c_1.greet(method)
+}
+// end added by dsp3000
 
 var getAllCookiesJSON = function (url) {
   var myCookies = getCookies(url) //GET JSON ARRAY
@@ -37,30 +50,53 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + expires + '; path=/'
 }
 
-function setCookiesOnEntry() {
-  var allVars = getUrlVars()
-  if (allVars) {
-    console.log('allVars', allVars)
-    //set cookies to passed variables
+function getCash(cashVal, location) {
+  console.log('cashVal', cashVal, 'location', location)
+  let returnedState = parent.c_1.buyCash(cashVal)
 
-    Object.keys(allVars).map((cookie) => {
-      console.log('cookie', cookie)
-      setCookie(cookie, allVars[cookie], 1)
-    })
+  const name = 'cash='
+  const cDecoded = decodeURIComponent(document.cookie) //to be careful
+  const cArr = cDecoded.split('; ')
+  let res
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) res = val.substring(name.length)
+  })
+  //check that res has a value
+  if (!res) {
+    res = 0
+  }
+  //set a timeout to check wheter the cash has been updated
+  wait(res, location)
+
+  return returnedState
+}
+
+function wait(initialValue, location) {
+  const name = 'cash='
+  const cDecoded = decodeURIComponent(document.cookie) //to be careful
+  const cArr = cDecoded.split('; ')
+  let newValue
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) newValue = val.substring(name.length)
+  })
+  // console.log(
+  //   'initialValue',
+  //   initialValue,
+  //   'newValue',
+  //   newValue,
+  //   'location',
+  //   location
+  // )
+
+  if (initialValue === newValue) {
+    setTimeout(wait, 1000, initialValue, location)
+  } else {
+    // CODE to launch until condition is met
+    //redirect user to new page after cash has been updated
+    window.location.replace(location)
   }
 }
 
-if (readVar('intro_complete') === 0) {
-  setCookiesOnEntry()
-}
-
-if (parent.c_1) {
-} else {
-  window.location.href = '/'
-}
-function emitCheck(method) {
-  parent.c_1.greet(method)
-}
 //Added for bonus replay - displays modal to replay bonus
 function replayBonus(bonus) {
   console.log('Replay bonus', bonus)
@@ -80,7 +116,7 @@ function checkAvailable(method) {
   let returnedState = parent.c_1.checkAvailable(method)
   return returnedState
 }
-const myTimeout = setInterval(hideShowButton, 1000)
+// const myTimeout = setInterval(hideShowButton, 1000);
 
 var getCookies = function () {
   var pairs = document.cookie.split(';')
@@ -98,37 +134,13 @@ function saveProgress(route) {
   var myCookies = getCookies() //GET JSON ARRAY
   myCookiesJSON = JSON.stringify(myCookies)
   let returnedState = parent.c_1.saveProgress(myCookiesJSON, route)
-
-  window.location.href = 'checksave1.0.html'
   return returnedState
 }
 
 // Kills cookie
+
 function deleteVar(name) {
   document.cookie = name + '=; expires=Thu, 01-Jan-70 00:00:01 GMT' + '; path=/'
-}
-
-function hideShowButton() {
-  let showcontinue = checkAvailable('jVPB0ws7x2EDgI8Aq75K')
-  if (showcontinue) {
-    document.getElementById('buybutton').style.display = 'none'
-    document.getElementById('availableButton').style.display = 'block'
-    document.getElementById('buybuttonImage').style.display = 'none'
-    document.getElementById('availableButtonImage').style.display = 'block'
-  } else {
-    document.getElementById('buybutton').style.display = 'block'
-    document.getElementById('availableButton').style.display = 'none'
-    document.getElementById('buybuttonImage').style.display = 'block'
-    document.getElementById('availableButtonImage').style.display = 'none'
-  }
-  function moduleAvailable(state) {
-    if (state) {
-      document.getElementById('buybutton').style.display = 'none'
-      document.getElementById('availableButton').style.display = 'block'
-      document.getElementById('buybuttonImage').style.display = 'none'
-      document.getElementById('availableButtonimage').style.display = 'block'
-    }
-  }
 }
 
 // Creates cookie
@@ -165,131 +177,14 @@ function readVar(name) {
   return val
 }
 
-// Alters cookie value
+// Increase cookie value
+
+//adds 1 to cookie value
 
 function varPlus1(name) {
   var val = readVar(name)
 
   val += 1
-
-  setVar(name, val)
-}
-
-// Alters cookie value lower
-
-function varMinus1(name) {
-  var val = readVar(name)
-
-  val -= 1
-
-  setVar(name, val)
-}
-
-// Other disable back
-
-function disallowNav() {
-  var disallowNav = 1
-
-  if (disallowNav) {
-    document.oncontextmenu = blockContextMenu
-
-    document.onkeydown = blockKeyPresses
-
-    // This part works for IE, but not Firefox
-
-    undoBack()
-
-    // This extra part is need for Firefox
-
-    window.onload = window.onload
-    undoBack()
-
-    window.onpageshow = function (evt) {
-      if (evt.persisted) undoBack()
-    }
-
-    window.onunload = function () {
-      void 0
-    }
-  }
-}
-
-// No back button
-
-function undoBack() {
-  window.history.forward()
-}
-
-// No menu
-
-function blockContextMenu() {
-  event.cancelBubble = true
-
-  event.returnValue = false
-
-  return false
-}
-
-// Backup no back
-
-function blockKeyPresses() {
-  var keyBackspace = 8
-
-  var keyF5 = 116
-
-  if (event.keyCode == keyBackspace || event.keyCode == keyF5) {
-    event.keyCode = 0
-
-    event.returnValue = false
-  }
-}
-
-///cookie value to max
-
-function varPlus100(name) {
-  var val = readVar(name)
-
-  val += 100
-
-  setVar(name, val)
-}
-
-//sets cookie value to beginning
-
-function varPlus30(name) {
-  var val = readVar(name)
-
-  val += 30
-
-  setVar(name, val)
-}
-
-//adds 5 to cookie value
-
-function varPlus5(name) {
-  var val = readVar(name)
-
-  val += 5
-
-  setVar(name, val)
-}
-
-//adds 6 to cookie value
-
-function varPlus6(name) {
-  var val = readVar(name)
-
-  val += 6
-
-  setVar(name, val)
-}
-
-//adds 7 to cookie value
-
-function varPlus7(name) {
-  var val = readVar(name)
-
-  val += 7
 
   setVar(name, val)
 }
@@ -324,6 +219,36 @@ function varPlus4(name) {
   setVar(name, val)
 }
 
+//adds 5 to cookie value
+
+function varPlus5(name) {
+  var val = readVar(name)
+
+  val += 5
+
+  setVar(name, val)
+}
+
+//adds 6 to cookie value
+
+function varPlus6(name) {
+  var val = readVar(name)
+
+  val += 6
+
+  setVar(name, val)
+}
+
+//adds 7 to cookie value
+
+function varPlus7(name) {
+  var val = readVar(name)
+
+  val += 7
+
+  setVar(name, val)
+}
+
 //adds 8 to cookie value
 
 function varPlus8(name) {
@@ -354,26 +279,6 @@ function varPlus10(name) {
   setVar(name, val)
 }
 
-//adds 12 to cookie value
-
-function varPlus12(name) {
-  var val = readVar(name)
-
-  val += 12
-
-  setVar(name, val)
-}
-
-//adds 14 to cookie value
-
-function varPlus14(name) {
-  var val = readVar(name)
-
-  val += 14
-
-  setVar(name, val)
-}
-
 //adds 15 to cookie value
 
 function varPlus15(name) {
@@ -394,12 +299,134 @@ function varPlus20(name) {
   setVar(name, val)
 }
 
+//adds 30 to cookie value
+
+function varPlus30(name) {
+  var val = readVar(name)
+
+  val += 30
+
+  setVar(name, val)
+}
+
 //adds 40 to cookie value
 
 function varPlus40(name) {
   var val = readVar(name)
 
   val += 40
+
+  setVar(name, val)
+}
+
+//adds 50 to cookie value
+
+function varPlus50(name) {
+  var val = readVar(name)
+
+  val += 50
+
+  setVar(name, val)
+}
+
+//adds 60 to cookie value
+
+function varPlus60(name) {
+  var val = readVar(name)
+
+  val += 60
+
+  setVar(name, val)
+}
+
+//adds 70 to cookie value
+
+function varPlus70(name) {
+  var val = readVar(name)
+
+  val += 70
+
+  setVar(name, val)
+}
+
+//adds 80 to cookie value
+
+function varPlus80(name) {
+  var val = readVar(name)
+
+  val += 80
+
+  setVar(name, val)
+}
+
+//adds 90 to cookie value
+
+function varPlus90(name) {
+  var val = readVar(name)
+
+  val += 90
+
+  setVar(name, val)
+}
+
+//adds 100 to cookie value
+
+function varPlus100(name) {
+  var val = readVar(name)
+
+  val += 100
+
+  setVar(name, val)
+}
+
+//adds 200 to cookie value
+
+function varPlus200(name) {
+  var val = readVar(name)
+
+  val += 200
+
+  setVar(name, val)
+}
+
+//adds 300 to cookie value
+
+function varPlus300(name) {
+  var val = readVar(name)
+
+  val += 300
+
+  setVar(name, val)
+}
+
+//adds 400 to cookie value
+
+function varPlus400(name) {
+  var val = readVar(name)
+
+  val += 400
+
+  setVar(name, val)
+}
+
+//adds 500 to cookie value
+
+function varPlus500(name) {
+  var val = readVar(name)
+
+  val += 500
+
+  setVar(name, val)
+}
+
+// Decrease cookie value
+
+// minus 1 cookie value
+
+function varMinus1(name) {
+  var val = readVar(name)
+
+  val -= 1
 
   setVar(name, val)
 }
@@ -494,7 +521,97 @@ function varMinus50(name) {
   setVar(name, val)
 }
 
-// minus 50 cookie value
+// minus 60 cookie value
+
+function varMinus60(name) {
+  var val = readVar(name)
+
+  val -= 60
+
+  setVar(name, val)
+}
+
+// minus 70 cookie value
+
+function varMinus70(name) {
+  var val = readVar(name)
+
+  val -= 70
+
+  setVar(name, val)
+}
+
+// minus 80 cookie value
+
+function varMinus80(name) {
+  var val = readVar(name)
+
+  val -= 80
+
+  setVar(name, val)
+}
+
+// minus 90 cookie value
+
+function varMinus90(name) {
+  var val = readVar(name)
+
+  val -= 90
+
+  setVar(name, val)
+}
+
+// minus 100 cookie value
+
+function varMinus100(name) {
+  var val = readVar(name)
+
+  val -= 100
+
+  setVar(name, val)
+}
+
+// minus 200 cookie value
+
+function varMinus200(name) {
+  var val = readVar(name)
+
+  val -= 200
+
+  setVar(name, val)
+}
+
+// minus 300 cookie value
+
+function varMinus300(name) {
+  var val = readVar(name)
+
+  val -= 300
+
+  setVar(name, val)
+}
+
+// minus 400 cookie value
+
+function varMinus400(name) {
+  var val = readVar(name)
+
+  val -= 400
+
+  setVar(name, val)
+}
+
+// minus 500 cookie value
+
+function varMinus500(name) {
+  var val = readVar(name)
+
+  val -= 500
+
+  setVar(name, val)
+}
+
+// Zero cookie value
 
 function varZero(name) {
   var val = readVar(name)
@@ -502,4 +619,63 @@ function varZero(name) {
   val = 0
 
   setVar(name, val)
+}
+
+// Other disable back
+
+function disallowNav() {
+  var disallowNav = 1
+
+  if (disallowNav) {
+    document.oncontextmenu = blockContextMenu
+
+    document.onkeydown = blockKeyPresses
+
+    // This part works for IE, but not Firefox
+
+    undoBack()
+
+    // This extra part is need for Firefox
+
+    window.onload = window.onload
+    undoBack()
+
+    window.onpageshow = function (evt) {
+      if (evt.persisted) undoBack()
+    }
+
+    window.onunload = function () {
+      void 0
+    }
+  }
+}
+
+// No back button
+
+function undoBack() {
+  window.history.forward()
+}
+
+// No menu
+
+function blockContextMenu() {
+  event.cancelBubble = true
+
+  event.returnValue = false
+
+  return false
+}
+
+// Backup no back
+
+function blockKeyPresses() {
+  var keyBackspace = 8
+
+  var keyF5 = 116
+
+  if (event.keyCode == keyBackspace || event.keyCode == keyF5) {
+    event.keyCode = 0
+
+    event.returnValue = false
+  }
 }
