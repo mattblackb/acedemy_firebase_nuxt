@@ -56,7 +56,6 @@ cookiesToKeep = [
     'ch4_jodie_sex',
 	'ch4_success',
 	'ch4girls_shower',
-	'annie_pic4',
   ]
 
 const setCookiesOnEntry = async function () {
