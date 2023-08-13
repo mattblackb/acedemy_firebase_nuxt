@@ -50,6 +50,8 @@ cookiesToKeep = [
     'ch7_jodie_sex',
     'ch7_lola_sex',
     'ch7_bridgette_sex',
+	'ch7_bridgette_positive',
+	'ch7_bridgette_negative',
 	'ch7holly_key',
 	'ch7cctv_office',
 	'ch7have_key',
