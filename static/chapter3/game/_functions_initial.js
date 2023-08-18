@@ -41,6 +41,7 @@ function setCookie(name, value, days) {
 cookiesToKeep = [
     'annie_score',
 	'bridgette_score',
+	'holly_score',
     'jodie_score',
 	'ch2_maria_sex',
     'ch2_jodie_positive',
