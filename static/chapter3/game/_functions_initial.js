@@ -49,7 +49,9 @@ cookiesToKeep = [
     'ch2_annie_positive',
     'ch2_annie_cum',
 	'ch2_success',
+	'ch2annie_ride',
 	'ch3_bridgette_positive',
+	'ch3annie_studio',
 	'report',
 	'progress',
   ]
