@@ -44,6 +44,8 @@ cookiesToKeep = [
     'bridgette_score',
 	'holly_score',
     'jodie_score',
+	'laura_score',
+	'lola_score',
 	'ch2_jodie_positive',
     'ch2_jodie_cum',
     'ch2_maria_sex',
