@@ -2,7 +2,12 @@
   <div id="app">
     <div class="search-wrapper">
       <label>Search email:</label>
-      <input type="text" v-model="search" placeholder="Search email.." />
+      <input
+        type="text"
+        v-model="search"
+        placeholder="Search email.."
+        size="50"
+      />
       <button @click="returnCurrent">Search</button>
     </div>
     <div class="wrapper" v-if="this.chosenUser.length != 0">
@@ -29,6 +34,9 @@
       />
       <v-btn color="success" class="mr-4" @click="addCredits">
         Add Credits
+      </v-btn>
+      <v-btn color="success" class="mr-4" @click="overwriteCredits">
+        Overwrite Credits
       </v-btn>
     </div>
     <div class="unWantedWarning" v-if="unwantedRubbish">
@@ -76,6 +84,13 @@ export default {
       let clonededPerson = _.cloneDeep(personData)
       clonededPerson.data.credits =
         parseInt(clonededPerson.data.credits) + parseInt(this.creditsvalue)
+      this.$store.commit('setuser/updatePerson', clonededPerson.data)
+      this.$store.commit('SET_PEOPLE', personData)
+    },
+    overwriteCredits() {
+      let personData = { ...this.$store.state.setuser.chosenPerson }
+      let clonededPerson = _.cloneDeep(personData)
+      clonededPerson.data.credits = parseInt(this.creditsvalue)
       this.$store.commit('setuser/updatePerson', clonededPerson.data)
       this.$store.commit('SET_PEOPLE', personData)
     },
