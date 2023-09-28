@@ -5,27 +5,27 @@
      <v-row>
      <v-col cols="12" md="6">
        <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction' && showSaved" :introAchievments="introchosen" />
-        <img src="/imgs/26.png">
+        <img src="/imgs/27.png">
      </v-col>
       <v-col cols="12" md="6">
 
-    <h1>The Academy - Chapter Eleven</h1>
+    <h1>The Academy - Chapter Twelve</h1>
 	
-	<h4 class="clickable" > <NuxtLink to="/chapter10Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter12Details">Next Chapter ></NuxtLink></h4>
+	<h4 class="clickable" > <NuxtLink to="/chapter11Details">< Previous Chapter</NuxtLink></h4>
 <br/><br/>
-    <p>You've made it to the Brass Pole nightclub!<br/><br/>
+    <p>Time to sample the delights of the Pink Pussy strip club!<br/><br/>
 
-If you are still on your date with Bridgette then this could be just the test that your relationship needs.
+Bridgette likes new experiences but will visiting a strip club be one step too far?
 <br/>
-In a nightclub full of other temptations it might just be too much to resist.
+Even without, or perhaps especially without Bridgette you are sure to have a whole lot of fun with all the sexy and exotic performers.
 <br /><br/>
-Amy, Alicia, Laura and Lola and a whole host of other girls are all there to dance with you.
+Then of course there is also the possibility of meeting up with Didi too.
 <br/>
-But will you just be dancing...
+You did remember to invite her right...?
 <br/><br/>
-<b>Chapter Eleven</b> statistics : 2340 pages : 3645 images : 2 bonus scenes : 15 date achievements : 35 nightclub achievements : 20 other achievements : 30 bonus achievements
+<b>Chapter Twelve</b> statistics : 3000+ pages : 4000+ images : 5 bonus scenes : 30 date achievements : TBC strip club achievements : TBC other achievements : TBC bonus achievements
 <br />
-<b>NOTE:</b> You must successfully complete Chapter Ten before you can play Chapter Eleven!
+<b>NOTE:</b> You must successfully complete Chapter Eleven before you can play Chapter Twelve!
     </p>
 
     <h2 class="clickable" > <NuxtLink to="/profile">Continue the story from a saved game</NuxtLink></h2>
