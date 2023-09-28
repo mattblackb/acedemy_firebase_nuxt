@@ -10,10 +10,11 @@
       <v-col cols="12" md="6">
 
     <h1>The Academy - Chapter Twelve</h1>
-	<h2>COMING SOON</h2>
 	
 	<h4 class="clickable" > <NuxtLink to="/chapter11Details">< Previous Chapter</NuxtLink></h4>
 <br/><br/>
+
+<h2>COMING SOON</h2>
     <p>Time to sample the delights of the Pink Pussy strip club!<br/><br/>
 
 Bridgette likes new experiences but will visiting a strip club be one step too far?
