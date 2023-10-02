@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<title>The Academy: Chapter Twelve</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+
+<script language="javascript">
+
+
+
+function check()
+
+{
+
+    var val = readVar("cash");
+	
+	//less than 100
+	
+	if ((val > -1)&&(val < 200))
+
+        window.location = "cherry51.html";
+		
+	else
+	
+	//100 to 300
+	
+	if ((val > 199)&&(val < 301))
+
+        window.location = "cherry59.html";
+	
+	else
+	
+	//over 300
+	
+	if ((val > 300)&&(val < 1001))
+
+        window.location = "cherry62.html";
+		
+	else
+
+        window.location = "cherry51.html";
+		  
+
+}
+
+
+
+check();
+
+
+
+</script>
+
+</body>
+
+</html>
+
