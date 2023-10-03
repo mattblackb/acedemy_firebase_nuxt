@@ -39,7 +39,11 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
-    'ch2_jodie_cum',
+    'amy_score',
+    'annie_score',
+    'bridgette_score',
+	'jodie_score',
+	'ch2_jodie_cum',
     'ch2_maria_sex',
 	'ch2_annie_cum',
 	'ch3_bridgette_positive',
@@ -54,12 +58,17 @@ cookiesToKeep = [
     'ch5_annie_sex',
 	'ch5_amy_positive',
 	'ch5_annie_positive',
-	'ch5_documents',
+	'ch5documents',
 	'ch5amy_bonus',
     'ch5annie_bonus',
 	'ch5annie_garden',
 	'ch5garden_suck',
 	'ch5jodie_invite',
+	'ch5spare_key',
+	'annie_pic1',
+	'annie_pic2',
+	'annie_pic3',
+	'annie_pic4',
   ]
 
 const setCookiesOnEntry = async function () {

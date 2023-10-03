@@ -39,6 +39,7 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
+	'bridgette_score',
 	'ch2_jodie_cum',
     'ch2_maria_sex',
 	'ch2_annie_cum',
@@ -46,9 +47,12 @@ cookiesToKeep = [
 	'ch4_annie_cum',
     'ch4_holly_sex',
     'ch4_lola_sex',
+	'ch4_jodie_positive',
     'ch4_jodie_sex',
     'ch5_amy_sex',
     'ch5_annie_sex',
+	'ch5spare_key',
+	'ch6_jodie_positive',
     'ch6_jodie_sex',
     'ch6_bridgette_sex',
 	'ch6principal_blackmail', 

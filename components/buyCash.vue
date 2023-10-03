@@ -166,7 +166,13 @@ export default {
         this.changeURL('../chapter11/game/cashmachine9.html')
         this.currentMessage = 'You do not have enough credits.'
       } else {
-        console.log(personData.credits, personData.credits - credits, credits)
+        console.log(
+          personData.credits,
+          personData.credits - credits,
+          credits,
+          'currentmodule',
+          this.currentmodule
+        )
         this.$store.commit('setuser/updatePerson', personData)
         this.$store.commit('SET_PEOPLE', personData)
         this.currentMessage = 'Thank you for your purchase'
@@ -174,6 +180,8 @@ export default {
         this.thisBuy = false
         if (this.currentmodule === 'chapter11') {
           this.changeURL('../chapter11/game/cashmachine10.html')
+        } else if (this.currentmodule === 'chapter12') {
+          this.changeURL('../chapter12/game/cashmachine10.html')
         } else {
           this.changeURL('none')
         }

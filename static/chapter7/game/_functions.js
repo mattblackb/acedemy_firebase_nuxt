@@ -17,6 +17,16 @@ var getCookies = function (url) {
   return cookies
 }
 
+// start added by dsp3000
+if (parent.c_1) {
+} else {
+  window.location.href = '/'
+}
+function emitCheck(method) {
+  parent.c_1.greet(method)
+}
+// end added by dsp3000
+
 var getAllCookiesJSON = function (url) {
   var myCookies = getCookies(url) //GET JSON ARRAY
   // console.log(JSON.stringify(getCookies()); // "do not tell you
