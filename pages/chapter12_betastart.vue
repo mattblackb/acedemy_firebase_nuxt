@@ -40,7 +40,7 @@
               <v-btn
                 color="primary"
                 text
-                @click="changeURL('../chapter12/game/cashmachine9.html')"
+                @click="changeURL('../chapter12/game/_temp_start12.html')"
               >
                 X
               </v-btn>
