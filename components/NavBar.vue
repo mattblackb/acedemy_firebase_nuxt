@@ -46,10 +46,11 @@
                 </v-list-item>
               </v-list>
             </v-menu>
-            <v-btn to="/about"> About </v-btn>
             <v-btn to="/characters"> Characters </v-btn>
+			<v-btn to="/about"> About </v-btn>
           </v-toolbar-items>
           <v-spacer></v-spacer>
+		  
           <v-toolbar-items>
             <v-btn v-if="currentUser" @click="dialog = true"> Get Credits </v-btn>
             <v-btn to="/auth/signout" v-if="currentUser"> Logout </v-btn>
