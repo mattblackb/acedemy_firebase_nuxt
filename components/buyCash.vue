@@ -113,7 +113,6 @@ export default {
             this.selectedStory = story
           }
         })
-        console.log(personData.credits, this.currentCreditsneeded)
 
         if (personData.credits >= this.currentCreditsneeded) {
           this.currentStatus = true
@@ -163,7 +162,13 @@ export default {
       personData.credits = personData.credits - credits
       //check this isn't a negative number
       if (personData.credits < 0) {
-        this.changeURL('../chapter11/game/cashmachine9.html')
+        if (this.currentmodule === 'chapter11') {
+          this.changeURL('../chapter11/game/cashmachine9.html')
+        } else if (this.currentmodule === 'chapter12') {
+          this.changeURL('../chapter12/game/cashmachine9.html')
+        } else {
+          this.changeURL('none')
+        }
         this.currentMessage = 'You do not have enough credits.'
       } else {
         console.log(
