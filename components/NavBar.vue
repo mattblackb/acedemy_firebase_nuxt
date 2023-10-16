@@ -45,9 +45,8 @@
                 </v-list-item>
               </v-list>
             </v-menu>
-            <v-btn to="/about"> About </v-btn>
             <v-btn to="/characters"> Characters </v-btn>
-            <v-btn to="/tests"> Tests </v-btn>
+            <v-btn to="/about"> About </v-btn>
           </v-toolbar-items>
           <v-spacer></v-spacer>
           <v-toolbar-items>
@@ -87,10 +86,7 @@
         <v-col cols="1" sm="1" md="1">
           <v-btn class="ma-2" to="/about"> About </v-btn>
         </v-col>
-        <v-col cols="1" sm="1" md="1">
-          <v-btn class="ma-2" to="/tests"> Tests </v-btn>
-        </v-col>
-
+        
         <v-col cols="12" sm="12" md="3">
           <v-btn v-if="currentUser" @click="dialog = true"> Buy Credits </v-btn>
           <v-btn to="/auth/signout" v-if="currentUser"> Logout </v-btn>
