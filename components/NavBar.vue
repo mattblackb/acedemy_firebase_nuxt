@@ -4,6 +4,7 @@
       <v-card class="pa5 modalbackground">
         <v-btn color="primary" text @click="dialog = false"> X </v-btn>
         <h2>Credit payment facility currently disabled</h2>
+		<h4> Get credits at <a href="https://www.patreon.com/dsp3000">https://www.patreon.com/dsp3000</a></h4>
       </v-card>
     </v-dialog>
 
@@ -88,7 +89,7 @@
         </v-col>
         
         <v-col cols="12" sm="12" md="3">
-          <v-btn v-if="currentUser" @click="dialog = true"> Buy Credits </v-btn>
+          <v-btn v-if="currentUser" @click="dialog = true"> Get Credits </v-btn>
           <v-btn to="/auth/signout" v-if="currentUser"> Logout </v-btn>
           <v-btn icon to="/profile" v-if="currentUser">
             <v-icon>mdi-account</v-icon>
