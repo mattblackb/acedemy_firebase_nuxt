@@ -377,8 +377,48 @@
             </span>
           </div>
         </v-col>
+		<v-col cols="6">
+          <a href="/chapter12Details"><img src="/imgs/index_ch12.jpg" /></a>
+          <div v-for="chapter12saved in chapter12" :key="chapter12saved.name">
+            <span
+              class="clickable"
+              @click="
+                setIntroductionRedirect(
+                  chapter12saved,
+                  '/chapter12saved?saved=true'
+                )
+              "
+              >{{ chapter12saved.date }} | View Chapter Twelve achievements</span
+            >
+            |
+            <span
+              class="clickable"
+              @click="
+                setIntroductionRedirect(
+                  chapter11saved,
+                  '/chapter11saved?saved=true'
+                )
+              "
+            >
+              Play Chapter Thirteen</span
+            >
+            <span class="clickable" @click="deleteSave(chapter12saved)"
+              >| Delete
+            </span>
+          </div>
+        </v-col>
+		<v-col cols="6">
+          <a href="/"><img src="/imgs/index_ch13_locked.jpg" /></a>
+        </v-col>
         <v-col cols="6">
-          <a href="/"><img src="/imgs/index_ch12_locked.jpg" /></a>
+          <a href="/"><img src="/imgs/index_ch14_locked.jpg" /></a>
+        </v-col>
+		</v-col>
+		<v-col cols="6">
+          <a href="/"><img src="/imgs/index_ch15_locked.jpg" /></a>
+        </v-col>
+        <v-col cols="6">
+          <a href="/"><img src="/imgs/index_ch16_locked.jpg" /></a>
         </v-col>
       </v-row>
 
@@ -674,6 +714,24 @@ export default {
             game.ch11_complete === '1' &&
             game.ch12_complete != 0 &&
             !game.ch12_complete
+          ) {
+            savedGame.push(_.cloneDeep(game))
+            savedGame[x].index = index
+            x++
+          }
+        })
+        return savedGame
+      }
+	 },
+    chapter12() {
+      if (this.$store.state.person) {
+        var savedGame = []
+        var x = 0
+        this.$store.state.person.saved_games.map(function (game, index) {
+          if (
+            game.ch12_complete === '1' &&
+            game.ch13_complete != 0 &&
+            !game.ch13_complete
           ) {
             savedGame.push(_.cloneDeep(game))
             savedGame[x].index = index

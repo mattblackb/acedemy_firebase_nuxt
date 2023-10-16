@@ -4,13 +4,13 @@ function outcome()
 
 {
 
-  var val = readVar("ch12street_blowjob");
+  var val = readVar("ch12bridgettebonus_oral");
 
 	
 
     if (val > 0)
 
-        document.write("<img src='buttonsetc/endcards/ch12bridgettebonus1.jpg'>"); 
+        document.write("<img src='buttonsetc/endcards/ch12bridgettebonus4.jpg'>"); 
 
     else
 	

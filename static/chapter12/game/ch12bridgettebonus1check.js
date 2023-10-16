@@ -4,7 +4,7 @@ function outcome()
 
 {
 
-  var val = readVar("ch12street_blowjob");
+  var val = readVar("ch12bridgettebonus_blowjob");
 
 	
 

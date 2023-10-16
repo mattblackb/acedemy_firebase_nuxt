@@ -14,7 +14,7 @@
 	<h4 class="clickable" > <NuxtLink to="/chapter11Details">< Previous Chapter</NuxtLink></h4>
 <br/><br/>
 
-<h2>COMING SOON</h2>
+<h2>DATE PATHWAY RELEASED - SOLO PATHWAY COMING SOON</h2>
     <p>Time to sample the delights of the Pink Pussy strip club!<br/><br/>
 
 Bridgette likes new experiences but will visiting a strip club be one step too far?
@@ -25,7 +25,7 @@ Then of course there is also the possibility of meeting up with Didi too.
 <br/>
 You did remember to invite her right...?
 <br/><br/>
-<b>Chapter Twelve</b> statistics : 3000+ pages : 4000+ images : 5 bonus scenes : 30 date achievements : TBC strip club achievements : TBC other achievements : TBC bonus achievements
+<b>Chapter Twelve</b> statistics : 3200+ pages : 4250+ images : 5 bonus scenes : 30 date achievements : TBC strip club achievements : TBC other achievements : TBC bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Eleven before you can play Chapter Twelve!
     </p>
