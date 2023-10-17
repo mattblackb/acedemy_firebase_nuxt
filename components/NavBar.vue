@@ -55,7 +55,7 @@
               You have <b> {{ userDetails.credits }} </b> credits
             </v-col>
             <v-btn v-if="currentUser" @click="dialog = true">
-              Buy Credits
+              Get Credits
             </v-btn>
             <v-btn to="/auth/signout" v-if="currentUser"> Logout </v-btn>
             <v-btn to="/profile" v-if="currentUser" class="primary">
