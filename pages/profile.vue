@@ -395,8 +395,8 @@
               class="clickable"
               @click="
                 setIntroductionRedirect(
-                  chapter11saved,
-                  '/chapter11saved?saved=true'
+                  chapter12saved,
+                  '/chapter12saved?saved=true'
                 )
               "
             >
