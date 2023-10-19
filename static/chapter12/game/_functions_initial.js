@@ -94,7 +94,7 @@ const setCookiesOnEntry = async function () {
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
       //check that cookie contains ch11
-      if (cookie.includes('ch11') || cookiesToKeep.includes(cookie)) {
+      if (cookie.includes('ch12') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }
     })
