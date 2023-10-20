@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter12/game/street240_OFFLINE.html"
+              src="../chapter12/game/vixen59_locked.html"
               width="100%"
               height="100px"
               style="border: 1px solid #eee; background: white"

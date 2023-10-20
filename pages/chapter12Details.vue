@@ -25,7 +25,7 @@ Then of course there is also the possibility of meeting up with Didi too.
 <br/>
 You did remember to invite her right...?
 <br/><br/>
-<b>Chapter Twelve</b> statistics : 3200+ pages : 4250+ images : 5 bonus scenes : 30 date achievements : TBC strip club achievements : TBC other achievements : TBC bonus achievements
+<b>Chapter Twelve</b> statistics : 3400+ pages : 4750+ images : 5 bonus scenes : 30 date achievements : 35 strip club achievements : 10 other achievements : 70 bonus achievements
 <br />
 <b>NOTE:</b> You must successfully complete Chapter Eleven before you can play Chapter Twelve!
     </p>
