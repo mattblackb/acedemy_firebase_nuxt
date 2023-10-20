@@ -4,7 +4,7 @@ function infcheck()
 
 {
 
-  var val = readVar("asuki_score");
+  var val = readVar("vixen_score");
 
 	if ((val > -200)&&(val < -4))
 

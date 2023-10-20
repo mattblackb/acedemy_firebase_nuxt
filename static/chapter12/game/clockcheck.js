@@ -294,13 +294,61 @@ var val = readVar("clock");
 
         document.write("<img src='buttonsetc/clock230.jpg'>");
 	
-	else 
+	else
+		
+	//03:00
 
-	//03:00 and beyond
-
-    if ((val > 33)&&(val < 45))
+    if ((val > 35)&&(val < 37))
 
         document.write("<img src='buttonsetc/clock3.jpg'>");
+	
+	else
+		
+	//03:30
+
+    if ((val > 36)&&(val < 38))
+
+        document.write("<img src='buttonsetc/clock330.jpg'>");
+	
+	else
+		
+	//04:00
+
+    if ((val > 37)&&(val < 39))
+
+        document.write("<img src='buttonsetc/clock4.jpg'>");
+	
+	else
+		
+	//04:30
+
+    if ((val > 38)&&(val < 40))
+
+        document.write("<img src='buttonsetc/clock430.jpg'>");
+	
+	else
+		
+	//05:00
+
+    if ((val > 39)&&(val < 41))
+
+        document.write("<img src='buttonsetc/clock5.jpg'>");
+	
+	else
+		
+	//05:30
+
+    if ((val > 40)&&(val < 42))
+
+        document.write("<img src='buttonsetc/clock530.jpg'>");
+	
+	else
+
+	//06:00 and beyond
+
+    if ((val > 41)&&(val < 45))
+
+        document.write("<img src='buttonsetc/clock6.jpg'>");
 	
 	else 
 
