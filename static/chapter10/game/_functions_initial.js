@@ -56,6 +56,7 @@ cookiesToKeep = [
   'ch10_lola_sex',
   'ch10_bridgette_negative',
   'ch8_fired',
+  'ch8principal_fired',
   'ch9bar_girl',
   'ch9park_tits',
   'ch9rest_maria',
@@ -97,7 +98,7 @@ const setCookiesOnEntry = async function () {
 }
 
 function clearUnwantedCookies() {
-  console.log('cookies to keep chp10 ...')
+  console.log('cookies to keep...')
 
   //get all cookies and delete the ones not in the array
   const cookies = document.cookie.split(';')

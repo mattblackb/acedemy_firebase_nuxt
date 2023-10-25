@@ -62,6 +62,7 @@ cookiesToKeep = [
     'ch8_alicia_sex',
 	'ch8_principal_sex',
     'ch8_fired',
+	'ch8principal_fired',
     'ch8bridgette_number',
     ]
 

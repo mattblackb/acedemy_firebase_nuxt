@@ -53,6 +53,7 @@ cookiesToKeep = [
   'ch8_annie_sex"',
   'ch8_alicia_sex',
   'ch8_fired',
+  'ch8principal_fired',
   'ch9_alexia_sex',
   'ch10_lola_sex',
   'ch10_bridgette_negative',
@@ -65,6 +66,8 @@ cookiesToKeep = [
   'ch10run_away',
   'ch10bridgette_continue',
   'ch11bridgette_continue',
+  'ch11brass_champagne',
+  'ch11didi_reject',
   'ch11_bridgette_negative',
   'cash',
 ]
