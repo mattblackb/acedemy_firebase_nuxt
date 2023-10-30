@@ -3,12 +3,15 @@
     <NavBar />
     <v-container>
       <v-row>
-        <v-col cols="12" md="6">      <img src="/imgs/4.png" /></v-col>
+        <v-col cols="12" md="6"> <img src="/imgs/4.png" /></v-col>
         <v-col cols="12" md="6">
           <h1>The Academy - Chapter Three</h1>
-		  
-		  <h4 class="clickable" > <NuxtLink to="/chapter2Details">< Previous Chapter</NuxtLink> : <NuxtLink to="/chapter4Details">Next Chapter ></NuxtLink></h4>
-<br/><br/>
+
+          <h4 class="clickable">
+            <NuxtLink to="/chapter2Details">< Previous Chapter</NuxtLink> :
+            <NuxtLink to="/chapter4Details">Next Chapter ></NuxtLink>
+          </h4>
+          <br /><br />
 
           <p>
             Time to return for your second day of work at the Goodhead
@@ -34,6 +37,7 @@
               >Continue the story from a saved game</NuxtLink
             >
           </h2>
+          <SavedGames chapter="3" />
           <!-- <div
             v-for="savedintroduction in dayonenGame3"
             :key="savedintroduction.name"
@@ -64,7 +68,6 @@
               >| Delete
             </span> 
           </div> -->
-     
         </v-col>
       </v-row>
     </v-container>
@@ -149,10 +152,19 @@ export default {
 }
 </script>
 <style scoped>
- .clickable {
-   cursor: pointer;
- }
- h2, h2 a { color: white; text-decoration: none; text-transform: uppercase;}
- 
- h4, h4 a { color: white; text-decoration: none;}
+.clickable {
+  cursor: pointer;
+}
+h2,
+h2 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h4,
+h4 a {
+  color: white;
+  text-decoration: none;
+}
 </style>
