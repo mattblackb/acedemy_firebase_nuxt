@@ -23,6 +23,35 @@ export const actions = {
         }
       })
   },
+  async setPersonLike(state, email) {
+    await this.$fire.firestore
+      .collection('People')
+      // .where('email', '>=', email)
+      // .where('email', '<=', email + '\uf8ff')
+      .get()
+      .then((querySnapshot) => {
+        // console.log('userProfile', querySnapshot.docs[0]);
+        // console.log('ID', querySnapshot.docs[0].id);
+        // if (querySnapshot.docs[0]) {
+        //   var returnUser = {}
+        //   returnUser.id = querySnapshot.docs[0].id
+        //   returnUser.data = querySnapshot.docs[0].data()
+        //   state.commit('SET_CHOSENPERSON', returnUser)
+        // } else {
+        //   console.log('no user')
+        //   state.commit('SET_CHOSENPERSON', [])
+        // }
+        //loop around array to get all data into an array
+        var people = []
+        querySnapshot.forEach((doc) => {
+          var person = {}
+          person.id = doc.id
+          person.data = doc.data()
+          console.log('person', person.data)
+        })
+        console.log('ID', people)
+      })
+  },
 }
 export const mutations = {
   async updatePerson(state, docData) {

@@ -8,7 +8,13 @@
         placeholder="Search email.."
         size="50"
       />
-      <button @click="returnCurrent">Search</button>
+      <v-btn color="success" class="mr-4" @click="returnCurrent">
+        Search
+      </v-btn>
+
+      <v-btn color="success" class="mr-4" @click="returnCurrentLike">
+        Like
+      </v-btn>
     </div>
     <div class="wrapper" v-if="this.chosenUser.length != 0">
       {{ this.chosenUser.id }} || {{ this.chosenUser.data.email }} ||
@@ -71,7 +77,13 @@ export default {
   },
   methods: {
     ...mapActions(['setuser/setPerson']),
+    returnCurrentLike() {
+      const that = this
+      var returnedArray = []
+      this.$store.dispatch('setuser/setPersonLike', this.search)
 
+      return returnedArray
+    },
     returnCurrent() {
       const that = this
       var returnedArray = []
