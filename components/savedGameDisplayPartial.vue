@@ -1,7 +1,8 @@
 <template>
   <v-row>
     <v-col>
-      <span
+      <h1>Banana</h1>
+      <!-- <span
         class="clickable"
         @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
         >{{ item.date }} |{{ setTextfromtype() }}
@@ -15,7 +16,7 @@
           </v-icon>
         </template>
         <span>{{ item.description }} </span>
-      </v-tooltip>
+      </v-tooltip> -->
     </v-col>
   </v-row>
 </template>
@@ -58,23 +59,13 @@ export default {
       return ' Play next Chapter'
     },
     async setIntroductionRedirect(introductionObject, page) {
-      this.showloading = true
-      this.introchosen = introductionObject
-      this.showIntroduction = true
-
-      await this.$store.commit(
-        'setCurrentGame/addAchievements',
-        introductionObject
-      )
-      // setTimeout(() => {
-      //   this.showloading = false
+      let gameDetails = JSON.parse(introductionObject.gameDetails)
+      await this.$store.commit('setCurrentGame/addAchievements', gameDetails)
       this.$router.push(page)
-      // }, 3000)
-
-      //  this.showloading = false;
-      //       this.$router.push({
-      //     path: page
-      // })
+      this.$router.push({
+        path: page,
+        query: { chapter: introductionObject.chapterSaved },
+      })
     },
   },
 }

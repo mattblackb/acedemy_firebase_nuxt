@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- These should be the list of previous chapters so for chapter 3 this should be chapter 2 -->
-    <PrimarySavedGame :chapter="setChapterforIntroduction" />
+    <PrimarySavedGame :chapter="setChapterforIntroduction()" />
 
     <!-- These should be the list of previous chapters so for cghapter 3 this should be chapter 2 -->
-    <PartialSavedGames :chapter="chapter" />
+    <!-- <PartialSavedGames :chapter="chapter" /> -->
     <!-- These should be the end saves - so for chapter 3 this should ber chapter 3 saves -->
     <EndSavedGame :chapter="chapter" />
   </div>
@@ -31,15 +31,15 @@ export default {
     setSave(newChapter) {
       alert('newChapter', newChapter)
     },
-  },
-  computed: {
     setChapterforIntroduction() {
-      console.log('newChapter', this.chapter)
       if (this.chapter == '1') {
         return 'introduction'
       }
+      //convert chapter string to int
+
       return this.chapter
     },
   },
+  computed: {},
 }
 </script>

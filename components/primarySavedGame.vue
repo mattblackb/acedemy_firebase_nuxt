@@ -5,7 +5,7 @@
     <p v-for="item in setPrimary" :key="item.id">
       <SavedGameDisplay
         :item="item"
-        :chapter="chapter"
+        :chapter="minusOnefromChapter()"
         type="start"
       ></SavedGameDisplay>
     </p>
@@ -14,6 +14,7 @@
 
 <script>
 import util from '~/assets/js/utils'
+import _ from 'lodash'
 export default {
   data() {
     return {}
@@ -34,6 +35,11 @@ export default {
     setSave(newChapter) {
       alert('newChapter', newChapter)
     },
+    minusOnefromChapter() {
+      //parse this.chapter to integer
+      var chapterMinus = parseInt(this.chapter) - 1
+      return chapterMinus
+    },
     convertnumbertoStr() {
       var chapterPass = this.chapter
       if (this.chapter == 'introduction') {
@@ -48,18 +54,46 @@ export default {
       //get person data from store
       let personData = JSON.parse(JSON.stringify(this.$store.state.person))
       personData = personData.saved_games
-      console.log('personData', personData)
+      // console.log('personData', personData)
       if (this.chapter != 'introduction') {
         var chapterMinus = parseInt(this.chapter) - 1
       } else {
         var chapterMinus = this.chapter
       }
-      //filter persondata where the personData.chapterSaved === this.chapter
-      let filteredData = personData.filter(
-        (item) => item.episode === 'chapter' + chapterMinus + 'saved'
-      )
-      console.log('Filtered Data', filteredData, 'chapters', this.chapter)
-      return filteredData
+      var curChapter = this.chapter
+      // //filter persondata where the personData.chapterSaved === this.chapter
+      // let filteredData = personData.filter(
+      //   (item) => item.episode === 'chapter' + chapterMinus + 'saved'
+      // )
+      //conver integer to string
+
+      var chapterKey = 'ch' + chapterMinus + '_complete'
+      var chapterKey2 = 'ch' + curChapter + '_complete'
+
+      var savedGame = []
+      var x = 0
+      personData.map(function (game, index) {
+        if (
+          game[chapterKey] === '1' &&
+          game[chapterKey2] != 0 &&
+          !game[chapterKey2]
+        ) {
+          savedGame.push(_.cloneDeep(game))
+          savedGame[x].index = index
+          x++
+        }
+      })
+      console.log('savedGame', savedGame)
+      return savedGame
+
+      // console.log(
+      //   'Filtered Data',
+      //   filteredData,
+      //   'chapters',
+      //   this.chapter,
+      //   chapterMinus
+      // )
+      // return filteredData
     },
   },
 }

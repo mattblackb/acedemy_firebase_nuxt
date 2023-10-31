@@ -15,6 +15,7 @@
 
 <script>
 import util from '~/assets/js/utils'
+import _ from 'lodash'
 export default {
   data() {
     return {}
@@ -60,14 +61,52 @@ export default {
       //get person data from store
       let personData = JSON.parse(JSON.stringify(this.$store.state.person))
       personData = personData.saved_games
+      // console.log('personData', personData)
+      if (this.chapter != 'introduction') {
+        var chapterMinus = parseInt(this.chapter) + 1
+      } else {
+        var chapterMinus = this.chapter
+      }
+      var curChapter = this.chapter
+      // //filter persondata where the personData.chapterSaved === this.chapter
+      // let filteredData = personData.filter(
+      //   (item) => item.episode === 'chapter' + chapterMinus + 'saved'
+      // )
+      //conver integer to string
 
-      //filter persondata where the personData.episode === this.chapter
-      let filteredData = personData.filter(
-        (item) => item.episode === 'chapter' + this.chapter + 'saved'
-      )
+      var chapterKey = 'ch' + curChapter + '_complete'
+      var chapterKey2 = 'ch' + chapterMinus + '_complete'
 
-      console.log('Filtered Data', filteredData, 'chapters', this.chapter)
-      return filteredData
+      var savedGame = []
+      var x = 0
+      personData.map(function (game, index) {
+        console.log(
+          ' game[chapterKey]',
+          game[chapterKey],
+          chapterKey,
+          chapterKey2
+        )
+        if (
+          game[chapterKey] === '1' &&
+          game[chapterKey2] != 0 &&
+          !game[chapterKey2]
+        ) {
+          savedGame.push(_.cloneDeep(game))
+          savedGame[x].index = index
+          x++
+        }
+      })
+      console.log('savedGame', savedGame)
+      return savedGame
+
+      // console.log(
+      //   'Filtered Data',
+      //   filteredData,
+      //   'chapters',
+      //   this.chapter,
+      //   chapterMinus
+      // )
+      // return filteredData
     },
   },
 }

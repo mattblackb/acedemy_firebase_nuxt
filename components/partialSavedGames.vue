@@ -6,12 +6,12 @@
     <div v-for="item in setHeader" :key="item.id">
       <h5>{{ item }}</h5>
       <div v-for="sGame in getSplitScenes(item)" :key="sGame.id">
-        <!-- {{ sGame }} -->
-        <SavedGameDisplay
+        {{ sGame }}
+        <SavedGameDisplayPartial
           :item="sGame"
-          :chapter="chapter"
+          :chapter="minusOnefromChapter()"
           type="partial"
-        ></SavedGameDisplay>
+        ></SavedGameDisplayPartial>
       </div>
     </div>
 
@@ -48,6 +48,11 @@ export default {
     },
   },
   methods: {
+    minusOnefromChapter() {
+      //parse this.chapter to integer
+      var chapterMinus = parseInt(this.chapter) - 1
+      return chapterMinus
+    },
     convertnumbertoStr() {
       const retunedNumber = util.convertnumbertoString(this.chapter)
       return retunedNumber
