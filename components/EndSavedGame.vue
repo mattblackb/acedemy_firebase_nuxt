@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h3>Completed Chapter {{ convertnumbertoStr(chapter) }} saves</h3>
+    <h3>Completed Chapter {{ convertnumbertoStr(chapter) }} Saves</h3>
     <!-- These should be the list of previous chapters so for chapter 3 this should be chapter 2 -->
 
     <div v-for="item in setPrimary" :key="item.id">
       <SavedGameDisplay
         :item="item"
-        :chapter="chapter"
+        :chapter="checkChapterisInteger()"
         type="end"
       ></SavedGameDisplay>
     </div>
@@ -22,7 +22,7 @@ export default {
   },
   props: {
     chapter: {
-      type: String,
+      type: Number,
       required: true,
     },
   },
@@ -36,6 +36,11 @@ export default {
     setSave(newChapter) {
       alert('newChapter', newChapter)
     },
+    checkChapterisInteger() {
+      //parse this.chapter to integer
+      var chapterInt = parseInt(this.chapter)
+      return chapterInt
+    },
     convertnumbertoStr() {
       const retunedNumber = util.convertnumbertoString(this.chapter)
       return retunedNumber
@@ -43,9 +48,9 @@ export default {
 
     async setIntroductionRedirect(introductionObject, page) {
       //parse json introductionObject
-      console.log('introductionObject', introductionObject.gameDetails)
+
       let gameDetails = JSON.parse(JSON.parse(introductionObject.gameDetails))
-      console.log('introductionObject', gameDetails)
+
       await this.$store.commit('setCurrentGame/addAchievements', gameDetails)
 
       this.$router.push(page)
@@ -74,8 +79,10 @@ export default {
       // )
       //conver integer to string
 
-      var chapterKey = 'ch' + curChapter + '_complete'
-      var chapterKey2 = 'ch' + chapterMinus + '_complete'
+      var chapterKey = '00' + curChapter + '_save'
+      var chapterKey2 = '00' + chapterMinus + '_save'
+
+      //Currently 001_save has set for the most recent save, but we need to check historic saves for the chapter as the highest value
 
       var savedGame = []
       var x = 0
@@ -88,13 +95,14 @@ export default {
         )
         if (
           game[chapterKey] === '1' &&
-          game[chapterKey2] != 0 &&
+          game[chapterKey2] != '1' &&
           !game[chapterKey2]
         ) {
           savedGame.push(_.cloneDeep(game))
           savedGame[x].index = index
           x++
         }
+        //Else check for ch3_complete as a back up
       })
       console.log('savedGame', savedGame)
       return savedGame

@@ -17,7 +17,7 @@ export default {
   },
   props: {
     chapter: {
-      type: String,
+      type: Number,
       required: true,
     },
   },

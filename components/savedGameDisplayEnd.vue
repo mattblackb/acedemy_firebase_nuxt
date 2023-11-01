@@ -1,7 +1,6 @@
 <template>
   <!-- <v-row>
     <v-col> -->
-
   <span
     class="clickable"
     @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
@@ -37,7 +36,7 @@ export default {
       required: true,
     },
     chapter: {
-      type: Number,
+      type: String,
       required: true,
     },
     type: {
@@ -48,8 +47,6 @@ export default {
   methods: {
     //function to turn number to string
     numberToString(num) {
-      //make sure num is an Integer
-      num = parseInt(num)
       switch (num) {
         case 0:
           return 'Zero'
@@ -86,12 +83,7 @@ export default {
         return returnVar + ' from this save'
       }
       if (this.type == 'end') {
-        var returnVar =
-          'View Chapter ' +
-          this.numberToString(this.chapter) +
-          ' achievements  | Start chapter ' +
-          this.numberToString(this.chapter + 1)
-        return returnVar + ' from this save'
+        return ' Continue from this save'
       }
       if (this.type == 'partial') {
         return ' Play next Scene'

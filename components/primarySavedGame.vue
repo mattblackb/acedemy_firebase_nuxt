@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h3>Chapter {{ convertnumbertoStr(chapter) }} Start</h3>
+    <h3>Chapter {{ convertnumbertoStr(chapter) }} Start Points</h3>
     <!-- These should be the list of previous chapters so for chapter 3 this should be chapter 2 -->
-    <p v-for="item in setPrimary" :key="item.id">
+    <span v-for="item in setPrimary" :key="item.id">
       <SavedGameDisplay
         :item="item"
         :chapter="minusOnefromChapter()"
         type="start"
       ></SavedGameDisplay>
-    </p>
+    </span>
   </div>
 </template>
 
