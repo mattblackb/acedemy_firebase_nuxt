@@ -3,7 +3,7 @@
     <v-col> -->
 
   <span
-    class="clickable"
+    class="clickable savedGamelink"
     @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
     >{{ item.date }} | <b>{{ setTextfromtype() }}</b>
   </span>
@@ -122,7 +122,7 @@ export default {
 </script>
 
 <style>
-.clickable {
+.savedGamelink {
   cursor: pointer;
   display: inline-block;
   width: 100%;
