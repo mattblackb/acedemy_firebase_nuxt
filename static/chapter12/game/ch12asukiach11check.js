@@ -4,7 +4,7 @@ function outcome()
 
 {
 
-  var val = readVar("ch12asuki_");
+  var val = readVar("ch12asuki_cum_clean");
 
 	
 
