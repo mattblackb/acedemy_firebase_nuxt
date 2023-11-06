@@ -71,6 +71,20 @@ export default {
           return 'Eight'
         case 9:
           return 'Nine'
+        case 10:
+          return 'Ten'
+        case 11:
+          return 'Eleven'
+        case 12:
+          return 'Twelve'
+        case 13:
+          return 'Thirteen'
+        case 14:
+          return 'Fourteen'
+        case 15:
+          return 'Fifteen'
+        case 16:
+          return 'Sixteen'
         default:
           return 'Number out of range'
       }

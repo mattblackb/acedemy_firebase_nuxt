@@ -39,6 +39,7 @@ export default {
     checkChapterisInteger() {
       //parse this.chapter to integer
       var chapterInt = parseInt(this.chapter)
+      console.log('chapterInt', chapterInt)
       return chapterInt
     },
     convertnumbertoStr() {
