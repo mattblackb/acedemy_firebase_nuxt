@@ -39,7 +39,6 @@ export default {
     checkChapterisInteger() {
       //parse this.chapter to integer
       var chapterInt = parseInt(this.chapter)
-      console.log('chapterInt', chapterInt)
       return chapterInt
     },
     convertnumbertoStr() {
@@ -88,12 +87,7 @@ export default {
       var savedGame = []
       var x = 0
       personData.map(function (game, index) {
-        console.log(
-          ' game[chapterKey]',
-          game[chapterKey],
-          chapterKey,
-          chapterKey2
-        )
+        // console.log(' game[chapterKey]', game, chapterKey, chapterKey2)
         if (
           game[chapterKey] === '1' &&
           game[chapterKey2] != '1' &&
@@ -105,7 +99,7 @@ export default {
         }
         //Else check for ch3_complete as a back up
       })
-      console.log('savedGame', savedGame)
+      // console.log('savedGame', savedGame)
       return savedGame
 
       // console.log(
