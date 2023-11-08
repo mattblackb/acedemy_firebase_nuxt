@@ -78,7 +78,7 @@ export default {
         var returnVar =
           'View Chapter ' +
           this.numberToString(this.chapter) +
-          ' achievements  | Start chapter ' +
+          ' achievements  | Start Chapter ' +
           this.numberToString(this.chapter + 1)
         return returnVar + ' from this save'
       }
