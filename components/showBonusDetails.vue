@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h2>Bonuses available for chapter {{ chapterNumber }}</h2>
+    <h2>Bonus scenes Chapter {{ chapterNumber }}</h2>
 
-    <p>Bonuses in this chapter:</p>
+    <!-- <p>Bonuses in this chapter:</p> -->
     <ul>
       <li v-for="game in chapters" :key="game.id">
         Cost: <b>{{ game.cost }}</b> | Description:

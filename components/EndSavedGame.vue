@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-2">
     <h3>Completed Chapter {{ convertnumbertoStr(chapter) }} Saves</h3>
     <!-- These should be the list of previous chapters so for chapter 3 this should be chapter 2 -->
 

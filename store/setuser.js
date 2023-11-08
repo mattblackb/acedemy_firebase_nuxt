@@ -47,7 +47,9 @@ export const actions = {
           var person = {}
           person.id = doc.id
           person.data = doc.data()
-          console.log('person', person.data)
+          if (person.data.email.includes(email)) {
+            console.log('person', person.data.email)
+          }
         })
         console.log('ID', people)
       })
