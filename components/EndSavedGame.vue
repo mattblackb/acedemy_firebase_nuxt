@@ -79,11 +79,11 @@ export default {
       // )
       //conver integer to string
 
-      var chapterKey = '00' + curChapter + '_save'
-      var chapterKey2 = '00' + chapterMinus + '_save'
+      var chapterKey = 'ch' + curChapter + '_complete'
+      var chapterKey2 = 'ch' + chapterMinus + '_complete'
 
       //Currently 001_save has set for the most recent save, but we need to check historic saves for the chapter as the highest value
-
+      console.log('chapterKey', chapterKey, chapterKey2)
       var savedGame = []
       var x = 0
       personData.map(function (game, index) {
@@ -97,6 +97,9 @@ export default {
           savedGame[x].index = index
           x++
         }
+
+        // game.ch3_complete === '1' &&
+        //   game.ch4_complete != 0 &&
         //Else check for ch3_complete as a back up
       })
       // console.log('savedGame', savedGame)

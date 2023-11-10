@@ -69,6 +69,7 @@ export default {
 
       var chapterKey = 'ch' + chapterMinus + '_complete'
       var chapterKey2 = 'ch' + curChapter + '_complete'
+      console.log('chapterKey', chapterKey, chapterKey2)
 
       var savedGame = []
       var x = 0
