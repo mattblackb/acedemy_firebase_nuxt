@@ -18,7 +18,6 @@
           </h4>
           <br /><br />
 
-          <h2>DATE PATHWAY RELEASED - SOLO PATHWAY COMING SOON</h2>
           <p>
             Time to sample the delights of the Pink Pussy strip club!<br /><br />
 
@@ -33,9 +32,9 @@
             <br />
             You did remember to invite her right...?
             <br /><br />
-            <b>Chapter Twelve</b> statistics : 3400+ pages : 4750+ images : 5
+            <b>Chapter Twelve</b> statistics : 3540 pages : 5050 images : 5
             bonus scenes : 30 date achievements : 35 strip club achievements :
-            10 other achievements : 70 bonus achievements
+            10 other achievements : 95 bonus achievements
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Eleven before
             you can play Chapter Twelve!
