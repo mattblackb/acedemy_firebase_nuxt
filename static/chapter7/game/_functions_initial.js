@@ -65,6 +65,8 @@ cookiesToKeep = [
     'ch7_bridgette_sex',
 	'ch7_bridgette_positive',
 	'ch7_bridgette_negative',
+	'ch7_principal_positive', 
+	'ch7_principal_negative', 
 	'ch7holly_key',
 	'ch7cctv_office',
 	'ch7have_key',
