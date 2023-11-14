@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2">
+  <div class="mt-2 clearBoth">
     <h3>Completed Chapter {{ convertnumbertoStr(chapter) }} Saves</h3>
     <!-- These should be the list of previous chapters so for chapter 3 this should be chapter 2 -->
 
@@ -117,3 +117,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.clearBoth {
+  clear: both;
+}
+</style>
