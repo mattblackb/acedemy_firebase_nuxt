@@ -1,13 +1,24 @@
 <template>
-  <!-- <v-row>
+  <div>
+    <v-dialog v-model="dialog" width="500">
+      <v-card class="pa5 modalbackground">
+        <v-btn color="primary" text @click="dialog = false"> X </v-btn>
+        <h3>Delete this save?</h3>
+        <v-btn color="primary" depressed @click="dialog = false"> No </v-btn>
+        <v-btn color="warning" depressed @click="commitDelete()"> Yes </v-btn>
+      </v-card>
+    </v-dialog>
+    <!-- <v-row>
     <v-col> -->
 
-  <span
-    class="clickable savedGamelink"
-    @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
-    >{{ item.date }} | <b>{{ setTextfromtype() }}</b>
-  </span>
-  <!-- </v-col>
+    <span
+      class="clickable savedGamelink"
+      @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
+      >{{ item.date }} | <b>{{ setTextfromtype() }}</b>
+    </span>
+    <span class="clickable delete" @click="deleteSave(item)"> Delete </span>
+
+    <!-- </v-col>
     <v-col>
       <v-tooltip right v-if="item.description">
         <template v-slot:activator="{ on, attrs }">
@@ -19,12 +30,15 @@
       </v-tooltip>
     </v-col>
   </v-row> -->
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      dialog: false,
+      deleteObject: {},
       chapter1: [
         { chapter1: 'chapter1saved' },
         { chapter1scene1_save: 'entrance29.html ' },
@@ -46,6 +60,21 @@ export default {
     },
   },
   methods: {
+    commitDelete() {
+      this.$store.commit('setuser/updatePerson', this.deleteObject)
+      this.$store.commit('SET_PEOPLE', this.deleteObject)
+      this.dialog = false
+    },
+    deleteSave(introductionObject) {
+      var orderAllData = _.cloneDeep(this.$store.state.person)
+      console.log('orderAllData', orderAllData.saved_games)
+      this.dialog = true
+      //remove from aray at index
+
+      orderAllData.saved_games.splice(parseInt(introductionObject.index), 1)
+      this.deleteObject = orderAllData
+      console.log('DeleteObject', this.deleteObject.saved_games)
+    },
     //function to turn number to string
     numberToString(num) {
       //make sure num is an Integer
@@ -138,7 +167,15 @@ export default {
 <style>
 .savedGamelink {
   cursor: pointer;
-  display: inline-block;
-  width: 100%;
+  display: block;
+  float: left;
+  clear: both;
+}
+.delete {
+  float: right;
+  background-color: red;
+  color: white;
+  margin-top: 1px;
+  padding: 1px 5px;
 }
 </style>
