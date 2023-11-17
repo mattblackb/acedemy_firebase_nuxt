@@ -57,7 +57,6 @@ export const actions = {
 }
 export const mutations = {
   async updatePerson(state, docData) {
-    console.log('UpdatePerson', docData)
     var userProfile = await this.$fire.firestore
       .collection('People')
       .where('email', '==', docData.email)
