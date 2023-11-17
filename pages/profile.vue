@@ -3,7 +3,7 @@
     <NavBar />
     <v-container>
       <v-row>
-        <v-col cols="4">
+        <v-col cols="12">
           <h1>Welcome to your profile {{ userDetails.name }}</h1>
           <h2 v-if="userDetails">
             Available Credits: {{ userDetails.credits }}
