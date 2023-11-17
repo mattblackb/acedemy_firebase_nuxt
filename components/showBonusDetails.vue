@@ -64,20 +64,31 @@ export default {
 
     splitIntoChapters(modules) {
       const chapters = []
-      modules.forEach((module) => {
-        const chapterName = module.description
-        //Split chapterName into array of words by space then check the second word is equal to 1
 
-        var words = chapterName.split(' ')
-        if (words[1] === this.chapterNumber) {
-          if (this.checkModuleAvailable(module.id)) {
-            module['status'] = 'available'
+      modules.forEach((module) => {
+        const chapter = module.chapter
+        if (chapter) {
+          if (chapter == this.chapterNumber) {
+            chapters.push(module)
           }
-          if (module['status'] === undefined) {
-            module['status'] = 'locked'
-          }
-          chapters.push(module)
         }
+        console.log('chapter', chapters)
+        //order chapters by chapter bonus number
+        chapters.sort((a, b) => a.bonus - b.bonus)
+
+        // const chapterName = module.description
+        // //Split chapterName into array of words by space then check the second word is equal to 1
+
+        // var words = chapterName.split(' ')
+        // if (words[1] === this.chapterNumber) {
+        //   if (this.checkModuleAvailable(module.id)) {
+        //     module['status'] = 'available'
+        //   }
+        //   if (module['status'] === undefined) {
+        //     module['status'] = 'locked'
+        //   }
+        //   chapters.push(module)
+        // }
       })
       return chapters
     },
@@ -100,3 +111,9 @@ export default {
   },
 }
 </script>
+
+<style>
+ul li {
+  list-style-type: none;
+}
+</style>
