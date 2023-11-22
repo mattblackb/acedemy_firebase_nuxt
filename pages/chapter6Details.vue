@@ -9,6 +9,7 @@
             :introAchievments="introchosen"
           />
           <img src="/imgs/14.png" />
+          <showBonusDetails chapterNumber="6" />
         </v-col>
         <v-col cols="12" md="6">
           <h1>The Academy - Chapter Six</h1>

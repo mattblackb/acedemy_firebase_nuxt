@@ -3,11 +3,12 @@
     <NavBar />
     <v-container>
       <v-row>
-        <v-col cols="4">
+        <v-col cols="12">
           <h1>Welcome to your profile {{ userDetails.name }}</h1>
           <h2 v-if="userDetails">
             Available Credits: {{ userDetails.credits }}
           </h2>
+             <ChangeName />
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
           <h2>Your Saved Games</h2>
         </v-col>
