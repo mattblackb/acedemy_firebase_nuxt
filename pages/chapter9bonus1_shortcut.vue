@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter4/game/gym76_locked.html"
+              src="../chapter9/game/solobar269_shortcut.html"
               width="100%"
               height="100px"
               style="border: 1px solid #eee; background: white"

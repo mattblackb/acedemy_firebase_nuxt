@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter4/game/shower87_locked.html"
+              src="../chapter11/game/checkpoint12.html"
               width="100%"
               height="100px"
               style="border: 1px solid #eee; background: white"
@@ -29,7 +29,7 @@
               </v-btn>
               <h1 :v-show="genericModalAction == ''">Play this bonus again</h1>
               <v-btn color="primary" text @click="triggerBonusReplay()">
-                Replay Bonus
+                Replay Bonus..
               </v-btn>
             </v-card>
           </v-dialog>

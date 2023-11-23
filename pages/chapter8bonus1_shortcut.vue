@@ -7,9 +7,9 @@
           <h1></h1>
           <div class="container">
             <iframe
-              :src="curIframeSrc"
+              src="../chapter8/game/lunch114_shortcut.html"
               width="100%"
-              height="auto"
+              height="100px"
               style="border: 1px solid #eee; background: white"
               frameborder="0"
               scrolling="yes"
@@ -34,24 +34,6 @@
             </v-card>
           </v-dialog>
           <!-- End of generic modal -->
-
-          <v-dialog v-model="dialogCash" width="500">
-            <v-card class="pa5 modalbackground">
-              <v-btn
-                color="primary"
-                text
-                @click="changeURL('../chapter12/game/start12.html')"
-              >
-                X
-              </v-btn>
-
-              <BuyCash
-                :currentCreditsneeded="cashAmount"
-                :currentmodule="currentmodule"
-                :changeURL="changeURL"
-              />
-            </v-card>
-          </v-dialog>
 
           <v-dialog v-model="dialog" width="500">
             <v-card class="pa5 modalbackground">
@@ -85,15 +67,13 @@ export default {
       dialog: false,
       dialogSave: false,
       dialogInteraction: false,
-      dialogCash: false,
       cookieJson: '',
       currentCreditsneeded: [],
-      currentmodule: 'chapter12',
+      currentmodule: '',
       route: '',
       genericModalAction: '',
       backgroundImage: '/imgs/modals/modal_principal1.jpg',
       bonusRedirectUrl: '',
-      curIframeSrc: '../chapter12/game/_temp_start12.html',
     }
   },
   computed: {
@@ -109,12 +89,6 @@ export default {
     },
   },
   methods: {
-    changeURL(url) {
-      var rand = Math.floor(Math.random() * 1000000 + 1)
-      this.curIframeSrc = url + '?uid=' + +rand
-      iframeContent.contentWindow.location.reload(true)
-      this.dialogCash = false
-    },
     replayBonus(bonusString) {
       //split bonusString by | and return
       var bonusSplit = bonusString.split('|')
@@ -202,10 +176,6 @@ export default {
         e.preventDefault()
         e.returnValue = ''
       }
-    },
-    async buyCash(cashAmount) {
-      this.cashAmount = cashAmount
-      this.dialogCash = true
     },
   },
   beforeRouteLeave(to, from, next) {
