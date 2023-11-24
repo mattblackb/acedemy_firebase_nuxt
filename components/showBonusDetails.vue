@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Bonus scenes Chapter {{ chapterNumber }}</h2>
+    <h2>Bonus scenes Chapter {{ convertnumbertoStr() }}</h2>
 
     <!-- <p>Bonuses in this chapter:</p> -->
     <ul>
@@ -16,6 +16,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import util from '~/assets/js/utils'
 export default {
   props: {
     chapterNumber: {
@@ -33,6 +34,10 @@ export default {
   },
   methods: {
     ...mapGetters('stories', ['getStories']),
+    convertnumbertoStr() {
+      const retunedNumber = util.convertnumbertoString(this.chapterNumber)
+      return retunedNumber
+    },
     buttonLocked(status, unlocked) {
       console.log('buttonLocked', status)
       if (status === 'locked') {
