@@ -73,6 +73,7 @@ cookiesToKeep = [
   'ch12more_sex',
   'ch12bridgette_drunk',
   'ch12bridgette_continue',
+  'ch12pink_dandb',
   'cash',
 ]
 
