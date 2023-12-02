@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="4">
-          <h1>Change name</h1>
+          <h1>Change name {{ name }}</h1>
           <v-text-field
             v-model="name"
             :rules="nameRules"
@@ -26,6 +26,7 @@ export default {
   data() {
     return {
       valid: false,
+
       nameRules: [
         (value) => {
           if (value) return true
@@ -40,9 +41,10 @@ export default {
       if (this.$store.state.person) {
         var user = this.$store.state.person
       }
+
       let clonededPerson = _.cloneDeep(user)
       clonededPerson.name = this.name
-      console.log('clonededPerson', clonededPerson)
+
       this.$store.commit('setuser/updatePerson', clonededPerson)
       //   window.location.reload(true)
     },
