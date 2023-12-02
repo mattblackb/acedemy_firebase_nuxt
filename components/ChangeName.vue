@@ -30,7 +30,7 @@ export default {
       nameRules: [
         (value) => {
           if (value) return true
-          return 'Name is requred.'
+          return 'Name is required.'
         },
       ],
     }
