@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter5/game/photoshoot147_locked.html"
+              src="../chapter3/game/studio317_shortcut.html"
               width="100%"
               height="100px"
               style="border: 1px solid #eee; background: white"

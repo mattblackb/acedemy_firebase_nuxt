@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter12/game/asuki49_locked.html"
+              src="../chapter2/game/mediajodie60_shortcut.html"
               width="100%"
               height="100px"
               style="border: 1px solid #eee; background: white"

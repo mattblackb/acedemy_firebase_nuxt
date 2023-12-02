@@ -5,6 +5,7 @@
       <v-row>
         <v-col cols="12" md="6">
           <img src="/imgs/2.png" />
+          <showBonusDetails chapterNumber="1" />
         </v-col>
         <v-col cols="12" md="6">
           <h1>The Academy - Chapter One</h1>

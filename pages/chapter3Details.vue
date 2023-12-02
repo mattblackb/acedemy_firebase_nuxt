@@ -3,7 +3,11 @@
     <NavBar />
     <v-container>
       <v-row>
-        <v-col cols="12" md="6"> <img src="/imgs/4.png" /></v-col>
+        <v-col cols="12" md="6">
+          <img src="/imgs/4.png" />
+          <showBonusDetails chapterNumber="3" />
+        </v-col>
+
         <v-col cols="12" md="6">
           <h1>The Academy - Chapter Three</h1>
 

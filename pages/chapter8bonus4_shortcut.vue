@@ -7,18 +7,33 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter5/game/photoshoot147_locked.html"
+              src="../chapter8/game/principal116_shortcut.html"
               width="100%"
-              height="auto"
+              height="100px"
               style="border: 1px solid #eee; background: white"
               frameborder="0"
               scrolling="yes"
               class="video"
+              id="iframeContent"
             ></iframe>
-            <!-- <h2>Currently Unavailable</h2> -->
           </div>
 
-          <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
+          <!-- Modal for All other actions-->
+          <v-dialog v-model="dialogInteraction" width="500">
+            <v-card
+              class="pa-5 genericModal"
+              :style="{ backgroundImage: `url(${backgroundImage})` }"
+            >
+              <v-btn color="primary" text @click="dialogInteraction = false">
+                X
+              </v-btn>
+              <h1 :v-show="genericModalAction == ''">Play this bonus again</h1>
+              <v-btn color="primary" text @click="triggerBonusReplay()">
+                Replay Bonus
+              </v-btn>
+            </v-card>
+          </v-dialog>
+          <!-- End of generic modal -->
 
           <v-dialog v-model="dialog" width="500">
             <v-card class="pa5 modalbackground">
@@ -30,7 +45,7 @@
             </v-card>
           </v-dialog>
           <v-dialog v-model="dialogSave" width="500">
-            <v-card class="pa5 modalbackground">
+            <v-card>
               <v-btn color="primary" text @click="dialogSave = false">
                 X
               </v-btn>
@@ -45,27 +60,52 @@
 </template>
 
 <script>
-import { mapActions, mapMutations } from 'vuex'
+import { mapActions, mapMutations, mapGetters } from 'vuex'
 export default {
   data() {
     return {
       dialog: false,
       dialogSave: false,
+      dialogInteraction: false,
       cookieJson: '',
       currentCreditsneeded: [],
       currentmodule: '',
       route: '',
+      genericModalAction: '',
+      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      bonusRedirectUrl: '',
     }
   },
   computed: {
     ...mapActions(['updatePerson']),
+    ...mapGetters('setCurrentGame', ['getAchievements']),
     userDetails() {
       if (this.$store.state.person) {
         return this.$store.state.person
       }
     },
+    Achievements() {
+      return this.$store.state.chosenAcheivements
+    },
   },
   methods: {
+    replayBonus(bonusString) {
+      //split bonusString by | and return
+      var bonusSplit = bonusString.split('|')
+      if (bonusSplit.length > 1) {
+        this.backgroundImage = bonusSplit[0] //First part of string should be the img as '/imgs/modals/modal_amy1.jpg', Ignoring the static string
+        this.bonusRedirectUrl = bonusSplit[1] //Second part of string should be the url to replace the iframe with
+      }
+      if (bonusSplit.length > 2) {
+        //Future use
+        this.genericModalAction = bonusSplit[2] //Changes the behaviour of the modal...
+      }
+      this.dialogInteraction = true
+    },
+    triggerBonusReplay() {
+      document.getElementById('iframeContent').src = this.bonusRedirectUrl
+      this.dialogInteraction = false
+    },
     AddCredits() {
       this.dialog = true
     },
@@ -112,12 +152,10 @@ export default {
         return false
       } else {
         if (event) {
-          console.log(event)
-          await this.$store.commit('setCurrentGame/addAchievements', event)
           this.cookieJson = event
+          await this.$store.commit('setCurrentGame/addAchievements', event)
           this.dialogSave = true
-          this.route = route
-          //update user state with data
+          route = route
         }
         // //Logged in check for available
         // if(this.$store.state.person.available_modules.length > 0){
@@ -133,7 +171,26 @@ export default {
         // }
       }
     },
+    beforeWindowUnload(e) {
+      if (this.form_dirty) {
+        e.preventDefault()
+        e.returnValue = ''
+      }
+    },
   },
+  beforeRouteLeave(to, from, next) {
+    if (this.form_dirty) {
+      next(false)
+      window.location = to.path // this is the trick
+    } else {
+      next()
+    }
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('beforeunload', this.beforeWindowUnload)
+  },
+
   mounted() {
     window.c_1 = this
   },
@@ -144,7 +201,8 @@ export default {
 .container {
   position: relative;
   width: 100%;
-  height: 1000px;
+  height: 100px;
+  max-height: 1000px;
   padding-bottom: 56.25%;
 }
 .video {
@@ -153,5 +211,8 @@ export default {
   left: 0;
   width: 100%;
   height: 1000px;
+}
+.genericModal {
+  height: 250px;
 }
 </style>
