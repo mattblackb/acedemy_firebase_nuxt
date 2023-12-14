@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter1/game/checkpoint1.html"
+              src="../chapter1/game/media84_locked.html"
               width="100%"
               height="100px"
               style="border: 1px solid #eee; background: white"
@@ -36,7 +36,10 @@
           <!-- End of generic modal -->
 
           <v-dialog v-model="dialog" width="500">
-            <v-card class="pa5 modalbackground">
+            <v-card
+              class="pa5 modalbackground"
+              :style="{ backgroundImage: `url(${backgroundImage})` }"
+            >
               <v-btn color="primary" text @click="dialog = false"> X </v-btn>
               <DisplayCredits
                 :currentCreditsneeded="currentCreditsneeded"
@@ -120,6 +123,10 @@ export default {
         const myArray = event.split('|')
         this.currentCreditsneeded = parseInt(myArray[1])
         this.currentmodule = myArray[0]
+
+        if (myArray[2]) {
+          this.backgroundImage = myArray[2]
+        }
       }
     },
     Getname() {

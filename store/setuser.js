@@ -52,6 +52,41 @@ export const actions = {
         console.log('ID', people)
       })
   },
+  async setPersonToDelete(state) {
+    await this.$fire.firestore
+      .collection('People')
+      .where('credits', '==', 0)
+
+      .get()
+      .then((querySnapshot) => {
+        // console.log('userProfile', querySnapshot.docs[0]);
+        // console.log('ID', querySnapshot.docs[0].id);
+        //loop around array to get all data into an array and add doc.id
+        var people = []
+
+        querySnapshot.forEach((doc) => {
+          //check that the saved_games array is empty
+          if (doc.data().saved_games.length != 0) {
+            var person = {}
+            person.id = doc.id
+            person.data = doc.data()
+            people.push(person)
+          }
+        })
+
+        state.commit('SET_DEADPEOPLE', people)
+
+        // if (querySnapshot.docs[0]) {
+        //   var returnUser = {}
+        //   returnUser.id = querySnapshot.docs[0].id
+        //   returnUser.data = querySnapshot.docs[0].data()
+        //   state.commit('SET_CHOSENPERSON', returnUser)
+        // } else {
+        //   console.log('no user')
+        //   state.commit('SET_CHOSENPERSON', [])
+        // }
+      })
+  },
 }
 export const mutations = {
   async updatePerson(state, docData) {
@@ -80,6 +115,9 @@ export const mutations = {
 
   SET_CHOSENPERSON(state, chosenPerson) {
     state.chosenPerson = chosenPerson
+  },
+  SET_DEADPEOPLE(state, deadPeople) {
+    state.deadPeople = deadPeople
   },
 
   clearPeople({ commit }) {
