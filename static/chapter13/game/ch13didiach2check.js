@@ -4,7 +4,7 @@ function outcome()
 
 {
 
-  var val = readVar("ch13didi_enter");
+  var val = readVar("ch13didi_enters");
 
 	
 
