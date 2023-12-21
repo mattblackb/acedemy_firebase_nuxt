@@ -142,6 +142,7 @@ export default {
       { name: 'Chapter 10', url: '/chapter10Details' },
       { name: 'Chapter 11', url: '/chapter11Details' },
       { name: 'Chapter 12', url: '/chapter12Details' },
+	  { name: 'Chapter 13', url: '/chapter13Details' },
     ],
   }),
   methods: {

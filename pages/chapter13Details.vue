@@ -8,38 +8,34 @@
             v-if="introchosen.episode == 'introduction' && showSaved"
             :introAchievments="introchosen"
           />
-          <img src="/imgs/27.png" />
-          <showBonusDetails chapterNumber="12" />
+          <img src="/imgs/36.png" />
+          <showBonusDetails chapterNumber="13" />
         </v-col>
         <v-col cols="12" md="6">
-          <h1>The Academy - Chapter Twelve</h1>
+          <h1>The Academy - Chapter Thirteen</h1>
 
           <h4 class="clickable">
-            <NuxtLink to="/chapter11Details">< Previous Chapter</NuxtLink> :
-            <NuxtLink to="/chapter13Details">Next Chapter ></NuxtLink>
+            <NuxtLink to="/chapter12Details">< Previous Chapter</NuxtLink>
           </h4>
           <br /><br />
 
           <p>
-            Time to sample the delights of the Pink Pussy strip club!<br /><br />
+            It's been a long and varied night with Bridgette.<br /><br />
 
-            Bridgette likes new experiences but will visiting a strip club be
-            one step too far?
+            Time to spend the remainder of the evening back at her apartment.
             <br />
-            Even without, or perhaps especially without Bridgette you are sure
-            to have a whole lot of fun with all the sexy and exotic performers.
+            Assuming you have any energy left, then it will be a lot of sexy fun and a great way to round out the evening.
             <br /><br />
-            Then of course there is also the possibility of meeting up with Didi
-            too.
+            If you visited the strip club in Chapter 12 with Bridgette and Didi then there is a strong chance that Didi will pay you a visit too.
             <br />
-            You did remember to invite her right...?
+            She may seem reluctant but she can be persuaded to join you...
             <br /><br />
-            <b>Chapter Twelve</b> statistics : 3540 pages : 5050 images : 5
-            bonus scenes : 30 date achievements : 35 strip club achievements :
-            10 other achievements : 95 bonus achievements
+            <b>Chapter Twelve</b> statistics : TBC pages : TBC images : 2
+            bonus extensions : TBC Bridgette achievements : TBC Didi achievements :
+            TBC other achievements : TBC Threesome achievements
             <br />
-            <b>NOTE:</b> You must successfully complete Chapter Eleven before
-            you can play Chapter Twelve!
+            <b>NOTE:</b> You must successfully complete Chapter Twelve with Bridgette before
+            you can play Chapter Thirteen!
           </p>
 
           <h2 class="clickable">
@@ -48,7 +44,7 @@
             >
           </h2>
 
-          <SavedGames chapter="12" />
+          <SavedGames chapter="13" />
         </v-col>
       </v-row>
     </v-container>

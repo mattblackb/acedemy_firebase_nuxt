@@ -21,10 +21,11 @@
 You are a consultant hired for the week to assess what needs to happen in the Media Department to ensure a prosperous future at the Goodhead Academy. <br/><br/>
 Head of department Bridgette is there to help you out and at the end of the week you'll be expected to report your findings to Principal Valentine.<br/><br/>
 Along the way you get to meet the rest of the staff and student body. Everyone wants to get to know you while you are there, some of them will help you and some of them will be a welcome or perhaps unwelcome distraction.<br/><br/>
-It's easy to get tempted from the work you have to do and that can of course be lots of fun. All you must to do is avoid getting fired!
-
-
- <br/><br/>
+It's easy to get tempted away from the work you have to do and that can of course be lots of fun. All you really must to do is avoid getting fired before your report is due!<br/><br/>
+There are several puzzles and mysteries to unravel during your time at the Academy, many of them go much deeper than the simple task you were originally hired for.<br />
+Maybe you will be celebrating your success by Thursday evening...<br/>
+There will always be consequences at the end of the week though...
+<br/><br/>
 However you choose to play you can be sure to have fun along the way.
  </p>
  <img :src="selectedImage">
@@ -47,6 +48,7 @@ However you choose to play you can be sure to have fun along the way.
 		<a href="/chapter10Details"  ><img src="/imgs/index_ch10.jpg" /></a>
 		<a href="/chapter11Details"  ><img src="/imgs/index_ch11.jpg" /></a>
 		<a href="/chapter12Details"  ><img src="/imgs/index_ch12.jpg" /></a>
+		<a href="/chapter13Details"  ><img src="/imgs/index_ch13.jpg" /></a>
         <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
@@ -83,7 +85,7 @@ export default {
             currentUser: false,
             selectedImage: 'imgs/4.png',
             images: [
-                'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/4.png', 'imgs/5.png', 'imgs/6.png', 'imgs/7.png', 'imgs/8.png', 'imgs/9.png', 'imgs/10.png', 'imgs/11.png', 'imgs/12.png', 'imgs/13.png', 'imgs/14.png', 'imgs/15.png', 'imgs/16.png', 'imgs/17.png', 'imgs/18.png', 'imgs/19.png', 'imgs/20.png', 'imgs/21.png', 'imgs/22.png', 'imgs/23.png', 'imgs/24.png', 'imgs/25.png', 'imgs/26.png', 'imgs/27.png', 'imgs/28.png', 'imgs/29.png', 'imgs/30.png', 'imgs/31.png', 'imgs/32.png', 'imgs/33.png', 'imgs/34.png', 'imgs/35.png'
+                'imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/4.png', 'imgs/5.png', 'imgs/6.png', 'imgs/7.png', 'imgs/8.png', 'imgs/9.png', 'imgs/10.png', 'imgs/11.png', 'imgs/12.png', 'imgs/13.png', 'imgs/14.png', 'imgs/15.png', 'imgs/16.png', 'imgs/17.png', 'imgs/18.png', 'imgs/19.png', 'imgs/20.png', 'imgs/21.png', 'imgs/22.png', 'imgs/23.png', 'imgs/24.png', 'imgs/25.png', 'imgs/26.png', 'imgs/27.png', 'imgs/28.png', 'imgs/29.png', 'imgs/30.png', 'imgs/31.png', 'imgs/32.png', 'imgs/33.png', 'imgs/34.png', 'imgs/35.png', 'imgs/36.png'
             ]
 		}
 	},
