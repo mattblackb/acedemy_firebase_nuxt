@@ -18,6 +18,7 @@
             <NuxtLink to="/chapter12Details">< Previous Chapter</NuxtLink>
           </h4>
           <br /><br />
+		  <h2>BETA VERSION</h2>
 
           <p>
             It's been a long and varied night with Bridgette.<br /><br />
@@ -30,7 +31,7 @@
             <br />
             She may seem reluctant but she can be persuaded to join you...
             <br /><br />
-            <b>Chapter Twelve</b> statistics : TBC pages : TBC images : 2
+            <b>Chapter Thirteen</b> statistics : 1800+ pages :  4700+ images : 2
             bonus extensions : TBC Bridgette achievements : TBC Didi achievements :
             TBC other achievements : TBC Threesome achievements
             <br />
