@@ -15,7 +15,8 @@
           <h1>The Academy - Chapter Twelve</h1>
 
           <h4 class="clickable">
-            <NuxtLink to="/chapter11Details">< Previous Chapter</NuxtLink>
+            <NuxtLink to="/chapter11Details">< Previous Chapter</NuxtLink> :
+            <NuxtLink to="/chapter13Details">Next Chapter ></NuxtLink>
           </h4>
           <br /><br />
 

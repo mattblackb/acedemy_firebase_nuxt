@@ -67,6 +67,7 @@ cookiesToKeep = [
   'ch10bridgette_continue',
   'ch11bridgette_continue',
   'ch11brass_champagne',
+  'ch11didi_invite',
   'ch11didi_reject',
   'ch11_bridgette_negative',
   'ch12home_invite',
