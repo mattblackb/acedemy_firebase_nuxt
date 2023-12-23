@@ -4,6 +4,40 @@
 
 <head>
 
+<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
 <title>The Academy: Chapter Thirteen</title>
 
 <script language="javascript" src="_functions.js"></script>
@@ -16,14 +50,8 @@
 
 setVar("ch13unlimited", 1);
 	
-setVar("ch13bridgette_score", 5);
+setVar("ch13bridgette_score", 6);
 	
-setVar("ch13more_sex", 1);
-	
-setVar("ch13bonus_sex", 1);
-	
-setVar("ch13even_more_sex", 1);
-
 </script>
 	
 
@@ -31,7 +59,7 @@ setVar("ch13even_more_sex", 1);
 
 <div align="center">
 
-	<p><span class="black">"text"</span> <span class="bridgette">"I'm not really tired yet are you..."</span></p>
+	<p><span class="black">"text"</span></p>
 
 
 
@@ -85,13 +113,38 @@ setVar("ch13even_more_sex", 1);
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/brdend33.jpg" alt="" usemap="#Map" />
-      
-      <map name="Map" id="Map">
-        
-        <area shape="rect" coords="0,0,1000,750" href="unlimited2.html" title="Smile at her" />
+	  <td width="1000">
+    <img src="images/unlimited1_00.jpg" name="slide" width="1000" height="750" border="0" usemap="#slideMap">
+    <map name="slideMap">
+    <area shape="rect" coords="0,0,1000,750" href="unlimited2.html" title="Head back to the bedroom" />
+    </map>
+    	
+		<script>
+<!--
 
-     </map>
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/unlimited1_00.jpg","images/unlimited1_01.jpg","images/unlimited1_02.jpg","images/unlimited1_03.jpg","images/unlimited1_04.jpg","images/unlimited1_05.jpg","images/unlimited1_06.jpg","images/unlimited1_07.jpg","images/unlimited1_08.jpg","images/unlimited1_09.jpg","images/unlimited1_10.jpg","images/unlimited1_11.jpg","images/unlimited1_12.jpg","images/unlimited1_13.jpg","images/unlimited1_14.jpg","images/unlimited1_15.jpg")
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=150
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-0)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+          </script>
       
       </td>
     </tr>
