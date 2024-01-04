@@ -4,7 +4,7 @@ function outcome()
 
 {
 
-  var val = readVar("ch13end_bridgette_sleep");
+  var val = readVar("ch13end_didi_kiss");
 
 	
 
