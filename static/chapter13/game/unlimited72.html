@@ -4,6 +4,40 @@
 
 <head>
 
+<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
 <title>The Academy: Chapter Thirteen</title>
 
 <script language="javascript" src="_functions.js"></script>
@@ -12,18 +46,13 @@
     
 </head>
 
-<script language="javascript">
 
-setVar("ch13bridgette_score", 6);
-	
-</script>
-	
 
 <body onLoad="disallowNav()">
 
 <div align="center">
 
-	<p><span class="black">"text"</span> <span class="bridgette">"And I can see that you are still hard as a rock!"</span></p>
+	<p><span class="black">"text"</span> <span class="bridgette"><em>"It's getting so hard again!"</em></span></p>
 
 
 
@@ -77,13 +106,38 @@ setVar("ch13bridgette_score", 6);
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/unlimited9.jpg" alt="" usemap="#Map" />
-      
-      <map name="Map" id="Map">
-        
-        <area shape="rect" coords="0,0,1000,750" href="unlimited20.html" title="See what she does" />
+	  <td width="1000">
+    <img src="images/brdsex242_00.jpg" name="slide" width="1000" height="750" border="0" usemap="#slideMap">
+    <map name="slideMap">
+    <area shape="rect" coords="0,0,1000,750" href="unlimited73.html" title="Look at her" />
+    </map>
+		
+		<script>
+<!--
 
-     </map>
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/brdsex242_00.jpg","images/brdsex242_01.jpg","images/brdsex242_02.jpg","images/brdsex242_03.jpg","images/brdsex242_02.jpg","images/brdsex242_01.jpg")
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=180
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-1)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+          </script>
       
       </td>
     </tr>
