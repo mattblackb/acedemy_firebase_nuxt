@@ -37,7 +37,10 @@
           <!-- End of generci modal -->
 
           <v-dialog v-model="dialog" width="500">
-            <v-card class="pa5 modalbackground">
+            <v-card
+              class="pa5 modalbackground"
+              :style="{ backgroundImage: `url(${backgroundImage})` }"
+            >
               <v-btn color="primary" text @click="dialog = false"> X </v-btn>
               <DisplayCredits
                 :currentCreditsneeded="currentCreditsneeded"
@@ -117,6 +120,10 @@ export default {
         const myArray = event.split('|')
         this.currentCreditsneeded = parseInt(myArray[1])
         this.currentmodule = myArray[0]
+
+        if (myArray[2]) {
+          this.backgroundImage = myArray[2]
+        }
       }
     },
     getPlayerName() {
