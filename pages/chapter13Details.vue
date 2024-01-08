@@ -20,11 +20,11 @@
           <br /><br />
 		  
           <p>
-            It's the end of Thursday night and your date with Bridgette is coming to in conclusion.<br /><br />
-
+            It's the end of Thursday night and your date with Bridgette is coming to it's conclusion.
+			<br /><br />
             Time to spend the remainder of the evening back at her apartment.
             <br />
-            Assuming you have any energy left, then it will be a lot of sexy fun and a great way to round out the evening.
+            Assuming you have any energy left, then it will be a lot of sexy fun and a great way to round out the night.
             <br /><br />
             If you visited the strip club in Chapter 12 with Bridgette and Didi then there is a strong chance that Didi will pay you a visit too.
             <br />
