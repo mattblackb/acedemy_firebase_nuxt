@@ -4,17 +4,17 @@ function outcome()
 
 {
 
-  var val = readVar("ch13--");
+  var val = readVar("ch13cum_suck_swallow");
 
 	
 
     if (val > 0)
 
-        document.write("<img src='buttonsetc/endcards/ch13ach--.jpg'>"); 
+        document.write("<img src='buttonsetc/endcards/ch13cumshot23.jpg'>"); 
 
     else
 	
-	    document.write("<img src='buttonsetc/endcards/ach_blank.jpg'>");
+	    document.write("<img src='buttonsetc/endcards/ch13cumshot23_blank.jpg'>");
 
 }
 

@@ -18,23 +18,24 @@
             <NuxtLink to="/chapter12Details">< Previous Chapter</NuxtLink>
           </h4>
           <br /><br />
-		  <h2>BETA VERSION</h2>
-
+		  
           <p>
-            It's been a long and varied night with Bridgette.<br /><br />
-
+            It's the end of Thursday night and your date with Bridgette is coming to it's conclusion.
+			<br /><br />
             Time to spend the remainder of the evening back at her apartment.
             <br />
-            Assuming you have any energy left, then it will be a lot of sexy fun and a great way to round out the evening.
+            Assuming you have any energy left, then it will be a lot of sexy fun and a great way to round out the night.
             <br /><br />
             If you visited the strip club in Chapter 12 with Bridgette and Didi then there is a strong chance that Didi will pay you a visit too.
             <br />
-            She may seem reluctant but she can be persuaded to join you...
+            Didi may seem reluctant but she can be persuaded to join you...
             <br /><br />
-            <b>Chapter Thirteen</b> statistics : 1800+ pages :  4700+ images : 2
-            bonus extensions : TBC Bridgette achievements : TBC Didi achievements :
-            TBC other achievements : TBC Threesome achievements
-            <br />
+			Whatever happens, Bridgette will be eager to make the most of her time in private with you.
+			<br /><br />
+            <b>Chapter Thirteen</b> statistics : 1900 pages :  4800 images<br>
+			: 2 bonus scene extensions : 45 Bridgette achievements : 37 other achievements<br>
+            : 25 Didi achievements : 30 Threesome achievements
+            <br /><br />
             <b>NOTE:</b> You must successfully complete Chapter Twelve with Bridgette before
             you can play Chapter Thirteen!
           </p>
