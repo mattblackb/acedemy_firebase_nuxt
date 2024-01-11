@@ -63,7 +63,7 @@
 
               <BuyCash
                 :currentCreditsneeded="cashAmount"
-                currentmodule="chapter1"
+                currentmodule="chapter11"
                 :changeURL="changeURL"
               />
             </v-card>
