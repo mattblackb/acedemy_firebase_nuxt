@@ -134,7 +134,7 @@ export default {
 
     buyModule() {
       //set Cash cookie to current value plus this.currentCreditsneeded
-
+      console.log('Change URL', this.changeURL)
       const name = 'cash='
       const cDecoded = decodeURIComponent(document.cookie) //to be careful
       const cArr = cDecoded.split('; ')

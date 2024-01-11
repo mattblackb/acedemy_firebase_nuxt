@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              :src="../chapter11/game/ext150.html"
+              :src="curIframeSrc"
               width="100%"
               height="auto"
               style="border: 1px solid #eee; background: white"
@@ -63,7 +63,7 @@
 
               <BuyCash
                 :currentCreditsneeded="cashAmount"
-                :currentmodule="currentmodule"
+                currentmodule="chapter11"
                 :changeURL="changeURL"
               />
             </v-card>
@@ -100,7 +100,7 @@ export default {
       bonusRedirectUrl: '',
       dialogInteraction: false,
       cashAmount: 0,
-      curIframeSrc: '../chapter10/game/checksave10.html',
+      curIframeSrc: '../chapter11/game/ext150.html',
     }
   },
   computed: {
