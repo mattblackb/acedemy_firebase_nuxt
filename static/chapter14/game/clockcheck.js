@@ -1,12 +1,26 @@
-
-
-// displays game outcome
+// displays time
 
 function clockcheck()
 
 {
 
 var val = readVar("clock");
+	
+	//8
+
+    if ((val > -3)&&(val < -1))
+
+        document.write("<img src='buttonsetc/clock8.jpg'>"); 
+
+    else
+	
+	//8:30
+
+    if ((val > -2)&&(val < 0))
+
+        document.write("<img src='buttonsetc/clock830.jpg'>"); 
+
+    else
 
 	//9
 
@@ -222,135 +236,15 @@ var val = readVar("clock");
 
         document.write("<img src='buttonsetc/clock10.jpg'>");  
 
-	else 
+		else 
 
-	//22:30
+	//22:30 and beyond
 
-    if ((val > 26)&&(val < 28))
+    if ((val > 26)&&(val < 35))
 
         document.write("<img src='buttonsetc/clock1030.jpg'>"); 
-	
-	else 
 
-	//23:00
-
-    if ((val > 27)&&(val < 29))
-
-        document.write("<img src='buttonsetc/clock11.jpg'>");
-	
-	else 
-
-	//23:30
-
-    if ((val > 28)&&(val < 30))
-
-        document.write("<img src='buttonsetc/clock1130.jpg'>");
-	
-	else 
-
-	//00:00
-
-    if ((val > 29)&&(val < 31))
-
-        document.write("<img src='buttonsetc/clock12.jpg'>");
-	
-	else 
-
-	//00:30
-
-    if ((val > 30)&&(val < 32))
-
-        document.write("<img src='buttonsetc/clock1230.jpg'>");
-	
-	else 
-
-	//01:00
-
-    if ((val > 31)&&(val < 33))
-
-        document.write("<img src='buttonsetc/clock1.jpg'>");
-	
-	else 
-
-	//01:30
-
-    if ((val > 32)&&(val < 34))
-
-        document.write("<img src='buttonsetc/clock130.jpg'>");
-	
-	else 
-
-	//02:00
-
-    if ((val > 33)&&(val < 35))
-
-        document.write("<img src='buttonsetc/clock2.jpg'>");
-	
-	else 
-
-	//02:30
-
-    if ((val > 34)&&(val < 36))
-
-        document.write("<img src='buttonsetc/clock230.jpg'>");
-	
-	else
-		
-	//03:00
-
-    if ((val > 35)&&(val < 37))
-
-        document.write("<img src='buttonsetc/clock3.jpg'>");
-	
-	else
-		
-	//03:30
-
-    if ((val > 36)&&(val < 38))
-
-        document.write("<img src='buttonsetc/clock330.jpg'>");
-	
-	else
-		
-	//04:00
-
-    if ((val > 37)&&(val < 39))
-
-        document.write("<img src='buttonsetc/clock4.jpg'>");
-	
-	else
-		
-	//04:30
-
-    if ((val > 38)&&(val < 40))
-
-        document.write("<img src='buttonsetc/clock430.jpg'>");
-	
-	else
-		
-	//05:00
-
-    if ((val > 39)&&(val < 41))
-
-        document.write("<img src='buttonsetc/clock5.jpg'>");
-	
-	else
-		
-	//05:30
-
-    if ((val > 40)&&(val < 42))
-
-        document.write("<img src='buttonsetc/clock530.jpg'>");
-	
-	else
-
-	//06:00 and beyond
-
-    if ((val > 41)&&(val < 45))
-
-        document.write("<img src='buttonsetc/clock6.jpg'>");
-	
-	else 
+    else 
 
         document.write("<img src='buttonsetc/clockerror.jpg'>");       
 

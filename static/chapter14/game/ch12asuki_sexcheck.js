@@ -8,11 +8,11 @@ function outcome()
 
 if (val > 0)
 	
-document.write("<img src='buttonsetc/startchecks/250asuki.jpg'>");
+document.write("<img src='buttonsetc/pregame/250asuki.jpg'>");
 	
 else
 	
-document.write("<img src='buttonsetc/startchecks/250asuki_blank.jpg'>");
+document.write("<img src='buttonsetc/pregame/250asuki_blank.jpg'>");
 
 }
 

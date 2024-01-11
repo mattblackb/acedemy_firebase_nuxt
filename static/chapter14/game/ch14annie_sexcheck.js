@@ -8,11 +8,11 @@ function outcome()
 
 if (val > 0)
 	
-document.write("<img src='buttonsetc/startchecks/annie_naked.jpg'>");
+document.write("<img src='buttonsetc/pregame/annie_naked.jpg'>");
 	
 else
 	
-document.write("<img src='buttonsetc/startchecks/annie_blank.jpg'>");
+document.write("<img src='buttonsetc/pregame/annie_blank.jpg'>");
 
 }
 
