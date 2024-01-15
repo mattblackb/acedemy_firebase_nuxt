@@ -163,7 +163,7 @@ export default {
       if (
         this.currentUser.email === 'matt@plain.black' ||
         this.currentUser.email === 'dsp3000@gmx.com' ||
-        this.currentUser.email === 'jimacep@gmail.com '
+        this.currentUser.email === 'jimacep@gmail.com'
       ) {
         return true
       } else {
