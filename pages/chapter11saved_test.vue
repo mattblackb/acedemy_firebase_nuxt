@@ -96,7 +96,7 @@ export default {
       currentmodule: 'chapter12',
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
       dialogInteraction: false,
       cashAmount: 0,

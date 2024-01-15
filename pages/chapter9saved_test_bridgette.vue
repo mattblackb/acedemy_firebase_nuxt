@@ -56,7 +56,7 @@
               <v-btn
                 color="primary"
                 text
-                @click="changeURL('../chapter10/game/movieexit14.html')"
+                @click="changeURL('../chapter10/game/movieexit15.html')"
               >
                 X
               </v-btn>
@@ -93,10 +93,10 @@ export default {
       dialogCash: false,
       cookieJson: '',
       currentCreditsneeded: [],
-      currentmodule: 'chapter11',
+      currentmodule: 'chapter10',
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
       dialogInteraction: false,
       cashAmount: 0,
