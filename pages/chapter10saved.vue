@@ -61,7 +61,7 @@
                 X
               </v-btn>
 
-              <BuyCash
+              <BuyCash11
                 :currentCreditsneeded="cashAmount"
                 currentmodule="chapter11"
                 :changeURL="changeURL"
