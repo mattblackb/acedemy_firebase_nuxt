@@ -4,7 +4,12 @@
       <v-card class="pa5 modalbackground">
         <v-btn color="primary" text @click="dialog = false"> X </v-btn>
         <h2>Credit payment facility currently disabled</h2>
-		<h4> Get credits at <a href="https://www.patreon.com/dsp3000">https://www.patreon.com/dsp3000</a></h4>
+        <h4>
+          Get credits at
+          <a href="https://www.patreon.com/dsp3000"
+            >https://www.patreon.com/dsp3000</a
+          >
+        </h4>
       </v-card>
     </v-dialog>
 
@@ -48,6 +53,9 @@
             </v-menu>
             <v-btn to="/characters"> Characters </v-btn>
             <v-btn to="/about"> About </v-btn>
+            <v-btn v-if="checkEmailForBetaLinks()" to="/admin/pageloader">
+              Page Loader
+            </v-btn>
           </v-toolbar-items>
           <v-spacer></v-spacer>
           <v-toolbar-items>
@@ -142,14 +150,25 @@ export default {
       { name: 'Chapter 10', url: '/chapter10Details' },
       { name: 'Chapter 11', url: '/chapter11Details' },
       { name: 'Chapter 12', url: '/chapter12Details' },
-	  { name: 'Chapter 13', url: '/chapter13Details' },
+      { name: 'Chapter 13', url: '/chapter13Details' },
     ],
   }),
   methods: {
     ...mapActions(['stories/setStories']),
     changeRoute(route) {
-      console.log('route', this.chosenRoute)
       this.$router.push({ path: this.chosenRoute })
+    },
+    checkEmailForBetaLinks() {
+      console.log(this.currentUser.email)
+      if (
+        this.currentUser.email === 'matt@plain.black' ||
+        this.currentUser.email === 'dsp3000@gmx.com' ||
+        this.currentUser.email === 'jimacep@gmail.com '
+      ) {
+        return true
+      } else {
+        return false
+      }
     },
   },
   mounted() {
@@ -158,7 +177,7 @@ export default {
   computed: {
     userDetails() {
       if (this.$store.state.person) {
-        this.currentUser = true
+        this.currentUser = this.$store.state.person
         return this.$store.state.person
       }
     },

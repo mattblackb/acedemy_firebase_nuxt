@@ -69,15 +69,16 @@ export default {
 
       var chapterKey = 'ch' + chapterMinus + '_complete'
       var chapterKey2 = 'ch' + curChapter + '_complete'
-      console.log('chapterKey', chapterKey, chapterKey2)
+      var chapterKeyOld = 'ch' + chapterMinus + 'saved'
 
       var savedGame = []
       var x = 0
       personData.map(function (game, index) {
         if (
-          game[chapterKey] === '1' &&
-          game[chapterKey2] != 0 &&
-          !game[chapterKey2]
+          game[chapterKey] === '1' ||
+          (game[chapterKeyOld] === '1' &&
+            game[chapterKey2] != 0 &&
+            !game[chapterKey2])
         ) {
           savedGame.push(_.cloneDeep(game))
           savedGame[x].index = index
