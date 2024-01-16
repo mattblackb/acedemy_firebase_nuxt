@@ -51,11 +51,11 @@ The new version splits the original episode and adds additional alternative scen
 The remastered and expanded version released September - November 2023 : 3540 pages : 5050 images<br/>
 <br/>
 <b>Chapter Thirteen</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages : 4531 images<br/>
-This part of the story will take place during late on Thursday night/Friday morning.<br/>
-Chapter Thirteen will be released after some minor modifications :<br/>
-New release date TBC<br/>
+This part of the story will take place late on Thursday night/Friday morning.<br/>
+The new version adds additional material, new and extended scenes.<br />
+The remastered and expanded version released December 2023 - January 2024 : 1900 pages : 4800 images<br/>
 <br/>
-<b>Chapter Fourteen</b> Completed mid 2021 - yet to be released : 2900 pages<br/>
+<b>Chapter Fourteen</b> Completed mid 2021 - yet to be released<br/>
 This part of the story will take place during Friday morning.<br/>
 This brand new chapter is complete subject to testing :<br/>
 Release date TBC<br/>

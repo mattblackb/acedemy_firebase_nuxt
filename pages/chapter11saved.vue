@@ -61,7 +61,7 @@
                 X
               </v-btn>
 
-              <BuyCash
+              <BuyCash12
                 :currentCreditsneeded="cashAmount"
                 currentmodule="chapter12"
                 :changeURL="changeURL"
@@ -96,7 +96,7 @@ export default {
       currentmodule: 'chapter12',
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
       dialogInteraction: false,
       cashAmount: 0,

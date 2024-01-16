@@ -81,6 +81,7 @@ export default {
 
       var chapterKey = 'ch' + curChapter + '_complete'
       var chapterKey2 = 'ch' + chapterMinus + '_complete'
+      var chapterKeyOld = 'ch' + chapterMinus + 'saved'
 
       //Currently 001_save has set for the most recent save, but we need to check historic saves for the chapter as the highest value
       console.log('chapterKey', chapterKey, chapterKey2)
@@ -89,9 +90,10 @@ export default {
       personData.map(function (game, index) {
         // console.log(' game[chapterKey]', game, chapterKey, chapterKey2)
         if (
-          game[chapterKey] === '1' &&
-          game[chapterKey2] != '1' &&
-          !game[chapterKey2]
+          game[chapterKey] === '1' ||
+          (game[chapterKeyOld] === '1' &&
+            game[chapterKey2] != '1' &&
+            !game[chapterKey2])
         ) {
           savedGame.push(_.cloneDeep(game))
           savedGame[x].index = index
