@@ -151,6 +151,7 @@ export default {
       { name: 'Chapter 11', url: '/chapter11Details' },
       { name: 'Chapter 12', url: '/chapter12Details' },
       { name: 'Chapter 13', url: '/chapter13Details' },
+	  { name: 'Chapter 14', url: '/chapter14Details' },
     ],
   }),
   methods: {
@@ -215,7 +216,7 @@ img {
   }
 }
 .modalbackground {
-  background-image: url('/imgs/modals/modal_principal1.jpg');
+  background-image: url('/imgs/modals/modal_BG.jpg');
   background-color: #cccccc;
   min-height: 250px;
 }

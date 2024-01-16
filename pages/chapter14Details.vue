@@ -8,46 +8,24 @@
             v-if="introchosen.episode == 'introduction' && showSaved"
             :introAchievments="introchosen"
           />
-          <img src="/imgs/36.png" />
-          <showBonusDetails chapterNumber="13" />
+          <img src="/imgs/38.png" />
+          <showBonusDetails chapterNumber="14" />
         </v-col>
         <v-col cols="12" md="6">
-          <h1>The Academy - Chapter Thirteen</h1>
+          <h1>The Academy - Chapter Fourteen</h1>
 
           <h4 class="clickable">
-            <NuxtLink to="/chapter12Details">< Previous Chapter</NuxtLink>
-			<NuxtLink to="/chapter14Details">Next Chapter ></NuxtLink>
+            <NuxtLink to="/chapter13Details">< Previous Chapter</NuxtLink>
           </h4>
           <br /><br />
-		  
+		  <h2>COMING SOON</h2>
           <p>
-            It's the end of Thursday night and your date with Bridgette is coming to it's conclusion.
-			<br /><br />
-            Time to spend the remainder of the evening back at her apartment.
-            <br />
-            Assuming you have any energy left, then it will be a lot of sexy fun and a great way to round out the night.
-            <br /><br />
-            If you visited the strip club in Chapter 12 with Bridgette and Didi then there is a strong chance that Didi will pay you a visit too.
-            <br />
-            Didi may seem reluctant but she can be persuaded to join you...
-            <br /><br />
-			Whatever happens, Bridgette will be eager to make the most of her time in private with you.
-			<br /><br />
-            <b>Chapter Thirteen</b> statistics : 1900 pages :  4800 images<br>
-			: 2 bonus scene extensions : 45 Bridgette achievements : 37 other achievements<br>
-            : 25 Didi achievements : 30 Threesome achievements
-            <br /><br />
-            <b>NOTE:</b> You must successfully complete Chapter Twelve with Bridgette before
-            you can play Chapter Thirteen!
+            The story continues on Friday...
           </p>
 
-          <h2 class="clickable">
-            <NuxtLink to="/profile"
-              >Continue the story from a saved game</NuxtLink
-            >
-          </h2>
+          
 
-          <SavedGames chapter="13" />
+          <SavedGames chapter="14" />
         </v-col>
       </v-row>
     </v-container>
