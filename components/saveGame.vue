@@ -79,8 +79,7 @@ export default {
       this.$store.commit('setuser/updatePerson', personData)
       this.$store.commit('SET_PEOPLE', personData)
       this.currentPerson = personData
-      this.currentMessage =
-        'This game has been saved. You can see this game in your profile'
+      this.currentMessage = 'This game has been saved.'
 
       this.closeWindow()
     },

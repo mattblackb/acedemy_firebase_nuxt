@@ -96,11 +96,11 @@ export default {
       currentmodule: 'chapter11',
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_cash.jpg',
       bonusRedirectUrl: '',
       dialogInteraction: false,
       cashAmount: 0,
-      curIframeSrc: '../chapter11/game/ext150.html',
+      curIframeSrc: '../chapter11/game/cashmachine1.html',
     }
   },
   computed: {

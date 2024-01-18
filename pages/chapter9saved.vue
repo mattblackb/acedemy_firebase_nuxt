@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter9/game/checksave9.html"
+              :src="curIframeSrc"
               width="100%"
               height="auto"
               style="border: 1px solid #eee; background: white"
@@ -37,6 +37,7 @@
             </v-card>
           </v-dialog>
           <!-- End of generic modal -->
+
           <v-dialog v-model="dialog" width="500">
             <v-card
               class="pa5 modalbackground"
@@ -46,6 +47,24 @@
               <DisplayCredits
                 :currentCreditsneeded="currentCreditsneeded"
                 :currentmodule="currentmodule"
+              />
+            </v-card>
+          </v-dialog>
+
+          <v-dialog v-model="dialogCash" width="500">
+            <v-card class="pa5 modalbackground">
+              <v-btn
+                color="primary"
+                text
+                @click="changeURL('../chapter10/game/movieexit15.html')"
+              >
+                X
+              </v-btn>
+
+              <BuyCash10
+                :currentCreditsneeded="cashAmount"
+                currentmodule="chapter10"
+                :changeURL="changeURL"
               />
             </v-card>
           </v-dialog>
@@ -71,14 +90,17 @@ export default {
     return {
       dialog: false,
       dialogSave: false,
+      dialogCash: false,
       cookieJson: '',
       currentCreditsneeded: [],
-      currentmodule: '',
+      currentmodule: 'chapter10',
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
       dialogInteraction: false,
+      cashAmount: 0,
+      curIframeSrc: '../chapter9/game/checksave9.html',
     }
   },
   computed: {
@@ -90,6 +112,12 @@ export default {
     },
   },
   methods: {
+    changeURL(url) {
+      var rand = Math.floor(Math.random() * 1000000 + 1)
+      this.curIframeSrc = url + '?uid=' + +rand
+      iframeContent.contentWindow.location.reload(true)
+      this.dialogCash = false
+    },
     replayBonus(bonusString) {
       //split bonusString by | and return
       var bonusSplit = bonusString.split('|')
@@ -127,6 +155,7 @@ export default {
         }
       }
     },
+
     getPlayerName() {
       if (this.$store.state.person) {
         return this.$store.state.person.name
@@ -155,6 +184,10 @@ export default {
           return false
         }
       }
+    },
+    async buyCash(cashAmount) {
+      this.cashAmount = cashAmount
+      this.dialogCash = true
     },
     async saveProgress(event, route) {
       //check that the user is logged in (likely)

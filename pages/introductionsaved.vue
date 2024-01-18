@@ -69,7 +69,7 @@ export default {
       form_dirty: true,
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
       dialogInteraction: false,
     }

@@ -151,6 +151,7 @@ export default {
       { name: 'Chapter 11', url: '/chapter11Details' },
       { name: 'Chapter 12', url: '/chapter12Details' },
       { name: 'Chapter 13', url: '/chapter13Details' },
+	  { name: 'Chapter 14', url: '/chapter14Details' },
     ],
   }),
   methods: {
@@ -163,7 +164,7 @@ export default {
       if (
         this.currentUser.email === 'matt@plain.black' ||
         this.currentUser.email === 'dsp3000@gmx.com' ||
-        this.currentUser.email === 'jimacep@gmail.com '
+        this.currentUser.email === 'jimacep@gmail.com'
       ) {
         return true
       } else {
@@ -215,7 +216,7 @@ img {
   }
 }
 .modalbackground {
-  background-image: url('/imgs/modals/modal_principal1.jpg');
+  background-image: url('/imgs/modals/modal_BG.jpg');
   background-color: #cccccc;
   min-height: 250px;
 }
