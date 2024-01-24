@@ -11,15 +11,35 @@
     <!-- <v-row>
     <v-col> -->
 
+    <v-dialog v-model="dialogDescription" width="500">
+      <v-card class="pa5 modalbackground">
+        <v-btn color="primary" text @click="dialogObject = false"> X </v-btn>
+        <h3>Add Description</h3>
+        <v-textarea
+          v-model="description"
+          label="Description"
+          hint="Add a description to this save"
+          persistent-hint
+          counter="150"
+          rows="1"
+          auto-grow
+          max-height="200"
+        >
+        </v-textarea>
+        <v-btn color="primary" depressed @click="dialogObject = false">
+          Cancel
+        </v-btn>
+        <v-btn color="warning" depressed @click="commitDescription()">
+          Save
+        </v-btn>
+      </v-card>
+    </v-dialog>
+
     <span
       class="clickable savedGamelink"
       @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
       >{{ item.date }} | <b>{{ setTextfromtype() }}</b>
-    </span>
-    <span class="clickable delete" @click="deleteSave(item)"> Delete </span>
 
-    <!-- </v-col>
-    <v-col>
       <v-tooltip right v-if="item.description">
         <template v-slot:activator="{ on, attrs }">
           <v-icon color="white" dark v-bind="attrs" v-on="on">
@@ -28,8 +48,13 @@
         </template>
         <span>{{ item.description }} </span>
       </v-tooltip>
-    </v-col>
-  </v-row> -->
+    </span>
+    <span class="clear">
+      <span class="clickable delete" @click="deleteSave(item)"> Delete </span>
+      <span class="clickable addDec" @click="addDescription(item)">
+        Add Description
+      </span>
+    </span>
   </div>
 </template>
 
@@ -37,6 +62,9 @@
 export default {
   data() {
     return {
+      dialogDescription: false,
+      description: '',
+      descriptionIndex: 0,
       dialog: false,
       deleteObject: {},
       chapter1: [
@@ -65,15 +93,30 @@ export default {
       this.$store.commit('SET_PEOPLE', this.deleteObject)
       this.dialog = false
     },
+    addDescription(orderData) {
+      if (this.item.description) {
+        this.description = this.item.description
+      }
+      this.dialogDescription = true
+      this.descriptionIndex = orderData.index
+    },
+    commitDescription() {
+      var orderAllData = _.cloneDeep(this.$store.state.person)
+
+      orderAllData.saved_games[
+        this.descriptionIndex
+      ].description = this.description
+      this.deleteObject = orderAllData
+      this.$store.commit('setuser/updatePerson', this.deleteObject)
+      this.$store.commit('SET_PEOPLE', this.deleteObject)
+      this.dialogDescription = false
+    },
     deleteSave(introductionObject) {
       var orderAllData = _.cloneDeep(this.$store.state.person)
-      console.log('orderAllData', orderAllData.saved_games)
       this.dialog = true
       //remove from aray at index
-
       orderAllData.saved_games.splice(parseInt(introductionObject.index), 1)
       this.deleteObject = orderAllData
-      console.log('DeleteObject', this.deleteObject.saved_games)
     },
     //function to turn number to string
     numberToString(num) {
@@ -173,9 +216,21 @@ export default {
 }
 .delete {
   float: right;
-  background-color: red;
+  background-color: rgba(229, 23, 23, 0.4);
   color: white;
   margin-top: 1px;
   padding: 1px 5px;
+}
+.addDec {
+  float: right;
+  background-color: rgba(68, 229, 23, 0.4);
+  color: white;
+  margin-top: 1px;
+  padding: 1px 5px;
+}
+.clear {
+  clear: both;
+  width: 100%;
+  display: inline-block;
 }
 </style>
