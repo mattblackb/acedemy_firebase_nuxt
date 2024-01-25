@@ -57,12 +57,6 @@
 
           <!-- Component to display the achievements -->
           <SavedGames chapter="1" />
-
-          <DisplayAceivementsdayone
-            v-if="introchosen.episode == 'dayone' && showSaved"
-            :introAchievments="introchosen"
-            class="pt-5"
-          />
         </v-col>
         <!-- <v-col cols="8">
           <DisplayAchievmentsintroduction v-if="introchosen.episode == 'introduction'" :introAchievments="introchosen" />

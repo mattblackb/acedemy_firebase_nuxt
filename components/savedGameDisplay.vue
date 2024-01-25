@@ -119,8 +119,15 @@ export default {
       this.deleteObject = orderAllData
     },
     //function to turn number to string
-    numberToString(num) {
+    numberToString(num, step) {
       //make sure num is an Integer
+      if (isNaN(num)) {
+        if (step == 1) {
+          return 'Intro'
+        } else {
+          return 'One'
+        }
+      }
       num = parseInt(num)
       switch (num) {
         case 0:
@@ -166,17 +173,17 @@ export default {
       if (this.type == 'start') {
         var returnVar =
           'View Chapter ' +
-          this.numberToString(this.chapter) +
+          this.numberToString(this.chapter, 1) +
           ' achievements  | Start Chapter ' +
-          this.numberToString(this.chapter + 1)
+          this.numberToString(this.chapter + 1, 2)
         return returnVar + ' from this save'
       }
       if (this.type == 'end') {
         var returnVar =
           'View Chapter ' +
-          this.numberToString(this.chapter) +
+          this.numberToString(this.chapter, 1) +
           ' achievements  | Start Chapter ' +
-          this.numberToString(this.chapter + 1)
+          this.numberToString(this.chapter + 1, 2)
         return returnVar + ' from this save'
       }
       if (this.type == 'partial') {
@@ -185,6 +192,9 @@ export default {
       return ' Play next Chapter'
     },
     async setIntroductionRedirect(introductionObject, page) {
+      if (page == '/chapterNaNsaved') {
+        page = '/chapter1saved'
+      }
       this.showloading = true
       this.introchosen = introductionObject
       this.showIntroduction = true

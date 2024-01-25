@@ -66,10 +66,24 @@ export default {
       //   (item) => item.episode === 'chapter' + chapterMinus + 'saved'
       // )
       //conver integer to string
+      if (this.chapter === 'introduction') {
+        var chapterKey = 'intro_complete'
+        var chapterKey2 = 'intro_complete'
+        var chapterKeyOld = '00_save'
+      } else {
+        var chapterKey = 'ch' + chapterMinus + '_complete'
+        var chapterKey2 = 'ch' + curChapter + '_complete'
+        var chapterKeyOld = 'ch' + chapterMinus + 'saved'
+      }
 
-      var chapterKey = 'ch' + chapterMinus + '_complete'
-      var chapterKey2 = 'ch' + curChapter + '_complete'
-      var chapterKeyOld = 'ch' + chapterMinus + 'saved'
+      console.log(
+        'chapterKey',
+        chapterKey,
+        'chapterKey2',
+        chapterKey2,
+        'Chapter',
+        this.chapter
+      )
 
       var savedGame = []
       var x = 0
