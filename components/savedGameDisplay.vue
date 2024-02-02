@@ -13,20 +13,26 @@
 
     <v-dialog v-model="dialogDescription" width="500">
       <v-card class="pa5 modalbackground">
-        <v-btn color="primary" text @click="dialogObject = false"> X </v-btn>
+        <v-btn color="primary" text @click="dialogDescription = false">
+          X
+        </v-btn>
         <h3>Add Description</h3>
-        <v-textarea
-          v-model="description"
-          label="Description"
-          hint="Add a description to this save"
-          persistent-hint
-          counter="150"
-          rows="1"
-          auto-grow
-          max-height="200"
-        >
-        </v-textarea>
-        <v-btn color="primary" depressed @click="dialogObject = false">
+        <v-row>
+          <v-col cols="8">
+            <v-textarea
+              v-model="description"
+              label="Description"
+              hint="Add a description to this save"
+              persistent-hint
+              counter="70"
+              rows="2"
+              max-height="200"
+            >
+            </v-textarea>
+          </v-col>
+        </v-row>
+
+        <v-btn color="primary" depressed @click="dialogDescription = false">
           Cancel
         </v-btn>
         <v-btn color="warning" depressed @click="commitDescription()">
@@ -38,17 +44,18 @@
     <span
       class="clickable savedGamelink"
       @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
-      >{{ item.date }} | <b>{{ setTextfromtype() }}</b>
+      >{{ item.date }} | <b>{{ setTextfromtype() }}</b></span
+    >
 
-      <v-tooltip right v-if="item.description">
-        <template v-slot:activator="{ on, attrs }">
-          <v-icon color="white" dark v-bind="attrs" v-on="on">
-            mdi-text-box
-          </v-icon>
-        </template>
-        <span>{{ item.description }} </span>
-      </v-tooltip>
-    </span>
+    <v-tooltip right v-if="item.description">
+      <template v-slot:activator="{ on, attrs }">
+        <v-icon color="white" dark v-bind="attrs" v-on="on">
+          mdi-text-box
+        </v-icon>
+      </template>
+      <span>{{ item.description }} </span>
+    </v-tooltip>
+
     <span class="clear">
       <span class="clickable delete" @click="deleteSave(item)"> Delete </span>
       <span class="clickable addDec" @click="addDescription(item)">
@@ -94,11 +101,12 @@ export default {
       this.dialog = false
     },
     addDescription(orderData) {
+      console.log('orderData', orderData)
       if (this.item.description) {
         this.description = this.item.description
       }
       this.dialogDescription = true
-      this.descriptionIndex = orderData.index
+      this.descriptionIndex = orderData.index_desc
     },
     commitDescription() {
       var orderAllData = _.cloneDeep(this.$store.state.person)
@@ -242,5 +250,8 @@ export default {
   clear: both;
   width: 100%;
   display: inline-block;
+}
+.modalbackground {
+  padding: 10px;
 }
 </style>

@@ -84,7 +84,7 @@ export default {
       var chapterKeyOld = 'ch' + chapterMinus + 'saved'
 
       //Currently 001_save has set for the most recent save, but we need to check historic saves for the chapter as the highest value
-      console.log('chapterKey', chapterKey, chapterKey2)
+
       var savedGame = []
       var x = 0
       personData.map(function (game, index) {
@@ -96,6 +96,7 @@ export default {
             !game[chapterKey2])
         ) {
           savedGame.push(_.cloneDeep(game))
+          savedGame[x].index_desc = index
           savedGame[x].index = index
           x++
         }
