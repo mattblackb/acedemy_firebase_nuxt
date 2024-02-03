@@ -12,7 +12,7 @@
     <v-col> -->
 
     <v-dialog v-model="dialogDescription" width="500">
-      <v-card class="pa5 modalbackground">
+      <v-card class="pa5 modalbackground modalNoImage">
         <v-btn color="primary" text @click="dialogDescription = false">
           X
         </v-btn>
@@ -49,15 +49,26 @@
 
     <v-tooltip right v-if="item.description">
       <template v-slot:activator="{ on, attrs }">
-        <v-icon color="white" dark v-bind="attrs" v-on="on">
+        <v-icon
+          color="white"
+          class="marginLeftSpan"
+          dark
+          v-bind="attrs"
+          v-on="on"
+          @click="addDescription(item)"
+        >
           mdi-text-box
         </v-icon>
       </template>
-      <span>{{ item.description }} </span>
+      <span class="clickable">
+        {{ item.description }}
+      </span>
     </v-tooltip>
 
     <span class="clear">
-      <span class="clickable delete" @click="deleteSave(item)"> Delete </span>
+      <span class="clickable delete" @click="deleteSave(item)">
+        Delete Save</span
+      >
       <span class="clickable addDec" @click="addDescription(item)">
         Add Description
       </span>
@@ -250,8 +261,17 @@ export default {
   clear: both;
   width: 100%;
   display: inline-block;
+  margin-bottom: 10px;
+  height: 30px;
 }
 .modalbackground {
   padding: 10px;
+}
+.modalNoImage {
+  background-image: url('/imgs/modals/modal_BG.jpg');
+}
+.marginLeftSpan {
+  margin-left: 10px;
+  cursor: pointer;
 }
 </style>
