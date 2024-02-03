@@ -66,10 +66,15 @@ export default {
       //   (item) => item.episode === 'chapter' + chapterMinus + 'saved'
       // )
       //conver integer to string
-
-      var chapterKey = 'ch' + chapterMinus + '_complete'
-      var chapterKey2 = 'ch' + curChapter + '_complete'
-      var chapterKeyOld = 'ch' + chapterMinus + 'saved'
+      if (this.chapter === 'introduction') {
+        var chapterKey = 'intro_complete'
+        var chapterKey2 = 'intro_complete'
+        var chapterKeyOld = '00_save'
+      } else {
+        var chapterKey = 'ch' + chapterMinus + '_complete'
+        var chapterKey2 = 'ch' + curChapter + '_complete'
+        var chapterKeyOld = 'ch' + chapterMinus + 'saved'
+      }
 
       var savedGame = []
       var x = 0
@@ -81,6 +86,7 @@ export default {
             !game[chapterKey2])
         ) {
           savedGame.push(_.cloneDeep(game))
+          savedGame[x].index_desc = index
           savedGame[x].index = index
           x++
         }

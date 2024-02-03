@@ -76,7 +76,7 @@ export default {
       //get person data from store
       let personData = JSON.parse(JSON.stringify(this.$store.state.person))
       personData = personData.saved_games
-      console.log('personData', personData)
+      // console.log('personData', personData)
       let filteredData = personData.filter((item) =>
         item.episode.includes('chapter' + this.chapter)
       )

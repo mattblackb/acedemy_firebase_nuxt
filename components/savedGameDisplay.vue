@@ -11,25 +11,68 @@
     <!-- <v-row>
     <v-col> -->
 
+    <v-dialog v-model="dialogDescription" width="500">
+      <v-card class="pa5 modalbackground modalNoImage">
+        <v-btn color="primary" text @click="dialogDescription = false">
+          X
+        </v-btn>
+        <h3>Add Description</h3>
+        <v-row>
+          <v-col cols="8">
+            <v-textarea
+              v-model="description"
+              label="Description"
+              hint="Add a description to this save"
+              persistent-hint
+              counter="70"
+              rows="2"
+              max-height="200"
+            >
+            </v-textarea>
+          </v-col>
+        </v-row>
+
+        <v-btn color="primary" depressed @click="dialogDescription = false">
+          Cancel
+        </v-btn>
+        <v-btn color="warning" depressed @click="commitDescription()">
+          Save
+        </v-btn>
+      </v-card>
+    </v-dialog>
+
     <span
       class="clickable savedGamelink"
       @click="setIntroductionRedirect(item, '/chapter' + chapter + 'saved')"
-      >{{ item.date }} | <b>{{ setTextfromtype() }}</b>
-    </span>
-    <span class="clickable delete" @click="deleteSave(item)"> Delete </span>
+      >{{ item.date }} | <b>{{ setTextfromtype() }}</b></span
+    >
 
-    <!-- </v-col>
-    <v-col>
-      <v-tooltip right v-if="item.description">
-        <template v-slot:activator="{ on, attrs }">
-          <v-icon color="white" dark v-bind="attrs" v-on="on">
-            mdi-text-box
-          </v-icon>
-        </template>
-        <span>{{ item.description }} </span>
-      </v-tooltip>
-    </v-col>
-  </v-row> -->
+    <v-tooltip right v-if="item.description">
+      <template v-slot:activator="{ on, attrs }">
+        <v-icon
+          color="white"
+          class="marginLeftSpan"
+          dark
+          v-bind="attrs"
+          v-on="on"
+          @click="addDescription(item)"
+        >
+          mdi-text-box
+        </v-icon>
+      </template>
+      <span class="clickable">
+        {{ item.description }}
+      </span>
+    </v-tooltip>
+
+    <span class="clear">
+      <span class="clickable delete" @click="deleteSave(item)">
+        Delete Save</span
+      >
+      <span class="clickable addDec" @click="addDescription(item)">
+        Add Description
+      </span>
+    </span>
   </div>
 </template>
 
@@ -37,6 +80,9 @@
 export default {
   data() {
     return {
+      dialogDescription: false,
+      description: '',
+      descriptionIndex: 0,
       dialog: false,
       deleteObject: {},
       chapter1: [
@@ -65,19 +111,42 @@ export default {
       this.$store.commit('SET_PEOPLE', this.deleteObject)
       this.dialog = false
     },
+    addDescription(orderData) {
+      console.log('orderData', orderData)
+      if (this.item.description) {
+        this.description = this.item.description
+      }
+      this.dialogDescription = true
+      this.descriptionIndex = orderData.index_desc
+    },
+    commitDescription() {
+      var orderAllData = _.cloneDeep(this.$store.state.person)
+
+      orderAllData.saved_games[
+        this.descriptionIndex
+      ].description = this.description
+      this.deleteObject = orderAllData
+      this.$store.commit('setuser/updatePerson', this.deleteObject)
+      this.$store.commit('SET_PEOPLE', this.deleteObject)
+      this.dialogDescription = false
+    },
     deleteSave(introductionObject) {
       var orderAllData = _.cloneDeep(this.$store.state.person)
-      console.log('orderAllData', orderAllData.saved_games)
       this.dialog = true
       //remove from aray at index
-
       orderAllData.saved_games.splice(parseInt(introductionObject.index), 1)
       this.deleteObject = orderAllData
-      console.log('DeleteObject', this.deleteObject.saved_games)
     },
     //function to turn number to string
-    numberToString(num) {
+    numberToString(num, step) {
       //make sure num is an Integer
+      if (isNaN(num)) {
+        if (step == 1) {
+          return 'Intro'
+        } else {
+          return 'One'
+        }
+      }
       num = parseInt(num)
       switch (num) {
         case 0:
@@ -123,17 +192,17 @@ export default {
       if (this.type == 'start') {
         var returnVar =
           'View Chapter ' +
-          this.numberToString(this.chapter) +
+          this.numberToString(this.chapter, 1) +
           ' achievements  | Start Chapter ' +
-          this.numberToString(this.chapter + 1)
+          this.numberToString(this.chapter + 1, 2)
         return returnVar + ' from this save'
       }
       if (this.type == 'end') {
         var returnVar =
           'View Chapter ' +
-          this.numberToString(this.chapter) +
+          this.numberToString(this.chapter, 1) +
           ' achievements  | Start Chapter ' +
-          this.numberToString(this.chapter + 1)
+          this.numberToString(this.chapter + 1, 2)
         return returnVar + ' from this save'
       }
       if (this.type == 'partial') {
@@ -142,6 +211,9 @@ export default {
       return ' Play next Chapter'
     },
     async setIntroductionRedirect(introductionObject, page) {
+      if (page == '/chapterNaNsaved') {
+        page = '/chapter1saved'
+      }
       this.showloading = true
       this.introchosen = introductionObject
       this.showIntroduction = true
@@ -173,9 +245,33 @@ export default {
 }
 .delete {
   float: right;
-  background-color: red;
+  background-color: rgba(229, 23, 23, 0.4);
   color: white;
   margin-top: 1px;
   padding: 1px 5px;
+}
+.addDec {
+  float: right;
+  background-color: rgba(68, 229, 23, 0.4);
+  color: white;
+  margin-top: 1px;
+  padding: 1px 5px;
+}
+.clear {
+  clear: both;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+  height: 30px;
+}
+.modalbackground {
+  padding: 10px;
+}
+.modalNoImage {
+  background-image: url('/imgs/modals/modal_BG.jpg');
+}
+.marginLeftSpan {
+  margin-left: 10px;
+  cursor: pointer;
 }
 </style>

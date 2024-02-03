@@ -8,6 +8,13 @@
           <h2 v-if="userDetails">
             Available Credits: {{ userDetails.credits }}
           </h2>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6">
+          <MainCarousel />
+        </v-col>
+        <v-col cols="6">
           <ChangeName />
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
           <h2>Your saved games are shown on the chapter details pages</h2>
