@@ -18,7 +18,7 @@ A new <b>Introductory Episode</b> available April 2022 : 180 pages : 478 images<
 <br/>
 <b>Chapters One and Two </b> were originally released in April 2016 as 'Academy: Part One' : 1230 pages : 997 images<br/>
 This part of the story takes place during Monday morning and afternoon.<br/>
-The remastered and expanded versions released May 2022: 1600 pages : 1732 images<br/>
+The remastered and expanded versions released May 2022 : 1600 pages : 1732 images<br/>
 <br/>
 <b>Chapters Three and Four</b> were originally released in July 2016 as 'Academy: Part Two' : 1851 pages : 1500 images<br/>
 This part of the story takes place during Tuesday morning, afternoon and early evening.<br/>
@@ -51,20 +51,25 @@ The new version splits the original episode and adds additional alternative scen
 The remastered and expanded version released September - November 2023 : 3540 pages : 5050 images<br/>
 <br/>
 <b>Chapter Thirteen</b> was originally released in October 2019 as 'A Date with Bridgette : Part Four' : 1762 pages : 4531 images<br/>
-This part of the story will take place late on Thursday night/Friday morning.<br/>
+This part of the story takes place late on Thursday night/Friday morning.<br/>
 The new version adds additional material, new and extended scenes.<br />
 The remastered and expanded version released December 2023 - January 2024 : 1900 pages : 4800 images<br/>
 <br/>
-<b>Chapter Fourteen</b> Completed mid 2021 - yet to be released<br/>
-This part of the story will take place during Friday morning.<br/>
-This brand new chapter is complete subject to testing :<br/>
-Release date TBC<br/>
+<b>Chapter Fourteen</b> The all new and much anticipated continuation of the Academy series<br/>
+This part of the story takes place during Friday morning.<br/>
+This brand new chapter released February 2024 : 2000+ pages : 2000+ images<br/>
 <br/>
-<b>Chapter Fifteen</b> In early stages of production :<br/>
+<b>Chapter Fifteen</b> In advanced stages of production :<br/>
 This part of the story will take place during Friday afternoon.<br/>
 Release date TBC<br/>
 <br/>
 <b>Chapter Sixteen</b> In early stages of production : <br/>
+Release date TBC<br/>
+<br/>
+<b>Chapter Seventeen</b> In early concept stages : <br/>
+Release date TBC<br/>
+<br/>
+<b>Chapter Eighteen</b> In early concept stages : <br/>
 Release date TBC<br/>
 <br/><br/>
 </p>

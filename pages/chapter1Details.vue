@@ -36,10 +36,8 @@
               >Skip intro and start playing the game</NuxtLink
             >
           </h2>
-
-          <h2 class="clickable">
-            <NuxtLink to="/profile">View your Saved Games</NuxtLink>
-          </h2>
+		  <hr>
+          <h2>Your Saved Games</h2>
 
           <div v-if="showSaved">
             <div
