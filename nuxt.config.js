@@ -1,35 +1,34 @@
 import colors from 'vuetify/es5/util/colors'
-
+require('dotenv').config()
+console.log(process.env)
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+  env: {
+    BETA_SITE: process.env.BETA_SITE,
+  },
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-
     titleTemplate: '%s',
     title: 'dsp3000 games',
 
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
   devtools: true,
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,7 +39,7 @@ export default {
     '@nuxtjs/vuetify',
   ],
   router: {
-    middleware: ['auth']
+    middleware: ['auth'],
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -49,7 +48,6 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
-
   ],
   firebase: {
     lazy: false,
@@ -60,7 +58,7 @@ export default {
       storageBucket: process.env.STORAGE_BUCKET,
       messagingSenderId: process.env.MESSAGE_SENDER_ID,
       appId: process.env.APP_ID,
-      measurementId: process.env.MEASUREMENT_ID
+      measurementId: process.env.MEASUREMENT_ID,
     },
     onFirebaseHosting: false,
     terminateDatabasesAfterGenerate: true,
@@ -68,7 +66,7 @@ export default {
       auth: {
         initialize: {
           onAuthStateChangedAction: 'onAuthStateChangedAction',
-          subscribeManually: false
+          subscribeManually: false,
         },
         ssr: true,
         // emulatorPort: isDev && useEmulators ? 9099 : undefined,
@@ -79,17 +77,17 @@ export default {
         enablePersistence: true,
         // emulatorPort: isDev && useEmulators ? 8080 : undefined,
       },
-    }
+    },
   },
- 
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
-    }
+      lang: 'en',
+    },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -105,13 +103,12 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+          success: colors.green.accent3,
+        },
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {},
 }

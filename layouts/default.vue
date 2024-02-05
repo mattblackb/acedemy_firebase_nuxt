@@ -2,23 +2,29 @@
   <v-app light>
     <v-main>
       <!-- if the current route is signin or signout, then do not display the main page -->
-
-      {{ isBetaUser() }}
-      <div v-if="isSigninOrSignoutRoute()">
-        <nuxt />
-      </div>
-      <div v-else-if="checkEmailForBetaLinks()">
-        <nuxt />
+      <div v-if="isBetaSite()">
+        <h2>Academy Beta</h2>
+        <div v-if="isSigninOrSignoutRoute()">
+          <nuxt />
+        </div>
+        <div v-else-if="checkEmailForBetaLinks()">
+          <nuxt />
+        </div>
+        <div v-else>
+          <v-container>
+            <v-row>
+              <h2>This site is for beta testers only..</h2>
+              <nuxt-link to="/auth/signin">Sign in</nuxt-link>
+              <nuxt-link to="/auth/signout">Sign out</nuxt-link>
+            </v-row>
+          </v-container>
+        </div>
       </div>
       <div v-else>
-        <v-container>
-          <v-row>
-            <h2>This site is for beta testers only..</h2>
-            <nuxt-link to="/auth/signin">Sign in</nuxt-link>
-            <nuxt-link to="/auth/signout">Sign out</nuxt-link>
-          </v-row>
-        </v-container>
+        <!-- Curremt site is not a beta site, assume Main site -->
+        <nuxt />
       </div>
+
       <p class="pa-5">
         Become a supporter at :
         <a href="https://www.patreon.com/dsp3000" target="_blank"
@@ -37,8 +43,16 @@ export default {
     }
   },
   methods: {
-    isBetaUser() {
-      return process.env.BETA_SITE !== undefined
+    isBetaSite() {
+      // console.log("ENV", process.env.BETA_SITE);
+      if (process.env.BETA_SITE !== undefined) {
+        if (process.env.BETA_SITE === 'True') {
+          return true
+        }
+      } else {
+        return false
+      }
+      // return process.env.BETA_SITE !== undefined;
     },
     checkEmailForBetaLinks() {
       if (!this.userDetails) return false
