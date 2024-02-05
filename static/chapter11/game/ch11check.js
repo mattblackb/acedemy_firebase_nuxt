@@ -1,4 +1,4 @@
-// displays chapter ten complete outcome
+// displays chapter complete outcome
 
 function outcome()
 
