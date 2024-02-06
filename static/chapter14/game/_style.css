@@ -37,6 +37,18 @@ body
 	font-size: large;
 	font-style: italic;
 	text-decoration: none;
+}
+.pregame {
+	color: #CCCCCC;
+	font-weight: bold;
+	font-size: small;
+	
+}
+.pregame a:hover {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: small;
+	text-decoration: none;
 	
 }
 .bridgette {
