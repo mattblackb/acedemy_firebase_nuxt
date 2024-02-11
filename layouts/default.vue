@@ -70,6 +70,7 @@ export default {
 		this.userDetails.email === 'gilmour.liamd@gmail.com' ||
 		this.userDetails.email === 'ptrckl82@gmail.com' ||
 		this.userDetails.email === 'jodark1002@gmail.com' ||
+		this.userDetails.email === 'sehjr413@yahoo.com' ||
 		this.userDetails.email === 'jimacep@gmail.com'
       ) {
         return true
