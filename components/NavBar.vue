@@ -151,7 +151,7 @@ export default {
       { name: 'Chapter 11', url: '/chapter11Details' },
       { name: 'Chapter 12', url: '/chapter12Details' },
       { name: 'Chapter 13', url: '/chapter13Details' },
-	  { name: 'Chapter 14', url: '/chapter14Details' },
+      { name: 'Chapter 14', url: '/chapter14Details' },
     ],
   }),
   methods: {
@@ -160,7 +160,6 @@ export default {
       this.$router.push({ path: this.chosenRoute })
     },
     checkEmailForBetaLinks() {
-      console.log(this.currentUser.email)
       if (
         this.currentUser.email === 'matt@plain.black' ||
         this.currentUser.email === 'dsp3000@gmx.com' ||
