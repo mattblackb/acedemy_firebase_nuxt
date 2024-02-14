@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../chapter13/game/brdsex155_shortcut.html"
+              src="../chapter14/game/lairmag1_shortcut.html"
               width="100%"
               height="100px"
               style="border: 1px solid #eee; background: white"
@@ -75,7 +75,7 @@ export default {
       currentmodule: '',
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_ch13bonus1.jpg',
+      backgroundImage: '/imgs/modals/modal_ch14bonus1.jpg',
       bonusRedirectUrl: '',
     }
   },
