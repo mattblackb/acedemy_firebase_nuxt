@@ -23,16 +23,28 @@ function check()
 
 {
 
-    var val = readVar("jodie_score");
+var val = readVar("jodie_score");
 	
-	if (val > 4)
+	if ((val > -6)&&(val < 0))
 
-        window.location = "morning51.html";
+        window.location = "morning51.html"; 
 
     else 
 
-        window.location = "morning55.html";
-		 
+    if ((val > -1)&&(val < 2))
+
+        window.location = "morning52.html"; 
+
+    else 
+
+
+    if ((val > 1)&&(val < 6))
+
+        window.location = "morning53.html"; 
+
+    else 
+
+	    window.location = "morning51.html";  
 
 }
 
@@ -47,4 +59,3 @@ check();
 </body>
 
 </html>
-
