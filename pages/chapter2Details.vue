@@ -39,6 +39,7 @@
             <b>NOTE:</b> You must successfully complete Chapter One before you
             can play Chapter Two!
           </p>
+		  
 		  <hr>
           <h2>Continue the story from a saved game</h2>
 

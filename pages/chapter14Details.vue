@@ -23,7 +23,8 @@
             The story continues on Friday...
           </p>
 
-          
+          <hr>
+          <h2>Continue the story from a saved game</h2>
 
           <SavedGames chapter="14" />
         </v-col>
