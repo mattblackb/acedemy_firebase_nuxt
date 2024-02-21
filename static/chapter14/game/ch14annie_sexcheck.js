@@ -4,7 +4,7 @@ function outcome()
 
 {
 
-  var val = readVar("ch14annie_sex");
+  var val = readVar("ch14_annie_sex");
 
 if (val > 0)
 	

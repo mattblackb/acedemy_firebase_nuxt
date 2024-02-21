@@ -6,7 +6,7 @@
     <!-- These should be the list of previous chapters so for cghapter 3 this should be chapter 2 -->
     <!-- <PartialSavedGames :chapter="chapter" /> -->
     <!-- These should be the end saves - so for chapter 3 this should ber chapter 3 saves -->
-    <EndSavedGame :chapter="chapter" />
+    <EndSavedGame :chapter="chapter" v-if="chapter != 'introduction'" />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
   },
   props: {
     chapter: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

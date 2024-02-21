@@ -75,7 +75,7 @@ export default {
       currentmodule: '',
       route: '',
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_ch13bonus2.jpg',
       bonusRedirectUrl: '',
     }
   },

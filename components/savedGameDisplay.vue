@@ -211,8 +211,9 @@ export default {
       return ' Play next Chapter'
     },
     async setIntroductionRedirect(introductionObject, page) {
+      console.log('introductionObject', introductionObject, 'page', page)
       if (page == '/chapterNaNsaved') {
-        page = '/chapter1saved'
+        page = '/introductionsaved'
       }
       this.showloading = true
       this.introchosen = introductionObject

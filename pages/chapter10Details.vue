@@ -43,11 +43,8 @@
             can play Chapter Ten!
           </p>
 
-          <h2 class="clickable">
-            <NuxtLink to="/profile"
-              >Continue the story from a saved game</NuxtLink
-            >
-          </h2>
+          <hr>
+          <h2>Continue the story from a saved game</h2>
 
           <SavedGames chapter="10" />
         </v-col>

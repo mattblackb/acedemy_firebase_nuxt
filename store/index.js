@@ -15,7 +15,6 @@ const actions = {
         email,
       })
       var returnedDocs = []
-      console.log('email', email)
       await this.$fire.firestore
         .collection('People')
         .where('email', '==', email)
