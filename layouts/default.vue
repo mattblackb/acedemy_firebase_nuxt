@@ -61,17 +61,9 @@ export default {
         this.userDetails.email === 'dsp3000@gmx.com' ||
         this.userDetails.email === 'kzies22@gmail.com' ||
 		this.userDetails.email === 'benjamin.m.charlton@gmail.com' ||
-		this.userDetails.email === 'harald.strasser87@gmail.com' ||
 		this.userDetails.email === 'taicartwright@yahoo.com' ||
 		this.userDetails.email === 'dreamszn23@gmail.com' ||
-		this.userDetails.email === 'clonetrooperkev@yahoo.com' ||
 		this.userDetails.email === 'sparkplug30549@yahoo.com' ||
-		this.userDetails.email === 'randyacehigh@gmail.com' ||
-		this.userDetails.email === 'gilmour.liamd@gmail.com' ||
-		this.userDetails.email === 'ptrckl82@gmail.com' ||
-		this.userDetails.email === 'jodark1002@gmail.com' ||
-		this.userDetails.email === 'sehjr413@yahoo.com' ||
-		this.userDetails.email === 'gotacoolemail3@yahoo.com' ||
 		this.userDetails.email === 'jimacep@gmail.com'
       ) {
         return true
