@@ -35,9 +35,9 @@ export default {
     }
   },
   watch: {
-    $route(to, from) {
-      this.currentBuy = to.params.id
-      console.log('Route changed', this.currentBuy)
+    //check that this.currentbuy has changed
+    currentmodule: function (newVal, oldVal) {
+      // console.log('Current Buy', newVal, oldVal)
       this.checkAvailable()
     },
   },
