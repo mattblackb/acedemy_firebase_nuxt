@@ -1,5 +1,5 @@
 //MB Added post message
-//Functions initial for Chapter Thirteen - passed into Chapter Fourteen
+//Functions initial for Chapter Fourteen - passed into Chapter Fifteen
 //MB added
 var getCookies = function (url) {
   // let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -39,9 +39,9 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
-  'ch13_bridgette_positive',
-  'ch13_didi_positive',
-  'ch13_dandb_negative',
+  'ch14_',
+  'ch14_',
+  'ch14_',
 ]
 
 const setCookiesOnEntry = async function () {
@@ -62,8 +62,8 @@ const setCookiesOnEntry = async function () {
       var date = new Date()
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch13
-      if (cookie.includes('ch13') || cookiesToKeep.includes(cookie)) {
+      //check that cookie contains ch14
+      if (cookie.includes('ch14') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }
     })
