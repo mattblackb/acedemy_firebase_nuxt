@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../academy_intro/game/start1.html"
+              src="../chapter14/game/start14.html"
               width="100%"
               height="auto"
               style="border: 1px solid #eee; background: white"
@@ -16,6 +16,7 @@
               class="video"
               id="iframeContent"
             ></iframe>
+            <!-- <h2>Currently Unavailable</h2> -->
           </div>
 
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
@@ -35,9 +36,14 @@
               </v-btn>
             </v-card>
           </v-dialog>
-          <!-- End of generci modal -->
+          <!-- End of generic modal -->
+
           <v-dialog v-model="dialog" width="500">
-            <v-card>
+            <v-card
+              class="pa5 modalbackground"
+              :style="{ backgroundImage: `url(${backgroundImage})` }"
+            >
+              <v-btn color="primary" text @click="dialog = false"> X </v-btn>
               <DisplayCredits
                 :currentCreditsneeded="currentCreditsneeded"
                 :currentmodule="currentmodule"
@@ -45,7 +51,10 @@
             </v-card>
           </v-dialog>
           <v-dialog v-model="dialogSave" width="500">
-            <v-card>
+            <v-card class="pa5 modalbackground">
+              <v-btn color="primary" text @click="dialogSave = false">
+                X
+              </v-btn>
               <h1>Save Game</h1>
               <SaveGame :cookieJson="cookieJson" :route="route" />
             </v-card>
@@ -66,7 +75,6 @@ export default {
       cookieJson: '',
       currentCreditsneeded: [],
       currentmodule: '',
-      form_dirty: true,
       route: '',
       genericModalAction: '',
       backgroundImage: '/imgs/modals/modal_BG.jpg',
@@ -103,24 +111,9 @@ export default {
     AddCredits() {
       this.dialog = true
     },
-     getPlayerName() {
-      if (this.$store.state.person) {
-        return this.$store.state.person.name
-      }
-    },
-    Getname() {
-      if (this.$store.state.person) {
-        return this.$store.state.person
-      }
-    },
     returnAchievements() {
       console.log(this.$store.state.setCurrentGame.chosenAcheivements)
-      if (this.$store.state.setCurrentGame.chosenAcheivements) {
-        return this.$store.state.setCurrentGame.chosenAcheivements
-      } else {
-        console.log(null)
-        return null
-      }
+      return this.$store.state.setCurrentGame.chosenAcheivements
     },
     greet(event) {
       // `event` is the native DOM event
@@ -129,12 +122,27 @@ export default {
         const myArray = event.split('|')
         this.currentCreditsneeded = parseInt(myArray[1])
         this.currentmodule = myArray[0]
+
+        if (myArray[2]) {
+          this.backgroundImage = myArray[2]
+        }
       }
     },
 
+    getPlayerName() {
+      if (this.$store.state.person) {
+        return this.$store.state.person.name
+      }
+    },
+
+    Getname() {
+      if (this.$store.state.person) {
+        return this.$store.state.person
+      }
+    },
     checkAvailable(id) {
       //check that the user is logged in (likely)
-      if (!this.$store.state.user) {
+      if (!this.$store.state.user.uid) {
         return false
       } else {
         //Logged in check for available
@@ -150,42 +158,35 @@ export default {
         }
       }
     },
-    saveProgress(event, route) {
+    async saveProgress(event, route) {
       //check that the user is logged in (likely)
+
       if (!this.$store.state.user.uid) {
         return false
       } else {
         if (event) {
+          await this.$store.commit('setCurrentGame/addAchievements', event)
           this.cookieJson = event
           this.dialogSave = true
           this.route = route
         }
-      }
-    },
-    beforeWindowUnload(e) {
-      if (this.form_dirty) {
-        e.preventDefault()
-        e.returnValue = ''
-      }
-    },
-  },
-  beforeRouteLeave(to, from, next) {
-    if (this.form_dirty) {
-      next(false)
-      window.location = to.path // this is the trick
-    } else {
-      next()
-    }
-  },
+        // //Logged in check for available
+        // if(this.$store.state.person.available_modules.length > 0){
+        //     if(this.$store.state.person.available_modules.includes(id)) {
+        //         //user has already bought the module change the button on the iframe src
+        //         return true
+        //     } else {
+        //         return false
+        //     }
 
-  beforeDestroy() {
-    window.removeEventListener('beforeunload', this.beforeWindowUnload)
+        // } else {
+        //     return false
+        // }
+      }
+    },
   },
   mounted() {
     window.c_1 = this
-  },
-  created() {
-    window.addEventListener('beforeunload', this.beforeWindowUnload)
   },
 }
 </script>
@@ -205,7 +206,6 @@ export default {
   height: 1000px;
 }
 </style>
-
 <style>
 .genericModal {
   height: 250px;

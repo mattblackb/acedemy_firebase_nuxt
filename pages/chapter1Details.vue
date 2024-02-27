@@ -32,8 +32,7 @@
           </p>
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
           <h2 class="clickable">
-            <NuxtLink to="/introductionsaved"
-              >Skip intro and start playing the game</NuxtLink
+            <NuxtLink to="/chapter1">Skip intro and start playing the game</NuxtLink
             >
           </h2>
 		  
