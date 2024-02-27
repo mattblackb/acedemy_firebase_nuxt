@@ -31,13 +31,13 @@
             scene : 25 achievements : 5 bonus achievements
           </p>
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-          <h2 class="clickable">
-            <NuxtLink to="/chapter1">Skip intro and start playing the game</NuxtLink
-            >
-          </h2>
+		  <hr>
+          <h3 class="clickable">
+            <NuxtLink to="/chapter1">Skip intro and start playing the game</NuxtLink>
+          </h3>
 		  
 		  <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <div v-if="showSaved">
             <div

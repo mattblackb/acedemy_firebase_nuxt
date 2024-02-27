@@ -57,7 +57,7 @@ The remastered and expanded version released December 2023 - January 2024 : 1900
 <br/>
 <b>Chapter Fourteen</b> The all new and much anticipated continuation of the Academy series<br/>
 This part of the story takes place during Friday morning.<br/>
-This brand new chapter released February 2024 : 2000+ pages : 2000+ images<br/>
+This brand new chapter released February 2024 : 2200 pages : 2500 images<br/>
 <br/>
 <b>Chapter Fifteen</b> In advanced stages of production :<br/>
 This part of the story will take place during Friday afternoon.<br/>

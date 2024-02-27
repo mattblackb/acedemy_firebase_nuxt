@@ -41,7 +41,7 @@
           </p>
 		  
 		  <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="2" />
         </v-col>

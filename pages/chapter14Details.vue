@@ -38,10 +38,11 @@
           </p>
 
           <hr>
-		  <h2 class="clickable">
+		  <h3 class="clickable">
             <NuxtLink to="/chapter14">Skip the previous chapters and play Chapter Fourteen</NuxtLink>
-          </h2>
-          <h2>Continue the story from a saved game</h2>
+          </h3>
+		  <hr>
+          <h4>Continue the story from a saved game</h4>
 
           <SavedGames chapter="14" />
         </v-col>
