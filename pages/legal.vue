@@ -25,8 +25,9 @@ This Privacy Statement describes the privacy practices of dsp3000.games, a websi
 <h3>Information We Collect:</h3>
 We collect the following information from our users:
 <br/>
-    Personal Data: This may include your name, email address, IP address, and any other information you voluntarily provide to us, such as through registration forms, contact forms, or game profiles.
+    Personal Data: This may include your name, email address, IP address, and any other information you voluntarily provide to us, such as through registration forms, contact forms, or game profiles.<br/>
     Usage Data: We may automatically collect information about how you use our website, such as the pages you visit, the links you click on, and the time you spend on each page.
+	<br/>
     Device Data: We may collect information about your device, such as your operating system, browser type, and device identifier.
 <br/><br/>
 <h3>How We Use Your Information:</h3>
@@ -42,8 +43,10 @@ We use the information we collect to:
 We process your personal data on the following legal bases:
 <br/>
     Consent: You may give us your consent to process your personal data for specific purposes, such as sending you marketing communications. You can withdraw your consent at any time.
+	<br/>
     Contract: We may process your personal data to fulfil our contractual obligations to you, such as providing you with access to our website and services.
-    Legitimate Interests: We may process your personal data for our legitimate interests, such as improving our website and services, preventing fraud, and complying with legal requirements.
+	<br/>
+	Legitimate Interests: We may process your personal data for our legitimate interests, such as improving our website and services, preventing fraud, and complying with legal requirements.
 <br/><br/>
 <h3>Disclosure of Your Information:</h3>
 We may share your personal data with third-party service providers who help us operate our website and services, such as web hosting providers, analytics providers, and marketing providers. We will only share your personal data with these third-party service providers on condition that they agree to keep your information confidential and secure.
@@ -60,11 +63,11 @@ We will retain your personal data for as long as it is necessary to fulfil the p
 <h3>Your Rights:</h3>
 You have the following rights under data protection laws:
 <br/>
-    The right to access your personal data.
-    The right to rectify inaccurate personal data.
-    The right to erase your personal data.
-    The right to restrict the processing of your personal data.
-    The right to object to the processing of your personal data.
+    The right to access your personal data.<br/>
+    The right to rectify inaccurate personal data.<br/>
+    The right to erase your personal data.<br/>
+    The right to restrict the processing of your personal data.<br/>
+    The right to object to the processing of your personal data.<br/>
     The right to data portability.
 <br/>
 You can exercise these rights by contacting us using the contact details provided below.
