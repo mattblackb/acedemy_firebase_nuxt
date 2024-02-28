@@ -38,7 +38,7 @@
             chapter.
             <br /><br />
             <b>Chapter Five</b> statistics : 1500 pages : 1700 images : 2 bonus
-            scenes : 25 achievements : 30 bonus achievements
+            scenes : 25 achievements : 30 bonus achievements : 75% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Four before you
             can play Chapter Five!

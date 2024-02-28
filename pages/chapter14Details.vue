@@ -33,7 +33,7 @@
 			It's not all hard work though, helping people does come with some more immediate rewards and revelations...
 			<br /><br />
             <b>Chapter Fourteen</b> statistics : 2200 pages :  2500 images<br>
-			: 6 bonus scenes : 40 achievements : 15 bonus achievements : 10 other achievements
+			: 6 bonus scenes : 40 achievements : 15 bonus achievements : 10 other achievements : 87% free to play content
             <br /><br />
             <b>NOTE:</b> You can play Chapter Fourteen without playing any of the previous chapters!
           </p>

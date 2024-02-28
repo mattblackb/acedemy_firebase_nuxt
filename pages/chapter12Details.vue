@@ -36,7 +36,7 @@
             <br /><br />
             <b>Chapter Twelve</b> statistics : 3540 pages : 5050 images : 5
             bonus scenes : 30 date achievements : 35 strip club achievements :
-            10 other achievements : 95 bonus achievements
+            10 other achievements : 95 bonus achievements : 71% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Eleven before
             you can play Chapter Twelve!

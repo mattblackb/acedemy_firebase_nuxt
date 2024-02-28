@@ -39,7 +39,7 @@
             <br /><br />
             <b>Chapter Nine</b> statistics : 2370 pages : 3640 images : 1 bonus
             scene : 25 date achievements : 20 solo achievements : 5 bonus
-            achievements : 60 additional achievements
+            achievements : 60 additional achievements : 95% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Eight before you
             can play Chapter Nine!

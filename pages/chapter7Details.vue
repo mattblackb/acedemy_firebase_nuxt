@@ -38,7 +38,7 @@
             can really begin to bear fruit.
             <br /><br />
             <b>Chapter Seven</b> statistics : 1450 pages : 2490 images : 1 bonus
-            scene : 50 achievements : 20 bonus achievements
+            scene : 50 achievements : 20 bonus achievements : 86% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Six before you
             can play Chapter Seven!

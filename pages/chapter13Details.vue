@@ -35,7 +35,7 @@
 			<br /><br />
             <b>Chapter Thirteen</b> statistics : 1900 pages :  4800 images<br>
 			: 2 bonus scene extensions : 45 Bridgette achievements : 37 other achievements<br>
-            : 25 Didi achievements : 30 Threesome achievements
+            : 25 Didi achievements : 30 Threesome achievements : 60% free to play content
             <br /><br />
             <b>NOTE:</b> You must successfully complete Chapter Twelve with Bridgette before
             you can play Chapter Thirteen!

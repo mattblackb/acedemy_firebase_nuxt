@@ -38,7 +38,7 @@
             <br /><br />
             <b>Chapter Ten</b> statistics : 2610 pages : 3340 images : 2 bonus
             scenes : 25 date achievements : 20 solo achievements : 45 bonus
-            achievements
+            achievements : 81% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Nine before you
             can play Chapter Ten!

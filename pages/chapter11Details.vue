@@ -36,7 +36,7 @@
             <br /><br />
             <b>Chapter Eleven</b> statistics : 2340 pages : 3645 images : 2
             bonus scenes : 15 date achievements : 35 nightclub achievements : 20
-            other achievements : 30 bonus achievements
+            other achievements : 30 bonus achievements : 86% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Ten before you
             can play Chapter Eleven!

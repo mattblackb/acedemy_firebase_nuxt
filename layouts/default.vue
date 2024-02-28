@@ -29,7 +29,7 @@
         Become a supporter at :
         <a href="https://www.patreon.com/dsp3000" target="_blank"
           >https://www.patreon.com/dsp3000</a
-        >
+        > : <nuxt-link to="../legal">Legal statements</nuxt-link>
       </p>
     </v-main>
   </v-app>

@@ -42,7 +42,7 @@
             chapter.
             <br /><br />
             <b>Chapter Four</b> statistics : 1780 pages : 3050 images : 4 bonus
-            scene : 40 achievements : 50 bonus achievements
+            scene : 40 achievements : 50 bonus achievements : 67% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Three before you
             can play Chapter Four!

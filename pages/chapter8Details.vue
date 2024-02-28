@@ -38,7 +38,7 @@
             Ramsey, you can figure out who else and how else you can help.
             <br /><br />
             <b>Chapter Eight</b> statistics : 2090 pages : 3390 images : 4 bonus
-            scenes : 35 achievements : 45 bonus achievements
+            scenes : 35 achievements : 45 bonus achievements : 61% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Seven before you
             can play Chapter Eight!

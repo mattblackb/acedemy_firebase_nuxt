@@ -34,7 +34,7 @@
             Stay lucky!
             <br /><br />
             <b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus
-            scenes : 50 achievements : 10 bonus achievements
+            scenes : 50 achievements : 10 bonus achievements : 85% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter One before you
             can play Chapter Two!

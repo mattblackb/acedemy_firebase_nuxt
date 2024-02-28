@@ -46,7 +46,7 @@
             make and the one's you have already made!
             <br /><br />
             <b>Chapter Six</b> statistics : 1880 pages : 2570 images : 2 bonus
-            scenes : 35 achievements : 35 bonus achievements
+            scenes : 35 achievements : 35 bonus achievements : 81% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Five before you
             can play Chapter Six!
