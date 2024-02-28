@@ -19,8 +19,8 @@
           an opportunity to test your skills and have some fun with her before
           you both have to leave for work.
           <br /><br />
-          You must play through this episode before you can move on to the next
-          one.
+          You can play through this episode before you move on to the next
+          one, or skip it and start with Chapter One.
           <br /><br />
           <b>Introduction statistics</b> : 180 pages : 478 images : 1 bonus
           scene <br /><br />
