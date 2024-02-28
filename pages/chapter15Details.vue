@@ -20,7 +20,8 @@
           </h4>
           <br />
 		  <p>
-            <h2>COMING SOON</h2>
+            <h2>NEW CHAPTER COMING SOON</h2>
+			The story continues on Friday at the Goodhead Academy
           </p>
 
           <hr>
