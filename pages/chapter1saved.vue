@@ -9,13 +9,14 @@
             <iframe
               src="../chapter1/game/checksave1.html"
               width="100%"
-              height="100px"
+              height="auto"
               style="border: 1px solid #eee; background: white"
               frameborder="0"
               scrolling="yes"
               class="video"
               id="iframeContent"
             ></iframe>
+            <!-- <h2>Currently Unavailable</h2> -->
           </div>
 
           <!-- Modal for All other actions-->
@@ -48,7 +49,7 @@
             </v-card>
           </v-dialog>
           <v-dialog v-model="dialogSave" width="500">
-            <v-card>
+            <v-card class="pa5 modalbackground">
               <v-btn color="primary" text @click="dialogSave = false">
                 X
               </v-btn>
@@ -63,13 +64,12 @@
 </template>
 
 <script>
-import { mapActions, mapMutations, mapGetters } from 'vuex'
+import { mapActions, mapMutations } from 'vuex'
 export default {
   data() {
     return {
       dialog: false,
       dialogSave: false,
-      dialogInteraction: false,
       cookieJson: '',
       currentCreditsneeded: [],
       currentmodule: '',
@@ -77,18 +77,15 @@ export default {
       genericModalAction: '',
       backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
+      dialogInteraction: false,
     }
   },
   computed: {
     ...mapActions(['updatePerson']),
-    ...mapGetters('setCurrentGame', ['getAchievements']),
     userDetails() {
       if (this.$store.state.person) {
         return this.$store.state.person
       }
-    },
-    Achievements() {
-      return this.$store.state.chosenAcheivements
     },
   },
   methods: {
@@ -129,6 +126,11 @@ export default {
         }
       }
     },
+    getPlayerName() {
+      if (this.$store.state.person) {
+        return this.$store.state.person.name
+      }
+    },
     Getname() {
       if (this.$store.state.person) {
         return this.$store.state.person
@@ -159,8 +161,8 @@ export default {
         return false
       } else {
         if (event) {
-          this.cookieJson = event
           await this.$store.commit('setCurrentGame/addAchievements', event)
+          this.cookieJson = event
           this.dialogSave = true
           route = route
         }
@@ -178,26 +180,7 @@ export default {
         // }
       }
     },
-    beforeWindowUnload(e) {
-      if (this.form_dirty) {
-        e.preventDefault()
-        e.returnValue = ''
-      }
-    },
   },
-  beforeRouteLeave(to, from, next) {
-    if (this.form_dirty) {
-      next(false)
-      window.location = to.path // this is the trick
-    } else {
-      next()
-    }
-  },
-
-  beforeDestroy() {
-    window.removeEventListener('beforeunload', this.beforeWindowUnload)
-  },
-
   mounted() {
     window.c_1 = this
   },
@@ -208,8 +191,7 @@ export default {
 .container {
   position: relative;
   width: 100%;
-  height: 100px;
-  max-height: 1000px;
+  height: 1000px;
   padding-bottom: 56.25%;
 }
 .video {
