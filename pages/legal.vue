@@ -15,12 +15,12 @@ You must provide accurate and complete information to register for an account to
 Failure to comply will result in account deletion or suspension.
 <br/><br/>
 <h3>Copyright Notice</h3>
-This website and its content is copyright of dsp3000.games © APOCALYPSE MEDIA LIMITED 2024. All rights reserved.
+This website and its content is copyright of © dsp3000.games. All rights reserved.
 Any redistribution or reproduction of part or all of the contents in any form is prohibited.
 You may not, except with our express written permission, distribute, share or commercially exploit the content. Nor may you transmit it or store it in any other website or other form of electronic retrieval system.
 <br/><br/>
 <h3>Privacy Statement</h3>
-This Privacy Statement describes the privacy practices of dsp3000.games, a website operated by APOCALYPSE MEDIA LIMITED, a company registered in England and Wales with company number 14226440 and with its registered office at Suite G04 1 Quality Court, Chancery Lane, London, England, WC2A 1HR. We are committed to protecting the privacy of our users and ensuring that their personal data is handled responsibly and in accordance with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the UK Data Protection Act 2018.
+This Privacy Statement describes the privacy practices of dsp3000.games. We are committed to protecting the privacy of our users and ensuring that their personal data is handled responsibly and in accordance with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the UK Data Protection Act 2018.
 <br/><br/>
 <h3>Information We Collect:</h3>
 We collect the following information from our users:
@@ -85,8 +85,6 @@ We may update this Privacy Statement from time to time. We will notify you of an
 If you have any questions about this Privacy Statement or our privacy practices, please contact us at:
 <br/><br/>
     Email: support@dsp3000.games
-	<br/>
-    Address: Suite G04 1 Quality Court, Chancery Lane, London, England, WC2A 1HR
 <br/><br/>
 <h3>Additional Information:</h3>
 For more information about your data protection rights, please visit the website of the Information Commissioner's Office (ICO): https://ico.org.uk/
