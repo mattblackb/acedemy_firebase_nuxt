@@ -12,7 +12,7 @@
           <h4 class="clickable">
             <NuxtLink to="/chapter1Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 
           You start the story when you wake up in a hotel room with a former
           acquaintance. Natalia explains all about how the game works and offers

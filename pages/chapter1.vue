@@ -7,7 +7,7 @@
           <h1></h1>
           <div class="container">
             <iframe
-              src="../academy_intro/game/start1.html"
+              src="../chapter1/game/start1.html"
               width="100%"
               height="auto"
               style="border: 1px solid #eee; background: white"
