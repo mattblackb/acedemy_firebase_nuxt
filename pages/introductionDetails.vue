@@ -26,12 +26,12 @@
           scene <br /><br />
 
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-          <h2 class="clickable">
+          <h3 class="clickable">
             <NuxtLink to="/introduction">Play the Introduction</NuxtLink>
-          </h2>
+          </h3>
 
           <div>
-            <h2>Your Saved Games</h2>
+            <h3>Your Saved Games</h3>
 
             <!-- Component to display the achievements -->
             <SavedGames chapter="introduction" />
@@ -109,7 +109,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

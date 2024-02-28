@@ -18,7 +18,7 @@
             <NuxtLink to="/chapter3Details">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter5Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 
           <p>
             Come back for a full schedule of activities on Tuesday
@@ -49,7 +49,7 @@
           </p>
 
           <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="4" />
         </v-col>
@@ -118,7 +118,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

@@ -18,7 +18,7 @@
             <NuxtLink to="/chapter1Details">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter3Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 
           <p>
             More possibilities present themselves after your lunch break, where
@@ -110,7 +110,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

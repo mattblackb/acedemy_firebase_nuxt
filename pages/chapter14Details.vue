@@ -17,7 +17,7 @@
           <h4 class="clickable">
             <NuxtLink to="/chapter13Details">< Previous Chapter</NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 		  <p>
             It's Friday at last and it's a brand new day at the Goodhead Academy.
 			<br /><br />
@@ -42,7 +42,7 @@
             <NuxtLink to="/chapter14">Skip the previous chapters and play Chapter Fourteen</NuxtLink>
           </h3>
 		  <hr>
-          <h4>Continue the story from a saved game</h4>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="14" />
         </v-col>
@@ -111,7 +111,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;
