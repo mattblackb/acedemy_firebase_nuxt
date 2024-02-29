@@ -25,11 +25,17 @@
         <nuxt />
       </div>
 
-      <p class="pa-5">
+      <p class="pl-5 h2_legal">
         Become a supporter at :
-        <a href="https://www.patreon.com/dsp3000" target="_blank"
+        <a
+          href="https://www.patreon.com/dsp3000"
+          target="_blank"
+          class="white_link"
           >https://www.patreon.com/dsp3000</a
-        > : <nuxt-link to="../legal">Legal statements</nuxt-link>
+        >
+      </p>
+      <p class="pl-5 legal_small">
+        <nuxt-link to="../legal" class="white_link">Legal statements</nuxt-link>
       </p>
     </v-main>
   </v-app>
@@ -60,11 +66,11 @@ export default {
         this.userDetails.email === 'matt@plain.black' ||
         this.userDetails.email === 'dsp3000@gmx.com' ||
         this.userDetails.email === 'kzies22@gmail.com' ||
-		this.userDetails.email === 'benjamin.m.charlton@gmail.com' ||
-		this.userDetails.email === 'taicartwright@yahoo.com' ||
-		this.userDetails.email === 'dreamszn23@gmail.com' ||
-		this.userDetails.email === 'sparkplug30549@yahoo.com' ||
-		this.userDetails.email === 'jimacep@gmail.com'
+        this.userDetails.email === 'benjamin.m.charlton@gmail.com' ||
+        this.userDetails.email === 'taicartwright@yahoo.com' ||
+        this.userDetails.email === 'dreamszn23@gmail.com' ||
+        this.userDetails.email === 'sparkplug30549@yahoo.com' ||
+        this.userDetails.email === 'jimacep@gmail.com'
       ) {
         return true
       } else {
@@ -98,5 +104,14 @@ export default {
     rgba(255, 203, 203, 1) 0%,
     rgba(255, 50, 75, 1) 100%
   ) !important;
+}
+.h2_legal {
+  font-size: 1.25rem;
+}
+.legal_small a {
+  color: white;
+}
+.white_link {
+  color: white !important;
 }
 </style>
