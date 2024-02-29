@@ -35,7 +35,7 @@
         >
       </p>
       <p class="pl-5 legal_small">
-        <nuxt-link to="../legal" class="white_link">Legal statements</nuxt-link> : © dsp3000.games
+        <nuxt-link to="../legal" class="white_link">Legal statements</nuxt-link> : © dsp3000.games 2024
       </p>
     </v-main>
   </v-app>
