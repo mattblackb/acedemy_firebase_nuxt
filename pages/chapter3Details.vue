@@ -15,7 +15,7 @@
             <NuxtLink to="/chapter2Details">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter4Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 
           <p>
             Time to return for your second day of work at the Goodhead
@@ -30,58 +30,24 @@
             Have a good time!
             <br /><br />
             <b>Chapter Three</b> statistics : 830 pages : 770 images : 1 bonus
-            scene : 25 achievements : 5 bonus achievements
+            scene : 25 achievements : 5 bonus achievements : 83% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Two before you
             can play Chapter Three!
           </p>
 
           <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 		  
           <SavedGames chapter="3" />
-          <!-- <div
-            v-for="savedintroduction in dayonenGame3"
-            :key="savedintroduction.name"
-          >
-            <span
-              class="clickable"
-              @click="
-                setIntroductionRedirect(
-                  savedintroduction,
-                  '/chapter3saved?saved=true'
-                )
-              "
-              >{{ savedintroduction.date }} | View Chapter Three achievements |</span
-            >
-  
-            <span
-              class="clickable"
-              @click="
-                setIntroductionRedirect(
-                  savedintroduction,
-                  '/chapter3saved?saved=true'
-                )
-              "
-            >
-              Play chapter Four</span
-            >
-          <span class="clickable" @click="deleteSave(savedintroduction)"
-              >| Delete
-            </span> 
-          </div> -->
         </v-col>
       </v-row>
     </v-container>
-    <div v-if="showloading" class="loading">
-      <img src="/VAyR.gif" />
-    </div>
   </main>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import _ from 'lodash'
 export default {
   data() {
     return {
@@ -89,27 +55,12 @@ export default {
       introchosen: {},
       showIntroduction: false,
       showSaved: false,
-      showloading: false,
     }
   },
   methods: {
     setIntroduction(introductionObject) {
       this.introchosen = introductionObject
       this.showIntroduction = true
-    },
-    async setIntroductionRedirect(introductionObject, page) {
-      this.showloading = true
-      this.introchosen = introductionObject
-      this.showIntroduction = true
-
-      await this.$store.commit(
-        'setCurrentGame/addAchievements',
-        introductionObject
-      )
-      setTimeout(() => {
-        this.showloading = false
-        this.$router.push(page)
-      }, 3000)
     },
     randomItem() {
       return this.images[Math.floor(Math.random() * this.images.length)]
@@ -135,19 +86,11 @@ export default {
         )
       }
     },
-    dayonenGame3() {
+    dayonenGame2() {
       if (this.$store.state.person) {
-        var savedGame = []
-        var x = 0
-        this.$store.state.person.saved_games.map(function (game, index) {
-          if (game.ch3_complete === '1' && !game.ch4_complete) {
-            console.log('game3', game.ch3_complete, index)
-            savedGame.push(_.cloneDeep(game))
-            savedGame[x].index = index
-            x++
-          }
-        })
-        return savedGame
+        return this.$store.state.person.saved_games.filter(
+          (game) => game.episode === 'dayone2'
+        )
       }
     },
   },
@@ -163,7 +106,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

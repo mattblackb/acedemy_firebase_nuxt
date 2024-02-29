@@ -14,7 +14,7 @@
             <NuxtLink to="/introductionDetails">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter2Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 
           <p>
             Start your new job at <i>The Goodhead Academy</i> on Monday morning
@@ -28,17 +28,16 @@
             Good luck!
             <br /><br />
             <b>Chapter One</b> statistics : 530 pages : 525 images : 1 bonus
-            scene : 25 achievements : 5 bonus achievements
+            scene : 25 achievements : 5 bonus achievements : 87% free to play content
           </p>
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-          <h2 class="clickable">
-            <NuxtLink to="/introductionsaved"
-              >Skip intro and start playing the game</NuxtLink
-            >
-          </h2>
+		  <hr>
+          <h3 class="clickable">
+            <NuxtLink to="/chapter1">Skip intro and start playing the game</NuxtLink>
+          </h3>
 		  
 		  <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <div v-if="showSaved">
             <div
@@ -127,7 +126,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

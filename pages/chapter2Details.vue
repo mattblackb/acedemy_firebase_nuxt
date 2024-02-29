@@ -18,7 +18,7 @@
             <NuxtLink to="/chapter1Details">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter3Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 
           <p>
             More possibilities present themselves after your lunch break, where
@@ -34,14 +34,14 @@
             Stay lucky!
             <br /><br />
             <b>Chapter Two</b> statistics : 1070 pages : 1195 images : 2 bonus
-            scenes : 50 achievements : 10 bonus achievements
+            scenes : 50 achievements : 10 bonus achievements : 85% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter One before you
             can play Chapter Two!
           </p>
 		  
 		  <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="2" />
         </v-col>
@@ -110,7 +110,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

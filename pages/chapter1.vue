@@ -4,22 +4,19 @@
     <v-container>
       <v-row>
         <v-col cols="12">
-          <h1>Chapter 1</h1>
+          <h1></h1>
           <div class="container">
             <iframe
               src="../chapter1/game/start1.html"
               width="100%"
-              height="100px"
+              height="auto"
               style="border: 1px solid #eee; background: white"
               frameborder="0"
               scrolling="yes"
               class="video"
               id="iframeContent"
             ></iframe>
-            <!-- <h2>Currently Unavailable</h2> -->
           </div>
-
-          <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
 
           <!-- Modal for All other actions-->
           <v-dialog v-model="dialogInteraction" width="500">
@@ -39,19 +36,10 @@
           <!-- End of generci modal -->
 
           <v-dialog v-model="dialog" width="500">
-            <v-card class="pa5 chapter2background">
-              <v-btn color="primary" text @click="dialogInteraction = false">
-                X
-              </v-btn>
-              <DisplayCredits
-                :currentCreditsneeded="currentCreditsneeded"
-                :currentmodule="currentmodule"
-              />
-            </v-card>
-          </v-dialog>
-
-          <v-dialog v-model="dialog" width="500">
-            <v-card class="pa5 chapter2background">
+            <v-card
+              class="pa5 modalbackground"
+              :style="{ backgroundImage: `url(${backgroundImage})` }"
+            >
               <v-btn color="primary" text @click="dialog = false"> X </v-btn>
               <DisplayCredits
                 :currentCreditsneeded="currentCreditsneeded"
@@ -59,10 +47,11 @@
               />
             </v-card>
           </v-dialog>
-
           <v-dialog v-model="dialogSave" width="500">
             <v-card>
-              <v-btn color="primary" text @click="dialog = false"> X </v-btn>
+              <v-btn color="primary" text @click="dialogSave = false">
+                X
+              </v-btn>
               <h1>Save Game</h1>
               <SaveGame :cookieJson="cookieJson" :route="route" />
             </v-card>
@@ -80,15 +69,14 @@ export default {
     return {
       dialog: false,
       dialogSave: false,
+      dialogInteraction: false,
       cookieJson: '',
       currentCreditsneeded: [],
       currentmodule: '',
       route: '',
-      dialogInteraction: false,
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
-      dialogInteraction: false,
     }
   },
   computed: {
@@ -135,6 +123,10 @@ export default {
         const myArray = event.split('|')
         this.currentCreditsneeded = parseInt(myArray[1])
         this.currentmodule = myArray[0]
+
+        if (myArray[2]) {
+          this.backgroundImage = myArray[2]
+        }
       }
     },
     Getname() {
@@ -160,7 +152,7 @@ export default {
         }
       }
     },
-    saveProgress(event, route) {
+    async saveProgress(event, route) {
       //check that the user is logged in (likely)
 
       if (!this.$store.state.user.uid) {
@@ -168,12 +160,44 @@ export default {
       } else {
         if (event) {
           this.cookieJson = event
+          await this.$store.commit('setCurrentGame/addAchievements', event)
           this.dialogSave = true
-          this.route = route
+          route = route
         }
+        // //Logged in check for available
+        // if(this.$store.state.person.available_modules.length > 0){
+        //     if(this.$store.state.person.available_modules.includes(id)) {
+        //         //user has already bought the module change the button on the iframe src
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+
+        // } else {
+        //     return false
+        // }
+      }
+    },
+    beforeWindowUnload(e) {
+      if (this.form_dirty) {
+        e.preventDefault()
+        e.returnValue = ''
       }
     },
   },
+  beforeRouteLeave(to, from, next) {
+    if (this.form_dirty) {
+      next(false)
+      window.location = to.path // this is the trick
+    } else {
+      next()
+    }
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('beforeunload', this.beforeWindowUnload)
+  },
+
   mounted() {
     window.c_1 = this
   },

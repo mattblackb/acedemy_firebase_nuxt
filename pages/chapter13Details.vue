@@ -18,7 +18,7 @@
             <NuxtLink to="/chapter12Details">< Previous Chapter</NuxtLink> :
 			<NuxtLink to="/chapter14Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
 		  
           <p>
             It's the end of Thursday night and your date with Bridgette is coming to it's conclusion.
@@ -35,14 +35,14 @@
 			<br /><br />
             <b>Chapter Thirteen</b> statistics : 1900 pages :  4800 images<br>
 			: 2 bonus scene extensions : 45 Bridgette achievements : 37 other achievements<br>
-            : 25 Didi achievements : 30 Threesome achievements
+            : 25 Didi achievements : 30 Threesome achievements : 60% free to play content
             <br /><br />
             <b>NOTE:</b> You must successfully complete Chapter Twelve with Bridgette before
             you can play Chapter Thirteen!
           </p>
 
           <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="13" />
         </v-col>
@@ -111,7 +111,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

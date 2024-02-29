@@ -23,6 +23,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import _ from 'lodash'
 export default {
   data() {
     return {
@@ -32,6 +33,13 @@ export default {
       currentMessage: 'You do not have enough credits.',
       storyId: '',
     }
+  },
+  watch: {
+    //check that this.currentbuy has changed
+    currentmodule: function (newVal, oldVal) {
+      // console.log('Current Buy', newVal, oldVal)
+      this.checkAvailable()
+    },
   },
   props: {
     currentCreditsneeded: {
@@ -93,7 +101,6 @@ export default {
             this.selectedStory = story
           }
         })
-        console.log(this.currentCreditsneeded, personData.credits)
         if (personData.credits >= this.currentCreditsneeded) {
           this.currentStatus = true
           this.currentMessage = 'You have enough credits to unlock this scene'
@@ -109,9 +116,8 @@ export default {
     },
 
     buyModule() {
-      let personData = { ...this.$store.state.person }
+      let personData = _.cloneDeep(this.$store.state.person)
       personData.available_modules.push(this.selectedStory.id)
-      console.log(personData)
       personData.credits = personData.credits - this.selectedStory.cost
       this.$store.commit('setuser/updatePerson', personData)
       this.$store.commit('SET_PEOPLE', personData)
@@ -122,9 +128,9 @@ export default {
   mounted: function () {
     const script = document.createElement('script')
     const ClientID = 'sb&enable-funding=venmo'
-    script.src = `https://www.paypal.com/sdk/js?client-id=${ClientID}`
-    script.addEventListener('load', this.setLoaded)
-    document.body.appendChild(script)
+    // script.src = `https://www.paypal.com/sdk/js?client-id=${ClientID}`
+    // script.addEventListener('load', this.setLoaded)
+    // document.body.appendChild(script)
     this.checkAvailable()
   },
 }

@@ -18,7 +18,7 @@
             <NuxtLink to="/chapter8Details">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter10Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
           <p>
             It's been a long week that's been full of challenges at the Goodhead
             Academy.<br /><br />
@@ -39,14 +39,14 @@
             <br /><br />
             <b>Chapter Nine</b> statistics : 2370 pages : 3640 images : 1 bonus
             scene : 25 date achievements : 20 solo achievements : 5 bonus
-            achievements : 60 additional achievements
+            achievements : 60 additional achievements : 95% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Eight before you
             can play Chapter Nine!
           </p>
 
           <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="9" />
         </v-col>
@@ -114,7 +114,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

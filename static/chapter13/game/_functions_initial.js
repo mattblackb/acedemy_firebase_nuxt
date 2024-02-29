@@ -39,45 +39,14 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
-  'ch2_maria_sex',
-  'ch4_holly_sex',
-  'ch4_lola_sex',
-  'ch4_jodie_sex',
-  'ch5_amy_sex',
-  'ch5_annie_sex',
-  'ch6_jodie_sex',
-  'ch6_bridgette_sex',
-  'ch7_jodie_sex',
-  'ch7_lola_sex',
-  'ch7_bridgette_sex',
-  'ch8_annie_sex"',
-  'ch8_alicia_sex',
-  'ch8_fired',
-  'ch8principal_fired',
-  'ch9_alexia_sex',
-  'ch10_lola_sex',
-  'ch10_bridgette_negative',
-  'ch11_alicia_sex',
-  'ch11_laura_sex',
-  'ch10_didi_positive',
-  'ch9rest_tip',
-  'ch10didi_invite',
-  'ch10vip_tickets',
-  'ch10run_away',
-  'ch10bridgette_continue',
-  'ch11bridgette_continue',
-  'ch11brass_champagne',
-  'ch11didi_invite',
-  'ch11didi_reject',
-  'ch11_bridgette_negative',
-  'ch12home_invite',
-  'ch12more_sex',
-  'ch12bridgette_drunk',
-  'ch12bridgette_continue',
-  'ch12pink_dandb',
   'ch13_bridgette_positive',
   'ch13_didi_positive',
   'ch13_dandb_negative',
+  'cum',
+  'dandb_cum',
+  'orgasm',
+  'bridgette_orgasm',
+  'didi_orgasm',
 ]
 
 const setCookiesOnEntry = async function () {
@@ -98,7 +67,7 @@ const setCookiesOnEntry = async function () {
       var date = new Date()
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch11
+      //check that cookie contains ch13
       if (cookie.includes('ch13') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }

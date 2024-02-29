@@ -18,7 +18,7 @@
             <NuxtLink to="/chapter6Details"> < Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter8Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
           <p>
             It's Thursday morning already and there are plans and schemes to
             figure out.<br /><br />
@@ -38,14 +38,14 @@
             can really begin to bear fruit.
             <br /><br />
             <b>Chapter Seven</b> statistics : 1450 pages : 2490 images : 1 bonus
-            scene : 50 achievements : 20 bonus achievements
+            scene : 50 achievements : 20 bonus achievements : 86% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Six before you
             can play Chapter Seven!
           </p>
 
           <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 		  
           <SavedGames chapter="7" />
         </v-col>
@@ -114,7 +114,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

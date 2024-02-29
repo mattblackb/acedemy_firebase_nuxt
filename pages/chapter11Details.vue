@@ -18,7 +18,8 @@
             <NuxtLink to="/chapter10Details">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter12Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
+		  
           <p>
             You've made it to the Brass Pole nightclub!<br /><br />
 
@@ -35,14 +36,14 @@
             <br /><br />
             <b>Chapter Eleven</b> statistics : 2340 pages : 3645 images : 2
             bonus scenes : 15 date achievements : 35 nightclub achievements : 20
-            other achievements : 30 bonus achievements
+            other achievements : 30 bonus achievements : 86% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Ten before you
             can play Chapter Eleven!
           </p>
 
           <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="11" />
         </v-col>
@@ -111,7 +112,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;

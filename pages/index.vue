@@ -74,6 +74,7 @@
           <a href="/chapter11Details"><img src="/imgs/index_ch11.jpg" /></a>
           <a href="/chapter12Details"><img src="/imgs/index_ch12.jpg" /></a>
           <a href="/chapter13Details"><img src="/imgs/index_ch13.jpg" /></a>
+		  <a href="/chapter14Details"><img src="/imgs/index_ch14.jpg" /></a>
           <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">

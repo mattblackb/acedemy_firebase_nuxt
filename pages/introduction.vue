@@ -18,8 +18,6 @@
             ></iframe>
           </div>
 
-          <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
-
           <!-- Modal for All other actions-->
           <v-dialog v-model="dialogInteraction" width="500">
             <v-card
@@ -38,7 +36,10 @@
           <!-- End of generci modal -->
 
           <v-dialog v-model="dialog" width="500">
-            <v-card class="pa5 modalbackground">
+            <v-card
+              class="pa5 modalbackground"
+              :style="{ backgroundImage: `url(${backgroundImage})` }"
+            >
               <v-btn color="primary" text @click="dialog = false"> X </v-btn>
               <DisplayCredits
                 :currentCreditsneeded="currentCreditsneeded"
@@ -47,7 +48,7 @@
             </v-card>
           </v-dialog>
           <v-dialog v-model="dialogSave" width="500">
-            <v-card class="pa5 modalbackground">
+            <v-card>
               <v-btn color="primary" text @click="dialogSave = false">
                 X
               </v-btn>
@@ -62,29 +63,32 @@
 </template>
 
 <script>
-import { mapActions, mapMutations } from 'vuex'
+import { mapActions, mapMutations, mapGetters } from 'vuex'
 export default {
   data() {
     return {
       dialog: false,
       dialogSave: false,
+      dialogInteraction: false,
       cookieJson: '',
       currentCreditsneeded: [],
       currentmodule: '',
       route: '',
-      form_dirty: true,
-      dialogInteraction: false,
       genericModalAction: '',
-      backgroundImage: '/imgs/modals/modal_principal1.jpg',
+      backgroundImage: '/imgs/modals/modal_BG.jpg',
       bonusRedirectUrl: '',
     }
   },
   computed: {
     ...mapActions(['updatePerson']),
+    ...mapGetters('setCurrentGame', ['getAchievements']),
     userDetails() {
       if (this.$store.state.person) {
         return this.$store.state.person
       }
+    },
+    Achievements() {
+      return this.$store.state.chosenAcheivements
     },
   },
   methods: {
@@ -103,15 +107,14 @@ export default {
     },
     triggerBonusReplay() {
       document.getElementById('iframeContent').src = this.bonusRedirectUrl
+      this.dialogInteraction = false
     },
-
     AddCredits() {
       this.dialog = true
     },
-    Getname() {
-      if (this.$store.state.person) {
-        return this.$store.state.person
-      }
+    returnAchievements() {
+      console.log(this.$store.state.setCurrentGame.chosenAcheivements)
+      return this.$store.state.setCurrentGame.chosenAcheivements
     },
     greet(event) {
       // `event` is the native DOM event
@@ -120,16 +123,20 @@ export default {
         const myArray = event.split('|')
         this.currentCreditsneeded = parseInt(myArray[1])
         this.currentmodule = myArray[0]
+
+        if (myArray[2]) {
+          this.backgroundImage = myArray[2]
+        }
       }
     },
-    getPlayerName() {
+    Getname() {
       if (this.$store.state.person) {
-        return this.$store.state.person.name
+        return this.$store.state.person
       }
     },
     checkAvailable(id) {
       //check that the user is logged in (likely)
-      if (!this.$store.state.user) {
+      if (!this.$store.state.user.uid) {
         return false
       } else {
         //Logged in check for available
@@ -145,16 +152,30 @@ export default {
         }
       }
     },
-    saveProgress(event, route) {
+    async saveProgress(event, route) {
       //check that the user is logged in (likely)
+
       if (!this.$store.state.user.uid) {
         return false
       } else {
         if (event) {
           this.cookieJson = event
+          await this.$store.commit('setCurrentGame/addAchievements', event)
           this.dialogSave = true
-          this.route = route
+          route = route
         }
+        // //Logged in check for available
+        // if(this.$store.state.person.available_modules.length > 0){
+        //     if(this.$store.state.person.available_modules.includes(id)) {
+        //         //user has already bought the module change the button on the iframe src
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+
+        // } else {
+        //     return false
+        // }
       }
     },
     beforeWindowUnload(e) {
@@ -176,11 +197,9 @@ export default {
   beforeDestroy() {
     window.removeEventListener('beforeunload', this.beforeWindowUnload)
   },
+
   mounted() {
     window.c_1 = this
-  },
-  created() {
-    window.addEventListener('beforeunload', this.beforeWindowUnload)
   },
 }
 </script>
@@ -189,7 +208,8 @@ export default {
 .container {
   position: relative;
   width: 100%;
-  height: 1000px;
+  height: 100px;
+  max-height: 1000px;
   padding-bottom: 56.25%;
 }
 .video {
@@ -199,13 +219,7 @@ export default {
   width: 100%;
   height: 1000px;
 }
-.modalbackground {
-  background-image: url('/imgs/modal_amy1.jpg');
-}
-</style>
-
-<style scoped>
 .genericModal {
-  min-height: 250px;
+  height: 250px;
 }
 </style>

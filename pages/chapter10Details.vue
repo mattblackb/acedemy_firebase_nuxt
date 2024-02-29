@@ -18,7 +18,8 @@
             <NuxtLink to="/chapter9Details">< Previous Chapter</NuxtLink> :
             <NuxtLink to="/chapter11Details">Next Chapter ></NuxtLink>
           </h4>
-          <br /><br />
+          <br />
+		  
           <p>
             Now that it's dark, the fun stuff can really start to happen...<br /><br />
 
@@ -37,14 +38,14 @@
             <br /><br />
             <b>Chapter Ten</b> statistics : 2610 pages : 3340 images : 2 bonus
             scenes : 25 date achievements : 20 solo achievements : 45 bonus
-            achievements
+            achievements : 81% free to play content
             <br />
             <b>NOTE:</b> You must successfully complete Chapter Nine before you
             can play Chapter Ten!
           </p>
 
           <hr>
-          <h2>Continue the story from a saved game</h2>
+          <h3>Continue the story from a saved game</h3>
 
           <SavedGames chapter="10" />
         </v-col>
@@ -113,7 +114,12 @@ h2 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+h3,
+h3 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 h4,
 h4 a {
   color: white;
