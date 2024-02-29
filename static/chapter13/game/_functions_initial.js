@@ -42,6 +42,11 @@ cookiesToKeep = [
   'ch13_bridgette_positive',
   'ch13_didi_positive',
   'ch13_dandb_negative',
+  'cum',
+  'dandb_cum',
+  'orgasm',
+  'bridgette_orgasm',
+  'didi_orgasm',
 ]
 
 const setCookiesOnEntry = async function () {
