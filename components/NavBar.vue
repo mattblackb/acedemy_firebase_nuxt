@@ -53,6 +53,7 @@
             </v-menu>
             <v-btn to="/characters"> Characters </v-btn>
             <v-btn to="/about"> About </v-btn>
+			<v-btn to="/commissions_taicartwright"> Commissions </v-btn>
             <v-btn v-if="checkEmailForBetaLinks()" to="/admin/pageloader">
               Page Loader
             </v-btn>
@@ -94,6 +95,8 @@
         </v-col>
         <v-col cols="1" sm="1" md="1">
           <v-btn class="ma-2" to="/about"> About </v-btn>
+        </v-col>
+		<v-btn class="ma-2" to="/commissions_taicartwright"> Commissions </v-btn>
         </v-col>
         
         <v-col cols="12" sm="12" md="3">
@@ -162,8 +165,7 @@ export default {
     checkEmailForBetaLinks() {
       if (
         this.currentUser.email === 'matt@plain.black' ||
-        this.currentUser.email === 'dsp3000@gmx.com' ||
-        this.currentUser.email === 'jimacep@gmail.com'
+        this.currentUser.email === 'dsp3000@gmx.com'
       ) {
         return true
       } else {
