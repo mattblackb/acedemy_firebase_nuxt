@@ -50,7 +50,7 @@ cookiesToKeep = [
   'ch7_jodie_sex',
   'ch7_lola_sex',
   'ch7_bridgette_sex',
-  'ch8_annie_sex"',
+  'ch8_annie_sex',
   'ch8_alicia_sex',
   'ch8_fired',
   'ch8principal_fired',
@@ -96,7 +96,7 @@ const setCookiesOnEntry = async function () {
       var date = new Date()
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch11
+      //check that cookie contains ch12
       if (cookie.includes('ch12') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }

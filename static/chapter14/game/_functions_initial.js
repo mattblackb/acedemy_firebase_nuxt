@@ -39,9 +39,38 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
-  'ch14_',
-  'ch14_',
-  'ch14_',
+  'ch14bridgette_positive',
+  'ch14bridgette_negative',
+  'ch14jodie_positive',
+  'ch14jodie_negative',
+  'ch14_success_park',
+  'ch14_success_annie',
+  'ch14meet_annie',
+  'ch14meet_park',
+  'ch14bridgette_key',
+  'ch14have_briefcase',
+  'ch14have_folder',
+  'ch14have_package',
+  'ch14help_progress',
+  'ch14help_megan',
+	
+  'ch13_bridgette_sex',
+  'ch14_bridgette_sex',
+  'ch14_didi_sex',
+  'ch14_jodie_sex',
+  'ch14_principal_sex',
+  'ch14_maria_sex',
+  'ch14_annie_sex',
+  'ch14_lola_sex',
+  'ch14_holly_sex',
+  'ch14_alicia_sex',
+  'ch14_laura_sex',
+  'ch14_natalia_sex',
+  'ch14_alexia_sex',
+  'ch14start_bridgette',
+  'ch14start_threesome',
+  'ch14start_laura',
+	
 ]
 
 const setCookiesOnEntry = async function () {
