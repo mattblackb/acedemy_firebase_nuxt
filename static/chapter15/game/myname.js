@@ -7,7 +7,6 @@ function myname2()
 {
 
 
-
 var username = GetCookie('playername');
 
 
