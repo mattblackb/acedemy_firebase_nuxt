@@ -1,5 +1,5 @@
 function hideShowButton() {
-  let showcontinue = checkAvailable('15BETA2_TANGERINE')
+  let showcontinue = checkAvailable('15BETA2_TANGERINE_30-04-24')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
@@ -21,7 +21,7 @@ function hideShowButton() {
   }
 }
 function hideShowButton2() {
-  let showcontinue = checkAvailable('15BETA2_TANGERINE')
+  let showcontinue = checkAvailable('15BETA2_TANGERINE_30-04-24')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
