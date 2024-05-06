@@ -46,6 +46,9 @@ export default {
         'imgs/36.png',
         'imgs/37.png',
         'imgs/38.png',
+		'imgs/39.png',
+        'imgs/40.png',
+        'imgs/41.png',
       ],
     }
   },
