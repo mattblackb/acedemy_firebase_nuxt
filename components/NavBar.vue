@@ -3,7 +3,6 @@
     <v-dialog v-model="dialog" width="500">
       <v-card class="pa5 modalbackground">
         <v-btn color="primary" text @click="dialog = false"> X </v-btn>
-        <h2>Credit payment facility currently disabled</h2>
         <h4>
           Get credits at
           <a href="https://www.patreon.com/dsp3000"
@@ -152,6 +151,7 @@ export default {
       { name: 'Chapter 12', url: '/chapter12Details' },
       { name: 'Chapter 13', url: '/chapter13Details' },
       { name: 'Chapter 14', url: '/chapter14Details' },
+	  { name: 'Chapter 15', url: '/chapter15Details' },
     ],
   }),
   methods: {
