@@ -44,8 +44,7 @@ export default {
       if (!this.userDetails) return false
       if (
         this.userDetails.email === 'matt@plain.black' ||
-        this.userDetails.email === 'dsp3000@gmx.com' ||
-        this.userDetails.email === 'jimacep@gmail.com'
+        this.userDetails.email === 'dsp3000@gmx.com'
       ) {
         return true
       } else {
