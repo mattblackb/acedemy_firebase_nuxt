@@ -4,6 +4,40 @@
 
 <head>
 
+<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
 <title>The Academy: Chapter Fifteen</title>
 
 <script language="javascript" src="_functions.js"></script>
@@ -11,7 +45,8 @@
 <link href="_style.css" rel="stylesheet" type="text/css" />
     
 </head>
-	
+
+
 <body onLoad="disallowNav()">
 
 <div align="center">
@@ -71,13 +106,40 @@
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/hollybonus189.jpg" alt="" usemap="#Map" />
-      
-      <map name="Map" id="Map">
-        
-        <area shape="rect" coords="0,0,1000,750" href="hollybonus190.html" title="Feel her pussy pulsate around your cock" />
+	  <td width="1000">
+    <img src="images/hollybonus189_00.jpg" name="slide" width="1000" height="750" border="0" usemap="#slideMap">
+	<map name="slideMap">
+    <area shape="rect" coords="0,0,1000,750" href="hollybonus190.html" title="Feel her pussy pulsate around your cock" />
+	
+	</map>
 
-     </map>
+    
+	<script>
+<!--
+
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/hollybonus189_00.jpg","images/hollybonus189_01.jpg","images/hollybonus189_02.jpg","images/hollybonus189_03.jpg","images/hollybonus189_04.jpg","images/hollybonus189_05.jpg","images/hollybonus189_06.jpg","images/hollybonus189_07.jpg","images/hollybonus189_08.jpg","images/hollybonus189_09.jpg","images/hollybonus189_10.jpg","images/hollybonus189_09.jpg","images/hollybonus189_08.jpg","images/hollybonus189_07.jpg","images/hollybonus189_06.jpg","images/hollybonus189_05.jpg","images/hollybonus189_04.jpg","images/hollybonus189_03.jpg","images/hollybonus189_02.jpg","images/hollybonus189_01.jpg","images/hollybonus189_00.jpg","images/hollybonus189_01.jpg","images/hollybonus189_02.jpg","images/hollybonus189_03.jpg","images/hollybonus189_04.jpg","images/hollybonus189_05.jpg","images/hollybonus189_04.jpg","images/hollybonus189_03.jpg","images/hollybonus189_02.jpg","images/hollybonus189_01.jpg","images/hollybonus189_00.jpg","images/hollybonus189_01.jpg","images/hollybonus189_02.jpg","images/hollybonus189_03.jpg","images/hollybonus189_04.jpg","images/hollybonus189_05.jpg","images/hollybonus189_04.jpg","images/hollybonus189_03.jpg","images/hollybonus189_02.jpg","images/hollybonus189_01.jpg","images/hollybonus189_00.jpg","images/hollybonus189_01.jpg","images/hollybonus189_02.jpg","images/hollybonus189_03.jpg","images/hollybonus189_04.jpg","images/hollybonus189_05.jpg","images/hollybonus189_06.jpg","images/hollybonus189_07.jpg","images/hollybonus189_08.jpg","images/hollybonus189_09.jpg","images/hollybonus189_10.jpg","images/hollybonus189_09.jpg","images/hollybonus189_08.jpg","images/hollybonus189_07.jpg","images/hollybonus189_06.jpg","images/hollybonus189_07.jpg","images/hollybonus189_07.jpg","images/hollybonus189_08.jpg","images/hollybonus189_09.jpg","images/hollybonus189_10.jpg","images/hollybonus189_09.jpg","images/hollybonus189_08.jpg","images/hollybonus189_07.jpg","images/hollybonus189_06.jpg","images/hollybonus189_05.jpg","images/hollybonus189_04.jpg","images/hollybonus189_03.jpg","images/hollybonus189_02.jpg","images/hollybonus189_01.jpg","images/hollybonus189_00.jpg")
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=150
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-0)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+          </script>
       
       </td>
     </tr>
