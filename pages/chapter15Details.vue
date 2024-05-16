@@ -21,16 +21,21 @@
           </h4>
           <br />
 		  <p>
-            <h2>BETA</h2>
-			After a busy Friday morning, you sure have some tough decisions to make...
+            After a busy Friday morning, you sure have some tough decisions to make...
 			<br /><br />
 			Who will you, or more to the point, who can you help in your quest to unravel the remaining mysteries at the Goodhead Academy?
 			<br /><br />
 			Bridgette and Didi obviously need your help, but you could also see what comes of assisting Annie and Principal Valentine.
 			<br /><br />
-			Then of course there are other girls who want to spend some time with you on your last day.
+			Then of course there are other girls who want to meet up spend some time with you on your last day.
 			<br /><br />
 			It's going to be difficult to fit it all in!
+			<br /><br />
+            <b>Chapter Fifteen</b> statistics : 2300 pages : 3500 images<br>
+			: 4 bonus scenes : 35 achievements : 55 bonus achievements : 63% free to play content
+            <br /><br />
+            <b>NOTE:</b> You must successfully complete Chapter Fourteen before
+            you can play Chapter Fifteen!
           </p>
 
           <hr>
