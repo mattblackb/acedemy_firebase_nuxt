@@ -39,9 +39,40 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
-  'ch14_',
-  'ch14_',
-  'ch14_',
+  'ch13_bridgette_sex',
+  'ch14_bridgette_sex',
+  'ch14_didi_sex',
+  'ch14_jodie_sex',
+  'ch14_principal_sex',
+  'ch14_maria_sex',
+  'ch14_annie_sex',
+  'ch14_lola_sex',
+  'ch14_holly_sex',
+  'ch14_alicia_sex',
+  'ch14_laura_sex',
+  'ch14_natalia_sex',
+  'ch14_alexia_sex',
+  'ch14start_bridgette',
+  'ch14start_threesome',
+  'ch14start_laura',
+  'ch14help_megan',
+  'ch14bridgette_key',
+  'ch14have_package',
+  'ch15have_package',
+  'ch15leave_message',
+  'ch15annie_abandoned',
+  'ch15amy_bridgette',
+  'ch15bridgette_positive',
+  'ch15bridgette_negative',
+  'ch15jodie_positive',
+  'ch15jodie_negative',
+  'ch15annie_positive',
+  'ch15annie_negative',
+  'ch15amy_positive',
+  'ch15amy_negative',
+  'ch15holly_positive',
+  'ch15holly_negative',
+
 ]
 
 const setCookiesOnEntry = async function () {
@@ -62,8 +93,8 @@ const setCookiesOnEntry = async function () {
       var date = new Date()
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch14
-      if (cookie.includes('ch14') || cookiesToKeep.includes(cookie)) {
+      //check that cookie contains ch15
+      if (cookie.includes('ch15') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }
     })
