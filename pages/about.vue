@@ -9,12 +9,13 @@
 Work began on The Academy series in 2015 after the release of the Tara trilogy of games on vdategames.com. The first eight installments of the Academy were created and released over a period of about four years up until 2019.<br/><br/>
 After a period of some uncertainty as to the whereabouts of the games' creator, it emerged that despite rumors of an untimely demise, work had never stopped on the series.
 <br/><br/>
-While completing on a further two episodes, a decision had also been taken to update the older episodes and bring them up to a consistent quality. At the same time, it was decided to release the new and remastered episodes on a custom-built platform.<br/><br/>
-It also gave dsp3000 an opportunity to improve and expand upon elements of the story.
-<br/><br/>
-During 2022/2023 an ambitious schedule of release has been set.
-<br/><br/>
-A new <b>Introductory Episode</b> available April 2022 : 180 pages : 478 images<br/>
+While continuing work on a further two episodes, a decision had also been taken to update the older episodes and bring them up to a consistent quality. At the same time, it was decided to release the new and remastered episodes on a new website with a custom-built platform.<br/><br/>
+It also gave an opportunity to improve and expand upon elements of the story.<br/>
+With well over 40,000 images, this updated version of the game has more than doubled in size when compared to the equivalent older original episodes.<br/>
+It also adds a significant expansion to the original story with many new scenes, extensions and alternative pathways.</p>
+<h2>Release schedule</h2>
+<p>
+A new <b>Introductory Episode</b> released April 2022 : 180 pages : 478 images<br/>
 <br/>
 <b>Chapters One and Two </b> were originally released in April 2016 as 'Academy: Part One' : 1230 pages : 997 images<br/>
 This part of the story takes place during Monday morning and afternoon.<br/>
@@ -59,11 +60,11 @@ The remastered and expanded version released December 2023 - January 2024 : 1900
 This part of the story takes place during Friday morning.<br/>
 This brand new chapter released February 2024 : 2200 pages : 2500 images<br/>
 <br/>
-<b>Chapter Fifteen</b> In advanced stages of production :<br/>
-This part of the story will take place during Friday afternoon.<br/>
-Release date TBC<br/>
+<b>Chapter Fifteen</b> The latest chapter which continues the Academy series<br/>
+This part of the story takes place during early Friday afternoon.<br/>
+This brand new chapter released May 2024 : 2300 pages : 3500 images<br/>
 <br/>
-<b>Chapter Sixteen</b> In early stages of production : <br/>
+<b>Chapter Sixteen</b> In production : <br/>
 Release date TBC<br/>
 <br/>
 <b>Chapter Seventeen</b> In early concept stages : <br/>

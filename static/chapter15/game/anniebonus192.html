@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
+<title>The Academy: Chapter Fifteen</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+    
+</head>
+	
+<script language="javascript">
+
+setVar("cumometer", 12);
+	
+</script>
+	
+	
+<body onLoad="disallowNav()">
+
+<div align="center">
+
+	<p><span class="black">"text"</span> <span class="annie">"Oh yeah!"</span></p>
+
+
+
+<table width="1220" border="0">
+
+  <tr>
+
+    <td width="105">
+<!--inventory start-->
+    
+<!--clock start-->
+      <table width="99" border="0" align="center">
+
+        <tr>
+
+          <td height="100">
+
+<script src="clockcheck.js">
+
+</script>
+
+</td>
+        </tr>
+      </table>
+<!--clock end-->
+
+<!--score start-->
+      <table width="100" border="0" align="center" cellpadding="3">
+
+      <tr>
+<td width="68" align="center" bgcolor="#CCCCCC"><script src="cumometercheck.js">
+
+</script>
+          </td>
+
+      </tr>
+    </table>
+<!--score end-->
+    
+<!-- headshot start-->
+    <table width="200" border="0" align="center">
+
+          <tr>
+
+            <td height="250"><img src="buttonsetc/inv_annie_naked.jpg" width="125" height="200" alt=""/></td>
+
+          </tr>
+
+      </table>
+<!-- headshot end--></td>
+
+<!--inventory end-->
+
+	  <td width="1000">
+    <img src="images/anniebonus185_00.jpg" name="slide" width="1000" height="750" border="0" usemap="#slideMap">
+    <map name="slideMap">
+    <area shape="rect" coords="0,0,1000,750" href="anniebonus193.html" title="Finish cumming" />
+	
+    </map>
+    	
+		<script>
+<!--
+
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/anniebonus185_00.jpg","images/anniebonus185_01.jpg","images/anniebonus185_02.jpg","images/anniebonus185_03.jpg","images/anniebonus185_04.jpg","images/anniebonus185_05.jpg","images/anniebonus185_06.jpg","images/anniebonus185_07.jpg","images/anniebonus185_08.jpg","images/anniebonus185_09.jpg","images/anniebonus185_10.jpg","images/anniebonus185_11.jpg","images/anniebonus185_12.jpg","images/anniebonus185_13.jpg","images/anniebonus185_14.jpg","images/anniebonus185_15.jpg","images/anniebonus185_16.jpg","images/anniebonus185_17.jpg","images/anniebonus185_18.jpg","images/anniebonus185_19.jpg","images/anniebonus185_20.jpg","images/anniebonus185_21.jpg","images/anniebonus185_22.jpg","images/anniebonus185_23.jpg","images/anniebonus192_24.jpg","images/anniebonus192_25.jpg","images/anniebonus192_26.jpg","images/anniebonus192_27.jpg","images/anniebonus192_28.jpg","images/anniebonus192_29.jpg","images/anniebonus192_30.jpg","images/anniebonus192_31.jpg","images/anniebonus192_32.jpg","images/anniebonus192_33.jpg","images/anniebonus192_34.jpg","images/anniebonus192_35.jpg","images/anniebonus192_36.jpg","images/anniebonus192_37.jpg","images/anniebonus192_38.jpg","images/anniebonus192_39.jpg","images/anniebonus192_40.jpg","images/anniebonus192_41.jpg","images/anniebonus192_42.jpg","images/anniebonus192_43.jpg","images/anniebonus192_44.jpg","images/anniebonus192_45.jpg","images/anniebonus192_46.jpg","images/anniebonus192_47.jpg","images/anniebonus192_48.jpg","images/anniebonus192_49.jpg","images/anniebonus192_50.jpg","images/anniebonus192_51.jpg","images/anniebonus192_52.jpg","images/anniebonus192_53.jpg","images/anniebonus192_54.jpg","images/anniebonus192_55.jpg")
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=100
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-0)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+          </script>
+      
+      </td>
+    </tr>
+</table>
+
+<table width="1200" height="50" border="0">
+
+<tr>
+
+        <td width="200"></td>
+        
+        <td width="333"><a href="#"></a></td>
+
+        <td width="333"><a href="#"></a></td>
+
+        <td width="333"><a href="#"></a></td>
+
+    </tr>
+
+</table>
+
+<!-- NEW FUNCTIONS BAR START --> 
+<table width="1200" height="50" border="0">
+
+<tr>
+
+    <td width="50"></td>
+	
+	<td width="50"><a href="#" onClick="location.reload()"><img src="buttonsetc/refresh.jpg" width="50" height="50" alt="Refresh this page" title="Refresh this page"/></a></td>
+	
+	<td width="50"></td>
+	
+	<td width="1050"></td>
+
+    </tr>
+
+</table>
+	
+<!-- NEW FUNCTIONS BAR END -->
+
+</div>
+
+</body>
+
+</html>
+

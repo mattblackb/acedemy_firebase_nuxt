@@ -75,6 +75,7 @@
           <a href="/chapter12Details"><img src="/imgs/index_ch12.jpg" /></a>
           <a href="/chapter13Details"><img src="/imgs/index_ch13.jpg" /></a>
 		  <a href="/chapter14Details"><img src="/imgs/index_ch14.jpg" /></a>
+		  <a href="/chapter15Details"><img src="/imgs/index_ch15.jpg" /></a>
           <!-- <ul>
             <li>Introduction - View the tutorial on how this site works <a href="/introduction">View episode</a></li>
             <template v-if="userDetails">
@@ -145,6 +146,9 @@ export default {
         'imgs/36.png',
         'imgs/37.png',
         'imgs/38.png',
+		'imgs/39.png',
+        'imgs/40.png',
+		'imgs/41.png',
       ],
     }
   },
