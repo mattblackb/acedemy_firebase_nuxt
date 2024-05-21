@@ -1,0 +1,332 @@
+body 
+{
+	background-color: #999999;
+	text-align: center;
+}
+
+.narrate {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: large;
+	font-style: italic;
+	
+}
+.black {
+	color: #999999;
+	font-weight: bold;
+	font-size: 24px;
+	
+}
+.hint {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: large;
+	font-style: italic;
+}
+.hint a {
+	color: #999999;
+	font-weight: bold;
+	font-size: large;
+	font-style: italic;
+	text-decoration: none;
+	
+}
+.hint a:hover  {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: large;
+	font-style: italic;
+	text-decoration: none;
+}
+.pregame {
+	color: #CCCCCC;
+	font-weight: bold;
+	font-size: small;
+	
+}
+.pregame a:hover {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: small;
+	text-decoration: none;
+	
+}
+.bridgette {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.jodie {
+	color: #FFAA88;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.didi {
+	color: #6AF382;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.principal {
+	color: #6633FF;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.maria {
+	color: #FF99CC;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.holly {
+	color: #6666FF;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.amy {
+	color: #CCFF99;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.lola {
+	color: #99FFFF;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.laura {
+	color: #C92504;
+	font-weight: bold;
+	font-size: large;
+
+}
+.alicia {
+	color: #996699;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.annie {
+	color: #F3F26A;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.genevieve {
+	color: #993333;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.isabella {
+	color: #996666;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.megan {
+	color: #CC6666;
+	font-weight: bold;
+	font-size: large;
+
+}
+.alexia {
+	color: #E1A1E1;
+	font-weight: bold;
+	font-size: large;
+}
+.olivia {
+	color: #662662;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.susie {
+	color: #999900;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.frida {
+	color: #CC00CC;
+	font-weight: bold;
+	font-size: large;
+
+}
+.cleo {
+	color: #6F0F0F;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.caitlin {
+	color: #663300;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.abigail {
+	color: #6F0F0F;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.summer {
+	color: #663300;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.maddison {
+	color: #FF6666;
+	font-weight: bold;
+	font-size: large;
+
+}
+.tara {
+	color: #FF9900;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.natalia {
+	color: #A238E8;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.samantha {
+	color: #CC00CC;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.girl {
+	color: #FF99DD;
+	font-weight: bold;
+	font-size: large;
+		
+}
+.man {
+	color: #CCCCCC;
+	font-weight: bold;
+	font-size: large;
+
+}
+.sebastian {
+	color: #666666;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.ramsey {
+	color: #504030;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.eric {
+	color: #CC9966;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.security {
+	color: #003399;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.mugger {
+	color: #996633;
+	font-weight: bold;
+	font-size: large;
+		
+}
+.police {
+	color: #006699;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.hostess {
+	color: #FF66FF;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.stripper {
+	color: #FF11FF;
+	font-weight: bold;
+	font-size: large;
+}
+
+.mom {
+	color: #3333CC;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.waitress {
+	color: #990099;
+	font-weight: bold;
+	font-size: large;
+	
+}
+.time {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 24px;
+
+}
+
+body div {
+}
+
+img {
+	border: 2px solid #333333;
+}
+
+p 
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: medium;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+
+}
+
+td
+{
+	width: 333;
+	text-align: center;
+}
+table 
+{
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+}
+
+table a
+{
+	color: #000000;
+	text-decoration: none;
+	
+}
+.panorama {
+	height: 750px;
+	width: 1000px;
+	overflow: scroll;
+}
+.portrait {
+	height: 750px;
+	width: 1000px;
+	overflow: scroll;
+}
