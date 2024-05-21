@@ -28,7 +28,7 @@
             Good luck!
             <br /><br />
             <b>Chapter One</b> statistics : 530 pages : 525 images : 1 bonus
-            scene : 25 achievements : 5 bonus achievements : 87% free to play content
+            scene : 25 achievements : 5 bonus achievements : 100% free to play content
           </p>
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
 		  <hr>
