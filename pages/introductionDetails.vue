@@ -22,7 +22,7 @@
           You can play through this episode before you move on to the next
           one, or skip it and start with Chapter One.
           <br /><br />
-          <b>Introduction statistics</b> : 180 pages : 478 images : 1 bonus
+          <b>Introduction statistics</b> : 180 pages : 478 images : 1 bonus scene : 5 achievements : 5 bonus achievements : 100% free to play content
           scene <br /><br />
 
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
