@@ -3,7 +3,6 @@
     <v-dialog v-model="dialog" width="500">
       <v-card class="pa5 modalbackground">
         <v-btn color="primary" text @click="dialog = false"> X </v-btn>
-        
         <h4>
           Get credits at
           <a href="https://www.patreon.com/dsp3000"
