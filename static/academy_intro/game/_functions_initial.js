@@ -39,6 +39,11 @@ function setCookie(name, value, days) {
 }
 
 cookiesToKeep = [
+	'natalia_bonus',
+	'natalia_cum1',
+	'natalia_cum2',
+	'natalia_cum3',
+	'natalia_cum4',
 	'progress',
   ]
 
