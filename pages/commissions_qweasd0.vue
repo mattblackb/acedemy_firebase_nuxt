@@ -2,7 +2,12 @@
   <main>
     <NavBar />
     <v-container>
-      <v-row>
+      <v-row
+        v-if="
+          userDetails.email === 'dsp3000@gmx.com' ||
+          userDetails.email === 'gotacoolemail3@yahoo.com'
+        "
+      >
         <v-col cols="12">
           <h1></h1>
           <div class="container">
@@ -53,6 +58,11 @@
               <SaveGame :cookieJson="cookieJson" :route="route" />
             </v-card>
           </v-dialog>
+        </v-col>
+      </v-row>
+      <v-row v-else>
+        <v-col cols="12">
+          <h1>Sorry, you are not authorized to view this page</h1>
         </v-col>
       </v-row>
     </v-container>
