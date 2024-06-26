@@ -153,6 +153,8 @@ export default {
       { name: 'Chapter 13', url: '/chapter13Details' },
       { name: 'Chapter 14', url: '/chapter14Details' },
 	  { name: 'Chapter 15', url: '/chapter15Details' },
+	  { name: 'Chapter 16', url: '/chapter16Details' },
+	  { name: 'Interviews', url: '/interviewsDetails' },
     ],
   }),
   methods: {
