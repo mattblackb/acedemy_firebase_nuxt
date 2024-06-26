@@ -24,7 +24,7 @@
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
 		  <hr>
           <h3 class="clickable">
-            <NuxtLink to="/introduction">Play the Introduction</NuxtLink>
+            <NuxtLink to="/interview">Play the Academy Interviews game</NuxtLink>
           </h3>
 		  
 		  <hr>
