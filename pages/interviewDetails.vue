@@ -29,8 +29,7 @@
 		  
 		  <hr>
 
-          <div>
-            
+       </v-col>     
         
       </v-row>
     </v-container>
