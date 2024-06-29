@@ -1,5 +1,5 @@
 function hideShowButton() {
-  let showcontinue = checkAvailable('UfP8mPs3CI3Yg6Gb9rc3')
+  let showcontinue = checkAvailable('UUp10IJoNETo6vqAM4JY')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
@@ -21,7 +21,7 @@ function hideShowButton() {
   }
 }
 function hideShowButton2() {
-  let showcontinue = checkAvailable('UfP8mPs3CI3Yg6Gb9rc3')
+  let showcontinue = checkAvailable('UUp10IJoNETo6vqAM4JY')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
