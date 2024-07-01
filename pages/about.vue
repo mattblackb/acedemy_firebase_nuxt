@@ -64,6 +64,10 @@ This brand new chapter released February 2024 : 2200 pages : 2500 images<br/>
 This part of the story takes place during early Friday afternoon.<br/>
 This brand new chapter released May 2024 : 2300 pages : 3500 images<br/>
 <br/>
+<b>Academy Interviews</b> Mini-game<br/>
+This part of the story takes place at the same time as the events of Chapters Fourteen and Fifteen.<br/>
+This brand new mini-game released July 2024 : 420 pages : 444 images<br/>
+<br/>
 <b>Chapter Sixteen</b> In production : <br/>
 Release date TBC<br/>
 <br/>
