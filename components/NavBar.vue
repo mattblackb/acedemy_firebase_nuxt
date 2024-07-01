@@ -3,6 +3,7 @@
     <v-dialog v-model="dialog" width="500">
       <v-card class="pa5 modalbackground">
         <v-btn color="primary" text @click="dialog = false"> X </v-btn>
+        
         <h4>
           Get credits at
           <a href="https://www.patreon.com/dsp3000"
@@ -152,6 +153,8 @@ export default {
       { name: 'Chapter 13', url: '/chapter13Details' },
       { name: 'Chapter 14', url: '/chapter14Details' },
 	  { name: 'Chapter 15', url: '/chapter15Details' },
+	  { name: 'Chapter 16', url: '/chapter16Details' },
+	  { name: 'Interviews', url: '/interviewDetails' },
     ],
   }),
   methods: {
