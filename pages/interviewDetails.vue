@@ -18,7 +18,7 @@
           <br /><br />
 		  Visit the dsp3000 Patreon page to vote for who gets through to the next round in the interview process.
 		  <br /><br />
-          <b>Interviews statistics</b> : 410 pages : 340 images : 1 bonus extension
+          <b>Interviews statistics</b> : 420 pages : 444 images : 1 bonus extension
           scene <br /><br />
 
           <!-- <p>You are now logged in {{ $nuxt.$fire.auth.currentUser.email }}</p> -->
