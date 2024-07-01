@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+<title>The Academy : Interviews</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+
+<script language="javascript">
+
+
+
+function check()
+
+{
+
+    var val1 = readVar("naked_amelia");
+	var val2 = readVar("naked_emily");
+	var val3 = readVar("naked_nadia");
+	var val4 = readVar("naked_paige");
+	var val5 = readVar("naked_sarah");
+	
+	var allval = val1+val2+val3+val4+val5
+
+   if (allval > 4)
+//pass
+        window.location = "interview22.html";
+
+    else 
+//fail
+        window.location = "interview19.html";    
+
+}
+
+
+
+check();
+
+
+
+</script>
+
+</body>
+
+</html>
+
