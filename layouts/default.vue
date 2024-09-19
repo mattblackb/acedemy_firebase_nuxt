@@ -65,10 +65,7 @@ export default {
       if (
         this.userDetails.email === 'matt@plain.black' ||
         this.userDetails.email === 'dsp3000@gmx.com' ||
-        this.userDetails.email === 'taicartwright@yahoo.com' ||
-        this.userDetails.email === 'dreamszn23@gmail.com' ||
-        this.userDetails.email === 'sparkplug30549@yahoo.com' ||
-        this.userDetails.email === 'jimacep@gmail.com'
+        this.userDetails.email === 'sparkplug30549@yahoo.com'
       ) {
         return true
       } else {
