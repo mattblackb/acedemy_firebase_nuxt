@@ -1,5 +1,5 @@
 function hideShowButton() {
-  let showcontinue = checkAvailable('16BETA1_2309JA')
+  let showcontinue = checkAvailable('16BETA1_2909JA')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
@@ -21,7 +21,7 @@ function hideShowButton() {
   }
 }
 function hideShowButton2() {
-  let showcontinue = checkAvailable('16BETA1_2309JA')
+  let showcontinue = checkAvailable('16BETA1_2909JA')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
