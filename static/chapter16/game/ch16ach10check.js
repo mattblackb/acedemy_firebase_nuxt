@@ -4,7 +4,7 @@ function outcome()
 
 {
 
-  var val = readVar("ch16jodie_office");
+  var val = readVar("ch16jodie_hiding");
 
 	
 
