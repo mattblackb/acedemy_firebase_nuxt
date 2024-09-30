@@ -8,13 +8,13 @@ function infcheck()
 
 	if ((val > -100)&&(val < 1))
 
-        document.write("<img src='buttonsetc/cumometer0.jpg'>"); 
+        document.write("<img src='buttonsetc/cumometer2.jpg'>"); 
 
     else 
 
     if ((val > 0)&&(val < 2))
 
-        document.write("<img src='buttonsetc/cumometer1.jpg'>"); 
+        document.write("<img src='buttonsetc/cumometer2.jpg'>"); 
 
     else 
 
