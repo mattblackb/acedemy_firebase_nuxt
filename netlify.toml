@@ -1,0 +1,138 @@
+[[redirects]]
+  from = "/commissions/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/academy_intro/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+
+[[redirects]]
+  from = "/academy_interviews/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter1/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter2/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter3/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter4/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter5/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter6/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter7/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter8/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter9/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter10/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter11/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter12/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter13/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter14/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter15/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter16/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter17/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter18/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter19/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chapter20/game/images*"
+  to = "/.netlify/functions/serve-image/:splat"
+  status = 200
+  force = true
