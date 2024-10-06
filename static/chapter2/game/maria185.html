@@ -4,26 +4,60 @@
 
 <head>
 
+<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
 <title>The Academy: Chapter Two</title>
 
 <script language="javascript" src="_functions.js"></script>
 
 <link href="_style.css" rel="stylesheet" type="text/css" />
-
+    
 </head>
-
+	
 <script language="javascript">
 	
 setVar("cumometer", 12);
 	
 </script>
 	
-
+	
 <body onLoad="disallowNav()">
 
 <div align="center">
 
-  <p><span class="black">"text"</span><span class="maria">"Oh yeah! "</span></p>
+	<p><span class="black">"text"</span><span class="maria"><em>"Oh yeah!"</em></span></p>
 
 
 
@@ -54,10 +88,11 @@ setVar("cumometer", 12);
       <table width="100" border="0" align="center" cellpadding="3">
 
       <tr>
-<td width="68" align="center" bgcolor="#99999"><script src="cumometercheck.js">
+<td width="68" align="center" bgcolor="#CCCCCC"><script src="cumometercheck.js">
 
-</script>
-          </td>
+	</script>
+	
+</td>
 
       </tr>
     </table>
@@ -69,25 +104,49 @@ setVar("cumometer", 12);
           <tr>
 
             <td height="250"><img src="buttonsetc/inv_maria_naked.jpg" width="125" height="200" alt=""/></td>
+
           </tr>
-    </table>
-    
-    <table width="200" border="0" align="center">
-      <tr> </tr>
-      
-    </table>
-    <!-- headshot end--></td>
+
+      </table>
+<!-- headshot end--></td>
 
 <!--inventory end-->
 
-    <td width="1000"><img src="images/maria185.gif" alt="" usemap="#Map" />
-    
-    <map name="Map" id="Map">
+	  <td width="1000">
+    <img src="images/maria185_00.jpg" name="slide" width="1000" height="750" border="0" usemap="#slideMap">
+    <map name="slideMap">
+    <area shape="rect" coords="0,0,1000,750" href="maria186.html" title="Finish cumming" />
+	
+    </map>
+    	
+		<script>
+<!--
 
-        <area shape="rect" coords="0,0,1000,750" href="maria186.html" title="Finish cumming" />
-</map>
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/maria185_00.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_04.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_00.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_04.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_00.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_04.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_00.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_04.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_00.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_04.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_00.jpg","images/maria185_01.jpg","images/maria185_02.jpg","images/maria185_03.jpg","images/maria185_02.jpg","images/maria185_01.jpg","images/maria185_00.jpg")
 
-</td>
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=150
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-0)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+          </script>
+      
+      </td>
     </tr>
 </table>
 
