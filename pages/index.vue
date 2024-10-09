@@ -151,6 +151,7 @@ export default {
         'imgs/40.png',
 		'imgs/41.png',
 		'imgs/42.png',
+		'imgs/43.png',
       ],
     }
   },
