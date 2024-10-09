@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
+<title>The Academy: Chapter Sixteen</title>
+
+<script language="javascript" src="_functions.js"></script>
+
+<link href="_style.css" rel="stylesheet" type="text/css" />
+    
+</head>
+	
+	
+<body onLoad="disallowNav()">
+
+<div align="center">
+
+	<p><span class="black">"text"</span></p>
+
+
+
+<table width="1220" border="0">
+
+  <tr>
+
+    <td width="105">
+<!--inventory start-->
+    
+<!--clock start-->
+      <table width="99" border="0" align="center">
+
+        <tr>
+
+          <td height="100">
+
+<script src="clockcheck.js">
+
+</script>
+
+</td>
+        </tr>
+      </table>
+<!--clock end-->
+
+<!--score start-->
+      <table width="100" border="0" align="center" cellpadding="3">
+
+      <tr>
+<td width="68" align="center" bgcolor="#999999"><img src="buttonsetc/noscore.jpg">
+
+          </td>
+
+      </tr>
+    </table>
+<!--score end-->
+    
+<!-- headshot start-->
+    <table width="200" border="0" align="center">
+
+          <tr>
+
+            <td height="250"></td>
+
+          </tr>
+
+      </table>
+<!-- headshot end--></td>
+
+<!--inventory end-->
+
+	  <td width="1000">
+    <img src="images/upstairs40_00.jpg" name="slide" width="1000" height="750" border="0" usemap="#slideMap">
+    <map name="slideMap">
+    <area shape="rect" coords="0,0,500,750" href="upstairs41.html" title="Try to get her attention" />
+	<area shape="rect" coords="500,0,1000,750" href="upstairs41.html" title="Just keep watching" />
+	
+    </map>
+    	
+		<script>
+<!--
+
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/upstairs40_00.jpg","images/upstairs40_01.jpg","images/upstairs40_02.jpg","images/upstairs40_03.jpg","images/upstairs40_04.jpg","images/upstairs40_05.jpg","images/upstairs40_06.jpg","images/upstairs40_07.jpg","images/upstairs40_08.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_09.jpg","images/upstairs40_08.jpg","images/upstairs40_07.jpg","images/upstairs40_06.jpg","images/upstairs40_05.jpg","images/upstairs40_04.jpg","images/upstairs40_03.jpg","images/upstairs40_02.jpg","images/upstairs40_01.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg","images/upstairs40_00.jpg")
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=200
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-1)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+          </script>
+      
+      </td>
+    </tr>
+</table>
+
+<table width="1200" height="50" border="0">
+
+<tr>
+
+        <td width="200"></td>
+        
+        <td width="500"><a href="upstairs41.html">TRY TO GET HER ATTENTION</a></td>
+
+        <td width="500"><a href="upstairs41.html">JUST KEEP WATCHING</a></td>
+
+    </tr>
+
+</table>
+
+<!-- NEW FUNCTIONS BAR START --> 
+<table width="1200" height="50" border="0">
+
+<tr>
+
+    <td width="50"></td>
+	
+	<td width="50"><a href="#" onClick="location.reload()"><img src="buttonsetc/refresh.jpg" width="50" height="50" alt="Refresh this page" title="Refresh this page"/></a></td>
+	
+	<td width="50"></td>
+	
+	<td width="1050"></td>
+
+    </tr>
+
+</table>
+	
+<!-- NEW FUNCTIONS BAR END -->
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,5 +1,5 @@
 //MB Added post message
-//Functions initial for Chapter Fifteen - passed into Chapter Sixteen
+//Functions initial for Chapter sixteen : Part one - passed into Chapter Sixteen : Part two
 //MB added
 var getCookies = function (url) {
   // let cookieArr = ['rollup_ga_F1G3E656YZ',"_gac_UA-37952868-41","1279799279", "_gac_UA-37952868-51", "_hp2_props.1279799279", "ajs_anonymous_id", "ajs_user_id", "ga_Rollup_gid", "_fbp", "_ga", "notice_gdpr_prefs", "_gcl_au", "rollup_ga", "notice_behavior", "optimizelyEndUserId", "_fcdscst", "_gcl_aw", "ga_Rollup", "_gid", "_fcdscv", "user", "OptanonConsent"]
@@ -52,15 +52,6 @@ cookiesToKeep = [
   'ch14_laura_sex',
   'ch14_natalia_sex',
   'ch14_alexia_sex',
-  'ch14bridgette_positive',
-  'ch14bridgette_negative',
-  'ch14jodie_positive',
-  'ch14jodie_negative',
-  'ch14start_bridgette',
-  'ch14start_threesome',
-  'ch14start_laura',
-  'ch14help_megan',
-  'ch14bridgette_key',
   'ch14have_package',
   'ch15have_package',
   'ch15leave_message',
@@ -76,6 +67,14 @@ cookiesToKeep = [
   'ch15amy_negative',
   'ch15holly_positive',
   'ch15holly_negative',
+  'ch16annie_positive',
+  'ch16annie_negative',
+  'ch16bridgette_positive',
+  'ch16bridgette_negative',
+  'ch16jodie_positive',
+  'ch16jodie_negative',
+  'ch16dandb_positive',
+  'ch16dandb_negative',
 
 ]
 
@@ -97,8 +96,8 @@ const setCookiesOnEntry = async function () {
       var date = new Date()
       date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000)
       var expires = '; expires=' + date.toGMTString()
-      //check that cookie contains ch15
-      if (cookie.includes('ch15') || cookiesToKeep.includes(cookie)) {
+      //check that cookie contains ch16
+      if (cookie.includes('ch16') || cookiesToKeep.includes(cookie)) {
         document.cookie = cookie + '=' + allVars[cookie] + expires + '; path=/'
       }
     })
