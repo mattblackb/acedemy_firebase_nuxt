@@ -182,7 +182,9 @@ export default {
         case 15:
           return 'Fifteen'
         case 16:
-          return 'Sixteen'
+          return 'Sixteen : Part One'
+		case 17:
+          return 'Sixteen : Part Two'
         default:
           return 'Number out of range'
       }
