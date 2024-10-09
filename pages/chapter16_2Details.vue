@@ -8,35 +8,20 @@
             v-if="introchosen.episode == 'introduction' && showSaved"
             :introAchievments="introchosen"
           />
-          <img src="/imgs/40.png" />
+          <img src="/imgs/42.png" />
           <showBonusDetails chapterNumber="16" />
         </v-col>
         <v-col cols="12" md="6">
-          <h1>The Academy - Chapter Sixteen : Part One</h1>
+          <h1>The Academy - Chapter Sixteen : Part Two</h1>
 
           <h4 class="clickable">
-            <NuxtLink to="/chapter15Details">< Previous Chapter</NuxtLink> :
-			<NuxtLink to="/chapter16_2Details">Part Two ></NuxtLink>
+            <NuxtLink to="/chapter16Details">< Part One</NuxtLink> :
 			
           </h4>
           <br />
 		  <p>
-            <h2>BETA RELEASE</h2>
-			It's endgame at the Academy.
-			<br /><br />
-			Time to figure out your priorities and decide which direction to take.
-			<br /><br />
-			Your previous endeavours and achievements will all become important factors in who you can assist and who you can have a little more time with.
-			<br /><br />
-			Work out who you can trust, who you will help and who gets screwed!
-			<br /><br />
-			Unlock a few deep secrets to finally get what you came here for...
-			<br /><br />
-            <b>Chapter Sixteen : Part One</b> BETA statistics : 2200 pages : 2230 images<br>
-			: TBC bonus scenes : 50 achievements : TBC bonus achievements
-            <br /><br />
-            <b>NOTE:</b> You must successfully complete Chapter Fifteen before
-            you can play Chapter Sixteen!
+            <h2>NEW INSTALLMENT COMING SOON</h2>
+			The working week concludes at Goodhead Academy
           </p>
 
           <hr>
