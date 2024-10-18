@@ -1,5 +1,5 @@
 function hideShowButton() {
-  let showcontinue = checkAvailable(' 161jRQaz0m5Bx6IW7mTF')
+  let showcontinue = checkAvailable('161jRQaz0m5Bx6IW7mTF')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
@@ -21,7 +21,7 @@ function hideShowButton() {
   }
 }
 function hideShowButton2() {
-  let showcontinue = checkAvailable(' 161jRQaz0m5Bx6IW7mTF')
+  let showcontinue = checkAvailable('161jRQaz0m5Bx6IW7mTF')
   if (showcontinue) {
     document.getElementById('buybutton').style.display = 'none'
     document.getElementById('availableButton').style.display = 'block'
